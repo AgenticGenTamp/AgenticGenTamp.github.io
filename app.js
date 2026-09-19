@@ -11,8 +11,8 @@ function updateMotionButton() { $('#motion-toggle').textContent = hero.paused ? 
 hero.addEventListener('play', updateMotionButton);hero.addEventListener('pause', updateMotionButton);
 $('#motion-toggle').addEventListener('click', () => { heroWanted = hero.paused; if (heroWanted) hero.play().catch(updateMotionButton); else hero.pause(); });
 new IntersectionObserver(entries => { const visible = entries[0].isIntersecting; if (visible && heroWanted && !document.hidden) hero.play().catch(updateMotionButton); else hero.pause(); }, {threshold:0.05}).observe(hero);
-reduced.addEventListener('change', () => { if (reduced.matches) {heroWanted=false;hero.pause();} });
-document.addEventListener('visibilitychange',()=>{ if(document.hidden){hero.pause();$('#method-video').pause();$('#env-video').pause();$('#dialog-video').pause();pauseFilm();}else if(heroWanted && $('#top').getBoundingClientRect().bottom>0){hero.play().catch(()=>{});} });
+reduced.addEventListener('change', () => { if (reduced.matches) {heroWanted=false;hero.pause();galleryVisible.forEach(pauseGalleryVideo);} else galleryVisible.forEach(playGalleryVideo); });
+document.addEventListener('visibilitychange',()=>{ if(document.hidden){hero.pause();$('#method-video').pause();$('#env-video').pause();galleryVisible.forEach(pauseGalleryVideo);pauseFilm();}else {if(heroWanted && $('#top').getBoundingClientRect().bottom>0)hero.play().catch(()=>{});galleryVisible.forEach(playGalleryVideo);} });
 let scrolled = false;
 function navState(){const next=window.scrollY>100;if(next!==scrolled){$('#nav').classList.toggle('sticky',next);scrolled=next;}}
 window.addEventListener('scroll',navState,{passive:true});navState();
@@ -59,12 +59,61 @@ function selectEnvironment(id){
 function renderEnvironmentList(){let last='';$('#env-list').innerHTML=data.environments.map(e=>{const heading=e.family!==last?`<p class="env-group-title">${e.family}</p>`:'';last=e.family;return `${heading}<button data-env="${e.id}" aria-pressed="false">${e.name}<span aria-hidden="true">↗</span></button>`;}).join('');$$('[data-env]').forEach(b=>b.addEventListener('click',()=>selectEnvironment(b.dataset.env)));selectEnvironment('Tossing3D');}
 $$('[data-select-env]').forEach(b=>b.addEventListener('click',()=>{if(!data)return;selectEnvironment(b.dataset.selectEnv);$('.explorer').scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'start'});}));
 
-let gallery=[],category='all';const dialog=$('#gallery-dialog');
-function provenance(g){return `${g.method} · ${g.backend} · ${g.setting} · seed ${g.seed} · episode ${g.episode}`;}
-function openGallery(id){const g=gallery.find(g=>g.id===id);if(!g)return;const v=$('#dialog-video');v.src=`film/assets/clips/${g.file}.mp4`;v.poster=`assets/posters/${g.file}.jpg`;$('#dialog-category').textContent=`${g.category} / ${g.environment}`;$('#dialog-title').textContent=g.title;$('#dialog-description').textContent=g.description;$('#dialog-provenance').textContent=`${provenance(g)}. Source clip: ${g.file}.mp4 · playback 1×.`;$('#method-video').pause();$('#env-video').pause();pauseFilm();dialog.showModal();document.body.style.overflow='hidden';v.play().catch(()=>{});}
-function renderGallery(){const items=gallery.filter(g=>category==='all'||g.category===category);$('#gallery-grid').innerHTML=items.map(g=>`<article class="gallery-card"><button class="gallery-thumb" data-gallery="${g.id}" aria-label="Play: ${esc(g.title)}"><img loading="lazy" src="assets/posters/${g.file}.jpg" alt="${esc(g.environment)} example rollout" width="720" height="540"><span class="small-play" aria-hidden="true">▶</span></button><p class="gallery-type">${esc(g.category)} / ${esc(g.environment)}</p><h3>${esc(g.title)}</h3><p class="description">${esc(g.description)}</p><p class="provenance"><strong>${esc(g.method)} · ${esc(g.backend)}</strong><br>${esc(g.setting)} · seed ${g.seed} · episode ${g.episode}</p></article>`).join('');$$('[data-gallery]').forEach(b=>b.addEventListener('click',()=>openGallery(b.dataset.gallery)));}
+let gallery=[],category='all';
+const galleryVisible = new Set();
+const galleryPausedByUser = new WeakSet();
+const galleryAutomaticPauses = new WeakSet();
+function pauseGalleryVideo(video) {
+  if (!video.paused) {
+    galleryAutomaticPauses.add(video);
+    video.pause();
+  }
+}
+function playGalleryVideo(video) {
+  if (document.hidden || reduced.matches || navigator.connection?.saveData || galleryPausedByUser.has(video) || !galleryVisible.has(video)) return;
+  video.play().then(() => {
+    // A play request may settle after a scroll, filter change, or tab switch.
+    if (!galleryVisible.has(video) || document.hidden || reduced.matches) pauseGalleryVideo(video);
+  }).catch(() => {}); // Native controls remain available if autoplay is blocked.
+}
+const galleryObserver = new IntersectionObserver(entries => {
+  entries.forEach(({target:video,isIntersecting,intersectionRatio}) => {
+    if (isIntersecting && intersectionRatio >= 0.2) {
+      galleryVisible.add(video);
+      if (!video.getAttribute('src')) {
+        video.src = video.dataset.src;
+        video.load();
+      }
+      playGalleryVideo(video);
+    } else {
+      galleryVisible.delete(video);
+      pauseGalleryVideo(video);
+    }
+  });
+}, {threshold:[0,0.2]});
+function renderGallery() {
+  galleryObserver.disconnect();
+  galleryVisible.clear();
+  $$('.gallery-video').forEach(video => {pauseGalleryVideo(video);video.removeAttribute('src');video.load();});
+  const items=gallery.filter(g=>category==='all'||g.category===category);
+  $('#gallery-grid').innerHTML=items.map(g=>`<article class="gallery-card">
+    <div class="gallery-thumb"><video class="gallery-video" data-gallery="${g.id}" data-src="film/assets/clips/${g.file}.mp4" poster="assets/posters/${g.file}.jpg" muted loop playsinline controls preload="none" aria-labelledby="gallery-title-${g.id}" aria-describedby="gallery-provenance-${g.id}"></video></div>
+    <p class="gallery-type">${esc(g.category)} / ${esc(g.environment)}</p>
+    <h3 id="gallery-title-${g.id}">${esc(g.title)}</h3>
+    <p class="description">${esc(g.description)}</p>
+    <p class="provenance" id="gallery-provenance-${g.id}"><strong>${esc(g.method)} · ${esc(g.backend)}</strong><br>${esc(g.setting)} · seed ${g.seed} · episode ${g.episode}</p>
+  </article>`).join('');
+  $$('.gallery-video').forEach(video => {
+    video.muted = true;
+    video.addEventListener('play', () => galleryPausedByUser.delete(video));
+    video.addEventListener('pause', () => {
+      if (galleryAutomaticPauses.delete(video)) return;
+      if (galleryVisible.has(video) && !document.hidden && !reduced.matches) galleryPausedByUser.add(video);
+    });
+    galleryObserver.observe(video);
+  });
+}
 $$('[data-category]').forEach(b=>b.addEventListener('click',()=>{category=b.dataset.category;$$('[data-category]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});renderGallery();}));
-$('.dialog-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});dialog.addEventListener('close',()=>{$('#dialog-video').pause();$('#dialog-video').removeAttribute('src');$('#dialog-video').load();document.body.style.overflow='';});
 async function loadJSON(path){const res=await fetch(path);if(!res.ok)throw new Error(`Cannot load ${path}: ${res.status}`);return res.json();}
 loadJSON('data/benchmark.json').then(result=>{data=result;renderRanking();renderEnvironmentList();}).catch(error=>{console.error(error);$('#scope-note').textContent='The interactive results could not load. Please download the CSV or read Tables I–II in the paper.';});
 loadJSON('data/gallery.json').then(result=>{gallery=result;renderGallery();}).catch(error=>{console.error(error);$('#gallery-grid').innerHTML='<p>The gallery could not load. <a href="film/">Open the project film instead ↗</a></p>';});

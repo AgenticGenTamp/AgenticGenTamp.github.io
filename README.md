@@ -22,7 +22,7 @@ Open http://127.0.0.1:8770/. The included server supports byte ranges for seekin
 - Method: the Shelf calibration trace, with three selectable stages and original clips.
 - Leaderboard: all six rows from the paper, with environment-family and matched-planner-coverage controls. Click the score heading to reverse sorting.
 - Environment explorer: all 28 environments, all six method rows, and printed run-level ranges.
-- Gallery: curated clips with method, backend, setting, synthesis seed, episode, and source filename.
+- Gallery: large inline videos that loop silently as they enter the viewport, with native playback controls and method, backend, setting, synthesis seed, and episode. Offscreen and hidden-tab videos pause; reduced-motion and data-saving preferences disable automatic playback. Manually paused clips stay paused when returning to them.
 
 ## Sources and result definitions
 
@@ -36,7 +36,7 @@ All success rates and run-level min/max values are transcribed from **Tables Iâ€
 - Min/max in the explorer are across five runs, not confidence intervals.
 - Table III computation times use 44 matched seeds across 13 environments where both settings reach 100% success. They are not all-environment averages.
 
-`film/` is vendored from https://github.com/merlerm/agentamp-video at commit `d81f2c1`. The original HTML, CSS, JavaScript, local fonts, stills, and required clips are retained. Local-path metadata JSON and development scripts are excluded. The only player integration change accepts a same-origin pause message from the parent. The hero and gallery posters are derived from those supplied clips. Gallery provenance is recorded in `data/gallery.json`; media names retain the upstream run and episode identifiers.
+`film/` is vendored from https://github.com/merlerm/agentamp-video at commit `d81f2c1`. The original HTML, CSS, JavaScript, local fonts, stills, and required clips are retained. Local-path metadata JSON and development scripts are excluded. The only player integration change accepts a same-origin pause message from the parent. The hero and gallery posters are derived from those supplied clips. Prominent Leaderboard and Gallery buttons sit alongside Paper and Code below the main title. Gallery provenance is recorded in `data/gallery.json`; media names retain the upstream run and episode identifiers.
 
 ## Update content
 
