@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coding Agents for Generalized TAMP</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="poster">
+<div id="stage-wrap">
+<div id="stage">
+
+  <section class="scene clipslide" id="hook">
+    <div class="beat" data-from="0" data-to="10">
+      <video class="clip" data-fill="1" data-src="assets/clips/tossing-blackbox-r24-ep37.mp4" data-offset="0" data-speed="2" muted playsinline preload="auto"></video>
+      <div class="speed">2x speed</div>
+      <pre class="codepanel" id="hookcode"></pre>
+      <div class="headline">
+        <h1 class="line reveal" data-at="3">This program was written by a <span class="accent">coding agent</span></h1>
+        <p class="sub reveal" data-at="6">No supplied planner, skills, or simulator source code</p>
+      </div>
+    </div>
+    <div class="beat" data-from="10" data-to="13">
+      <div class="collage">
+        <video class="clip" data-src="assets/clips/grid/StickButton2D.mp4" data-free="1" muted loop playsinline preload="auto"></video>
+        <video class="clip" data-src="assets/clips/grid/Packing3D.mp4" data-free="1" muted loop playsinline preload="auto"></video>
+        <video class="clip" data-src="assets/clips/grid/DynScoopPour2D.mp4" data-free="1" muted loop playsinline preload="auto"></video>
+        <video class="clip" data-src="assets/clips/grid/BalanceBeam3D.mp4" data-free="1" muted loop playsinline preload="auto"></video>
+        <video class="clip" data-src="assets/clips/grid/ClutteredRetrieval2D.mp4" data-free="1" muted loop playsinline preload="auto"></video>
+        <video class="clip" data-src="assets/clips/grid/Tossing3D.mp4" data-free="1" muted loop playsinline preload="auto"></video>
+        <video class="clip" data-src="assets/clips/grid/DynPushT2D.mp4" data-free="1" muted loop playsinline preload="auto"></video>
+        <video class="clip" data-src="assets/clips/grid/Shelf3D.mp4" data-free="1" muted loop playsinline preload="auto"></video>
+        <video class="clip" data-src="assets/clips/grid/Motion2D.mp4" data-free="1" muted loop playsinline preload="auto"></video>
+        <video class="clip" data-src="assets/clips/grid/SweepIntoDrawer3D.mp4" data-free="1" muted loop playsinline preload="auto"></video>
+        <video class="clip" data-src="assets/clips/grid/DynPushPullHook2D.mp4" data-free="1" muted loop playsinline preload="auto"></video>
+        <video class="clip" data-src="assets/clips/grid/Transport3D.mp4" data-free="1" muted loop playsinline preload="auto"></video>
+      </div>
+      <div class="dim"></div>
+      <div class="titlecard"><p><span class="accent">Coding Agents</span> for Generalized Task and Motion Planning Problems<small>Anonymous ICRA 2027 submission</small></p></div>
+    </div>
+  </section>
+
+  <section class="scene problem" id="problem">
+    <div class="col inp reveal" data-at="0"><video class="clip" data-still="1" muted playsinline preload="auto"></video><span class="k"></span></div>
+    <div class="col inp reveal minor" data-at="0.5"><video class="clip" data-still="1" muted playsinline preload="auto"></video><span class="k"></span></div>
+    <div class="col inp reveal minor" data-at="1"><video class="clip" data-still="1" muted playsinline preload="auto"></video><span class="k"></span></div>
+    <div class="col out" style="top:calc(220px - var(--ch) / 2)"><video class="clip" data-starts="12.5,22.3,31" data-speed="1.5" muted playsinline preload="auto"></video></div>
+    <div class="col out" style="top:calc(370px - var(--ch) / 2)"><video class="clip" data-starts="12.9,22.3,31" data-speed="1.5" muted playsinline preload="auto"></video></div>
+    <div class="col out" style="top:calc(520px - var(--ch) / 2)"><video class="clip" data-starts="13.3,22.3,31" data-speed="1.5" muted playsinline preload="auto"></video></div>
+
+    <div class="lab reveal" data-at="7.5" data-until="18">TAMP planner</div>
+    <div class="lab reveal" data-at="18" data-until="26">Generalized TAMP</div>
+    <div class="lab us reveal" data-at="26">Coding agent</div>
+
+    <div class="top">
+      <div class="node2 reveal eng" data-at="7.5" style="left:285px"><svg class="g wide" viewBox="0 0 112 84"><circle cx="20" cy="30" r="9"/><path d="M4 62c0-11 7-18 16-18s16 7 16 18"/><path d="M60 22L52 66"/><g class="logo" transform="translate(66 20) scale(2)"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></g></svg><span class="k">engineer / LLM</span></div>
+      <svg class="arr reveal minor" data-at="8.2" viewBox="0 0 40 16" style="left:451px"><path d="M2 8h32M28 2l6 6-6 6"/></svg>
+      <div class="node2 reveal abs xwide" data-at="8.2" style="left:520px"><div class="minis"><div class="reveal minor" data-at="8.5"><svg viewBox="0 0 84 84"><path d="M20 8h30l14 14v54H20z"/><path d="M50 8v14h14"/><path d="M30 40h24M30 52h20M30 64h24"/></svg><span>predicates</span></div><div class="reveal minor" data-at="8.75"><svg viewBox="0 0 84 84"><path d="M20 8h30l14 14v54H20z"/><path d="M50 8v14h14"/><path d="M30 40h24M30 52h20M30 64h24"/></svg><span>operators</span></div><div class="reveal minor" data-at="9"><svg viewBox="0 0 84 84"><path d="M20 8h30l14 14v54H20z"/><path d="M50 8v14h14"/><path d="M30 40h24M30 52h20M30 64h24"/></svg><span>samplers</span></div><div class="reveal minor" data-at="9.25"><svg viewBox="0 0 84 84"><path d="M20 8h30l14 14v54H20z"/><path d="M50 8v14h14"/><path d="M30 40h24M30 52h20M30 64h24"/></svg><span>skills</span></div></div><span class="k">abstractions</span></div>
+      <div class="node2 reveal env" data-at="27.5" style="left:395px"><video class="clip envloop" data-free="1" muted loop playsinline preload="auto"></video><span class="k">environment</span></div>
+      <svg class="arr loop reveal minor" data-at="27.9" viewBox="0 0 70 40" style="left:502px"><path class="flow fwd" d="M4 12h54"/><path d="M52 6l6 6-6 6"/><path class="flow back" d="M66 28H12"/><path d="M18 22l-6 6 6 6"/></svg>
+      <div class="node2 reveal agent2 wide" data-at="27.5" style="left:565px"><svg class="g" viewBox="0 0 84 84"><g class="logo" transform="translate(2 2) scale(3.33)"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></g></svg><span class="k">coding agent</span></div>
+    </div>
+
+    <div class="pl reveal minor" data-at="11" data-until="18" style="top:178px"><svg class="tree" viewBox="0 0 84 84"><g class="reveal minor" data-at="11" data-until="18"><circle class="dot" cx="42" cy="18" r="7"/></g><g class="reveal minor" data-at="11.15" data-until="18"><path d="M38 24l-14 20M46 24l14 20"/><circle class="dot" cx="24" cy="44" r="7"/><circle class="dot" cx="60" cy="44" r="7"/></g><g class="reveal minor" data-at="11.3" data-until="18"><path d="M21.5 50.5l-7.5 19.5M26.5 50.5l7.5 19.5M57.5 50.5l-7.5 19.5M62.5 50.5l7.5 19.5"/><circle class="dot" cx="14" cy="70" r="7"/><circle class="dot" cx="34" cy="70" r="7"/><circle class="dot" cx="50" cy="70" r="7"/><circle class="dot" cx="70" cy="70" r="7"/></g></svg><span class="k reveal minor" data-at="11" data-until="18">planner</span></div><div class="pl reveal minor" data-at="11.35" data-until="18" style="top:328px"><svg class="tree" viewBox="0 0 84 84"><g class="reveal minor" data-at="11.35" data-until="18"><circle class="dot" cx="42" cy="18" r="7"/></g><g class="reveal minor" data-at="11.5" data-until="18"><path d="M38 24l-14 20M46 24l14 20"/><circle class="dot" cx="24" cy="44" r="7"/><circle class="dot" cx="60" cy="44" r="7"/></g><g class="reveal minor" data-at="11.65" data-until="18"><path d="M21.5 50.5l-7.5 19.5M26.5 50.5l7.5 19.5M57.5 50.5l-7.5 19.5M62.5 50.5l7.5 19.5"/><circle class="dot" cx="14" cy="70" r="7"/><circle class="dot" cx="34" cy="70" r="7"/><circle class="dot" cx="50" cy="70" r="7"/><circle class="dot" cx="70" cy="70" r="7"/></g></svg><span class="k reveal minor" data-at="11.35" data-until="18">planner</span></div><div class="pl reveal minor" data-at="11.7" data-until="18" style="top:478px"><svg class="tree" viewBox="0 0 84 84"><g class="reveal minor" data-at="11.7" data-until="18"><circle class="dot" cx="42" cy="18" r="7"/></g><g class="reveal minor" data-at="11.85" data-until="18"><path d="M38 24l-14 20M46 24l14 20"/><circle class="dot" cx="24" cy="44" r="7"/><circle class="dot" cx="60" cy="44" r="7"/></g><g class="reveal minor" data-at="12" data-until="18"><path d="M21.5 50.5l-7.5 19.5M26.5 50.5l7.5 19.5M57.5 50.5l-7.5 19.5M62.5 50.5l7.5 19.5"/><circle class="dot" cx="14" cy="70" r="7"/><circle class="dot" cx="34" cy="70" r="7"/><circle class="dot" cx="50" cy="70" r="7"/><circle class="dot" cx="70" cy="70" r="7"/></g></svg><span class="k reveal minor" data-at="11.7" data-until="18">planner</span></div>
+    <div class="node2 reveal mid" data-at="18.8" data-until="26"><svg class="g" viewBox="0 0 84 84"><path d="M20 8h30l14 14v54H20z"/><path d="M50 8v14h14"/><rect data-at="18.95" data-until="26" class="reveal minor bar a" x="28" y="34" width="22" height="5" rx="1"/><rect data-at="19.1" data-until="26" class="reveal minor bar i" x="34" y="44" width="16" height="5" rx="1"/><rect data-at="19.25" data-until="26" class="reveal minor bar i" x="34" y="54" width="20" height="5" rx="1"/><rect data-at="19.4" data-until="26" class="reveal minor bar a" x="28" y="64" width="14" height="5" rx="1"/></svg><span class="k">generalized policy</span></div>
+    <div class="node2 reveal mid" data-at="28.7"><svg class="g" viewBox="0 0 84 84"><path d="M20 8h30l14 14v54H20z"/><path d="M50 8v14h14"/><rect data-at="28.8" class="reveal minor bar a" x="28" y="34" width="22" height="5" rx="1"/><rect data-at="28.95" class="reveal minor bar i" x="34" y="44" width="16" height="5" rx="1"/><rect data-at="29.1" class="reveal minor bar i" x="34" y="54" width="20" height="5" rx="1"/><rect data-at="29.25" class="reveal minor bar a" x="28" y="64" width="14" height="5" rx="1"/></svg><span class="k">program</span></div>
+
+    <svg class="fan" viewBox="0 0 1280 720">
+      <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5 0 10z"/></marker></defs>
+
+      <path class="reveal minor ar" data-at="10.9" data-until="18" d="M226 220H596"/><path class="reveal minor ar" data-at="11.25" data-until="18" d="M226 370H596"/><path class="reveal minor ar" data-at="11.6" data-until="18" d="M226 520H596"/>
+      <path class="reveal minor ar" data-at="12.3" data-until="18" d="M684 220H1050"/><path class="reveal minor ar" data-at="12.5" data-until="18" d="M684 370H1050"/><path class="reveal minor ar" data-at="12.7" data-until="18" d="M684 520H1050"/>
+      <path class="reveal minor spine ar" data-at="18.8" data-until="26" d="M640 164V310"/>
+      <path class="reveal minor ar" data-at="20.5" data-until="26" d="M226 220C400 220 400 370 578 370"/><path class="reveal minor ar" data-at="20.5" data-until="26" d="M226 370H578"/><path class="reveal minor ar" data-at="20.5" data-until="26" d="M226 520C400 520 400 370 578 370"/>
+      <path class="reveal minor ar" data-at="22" data-until="26" d="M702 370C900 370 900 220 1050 220"/><path class="reveal minor ar" data-at="22" data-until="26" d="M702 370H1050"/><path class="reveal minor ar" data-at="22" data-until="26" d="M702 370C900 370 900 520 1050 520"/>
+      <path class="reveal minor strike" data-at="26" data-until="27.5" d="M300 46L405 128"/><path class="reveal minor strike" data-at="26" data-until="27.5" d="M535 46L745 128"/>
+      <path class="reveal minor spine ar" data-at="28.7" data-until="45" d="M640 164V310"/>
+      <path class="reveal minor ar" data-at="30.2" data-until="45" d="M226 220C400 220 400 370 578 370"/><path class="reveal minor ar" data-at="30.2" data-until="45" d="M226 370H578"/><path class="reveal minor ar" data-at="30.2" data-until="45" d="M226 520C400 520 400 370 578 370"/>
+      <path class="reveal minor ar" data-at="30.5" data-until="45" d="M702 370C900 370 900 220 1050 220"/><path class="reveal minor ar" data-at="30.5" data-until="45" d="M702 370H1050"/><path class="reveal minor ar" data-at="30.5" data-until="45" d="M702 370C900 370 900 520 1050 520"/>
+    </svg>
+
+    <h1 class="line reveal" data-at="1.5" data-until="6">TAMP problems with a <span class="accent">variable number of objects</span></h1>
+    <h1 class="line reveal" data-at="10.93" data-until="18">TAMP planner: given abstractions, <span class="accent">one search per instance</span></h1>
+    <h1 class="line reveal" data-at="20.5" data-until="26">Generalized TAMP: given abstractions, <span class="accent">one policy for all instances</span></h1>
+    <h1 class="line reveal" data-at="26.18">Drop the abstractions: <span class="accent">only a coding agent</span> and the environment?</h1>
+  </section>
+
+
+  <section class="scene protocol" id="protocol">
+    <div class="given">
+      <div class="card reveal" data-at="0"><span class="k">task description</span>
+        <p class="desc"># Shelf3DEnv (variable object count)<br>A 3D task where the robot must pick up objects from the ground and place them onto a space-constrained shelf in a cupboard with three layers. The robot has a holonomic mobile base with powered casters and a Kinova Gen3 arm.<br>This environment contains a VARIABLE number of objects.</p></div>
+      <div class="card sim reveal minor" data-at="0.6"><span class="k">simulator client</span>
+        <div class="simwrap"><video class="clip" data-still="1" data-src="assets/clips/shelf-final-main-r222-ep1.mp4" muted playsinline preload="auto"></video><video class="clip probe reveal minor" data-at="6" data-until="12" data-src="assets/clips/shelf-floorprobe-r222.mp4" data-starts="6" data-speed="4" data-wait="0" muted playsinline preload="auto"></video><div class="speed reveal minor" data-at="6" data-until="12">4x</div><div class="cardlabel reveal minor" data-at="10.8" data-until="12">stalls on the floor · its <b>recalled arm model</b> says the fingertip is 2.4 cm above it</div><video class="clip probe reveal minor" data-at="12" data-until="20" data-src="assets/clips/shelf-calib-close-r222.mp4" data-offset="59" data-starts="12" data-speed="8" data-wait="0" muted playsinline preload="auto"></video><div class="speed reveal minor" data-at="12" data-until="20">8x</div><svg class="point cardpoint reveal minor" data-at="17.9" data-until="20" viewBox="0 0 330 236"><path class="dots" d="M157 109L169 125"/><path class="arr" d="M120 31L146 95"/></svg><div class="cardlabel reveal minor" data-at="17.9" data-until="20">where its <b>prior arm model</b> put the block · shown 5x</div><div class="cardstat reveal minor" data-at="18.4" data-until="20">arm model error, 41 probes: <b>38.9 mm → 1.8 mm</b></div><video class="clip probe reveal minor" data-at="25" data-until="33" data-src="assets/clips/shelf-early-main-r222-ep1.mp4" data-starts="25.16" data-speed="6" data-wait="0" muted playsinline preload="auto"></video><div class="speed reveal minor" data-at="25" data-until="33">6x</div><div class="cardlabel reveal minor" data-at="29" data-until="33">drops the cube at the shelf and never goes back for it</div><video class="clip probe reveal minor" data-at="33" data-until="40" data-src="assets/clips/shelf-final-main-r222-ep1.mp4" data-starts="33.23" data-speed="3" data-wait="0" muted playsinline preload="auto"></video><div class="speed reveal minor" data-at="33" data-until="40">3x</div><div class="cardlabel reveal minor" data-at="34" data-until="40">fix: <b>checks each grasp with its arm model</b>, retries cubes left on the floor</div></div>
+        <p class="mono">reset(seed) · step(action) · render()<br>object-centric state in, action out</p></div>
+      <div class="card reveal minor" data-at="1.2"><span class="k">sandbox</span>
+        <p class="mono">Python · NumPy · SciPy<br>no environment source · no network<br>$20 · 60 s per test instance</p></div>
+    </div>
+    <svg class="arr loop big reveal minor" data-at="6" data-until="40" viewBox="0 0 70 40"><path class="flow fwd" d="M4 12h54"/><path d="M52 6l6 6-6 6"/><path class="flow back" d="M66 28H12"/><path d="M18 22l-6 6 6 6"/></svg>
+    <div class="node2 wide agent3 reveal minor" data-at="1.8"><svg class="g" viewBox="0 0 84 84"><g class="logo" transform="translate(2 2) scale(3.33)"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></g></svg><span class="k">coding agent</span></div>
+    <svg class="fan" viewBox="0 0 1280 720"><path class="reveal minor ar" data-at="23.29" data-until="40" d="M571 374V404"/></svg>
+    <div class="node2 prog reveal minor" data-at="23.29"><svg class="g" viewBox="0 0 84 84"><path d="M20 8h30l14 14v54H20z"/><path d="M50 8v14h14"/><rect class="bar a" x="28" y="34" width="22" height="5" rx="1"/><rect class="bar i" x="34" y="44" width="16" height="5" rx="1"/><rect class="bar i" x="34" y="54" width="20" height="5" rx="1"/><rect class="bar a" x="28" y="64" width="14" height="5" rx="1"/></svg><span class="k">approach.py</span><span class="k frozen">frozen · no LLM</span></div>
+    <pre class="term reveal" data-at="6" data-until="40" id="term"></pre>
+    <div class="evalbox reveal" data-at="40">
+      <video class="clip" data-src="assets/clips/shelf-heldout-100-r222.mp4" data-starts="40.37" data-speed="15" muted playsinline preload="auto"></video><div class="checks"></div><div class="speed">15x speed</div>
+      <p class="k">100 held-out instances, 1 to 8 cubes<br>no LLM at test time<br><b class="evalscore" id="evalscore">0</b> solved</p>
+    </div>
+    <h1 class="line reveal minor" data-at="2.4" data-until="6">Given: a task description, a simulator, a bare sandbox and $20</h1>
+    <h1 class="line reveal" data-at="6" data-until="12">It <span class="accent">probes</span>: the arm model it wrote from memory is wrong</h1>
+      <h1 class="line reveal" data-at="12" data-until="20">It holds a block and <span class="accent">fits its own arm model</span></h1>
+    <h1 class="line reveal" data-at="20" data-until="25">It <span class="accent">writes</span> a policy: reset() and get_action()</h1>
+    <h1 class="line reveal" data-at="25" data-until="33">It <span class="accent">tests</span> on the seeds it chooses: four of five fail</h1>
+    <h1 class="line reveal" data-at="33" data-until="40">It <span class="accent">debugs and commits</span>, 13 times in this run</h1>
+    <h1 class="line reveal" data-at="40">Frozen program, <span class="accent">100 held-out instances</span>, no LLM</h1>
+  </section>
+  <section class="scene protocol" id="protocol-stick">
+    <div class="given">
+      <div class="card reveal" data-at="0"><span class="k">task description</span>
+        <p class="desc"># StickButton2DEnv (variable object count)<br>A 2D environment where the goal is to touch all buttons. The robot has a movable circular base and a retractable arm with a rectangular vacuum end effector.<br>This environment contains a VARIABLE number of objects. Your program must handle ANY number of them.</p></div>
+      <div class="card sim reveal" data-at="1.5"><span class="k">simulator client</span>
+        <div class="simwrap"><video class="clip" data-still="1" data-src="assets/clips/stickbutton-seed455-good.mp4" muted playsinline preload="auto"></video><video class="clip probe reveal minor" data-at="6" data-until="14" data-src="assets/clips/stickbutton-probe-bounds.mp4" data-starts="6" data-speed="1.6" data-wait="0" muted playsinline preload="auto"></video><video class="clip probe reveal minor" data-at="19" data-until="27" data-src="assets/clips/stickbutton-seed455-bad.mp4" data-starts="19.16" data-speed="1.5" data-wait="0" muted playsinline preload="auto"></video><video class="clip probe reveal minor" data-at="27" data-until="34" data-src="assets/clips/stickbutton-seed455-good.mp4" data-starts="27.23" data-speed="1.5" data-wait="0" muted playsinline preload="auto"></video></div>
+        <p class="mono">reset(seed) · step(action) · render()<br>object-centric state in, action out</p></div>
+      <div class="card reveal" data-at="3"><span class="k">sandbox</span>
+        <p class="mono">Python · NumPy · SciPy<br>no environment source · no network<br>$20 · 60 s per test instance</p></div>
+    </div>
+    <svg class="arr loop big reveal minor" data-at="6" data-until="34" viewBox="0 0 70 40"><path class="flow fwd" d="M4 12h54"/><path d="M52 6l6 6-6 6"/><path class="flow back" d="M66 28H12"/><path d="M18 22l-6 6 6 6"/></svg>
+    <div class="node2 wide agent3 reveal" data-at="3.75"><svg class="g" viewBox="0 0 84 84"><g class="logo" transform="translate(2 2) scale(3.33)"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></g></svg><span class="k">coding agent</span></div>
+    <svg class="fan" viewBox="0 0 1280 720"><path class="reveal minor ar" data-at="17.29" data-until="34" d="M571 374V404"/></svg>
+    <div class="node2 prog reveal" data-at="17.29"><svg class="g" viewBox="0 0 84 84"><path d="M20 8h30l14 14v54H20z"/><path d="M50 8v14h14"/><rect class="bar a" x="28" y="34" width="22" height="5" rx="1"/><rect class="bar i" x="34" y="44" width="16" height="5" rx="1"/><rect class="bar i" x="34" y="54" width="20" height="5" rx="1"/><rect class="bar a" x="28" y="64" width="14" height="5" rx="1"/></svg><span class="k">approach.py</span><span class="k frozen">frozen · no LLM</span></div>
+    <pre class="term reveal" data-at="6" data-until="34" id="term-stick"></pre>
+    <div class="evalbox reveal" data-at="34">
+      <video class="clip" data-src="assets/clips/stickbutton-heldout-100-r42.mp4" data-starts="34.37" data-speed="1" muted playsinline preload="auto"></video><div class="checks"></div><div class="speed">real time</div>
+      <p class="k">100 held-out instances, 1 to 5 buttons<br>no LLM at test time<br><b class="evalscore" id="evalscore-stick">0</b> solved</p>
+    </div>
+    <h1 class="line reveal" data-at="0.75" data-until="6">Given: a task description, a simulator, a bare sandbox and $20</h1>
+    <h1 class="line reveal" data-at="6" data-until="14">It <span class="accent">probes</span> the black box: read states, push until the wall stops it</h1>
+    <h1 class="line reveal" data-at="14" data-until="19">It <span class="accent">writes</span> a policy: reset() and get_action()</h1>
+    <h1 class="line reveal" data-at="19" data-until="27">It <span class="accent">tests where it wants</span>: 300-seed sweeps, worst cases first</h1>
+    <h1 class="line reveal" data-at="27" data-until="34">It <span class="accent">debugs and commits</span>, 14 times in this run</h1>
+    <h1 class="line reveal" data-at="34">Frozen program, <span class="accent">100 held-out instances</span>, no LLM</h1>
+  </section>
+  <section class="scene study" id="study">
+    <div class="zoom"><video class="clip" data-src="assets/clips/study-mosaic-240.mp4" data-starts="0" data-wait="0" muted playsinline preload="auto"></video><video class="clip tile" style="left:768px;top:268.8px" data-src="assets/clips/study-tiles/r4c8.mp4" data-starts="0" data-wait="0" muted playsinline preload="auto"></video><video class="clip tile" style="left:864px;top:268.8px" data-src="assets/clips/study-tiles/r4c9.mp4" data-starts="0" data-wait="0" muted playsinline preload="auto"></video><video class="clip tile" style="left:960px;top:268.8px" data-src="assets/clips/study-tiles/r4c10.mp4" data-starts="0" data-wait="0" muted playsinline preload="auto"></video><video class="clip tile" style="left:768px;top:336px" data-src="assets/clips/study-tiles/r5c8.mp4" data-starts="0" data-wait="0" muted playsinline preload="auto"></video><video class="clip tile" style="left:864px;top:336px" data-src="assets/clips/study-tiles/r5c9.mp4" data-starts="0" data-wait="0" muted playsinline preload="auto"></video><video class="clip tile" style="left:960px;top:336px" data-src="assets/clips/study-tiles/r5c10.mp4" data-starts="0" data-wait="0" muted playsinline preload="auto"></video><video class="clip tile" style="left:768px;top:403.2px" data-src="assets/clips/study-tiles/r6c8.mp4" data-starts="0" data-wait="0" muted playsinline preload="auto"></video><video class="clip tile" style="left:864px;top:403.2px" data-src="assets/clips/study-tiles/r6c9.mp4" data-starts="0" data-wait="0" muted playsinline preload="auto"></video><video class="clip tile" style="left:960px;top:403.2px" data-src="assets/clips/study-tiles/r6c10.mp4" data-starts="0" data-wait="0" muted playsinline preload="auto"></video></div>
+    <div class="count">
+      <span class="reveal" data-at="3.5"><b>28</b> environments</span>
+      <span class="reveal" data-at="4">× <b>5</b> synthesis methods</span>
+      <span class="reveal" data-at="4.5">× <b>5</b> runs each</span>
+      <span class="reveal" data-at="5">× <b>100</b> held-out instances</span>
+    </div>
+    <h1 class="line reveal" data-at="5.8"><span class="accent">70,000</span> evaluation episodes</h1>
+  </section>
+  <section class="scene" id="results">
+    <div id="grid"></div>
+
+    <div class="oklegend reveal" data-at="3" data-until="7"><span class="okk"></span>14 of 28 environments at 95% success or above</div>
+    <div id="plots" class="reveal" data-at="7">
+      <svg id="plot-success" viewBox="0 0 400 260"></svg>
+      <svg id="plot-time" viewBox="0 0 400 260"></svg>
+    </div>
+    <div class="panel fam reveal" data-at="12"><span class="k">Mean success per family</span><div id="fambars"></div></div>
+    <div class="methods reveal" data-at="7.5">
+      <div class="m"><b><span class="sw agent"></span>AgenticGenPlan</b>Coding agent, bare sandbox, no abstractions. One program per environment.</div>
+      <div class="m"><b><span class="sw planner"></span>Planner</b>Hand-written predicates, operators, samplers, skills. New plan per instance.</div>
+      <div class="m"><b><span class="sw genplan"></span>LLMGenPlan</b>LLM writes the program from the environment source. Fixed feedback, no tools.</div>
+    </div>
+  </section>
+
+  <section class="scene source" id="source">
+    <div class="duo">
+      <div class="half"><span class="k">AgenticGenPlan · main setting · <b>0%</b> <small>Claude Code</small></span><video class="clip" data-src="assets/clips/sweep-main-r424-ep0.mp4" data-speed="6" muted playsinline preload="auto"></video></div>
+      <div class="half"><span class="k">AgenticGenPlan + source · <b>57%</b> <small>Claude Code</small></span><video class="clip" data-src="assets/clips/sweep-source-r42-ep0.mp4" data-speed="6" muted playsinline preload="auto"></video></div>
+    </div>
+    <div class="speed">6x speed</div>
+    <div class="panel eff wide reveal minor" data-at="0"><span class="k">Policy computation per action · 44 matched seeds, 13 environments</span><div id="effbars"></div></div>
+    <h1 class="line reveal minor" data-at="1">With the <span class="accent">environment source</span>: recovered, 7x slower per action</h1>
+  </section>
+
+  <section class="scene clipslide" id="surprises">
+    <div class="beat" data-from="0" data-to="9">
+      <video class="clip" data-fill="1" data-src="assets/clips/tossing-catapult-main-r42-ep3.mp4" data-offset="0" data-speed="3" muted playsinline preload="auto"></video>
+      <div class="who">AgenticGenPlan · main setting<small>Claude Code</small></div><div class="speed">3x speed</div><div class="goal"><span>Goal</span>every cube in the bin</div><div class="pip br"><video class="clip" data-src="assets/clips/demos/demo-Tossing3D.mp4" data-offset="0" data-speed="4" data-wait="0" muted playsinline preload="auto"></video><div class="piplabel">human demonstration · 4x</div><div class="piptag"><span>expected</span>underhand throw</div></div>
+      <div class="headline"><h1 class="line reveal" data-at="1" data-until="5">Winds up to an <span class="accent">overhand throw</span></h1></div>
+    </div>
+    <div class="beat" data-from="9" data-to="18">
+      <video class="clip contain" data-fill="1" data-src="assets/clips/scooppour2d-regrasp-main-aug-s42-ep0.mp4" data-offset="0" data-speed="8" muted playsinline preload="auto"></video>
+      <div class="who">AgenticGenPlan · main setting<small>Claude Code</small></div><div class="speed">8x speed</div><div class="goal"><span>Goal</span>get the balls to the right of the wall, at least half of them</div><div class="pip tr"><video class="clip" data-src="assets/clips/demos/demo-DynScoopPour2D.mp4" data-offset="0" data-speed="4" data-wait="0" muted playsinline preload="auto"></video><div class="piplabel">human demonstration · 4x</div><div class="piptag"><span>expected</span>small scoops</div></div>
+      <div class="headline"><h1 class="line reveal" data-at="10" data-until="14"><span class="accent">Regrasps</span> the tool, then one huge scoop</h1></div>
+    </div>
+    <div class="beat" data-from="18" data-to="27">
+      <video class="clip" data-fill="1" data-src="assets/clips/scooppour3d-tray-source-r444-ep3.mp4" data-offset="0" data-speed="5" muted playsinline preload="auto"></video>
+      <div class="who">AgenticGenPlan + source<small>Claude Code</small></div><div class="speed">5x speed</div><div class="goal"><span>Goal</span>move the pile of crumbs into the green tray</div><div class="pip ml"><video class="clip" data-src="assets/clips/demos/demo-ScoopPour3D.mp4" data-offset="0" data-speed="4" data-wait="0" muted playsinline preload="auto"></video><div class="piplabel">human demonstration · 4x</div><div class="piptag"><span>expected</span>use the scoop tool</div></div>
+      <svg class="point reveal minor" data-at="19" data-until="23" viewBox="0 0 1280 720"><path d="M1010 165 C 960 300, 800 380, 705 438"/><path d="M718 422 L705 438 L724 444"/></svg><div class="headline"><h1 class="line reveal" data-at="19" data-until="23">Grabs and <span class="accent">dumps the tray</span>, ignoring the tool</h1></div>
+    </div>
+    <div class="beat" data-from="27" data-to="36">
+      <video class="clip" data-fill="1" data-src="assets/clips/sweep-source-r42-ep0.mp4" data-offset="0" data-speed="6" muted playsinline preload="auto"></video>
+      <div class="who">AgenticGenPlan + source<small>Claude Code</small></div><div class="speed">6x speed</div><div class="goal"><span>Goal</span>open the drawer and sweep the crumbs in</div><div class="pip bl"><video class="clip" data-src="assets/clips/demos/demo-SweepIntoDrawer3D.mp4" data-offset="0" data-speed="4" data-wait="0" muted playsinline preload="auto"></video><div class="piplabel">human demonstration · 4x</div><div class="piptag"><span>expected</span>use the sweep tool</div></div>
+      <div class="headline"><h1 class="line reveal" data-at="28" data-until="32">Sweeps <span class="accent">with the arm</span> instead of the tool</h1></div>
+    </div>
+    <div class="beat" data-from="36" data-to="45">
+      <video class="clip contain" data-fill="1" data-src="assets/clips/clutteredstorage-main-r424-ep19.mp4" data-offset="0" data-speed="4" muted playsinline preload="auto"></video>
+      <div class="who">AgenticGenPlan · main setting<small>Claude Code</small></div><div class="speed">4x speed</div><div class="goal"><span>Goal</span>every block inside the shelf</div>
+      <div class="headline"><h1 class="line reveal" data-at="37" data-until="41">Makes room by <span class="accent">pushing stored blocks deeper</span></h1></div>
+    </div>
+    <div class="beat" data-from="45" data-to="54">
+      <video class="clip contain" data-fill="1" data-src="assets/clips/clutter25-main-r222-ep13.mp4" data-offset="0" data-speed="4" muted playsinline preload="auto"></video>
+      <div class="who">AgenticGenPlan · main setting<small>Claude Code</small></div><div class="speed">4x speed</div><div class="goal"><span>Goal</span>retrieve the target block to the target region</div>
+      <div class="headline"><h1 class="line reveal" data-at="46" data-until="50">25 objects: <span class="accent">clears a path</span> to the target</h1></div>
+    </div>
+    <div class="beat" data-from="54" data-to="63">
+      <video class="clip" data-fill="1" data-src="assets/clips/sortblocks-regrasp-source-r444-ep25.mp4" data-offset="0" data-speed="6" muted playsinline preload="auto"></video>
+      <div class="who">AgenticGenPlan + source<small>Claude Code</small></div><div class="speed reveal minor" data-at="54" data-until="61.5">6x speed</div><div class="speed reveal minor" data-at="61.5">48x speed</div><div class="goal"><span>Goal</span>each cube in the bin of its colour</div>
+      <div class="headline"><h1 class="line reveal" data-at="55" data-until="59"><span class="accent">Recovers</span> from failed grasps</h1></div>
+    </div>
+    <div class="beat" data-from="63" data-to="72">
+      <video class="clip contain" data-fill="1" data-src="assets/clips/pushpullhook2d-windmill-source-r24-ep5.mp4" data-offset="0" data-speed="1" muted playsinline preload="auto"></video>
+      <div class="who">AgenticGenPlan + source<small>Claude Code</small></div><div class="speed">real time</div><div class="goal"><span>Goal</span>push the movable button onto the target button</div>
+      <div class="headline"><h1 class="line reveal" data-at="64" data-until="68">Swings the hook like a <span class="accent">windmill</span>, pushing with its long side</h1></div>
+    </div>
+    <div class="beat" data-from="72" data-to="77.5">
+      <video class="clip" data-fill="1" data-src="assets/clips/blocked-near-claude-r424-ep13.mp4" data-offset="0" data-speed="1" data-end="3" muted playsinline preload="auto"></video>
+      <div class="who">AgenticGenPlan · main setting<small>Codex · early version of the program</small></div><div class="speed">real time</div><div class="goal"><span>Goal</span>any blue block on the green plate</div> <div class="headline"><h1 class="line reveal" data-at="72.5" data-until="77.5">Early in synthesis: the <span class="accent">grasp fails</span></h1></div>
+    </div>
+    <div class="beat" data-from="81" data-to="91">
+      <video class="clip" data-fill="1" data-src="assets/clips/blocked-far-codex-r24-ep13.mp4" data-offset="0" data-speed="1.5" muted playsinline preload="auto"></video>
+      <div class="who">AgenticGenPlan · main setting<small>Codex · final program</small></div><div class="speed">1.5x speed</div><div class="goal"><span>Goal</span>any blue block on the green plate</div>
+      <div class="headline"><h1 class="line reveal" data-at="82" data-until="86">Later: it goes for the <span class="accent">spare blocks</span> on the far table</h1></div>
+    </div>
+  </section>
+
+  <div id="captions"></div>
+</div>
+</div>
+
+<div id="controls">
+  <button id="play">Play</button>
+  <input id="scrub" type="range" min="0" max="170" step="0.05" value="0">
+  <span id="clock">0.0 s</span>
+  <span id="scene-name"></span>
+  <select id="theme"><option value="poster">poster</option><option value="journal">journal</option><option value="mono">mono</option></select>
+  <label><input id="caps" type="checkbox"> captions</label>
+  <span class="hint">space play · arrows cue · shift+arrows scene · t theme · c captions · ?t=SS ?theme=x ?record=1</span>
+</div>
+
+<script src="data.js"></script>
+<script src="timeline.js"></script>
+</body>
+</html>
