@@ -1,4 +1,5 @@
 import {selectEnvironments, summarize} from './benchmark.js';
+import {mountMethodStory} from './method-story.js?v=method-story-3';
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -12,7 +13,7 @@ hero.addEventListener('play', updateMotionButton);hero.addEventListener('pause',
 $('#motion-toggle').addEventListener('click', () => { heroWanted = hero.paused; if (heroWanted) hero.play().catch(updateMotionButton); else hero.pause(); });
 new IntersectionObserver(entries => { const visible = entries[0].isIntersecting; if (visible && heroWanted && !document.hidden) hero.play().catch(updateMotionButton); else hero.pause(); }, {threshold:0.05}).observe(hero);
 reduced.addEventListener('change', () => { if (reduced.matches) {heroWanted=false;hero.pause();galleryVisible.forEach(pauseGalleryVideo);} else galleryVisible.forEach(playGalleryVideo); });
-document.addEventListener('visibilitychange',()=>{ if(document.hidden){hero.pause();$('#method-video').pause();$('#env-video').pause();galleryVisible.forEach(pauseGalleryVideo);pauseFilm();}else {if(heroWanted && $('#top').getBoundingClientRect().bottom>0)hero.play().catch(()=>{});galleryVisible.forEach(playGalleryVideo);} });
+document.addEventListener('visibilitychange',()=>{ if(document.hidden){hero.pause();methodStory.pause();$('#env-video').pause();galleryVisible.forEach(pauseGalleryVideo);pauseFilm();}else {if(heroWanted && $('#top').getBoundingClientRect().bottom>0)hero.play().catch(()=>{});galleryVisible.forEach(playGalleryVideo);} });
 let scrolled = false;
 function navState(){const next=window.scrollY>100;if(next!==scrolled){$('#nav').classList.toggle('sticky',next);scrolled=next;}}
 window.addEventListener('scroll',navState,{passive:true});navState();
@@ -21,23 +22,19 @@ window.addEventListener('scroll',navState,{passive:true});navState();
 function pauseFilm(){ $('#film-shell iframe')?.contentWindow?.postMessage({type:'agentamp-film-pause'},location.origin); }
 function openFilm(time=0){
   const frame=document.createElement('iframe');frame.title='Project film: Coding Agents for Generalized Task and Motion Planning';frame.src=`film/?t=${time}&autoplay=1&captions=1`;frame.allow='autoplay; fullscreen';frame.allowFullscreen=true;
-  $('#film-shell').replaceChildren(frame);$('#method-video').pause();$('#env-video').pause();
+  $('#film-shell').replaceChildren(frame);methodStory.pause();$('#env-video').pause();
 }
 $('#film-play').addEventListener('click',()=>openFilm());
 $$('[data-time]').forEach(b=>b.addEventListener('click',()=>{openFilm(Number(b.dataset.time));$('#film-shell').scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'center'});}));
 new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)pauseFilm();},{threshold:0.01}).observe($('#film-shell'));
-const steps=[
- {file:'shelf-floorprobe-r222',badge:'BEFORE CALIBRATION',title:'An imperfect model meets the simulator.',copy:'The agent constructs an arm model from prior knowledge, then tests it through interaction. Its initial geometry is inaccurate.',metric:'38.9',unit:'mm initial calibration RMSE'},
- {file:'shelf-calib-main-r222',badge:'FIT ROBOT GEOMETRY',title:'Measure. Calibrate. Try again.',copy:'Using a grasped block as a marker, the agent fits six geometry parameters to observed positions. The model becomes accurate enough to guide inverse kinematics.',metric:'1.8',unit:'mm calibrated RMSE'},
- {file:'shelf-heldout-100-r222',badge:'FROZEN PROGRAM · HELD-OUT TESTS',title:'The same code, across unseen instances.',copy:'The finished policy is frozen and evaluated on 100 unseen instances. It acts directly from observations, without calling an LLM at test time.',metric:'100',unit:'held-out instances per program'}
-];
-function selectStep(i){
- const s=steps[i];$$('[data-step]').forEach((b,j)=>{b.classList.toggle('active',j===i);b.setAttribute('aria-selected',String(j===i));b.tabIndex=j===i?0:-1;});$('#method-panel').setAttribute('aria-labelledby',`step-${i}`);
- const v=$('#method-video');v.pause();v.poster=`assets/posters/${s.file}.jpg`;v.src=`film/assets/clips/${s.file}.mp4`;v.load();
- $('#method-badge').textContent=s.badge;$('#method-title').textContent=s.title;$('#method-copy').textContent=s.copy;$('#method-metric').innerHTML=`${s.metric} <span>${s.unit}</span>`;
-}
-$$('[data-step]').forEach((b,i)=>{b.addEventListener('click',()=>selectStep(i));b.addEventListener('keydown',e=>{let next=i;if(e.key==='ArrowDown'||e.key==='ArrowRight')next=(i+1)%3;else if(e.key==='ArrowUp'||e.key==='ArrowLeft')next=(i+2)%3;else if(e.key==='Home')next=0;else if(e.key==='End')next=2;else return;e.preventDefault();selectStep(next);$(`#step-${next}`).focus();});});
-['method-video','env-video'].forEach(id=>{const v=document.getElementById(id);v.addEventListener('play',()=>{pauseFilm();['method-video','env-video'].filter(x=>x!==id).forEach(x=>document.getElementById(x).pause());});new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)v.pause();},{threshold:0.01}).observe(v);});
+const methodStory = mountMethodStory($('#method'), {
+  reduced,
+  connection: navigator.connection,
+  pauseOtherMedia: () => {pauseFilm();$('#env-video').pause();},
+});
+const envVideo = $('#env-video');
+envVideo.addEventListener('play', () => {pauseFilm();methodStory.pause();});
+new IntersectionObserver(entries => {if (!entries[0].isIntersecting) envVideo.pause();}, {threshold:0.01}).observe(envVideo);
 
 let data, scope='all', family='all', descending=true;
 function renderRanking(){
