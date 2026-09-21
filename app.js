@@ -28,7 +28,7 @@ new IntersectionObserver(entries => {if (!entries[0].isIntersecting) pauseFilm()
 projectVideo.addEventListener('error', () => {
   const message = document.createElement('p');
   message.className = 'video-error';
-  message.textContent = 'The video could not load. Please try the download link below.';
+  message.textContent = 'The video could not load. Please reload the page and try again.';
   if (!$('#video .video-error')) projectVideo.after(message);
 });
 new IntersectionObserver(entries => {if (!entries[0].isIntersecting) envVideo.pause();}, {threshold:0.01}).observe(envVideo);

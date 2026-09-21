@@ -19,10 +19,10 @@ Open http://127.0.0.1:8770/. The included server supports byte ranges for seekin
 ## Page structure
 
 - Header and title: the PRPL logo, the full paper title, a background rollout mosaic, and matching Paper, Code, Leaderboard, and Gallery links.
-- Setup: a paper-grounded definition of generalized TAMP (Introduction and Section II), three instances of the same Obstruction task, and the synthesis/evaluation protocol (Sections III-A and IV-A). Each explanation links to the relevant paper section.
+- Setup: a paper-grounded definition of generalized TAMP (Introduction and Section II), three instances of the same Obstruction task, and the synthesis/evaluation protocol with links to Sections III-A and IV-A.
 - Gallery: examples near the top of the page. Clips loop silently when visible, with native playback controls. Captions describe the behavior and identify the coding agent and the paper's **Main setting / + source** terminology. Seeds and episode identifiers remain in the data, but are not displayed on cards.
-- Project video: a normal MP4 with native controls, a fixed 16:9 frame, and a download link. A short paragraph identifies the Shelf investigation as an observed example, without presenting it as a prescribed pipeline.
-- Leaderboard: all six methods from the paper, with environment-family and matched-planner-coverage controls. Click the score heading to reverse sorting.
+- Project video: a normal MP4 with native controls and a fixed 16:9 frame.
+- Leaderboard: all six methods from the paper, with environment-family and matched-planner-coverage controls. Click the score heading to reverse sorting. An unranked “Future coding agents” placeholder appears above the measured methods with an unknown score; it is excluded from benchmark data and sorting.
 - Environment explorer: all 28 environments, their verbatim agent-facing descriptions from archived main-setting runs, all six method rows, and printed run-level ranges. Descriptions include the original task, observation, action, and reward/goal text. The panel is visible by default and scrolls for long tables; a link opens the unchanged Markdown file.
 
 The background and gallery videos pause off screen or when the tab is hidden. Reduced-motion and data-saving preferences disable their automatic playback. Manually paused gallery clips stay paused when returning to them. The main video plays only on request and pauses other visible gallery clips while playing.

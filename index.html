@@ -11,8 +11,8 @@
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#66418b">
   <link rel="icon" href="assets/prpl-robot.png" type="image/png">
-  <link rel="stylesheet" href="styles.css?v=descriptions-5">
-  <script type="module" src="app.js?v=descriptions-5"></script>
+  <link rel="stylesheet" href="styles.css?v=refinement-6">
+  <script type="module" src="app.js?v=refinement-6"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -45,7 +45,6 @@
     <p>In task and motion planning (TAMP), discrete choices—such as which object to manipulate, which tool to use, or which subgoal to pursue—are coupled to continuous geometric, kinematic, and dynamic constraints.</p>
     <p><strong>Generalized TAMP</strong> exploits regularities across problem instances to produce reusable solutions, for example by learning samplers, feasibility predictors, search heuristics, or abstractions. In this paper, we study coding agents as a synthesis method that produces a single programmatic policy for each environment: <strong>AgenticGenPlan</strong>.</p>
     <p>Within an environment, instances may differ in object count, configuration, and geometry, while sharing the state and action spaces, transition model, and reward function. States are fully observed and object-centric; perception and language understanding are outside the scope of this study.</p>
-    <p class="paper-reference">Based on the paper’s <a href="assets/paper.pdf#page=1" target="_blank" rel="noopener">Introduction</a> and <a href="assets/paper.pdf#page=2" target="_blank" rel="noopener">Section II: Problem Setting</a>.</p>
   </div>
   <figure class="instance-example">
     <div class="instance-grid">
@@ -62,7 +61,7 @@
   </div>
   <p class="benchmark-scope">The study includes 25 KinDER environments across four families and three PDDLStream domains: Packing, Blocked, and Rovers. <a href="#results">View each environment and the exact description given to the agent.</a></p>
   <p class="paper-reference">Protocol: <a href="assets/paper.pdf#page=3" target="_blank" rel="noopener">Section III-A</a> and <a href="assets/paper.pdf#page=4" target="_blank" rel="noopener">Section IV-A</a>.</p>
-  <div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong>700</strong><span>synthesized programs</span></div><div><strong>70,000</strong><span>evaluation episodes</span></div><div><strong>0</strong><span>LLM calls at test time</span></div></div>
+  <div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong>700</strong><span>synthesized programs</span></div><div><strong>70,000</strong><span>evaluation episodes</span></div></div>
 </section>
 <section class="gallery-section" aria-labelledby="gallery-title"><div class="section gallery" id="gallery">
   <div class="section-heading"><h2 id="gallery-title">Gallery</h2><p>Examples of tool use, task strategies, and failure recovery in the synthesized programs. Main setting uses the simulator API; + source also provides the environment source code.</p></div>
@@ -73,14 +72,14 @@
 <section class="section video-section" id="video" aria-labelledby="video-title">
   <div class="section-heading"><h2 id="video-title">Project video</h2><p>An overview of the task setup, a synthesis example, experimental results, and selected behaviors.</p></div>
   <video id="project-video" controls playsinline preload="metadata" poster="assets/posters/project-video.jpg" aria-label="Project video: Coding Agents for Generalized Task and Motion Planning Problems"><source src="assets/project-video.mp4" type="video/mp4">Your browser cannot play this video. <a href="assets/project-video.mp4">Download the MP4</a>.</video>
-  <div class="video-caption"><p>A silent video; explanations and playback speeds are shown on screen.</p><a href="assets/project-video.mp4" download>Download video ↓</a></div>
-  <aside class="synthesis-note"><h3>Example investigation</h3><p>In the Shelf run shown in the video, the agent uses a held block to measure the arm’s geometry and fit a model for inverse kinematics. This is one observed investigation during synthesis, rather than a prescribed sequence of steps.</p></aside>
 </section>
 <section class="section leaderboard" id="leaderboard"><div class="section-heading"><div><h2>Leaderboard</h2></div><div><p>Mean success rates over 100 held-out instances per run, averaged across five runs and the selected environments.</p><a class="inline-link" href="data/benchmark.csv" download>Download the results <span>↓</span></a></div></div>
 <div class="leader-toolbar"><div class="segmented" role="group" aria-label="Evaluation coverage"><button class="active" data-scope="all" aria-pressed="true">All 28 environments</button><button data-scope="shared" aria-pressed="false">Planner subset · 16</button></div><label class="select-label">Family <select id="family-filter"><option value="all">All families</option><option>Kinematic 2D</option><option>Dynamic 2D</option><option>Kinematic 3D</option><option>Dynamic 3D</option><option>PDDLStream</option></select></label></div>
 <p class="scope-note" id="scope-note" aria-live="polite">Loading the paper’s results…</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Leaderboard, scroll horizontally on smaller screens"><table class="ranking"><caption class="sr-only">Mean held-out success rate by method. The experimental setting or supplied information is shown for every method.</caption><thead><tr><th scope="col">Rank</th><th scope="col">Method / backend</th><th scope="col">Setting / access</th><th scope="col">Coverage</th><th scope="col" aria-sort="descending"><button id="sort-score">Mean success <span aria-hidden="true">↓</span></button></th></tr></thead><tbody id="ranking-body"></tbody></table></div>
-<div class="leader-note"><p>Equal-environment averages of the rounded means in Tables I–II. The source-access reference is listed separately. Missing planner results are excluded from its average.</p><a href="assets/paper.pdf#page=5" target="_blank" rel="noopener">Read the tables ↗</a></div><div class="future"><p>More coding agents on the way.</p></div>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Leaderboard, scroll horizontally on smaller screens"><table class="ranking"><caption class="sr-only">Mean held-out success rate by method. Future coding agents are unranked and have not yet been evaluated.</caption><thead><tr><th scope="col">Rank</th><th scope="col">Method / backend</th><th scope="col">Setting / access</th><th scope="col">Coverage</th><th scope="col" aria-sort="descending"><button id="sort-score">Mean success <span aria-hidden="true">↓</span></button></th></tr></thead>
+<tbody class="future-methods"><tr><td class="rank">—</td><td><span class="method-name">Future coding agents</span><span class="backend">Not yet evaluated</span></td><td>—</td><td class="coverage">—</td><td class="score-cell"><span class="score-number" aria-label="Unknown">?</span></td></tr></tbody>
+<tbody id="ranking-body"></tbody></table></div>
+<div class="leader-note"><p>Equal-environment averages of the rounded means in Tables I–II. The source-access reference is listed separately. Missing planner results are excluded from its average.</p><a href="assets/paper.pdf#page=5" target="_blank" rel="noopener">Read the tables ↗</a></div>
 </section>
 <section class="results-section" id="results"><div class="section"><div class="section-heading"><div><h2>Results by environment</h2></div><p>Select an environment to read the exact description supplied to the agent in the main setting, watch an example rollout, and compare all six methods.</p></div><div class="explorer"><div class="env-list" role="group" aria-label="Select an environment" id="env-list"></div><div class="env-detail"><div class="env-title"><div><p class="eyebrow" id="env-family"></p><h3 id="env-name"></h3></div></div>
 <section class="env-description" aria-labelledby="env-description-title">
