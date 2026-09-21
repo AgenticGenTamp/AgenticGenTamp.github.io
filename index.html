@@ -1,74 +1,87 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AgenticGenTAMP — Coding Agents for Generalized Task and Motion Planning</title>
-  <meta name="description" content="Can coding agents write programs that generalize across task and motion planning problems? Explore our study of 28 environments, 700 programs, and 70,000 evaluation episodes.">
-  <meta property="og:title" content="Coding Agents for Generalized Task and Motion Planning">
-  <meta property="og:description" content="One program. Many instances. Explore the study, leaderboard, and unexpected strategies.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Coding Agents for Generalized Task and Motion Planning Problems</title>
+  <meta name="description" content="A study of coding agents for generalized task and motion planning across 28 simulated environments. Videos, experimental setup, and complete benchmark results.">
+  <meta property="og:title" content="Coding Agents for Generalized Task and Motion Planning Problems">
+  <meta property="og:description" content="Experimental setup, example behaviors, and results across 28 simulated environments.">
   <meta property="og:image" content="https://AgenticGenTamp.github.io/assets/posters/study-mosaic-240.jpg">
-  <meta property="og:type" content="website"><meta name="theme-color" content="#202921">
-  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=method-story-3"><script type="module" src="app.js?v=method-story-3"></script>
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#66418b">
+  <link rel="icon" href="assets/prpl-robot.png" type="image/png">
+  <link rel="stylesheet" href="styles.css?v=research-4">
+  <script type="module" src="app.js?v=research-4"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="nav" id="nav"><a class="wordmark" href="#top" aria-label="AgenticGenTAMP home"><span class="mark" aria-hidden="true">a<span>↗</span></span>Agentic<span>GenTAMP</span></a><nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#method">Method</a><a href="#leaderboard">Leaderboard</a><a href="#gallery">Gallery</a><a class="nav-paper" href="assets/paper.pdf" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a></nav></header>
+<header class="nav" id="nav">
+  <div class="identity">
+    <a class="lab-logo" href="https://prpl-group.com/" target="_blank" rel="noopener" aria-label="Princeton Robot Planning and Learning lab"><img src="assets/prpl-robot.png" width="602" height="435" alt="PRPL"></a>
+    <a class="wordmark" href="#top">AgenticGenTAMP</a>
+  </div>
+  <nav aria-label="Main navigation"><a href="#overview">Setup</a><a href="#gallery">Gallery</a><a href="#video">Video</a><a href="#leaderboard">Leaderboard</a><a href="assets/paper.pdf" target="_blank" rel="noopener">Paper ↗</a></nav>
+</header>
 <section class="hero" id="top" aria-labelledby="hero-title">
-  <video id="hero-video" class="hero-video" muted loop playsinline preload="none" poster="assets/posters/study-mosaic-240.jpg" aria-hidden="true"><source src="assets/hero.mp4" type="video/mp4"></video><div class="hero-shade"></div>
-  <div class="hero-content"><p class="eyebrow light"><span class="status-dot"></span>A study of coding agents &amp; physical reasoning</p><h1 id="hero-title">Coding agents for<br>generalized task<br>and motion planning.</h1><p class="hero-summary">Give an agent a simulator. Let it write a program.<br>See how far that program generalizes.</p><div class="hero-actions"><a class="button cream" href="assets/paper.pdf" target="_blank" rel="noopener">Read the paper <span>↗</span></a><a class="button glass" href="https://github.com/tomsilver/robocode" target="_blank" rel="noopener">Code <span>↗</span></a><a class="button cream hero-destination" href="#leaderboard">Leaderboard <span aria-hidden="true">↓</span></a><a class="button cream hero-destination" href="#gallery">Gallery <span aria-hidden="true">↓</span></a></div></div>
-  <div class="hero-bottom"><a href="#overview">SCROLL TO EXPLORE <span>↓</span></a><span class="hero-caption">Real rollouts. Across 28 environments.</span><button id="motion-toggle" aria-label="Play background video">▶ Background</button></div>
-</section>
-<main id="main">
-<section class="section overview" id="overview"><div class="section-heading"><div><p class="eyebrow">01 / THE BIG PICTURE</p><h2>One program.<br><em>Many instances.</em></h2></div><p>Can a general-purpose coding agent discover the physical reasoning needed for task and motion planning? We let agents investigate a simulator, develop a policy, and test that frozen program on unseen instances.</p></div>
-<div class="film-shell" id="film-shell"><button class="film-cover" id="film-play" aria-label="Play the project video presentation"><img src="assets/posters/tossing-catapult-main-r42-ep3.jpg" alt="A robot prepares to toss a cube across the room" width="1280" height="720" loading="lazy"><span class="film-scrim"></span><span class="film-label">THE PROJECT FILM</span><span class="play-orb" aria-hidden="true">▶</span><span class="film-title">Programs that learn<br>to <em>act.</em></span><span class="film-cta">Watch the full walkthrough <span>↗</span></span></button></div>
-<div class="film-chapters" aria-label="Video chapters"><button data-time="0">01 <span>The question</span></button><button data-time="49">02 <span>Inside the agent</span></button><button data-time="107">03 <span>The results</span></button><button data-time="136">04 <span>Unexpected strategies</span></button><a href="film/" target="_blank" rel="noopener" aria-label="Open the full presentation in a new tab">Open film ↗</a></div>
-<div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong>700</strong><span>synthesized programs</span></div><div><strong>70,000</strong><span>held-out evaluation episodes</span></div><div><strong>0</strong><span>LLM calls at test time</span></div></div>
-</section>
-<section class="method-section" id="method"><div class="section">
-  <div class="section-heading"><div><p class="eyebrow">02 / THE METHOD</p><h2>Room to experiment.<br><em>Code that generalizes.</em></h2></div><p>The agent tests its assumptions, uses what it observes to improve its program, then freezes the code for unseen instances. Follow one real Shelf run from an inaccurate arm model to a reusable policy.</p></div>
-  <div class="method-inputs"><span>GIVEN TO THE AGENT</span><ul><li>Task description</li><li>Simulator: <code>reset</code> + <code>step</code></li><li>$20 synthesis budget</li></ul><p>No simulator source or hand-designed planning abstractions.</p></div>
-  <div class="story-toolbar"><div><strong>A real synthesis trace</strong><p>Shelf · Claude Code · Opus 5 · seed 222</p></div><div class="story-playback"><span id="method-status">Probe → calibrate → evaluate</span><button id="method-toggle" hidden>Pause walkthrough</button></div></div>
-  <ol class="method-story" aria-label="The three stages of the synthesis process">
-    <li class="story-stage active" data-method-stage="0" aria-current="step">
-      <header><span class="story-number">01</span><div><p>DURING SYNTHESIS</p><h3>Test the model</h3></div><span class="story-arrow" aria-hidden="true">→</span></header>
-      <div class="story-media"><video class="story-video" data-src="assets/method/probe.mp4" poster="assets/method/probe.jpg" muted playsinline preload="none" aria-label="The initial arm model is tested against the simulator"></video><span class="story-video-label">Floor probe · 3×</span></div>
-      <progress class="story-progress" max="1" value="0" aria-label="Test the model playback progress"></progress>
-      <div class="story-copy"><h4>The prediction does not match reality.</h4><p>The arm stalls against the floor, even though the agent’s initial model predicts clearance. It needs to measure the robot’s actual geometry.</p><div class="story-fact"><strong>38.9 <small>mm</small></strong><span>Initial position RMSE<br>on calibration observations</span></div><div class="story-output"><span>NEXT</span>Collect positions to correct the model <b aria-hidden="true">→</b></div></div>
-    </li>
-    <li class="story-stage" data-method-stage="1">
-      <header><span class="story-number">02</span><div><p>DURING SYNTHESIS</p><h3>Fit &amp; refine</h3></div><span class="story-arrow" aria-hidden="true">→</span></header>
-      <div class="story-media"><video class="story-video" data-src="assets/method/calibrate.mp4" poster="assets/method/calibrate.jpg" muted playsinline preload="none" aria-label="The robot moves a held block to collect calibration observations; an orange ghost shows the prior prediction"></video><span class="story-video-label" id="calibration-video-label">Collect block positions · 8×</span></div>
-      <progress class="story-progress" max="1" value="0" aria-label="Fit and refine playback progress"></progress>
-      <div class="story-copy"><h4>Use the held block as a measuring tool.</h4><p>Observed block positions let the agent fit six parameters for the robot mount and grasp offsets. It uses the calibrated model for inverse kinematics and refines its policy.</p><div class="story-fact"><strong>1.8 <small>mm</small></strong><span>Position RMSE after calibration<br>on the same observations</span></div><div class="story-output"><span>NEXT</span>Freeze the resulting program <b aria-hidden="true">→</b></div></div>
-    </li>
-    <li class="story-stage" data-method-stage="2">
-      <header><span class="story-number">03</span><div><p>HELD-OUT EVALUATION</p><h3>Freeze &amp; test</h3></div><span class="story-arrow" aria-hidden="true">↗</span></header>
-      <div class="story-media"><video class="story-video" data-src="assets/method/evaluate.mp4" poster="assets/method/evaluate.jpg" muted playsinline preload="none" aria-label="The frozen Shelf policy runs on a mosaic of 100 held-out instances"></video><span class="story-video-label">Same program, new instances · 8×</span></div>
-      <progress class="story-progress" max="1" value="0" aria-label="Freeze and test playback progress"></progress>
-      <div class="story-copy"><h4>New instances. The same frozen code.</h4><p>Evaluate the program on 100 unseen instances with different configurations. The coding agent is no longer involved: the program computes the actions itself.</p><div class="story-fact"><strong>100</strong><span>Held-out test instances<br>0 LLM calls at test time</span></div><div class="story-output"><span>OUTPUT</span>A reusable programmatic policy <b aria-hidden="true">✓</b></div></div>
-    </li>
-  </ol>
-  <div class="calibration-detail">
-    <figure class="calibration-figure"><img src="film/assets/figures/shelf-discovery-1.png" width="700" height="615" alt="Four views from the paper: probe the arm, compare the orange predicted pose with the observed pose, fit the robot geometry, then use calibrated inverse kinematics to place a block on the shelf." loading="lazy"><figcaption>The Shelf case study from the paper. The model discrepancy is enlarged for visibility.</figcaption></figure>
-    <div class="calibration-explanation"><p class="eyebrow">WHAT CHANGED BETWEEN STAGES 1 AND 2?</p><h3>A model that matches<br><em>what the robot actually does.</em></h3><p>The agent compares where its model predicts the held block will be with where the simulator says it is. Fitting the geometry brings those positions much closer together.</p>
-      <div class="error-comparison" role="img" aria-label="Block position calibration RMSE decreases from 38.9 millimeters before calibration to 1.8 millimeters after calibration. Both bars use the same zero to 40 millimeter scale."><div class="error-axis"><span>POSITION RMSE</span><span>0–40 mm</span></div><div class="error-row before"><div><span>Before calibration</span><strong>38.9 <small>mm</small></strong></div><div class="error-track"><i style="width:97.25%"></i></div></div><div class="error-row after"><div><span>After calibration</span><strong>1.8 <small>mm</small></strong></div><div class="error-track"><i style="width:4.5%"></i></div></div></div>
-      <div class="calibration-takeaway"><strong>Learn the geometry → use it to choose actions.</strong><p>The calibrated model helps the policy solve inverse kinematics. These errors describe the calibration observations; held-out task success is evaluated separately in stage 3.</p></div>
+  <video id="hero-video" class="hero-video" muted loop playsinline preload="none" poster="assets/posters/study-mosaic-240.jpg" aria-hidden="true"><source src="assets/hero.mp4" type="video/mp4"></video>
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <h1 id="hero-title">Coding Agents for Generalized Task and Motion Planning Problems</h1>
+    <p class="hero-summary">We study whether coding agents can develop reusable programs for manipulation tasks across 28 simulated environments.</p>
+    <div class="hero-actions">
+      <a class="button" href="assets/paper.pdf" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a>
+      <a class="button" href="https://github.com/tomsilver/robocode" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a>
+      <a class="button" href="#leaderboard">Leaderboard <span aria-hidden="true">↓</span></a>
+      <a class="button" href="#gallery">Gallery <span aria-hidden="true">↓</span></a>
     </div>
   </div>
+  <div class="hero-bottom"><span>Example rollouts from the study</span><button id="motion-toggle" aria-label="Play background video">Play background</button></div>
+</section>
+<main id="main">
+<section class="section setup" id="overview" aria-labelledby="setup-title">
+  <h2 id="setup-title">Generalized task and motion planning</h2>
+  <div class="setup-intro">
+    <p>Task and motion planning (TAMP) combines decisions about <strong>what a robot should do</strong>—such as which object to move—with decisions about <strong>how it can move</strong> while satisfying geometric and physical constraints.</p>
+    <p>Generalized TAMP seeks a reusable policy for a family of problems. The task stays the same, while the number of objects, their positions, and other instance details change. In this study, the policy is a program written by a coding agent, which we call <strong>AgenticGenPlan</strong>.</p>
+  </div>
+  <figure class="instance-example">
+    <div class="instance-grid">
+      <div><img src="assets/setup/obstruction-26.jpg" width="480" height="360" alt="Obstruction task with one obstacle" loading="lazy"><span>1 obstacle</span></div>
+      <div><img src="assets/setup/obstruction-92.jpg" width="480" height="360" alt="Obstruction task with two obstacles" loading="lazy"><span>2 obstacles</span></div>
+      <div><img src="assets/setup/obstruction-84.jpg" width="480" height="360" alt="Obstruction task with four obstacles" loading="lazy"><span>4 obstacles</span></div>
+    </div>
+    <figcaption>Different instances of the Obstruction task. The same program must retrieve the target block across these configurations.</figcaption>
+  </figure>
+  <h3 class="setup-subheading">Experimental setup</h3>
+  <div class="setup-grid">
+    <article><h4>Program synthesis</h4><p>The coding agent receives a task description, a simulator API, and a $20 synthesis budget. It can run experiments and revise its program. In the <strong>main setting</strong>, it receives neither the simulator source nor hand-designed planning abstractions. The <strong>+ source</strong> setting additionally provides the simulator source code.</p></article>
+    <article><h4>Held-out evaluation</h4><p>We freeze each program and evaluate it on 100 unseen instances, with five independent synthesis runs per method and environment. The program selects actions without further LLM calls. Environments provide fully observed, object-centric states; visual perception is outside the scope of this study.</p></article>
+  </div>
+  <div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong>700</strong><span>synthesized programs</span></div><div><strong>70,000</strong><span>evaluation episodes</span></div><div><strong>0</strong><span>LLM calls at test time</span></div></div>
+</section>
+<section class="gallery-section" aria-labelledby="gallery-title"><div class="section gallery" id="gallery">
+  <div class="section-heading"><h2 id="gallery-title">Gallery</h2><p>Examples of tool use, task strategies, and failure recovery in the synthesized programs. Main setting uses the simulator API; + source also provides the environment source code.</p></div>
+  <div class="gallery-filters" role="group" aria-label="Filter gallery"><button class="active" data-category="all" aria-pressed="true">All examples</button><button data-category="Strategy" aria-pressed="false">Task strategies</button><button data-category="Tool use" aria-pressed="false">Tool use</button><button data-category="Recovery" aria-pressed="false">Failure recovery</button></div>
+  <div class="gallery-grid" id="gallery-grid"></div>
+  <noscript><p>Enable JavaScript to view the interactive gallery and results, or <a href="assets/project-video.mp4">watch the project video</a> and <a href="data/benchmark.csv">download the results</a>.</p></noscript>
 </div></section>
-<section class="section leaderboard" id="leaderboard"><div class="section-heading"><div><p class="eyebrow">03 / THE LEADERBOARD</p><h2>Put every method<br><em>to the test.</em></h2></div><div><p>Five runs. One hundred held-out instances per environment. Explore the results across both geometric and dynamic tasks.</p><a class="inline-link" href="data/benchmark.csv" download>Download the results <span>↓</span></a></div></div>
+<section class="section video-section" id="video" aria-labelledby="video-title">
+  <div class="section-heading"><h2 id="video-title">Project video</h2><p>An overview of the task setup, a synthesis example, experimental results, and selected behaviors.</p></div>
+  <video id="project-video" controls playsinline preload="metadata" poster="assets/posters/project-video.jpg" aria-label="Project video: Coding Agents for Generalized Task and Motion Planning Problems"><source src="assets/project-video.mp4" type="video/mp4">Your browser cannot play this video. <a href="assets/project-video.mp4">Download the MP4</a>.</video>
+  <div class="video-caption"><p>A silent video; explanations and playback speeds are shown on screen.</p><a href="assets/project-video.mp4" download>Download video ↓</a></div>
+  <aside class="synthesis-note"><h3>Example investigation</h3><p>In the Shelf run shown in the video, the agent uses a held block to measure the arm’s geometry and fit a model for inverse kinematics. This is one observed investigation during synthesis, rather than a prescribed sequence of steps.</p></aside>
+</section>
+<section class="section leaderboard" id="leaderboard"><div class="section-heading"><div><h2>Leaderboard</h2></div><div><p>Mean success rates over 100 held-out instances per run, averaged across five runs and the selected environments.</p><a class="inline-link" href="data/benchmark.csv" download>Download the results <span>↓</span></a></div></div>
 <div class="leader-toolbar"><div class="segmented" role="group" aria-label="Evaluation coverage"><button class="active" data-scope="all" aria-pressed="true">All 28 environments</button><button data-scope="shared" aria-pressed="false">Planner subset · 16</button></div><label class="select-label">Family <select id="family-filter"><option value="all">All families</option><option>Kinematic 2D</option><option>Dynamic 2D</option><option>Kinematic 3D</option><option>Dynamic 3D</option><option>PDDLStream</option></select></label></div>
 <p class="scope-note" id="scope-note" aria-live="polite">Loading the paper’s results…</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Leaderboard, scroll horizontally on smaller screens"><table class="ranking"><caption class="sr-only">Mean held-out success rate by method. Source access is shown for every method.</caption><thead><tr><th scope="col">Rank</th><th scope="col">Method / backend</th><th scope="col">Environment access</th><th scope="col">Coverage</th><th scope="col" aria-sort="descending"><button id="sort-score">Mean success <span aria-hidden="true">↓</span></button></th></tr></thead><tbody id="ranking-body"></tbody></table></div>
-<div class="leader-note"><p>Equal-environment averages of the rounded means in Tables I–II. The source-access reference is listed separately. Missing planner results are excluded from its average.</p><a href="assets/paper.pdf#page=5" target="_blank" rel="noopener">Read the tables ↗</a></div><div class="future"><span class="orbit" aria-hidden="true">＋</span><p>More coding agents on the way.</p><span class="future-line"></span></div>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Leaderboard, scroll horizontally on smaller screens"><table class="ranking"><caption class="sr-only">Mean held-out success rate by method. The experimental setting or supplied information is shown for every method.</caption><thead><tr><th scope="col">Rank</th><th scope="col">Method / backend</th><th scope="col">Setting / access</th><th scope="col">Coverage</th><th scope="col" aria-sort="descending"><button id="sort-score">Mean success <span aria-hidden="true">↓</span></button></th></tr></thead><tbody id="ranking-body"></tbody></table></div>
+<div class="leader-note"><p>Equal-environment averages of the rounded means in Tables I–II. The source-access reference is listed separately. Missing planner results are excluded from its average.</p><a href="assets/paper.pdf#page=5" target="_blank" rel="noopener">Read the tables ↗</a></div><div class="future"><p>More coding agents on the way.</p></div>
 </section>
-<section class="results-section" id="results"><div class="section"><div class="section-heading"><div><p class="eyebrow">04 / A CLOSER LOOK</p><h2>Different worlds.<br><em>Different challenges.</em></h2></div><p>Explore all 28 environments. Compare every method, including the range across synthesis runs, alongside an example rollout.</p></div><div class="explorer"><div class="env-list" role="group" aria-label="Select an environment" id="env-list"></div><div class="env-detail"><div class="env-title"><div><p class="eyebrow" id="env-family"></p><h3 id="env-name"></h3></div><span class="small-label">EXAMPLE ROLLOUT</span></div><video id="env-video" controls muted playsinline preload="none"></video><div class="env-bars" id="env-bars"></div><p class="fine">Bars show mean success; brackets give min–max across the five runs. Example videos illustrate behavior and do not represent an average run.</p></div></div>
-<div class="insights"><article class="insight"><p class="eyebrow">WHEN SOURCE CODE HELPS</p><h3>From no successes<br>to <em>57%.</em></h3><p>On SweepIntoDrawer, access to source code raises Claude Code’s mean success from 0% to 57%. The agent discovers it can use the gripper itself to sweep.</p><button class="inline-link" data-select-env="SweepIntoDrawer3D">Inspect this environment ↗</button></article><article class="insight efficiency"><p class="eyebrow">FAST PROGRAMS AT TEST TIME</p><h3>Decisions in<br><em>4.0 milliseconds.</em></h3><div class="time-bar"><span>Main setting</span><i style="--w:14.34%;--c:var(--rust)"></i><strong>4.002 ms</strong></div><div class="time-bar"><span>With source</span><i style="--w:100%;--c:#956d9b"></i><strong>27.900 ms</strong></div><p class="fine">Policy computation per action. Equal-environment means on 44 matched seeds across 13 environments where both settings achieve 100% success. Table III.</p></article></div>
+<section class="results-section" id="results"><div class="section"><div class="section-heading"><div><h2>Results by environment</h2></div><p>Select an environment to compare all six methods and view an example rollout. Ranges show the minimum and maximum success rates across synthesis runs.</p></div><div class="explorer"><div class="env-list" role="group" aria-label="Select an environment" id="env-list"></div><div class="env-detail"><div class="env-title"><div><p class="eyebrow" id="env-family"></p><h3 id="env-name"></h3></div><span class="small-label">Example rollout</span></div><video id="env-video" controls muted playsinline preload="none"></video><div class="env-bars" id="env-bars"></div><p class="fine">Bars show mean success; brackets give min–max across the five runs. Example videos illustrate behavior and do not represent an average run.</p></div></div>
+<div class="insights"><article class="insight"><h3>Effect of source access</h3><p>On SweepIntoDrawer, access to source code raises Claude Code’s mean success from 0% to 57%. The agent discovers it can use the gripper itself to sweep.</p><button class="inline-link" data-select-env="SweepIntoDrawer3D">Inspect this environment ↗</button></article><article class="insight efficiency"><h3>Computation at test time</h3><div class="time-bar"><span>Main setting</span><i style="--w:14.34%;--c:var(--rust)"></i><strong>4.002 ms</strong></div><div class="time-bar"><span>+ source</span><i style="--w:100%;--c:#956d9b"></i><strong>27.900 ms</strong></div><p class="fine">Policy computation per action. Equal-environment means on 44 matched seeds across 13 environments where both settings achieve 100% success. Table III.</p></article></div>
 </div></section>
-<section class="section gallery" id="gallery"><div class="section-heading"><div><p class="eyebrow">05 / THE GALLERY</p><h2>We didn’t tell it<br><em>to do that.</em></h2></div><p>Unexpected tool use, clever workarounds, and recovery from failure. A few moments worth watching.</p></div><div class="gallery-filters" role="group" aria-label="Filter gallery"><button class="active" data-category="all" aria-pressed="true">All moments</button><button data-category="Strategy" aria-pressed="false">Unexpected strategies</button><button data-category="Tool use" aria-pressed="false">Tool use</button><button data-category="Recovery" aria-pressed="false">Failure recovery</button></div><div class="gallery-grid" id="gallery-grid"></div><noscript><p>Enable JavaScript for the interactive results and gallery, or <a href="data/benchmark.csv">download the complete result table</a>.</p></noscript></section>
-<section class="closing"><p class="eyebrow">EXPLORE THE RESEARCH</p><h2>What can a coding agent<br><em>figure out next?</em></h2><div class="closing-links"><a class="button dark" href="assets/paper.pdf" target="_blank" rel="noopener">Read the paper ↗</a><a class="button outline" href="https://github.com/tomsilver/robocode" target="_blank" rel="noopener">Explore the code ↗</a></div></section>
 </main>
-<footer><a class="wordmark" href="#top">Agentic<span>GenTAMP</span></a><p>Coding Agents for Generalized Task and Motion Planning Problems</p><a href="https://github.com/AgenticGenTamp/AgenticGenTamp.github.io" target="_blank" rel="noopener">Website source ↗</a></footer>
-
-</body></html>
+<footer><div><a class="wordmark" href="#top">AgenticGenTAMP</a><p>Coding Agents for Generalized Task and Motion Planning Problems</p></div><div class="footer-links"><a href="assets/paper.pdf" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/tomsilver/robocode" target="_blank" rel="noopener">Code ↗</a><a href="https://github.com/AgenticGenTamp/AgenticGenTamp.github.io" target="_blank" rel="noopener">Website source ↗</a></div></footer>
+</body>
+</html>

@@ -39,6 +39,7 @@ for g in json.loads((ROOT/'data/gallery.json').read_text()):
     require(f"film/assets/clips/{g['file']}.mp4");require(f"assets/posters/{g['file']}.jpg")
     assert all(key in g for key in ('method','backend','setting','seed','episode','description'))
 require('assets/hero.mp4')
-require('method-story.js')
+require('assets/project-video.mp4')
+require('assets/prpl-robot.png')
 if errors:raise SystemExit('\n'.join(errors))
 print('PASS: HTML references, 28 environments, 6 methods, paper checksum, gallery provenance, media sizes, private-path scan.')
