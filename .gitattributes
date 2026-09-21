@@ -1,0 +1,2 @@
+# Preserve the archived agent-input files byte for byte, including whitespace.
+data/environment-descriptions/*.md -text -whitespace

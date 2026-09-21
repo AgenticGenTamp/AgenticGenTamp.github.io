@@ -33,7 +33,8 @@ projectVideo.addEventListener('error', () => {
 });
 new IntersectionObserver(entries => {if (!entries[0].isIntersecting) envVideo.pause();}, {threshold:0.01}).observe(envVideo);
 
-let data, scope='all', family='all', descending=true;
+let data, descriptions, selectedEnvironment, descriptionLoadFailed=false;
+let scope='all', family='all', descending=true;
 function renderRanking(){
  const envs=selectEnvironments(data,scope,family);const rows=summarize(data,scope,family,descending);
  const plannerCount=envs.filter(e=>e.results.planner!==null).length;
@@ -43,10 +44,32 @@ function renderRanking(){
 }
 $$('[data-scope]').forEach(b=>b.addEventListener('click',()=>{scope=b.dataset.scope;$$('[data-scope]').forEach(x=>{const active=x===b;x.classList.toggle('active',active);x.setAttribute('aria-pressed',String(active));});if(data)renderRanking();}));
 $('#family-filter').addEventListener('change',e=>{family=e.target.value;if(data)renderRanking();});$('#sort-score').addEventListener('click',()=>{descending=!descending;if(data)renderRanking();});
+function renderEnvironmentDescription() {
+ const panel=$('#env-description-content');
+ const raw=$('#env-description-raw');
+ if(!selectedEnvironment)return;
+ raw.href=`data/environment-descriptions/${encodeURIComponent(selectedEnvironment)}.md`;
+ const entry=descriptions?.environments.find(e=>e.id===selectedEnvironment);
+ panel.setAttribute('aria-label', `Agent description: ${$('#env-name').textContent}`);
+ if(entry){
+   // HTML is generated from the checked-in Markdown with raw HTML disabled.
+   panel.innerHTML=entry.html;
+   raw.href=entry.rawFile;
+   panel.setAttribute('aria-busy','false');
+ }else if(descriptionLoadFailed || descriptions){
+   panel.textContent='The description could not load. Use the Original Markdown link above to read the archived text.';
+   panel.setAttribute('aria-busy','false');
+ }else{
+   panel.textContent='Loading the environment description…';
+   panel.setAttribute('aria-busy','true');
+ }
+ panel.scrollTop=0;
+ panel.scrollLeft=0;
+}
 function selectEnvironment(id){
  const env=data.environments.find(e=>e.id===id);if(!env)return;
  $$('[data-env]').forEach(b=>{b.classList.toggle('active',b.dataset.env===id);b.setAttribute('aria-pressed',String(b.dataset.env===id));});
- $('#env-family').textContent=env.family;$('#env-name').textContent=env.name;const v=$('#env-video');v.pause();v.poster=env.poster;v.src=env.video;v.load();
+ $('#env-family').textContent=env.family;$('#env-name').textContent=env.name;selectedEnvironment=id;renderEnvironmentDescription();const v=$('#env-video');v.pause();v.poster=env.poster;v.src=env.video;v.load();
  const order=['claude','codex','genplan','oneshot','planner','source'];
  $('#env-bars').innerHTML=order.map(id=>{const m=data.methods.find(x=>x.id===id),r=env.results[id];const name={claude:'Agentic · Claude Code',codex:'Agentic · Codex',genplan:'LLMGenPlan',oneshot:'One-shot',planner:'Planner',source:'Agentic + source'}[id];return `<div class="env-row"><strong>${name}</strong><span class="score-track"><span class="score-fill" style="--w:${r?r.mean*100:0}%;--c:${m.color}"></span></span><span class="env-value">${r?`${whole(r.mean)} <small>[${whole(r.min)}–${whole(r.max)}]</small>`:'Not available'}</span></div>`;}).join('');
 }
@@ -111,3 +134,5 @@ $$('[data-category]').forEach(b=>b.addEventListener('click',()=>{category=b.data
 async function loadJSON(path){const res=await fetch(path);if(!res.ok)throw new Error(`Cannot load ${path}: ${res.status}`);return res.json();}
 loadJSON('data/benchmark.json').then(result=>{data=result;renderRanking();renderEnvironmentList();}).catch(error=>{console.error(error);$('#scope-note').textContent='The interactive results could not load. Please download the CSV or read Tables I–II in the paper.';});
 loadJSON('data/gallery.json').then(result=>{gallery=result;renderGallery();}).catch(error=>{console.error(error);$('#gallery-grid').innerHTML='<p>The gallery could not load. <a href="assets/project-video.mp4">Watch the project video ↗</a></p>';});
+
+loadJSON('data/environment-descriptions.json?v=descriptions-5').then(result=>{descriptions=result;renderEnvironmentDescription();}).catch(error=>{console.error(error);descriptionLoadFailed=true;renderEnvironmentDescription();});

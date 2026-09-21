@@ -1,0 +1,454 @@
+{
+  "setting": "Main setting",
+  "description": "Verbatim env_description.md files from archived experiment runs. These files contain the environment-description portion of the initial agent prompt. They have not been rewritten or regenerated.",
+  "environments": [
+    {
+      "id": "StickButton2D",
+      "environmentKey": "stickbutton2d_generalized",
+      "name": "StickButton",
+      "family": "Kinematic 2D",
+      "rawFile": "data/environment-descriptions/StickButton2D.md",
+      "sha256": "993134fa767b554ac2d85aee0a7fbc3076bf1758dae196dfee440aaccfa5061c",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/kinematic2d.zip",
+        "member": "stickbutton2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__2a66bd4a/2026-09-04_09-35-38/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.kinematic2d.stickbutton2d:StickButton2DEnv"
+      }
+    },
+    {
+      "id": "Obstruction2D",
+      "environmentKey": "obstruction2d_generalized",
+      "name": "Obstruction",
+      "family": "Kinematic 2D",
+      "rawFile": "data/environment-descriptions/Obstruction2D.md",
+      "sha256": "240d5820bb4a168097d097757da0a75a73f4f92f77e767784ed549d086d77469",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/kinematic2d.zip",
+        "member": "obstruction2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__3736cd3f/2026-09-03_18-24-08/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.kinematic2d.obstruction2d:Obstruction2DEnv"
+      }
+    },
+    {
+      "id": "ClutteredStorage2D",
+      "environmentKey": "clutteredstorage2d_generalized",
+      "name": "ClutteredStorage",
+      "family": "Kinematic 2D",
+      "rawFile": "data/environment-descriptions/ClutteredStorage2D.md",
+      "sha256": "a47ce4560786dcc7842dedeb5b8be3c8d29f60ddd044396fa571e7a850c9c077",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/kinematic2d.zip",
+        "member": "clutteredstorage2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__d099d391/2026-09-04_07-20-08/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.kinematic2d.clutteredstorage2d:ClutteredStorage2DEnv"
+      }
+    },
+    {
+      "id": "ClutteredRetrieval2D",
+      "environmentKey": "clutteredretrieval2d_generalized",
+      "name": "ClutteredRetrieval",
+      "family": "Kinematic 2D",
+      "rawFile": "data/environment-descriptions/ClutteredRetrieval2D.md",
+      "sha256": "d5780c5362ca609b59205b674371c43cc46c1b6c053cc1e93e206f9f2604fc58",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/kinematic2d.zip",
+        "member": "clutteredretrieval2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__bdf9bfa8/2026-09-03_23-25-09/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.kinematic2d.clutteredretrieval2d:ClutteredRetrieval2DEnv"
+      }
+    },
+    {
+      "id": "Motion2D",
+      "environmentKey": "motion2d_generalized",
+      "name": "Motion",
+      "family": "Kinematic 2D",
+      "rawFile": "data/environment-descriptions/Motion2D.md",
+      "sha256": "532f698bb1f8b0fc49ffbc00fbfd155f9bbed32e39aaf142c4f53ba1a0a876c9",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/kinematic2d.zip",
+        "member": "motion2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__0abd3dc9/2026-09-04_01-31-22/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.kinematic2d.motion2d:Motion2DEnv"
+      }
+    },
+    {
+      "id": "PushPullHook2D",
+      "environmentKey": "pushpullhook2d",
+      "name": "PushPullHook",
+      "family": "Kinematic 2D",
+      "rawFile": "data/environment-descriptions/PushPullHook2D.md",
+      "sha256": "c8c0d9a1cf95bd8626ae893d7460f4b01f2efea221613b04c3892b9b3944a103",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/kinematic2d.zip",
+        "member": "pushpullhook2d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__45d72073/2026-09-04_03-08-53/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.kinder_geom2d_env.KinderGeom2DEnv",
+        "environmentImplementation": "kinder/PushPullHook2D-v0"
+      }
+    },
+    {
+      "id": "DynObstruction2D",
+      "environmentKey": "dynobstruction2d_generalized",
+      "name": "Obstruction",
+      "family": "Dynamic 2D",
+      "rawFile": "data/environment-descriptions/DynObstruction2D.md",
+      "sha256": "44efc5c33441e5713eaafde82a6e67257262ca561872e3503a4d81c213554ed3",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/dynamic2d.zip",
+        "member": "dynobstruction2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__0a98652d/2026-09-03_18-24-48/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.dynamic2d.dyn_obstruction2d:DynObstruction2DEnv"
+      }
+    },
+    {
+      "id": "DynPushPullHook2D",
+      "environmentKey": "dynpushpullhook2d_generalized",
+      "name": "PushPullHook",
+      "family": "Dynamic 2D",
+      "rawFile": "data/environment-descriptions/DynPushPullHook2D.md",
+      "sha256": "d84fc3f9030b111a1ed3958785163584e4e48c59d034239c3799a0226da48bf0",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/dynamic2d.zip",
+        "member": "dynpushpullhook2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__fa580313/2026-09-04_18-42-16/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.dynamic2d.dyn_pushpullhook2d:DynPushPullHook2DEnv"
+      }
+    },
+    {
+      "id": "DynPushT2D",
+      "environmentKey": "dynpusht2d",
+      "name": "PushT",
+      "family": "Dynamic 2D",
+      "rawFile": "data/environment-descriptions/DynPushT2D.md",
+      "sha256": "c112652aa000c5b7a4668c60b3da0c0daa70465a7f753c73200d462dfc1ca0b0",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/dynamic2d.zip",
+        "member": "dynpusht2d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__3a989e8a/2026-09-04_20-08-47/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.kinder_geom2d_env.KinderGeom2DEnv",
+        "environmentImplementation": "kinder/DynPushT2D-t1-v0"
+      }
+    },
+    {
+      "id": "DynScoopPour2D",
+      "environmentKey": "dynscooppour2d_generalized",
+      "name": "ScoopPour",
+      "family": "Dynamic 2D",
+      "rawFile": "data/environment-descriptions/DynScoopPour2D.md",
+      "sha256": "86c9e63b2cc5982ca8cfe1dffcbd515b4426b4760d5a6dcb7f2233b963cc58b6",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/dynamic2d.zip",
+        "member": "dynscooppour2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__fdd0573f/2026-09-04_23-25-18/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "robocode.environments.generalized_dynamic2d:CountParameterizedDynScoopPour2DEnv"
+      }
+    },
+    {
+      "id": "Obstruction3D",
+      "environmentKey": "obstruction3d_generalized",
+      "name": "Obstruction",
+      "family": "Kinematic 3D",
+      "rawFile": "data/environment-descriptions/Obstruction3D.md",
+      "sha256": "e5b2b6cd52c011a7f1ec184c573d362676a5e6fe66db454b880d4ceca7cfb1b4",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/kinematic3d.zip",
+        "member": "obstruction3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__9e2b7c7e/2026-09-03_18-24-28/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.kinematic3d.obstruction3d:Obstruction3DEnv"
+      }
+    },
+    {
+      "id": "Packing3D",
+      "environmentKey": "packing3d_generalized",
+      "name": "Packing",
+      "family": "Kinematic 3D",
+      "rawFile": "data/environment-descriptions/Packing3D.md",
+      "sha256": "cb5029e9de153ab3d356c6384ddda71e6d49d5506bacf5d0d1e49a406b427113",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/kinematic3d.zip",
+        "member": "packing3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__414bfc26/2026-09-03_20-11-44/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.kinematic3d.packing3d:Packing3DEnv"
+      }
+    },
+    {
+      "id": "Transport3D",
+      "environmentKey": "transport3d_generalized",
+      "name": "Transport",
+      "family": "Kinematic 3D",
+      "rawFile": "data/environment-descriptions/Transport3D.md",
+      "sha256": "d11231ce9c2be15567d61654cbd6324b4a4cafe8d80ce34f6a199cd09eefc11a",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/kinematic3d.zip",
+        "member": "transport3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__88fd6989/2026-09-05_06-39-43/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.kinematic3d.transport3d:Transport3DEnv"
+      }
+    },
+    {
+      "id": "Table3D",
+      "environmentKey": "table3d_generalized",
+      "name": "Table",
+      "family": "Kinematic 3D",
+      "rawFile": "data/environment-descriptions/Table3D.md",
+      "sha256": "03d490f174933c17632fc8338cc92550deaeebd1a4c8d1fcdbed02406aa818ec",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/kinematic3d.zip",
+        "member": "table3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__827d1f37/2026-09-05_08-47-14/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.kinematic3d.table3d:Table3DEnv"
+      }
+    },
+    {
+      "id": "BaseMotion3D",
+      "environmentKey": "basemotion3d",
+      "name": "BaseMotion",
+      "family": "Kinematic 3D",
+      "rawFile": "data/environment-descriptions/BaseMotion3D.md",
+      "sha256": "7fef02d0b070c8aa2fa25b09c69d1d7dfba6e960d77ed31ed0f4c647c66c88bf",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Codex GPT5.6 Sol/basemotion3d__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__b464e889.zip",
+        "member": "basemotion3d__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__b464e889/2026-09-14_15-12-23_basemotion/replicate_222/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.kinder_geom3d_env.KinderGeom3DEnv",
+        "environmentImplementation": "kinder/BaseMotion3D-v0"
+      }
+    },
+    {
+      "id": "BalanceBeam3D",
+      "environmentKey": "balancebeam3d",
+      "name": "BalanceBeam",
+      "family": "Dynamic 3D",
+      "rawFile": "data/environment-descriptions/BalanceBeam3D.md",
+      "sha256": "5969f474444780f186de95df1744149c7097c9ff4ff62cfab51a4729b959b6d2",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/dynamic3d.zip",
+        "member": "balancebeam3d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__78ec7f36/2026-09-09_23-34-48/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.kinder_geom3d_env.KinderGeom3DEnv",
+        "environmentImplementation": "kinder/BalanceBeam3D-o3-v0"
+      }
+    },
+    {
+      "id": "ConstrainedCupboard3D",
+      "environmentKey": "constrainedcupboard3d_generalized",
+      "name": "ConstrainedCupboard",
+      "family": "Dynamic 3D",
+      "rawFile": "data/environment-descriptions/ConstrainedCupboard3D.md",
+      "sha256": "f14f07cd54cd396c43a0673cd774611a7572644e2f1c310d92c6207e18605d29",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/dynamic3d.zip",
+        "member": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__a15cbc70/2026-09-10_08-48-49/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.dynamic3d.task_families:ConstrainedCupboard3DEnv"
+      }
+    },
+    {
+      "id": "Dynamo3D",
+      "environmentKey": "dynamo3d_generalized",
+      "name": "Dynamo",
+      "family": "Dynamic 3D",
+      "rawFile": "data/environment-descriptions/Dynamo3D.md",
+      "sha256": "226c045047c931123827d922c2c0eebed7413d6804aad77919e62a2bf5d4f6fd",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/dynamic3d.zip",
+        "member": "dynamo3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__589142fc/2026-09-10_19-32-15_rescore/replicate_222/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.dynamic3d.task_families:Dynamo3DEnv"
+      }
+    },
+    {
+      "id": "Rearrange3D",
+      "environmentKey": "rearrange3d",
+      "name": "Rearrange",
+      "family": "Dynamic 3D",
+      "rawFile": "data/environment-descriptions/Rearrange3D.md",
+      "sha256": "603204aa7be260f3f30df4a3cfc2695852562cd3aaba0a002e6aefabc6d5ffe2",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/dynamic3d.zip",
+        "member": "rearrange3d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__56ea42c0/2026-09-10_06-35-39/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.kinder_geom3d_env.KinderGeom3DEnv",
+        "environmentImplementation": "kinder/Rearrange3D-o2-put_the_boxed_drink_and_the_can_next_to_the_bowl-v0"
+      }
+    },
+    {
+      "id": "ScoopPour3D",
+      "environmentKey": "scooppour3d_generalized",
+      "name": "ScoopPour",
+      "family": "Dynamic 3D",
+      "rawFile": "data/environment-descriptions/ScoopPour3D.md",
+      "sha256": "860ec59888ae2d8aa500cdf5bdae03f3797cbcfe278708e9220ec390829bd745",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/dynamic3d.zip",
+        "member": "scooppour3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__b7ffde94/2026-09-10_19-55-20/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.dynamic3d.task_families:ScoopPour3DEnv"
+      }
+    },
+    {
+      "id": "Shelf3D",
+      "environmentKey": "dynamicshelf3d_generalized",
+      "name": "Shelf",
+      "family": "Dynamic 3D",
+      "rawFile": "data/environment-descriptions/Shelf3D.md",
+      "sha256": "e8441489b81ee7f41e539f03f3e041dd32aa9edc8cb86e4e5aec6820f31a62de",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/dynamic3d.zip",
+        "member": "dynamicshelf3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__c7ece5c3/2026-09-10_05-42-10/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.dynamic3d.task_families:Shelf3DEnv"
+      }
+    },
+    {
+      "id": "SortClutteredBlocks3D",
+      "environmentKey": "sortclutteredblocks3d_generalized",
+      "name": "SortClutteredBlocks",
+      "family": "Dynamic 3D",
+      "rawFile": "data/environment-descriptions/SortClutteredBlocks3D.md",
+      "sha256": "848f2e65181a40af7aa735bdcabafffda2201a25431fedd3f65520fc6fe25161",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/dynamic3d.zip",
+        "member": "sortclutteredblocks3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__c664fa0e/2026-09-10_19-54-20/replicate_444/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.dynamic3d.task_families:SortClutteredBlocks3DEnv"
+      }
+    },
+    {
+      "id": "SweepIntoDrawer3D",
+      "environmentKey": "sweepintodrawer3d",
+      "name": "SweepIntoDrawer",
+      "family": "Dynamic 3D",
+      "rawFile": "data/environment-descriptions/SweepIntoDrawer3D.md",
+      "sha256": "324714d0edaa4ec2165ed6453c4b59228f0efea44e6da90b9fcdaf16f25f85f6",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/dynamic3d.zip",
+        "member": "sweepintodrawer3d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__4786c7d1/2026-09-10_13-37-12/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.kinder_geom3d_env.KinderGeom3DEnv",
+        "environmentImplementation": "kinder/SweepIntoDrawer3D-o5-v0"
+      }
+    },
+    {
+      "id": "SweepSimple3D",
+      "environmentKey": "sweepsimple3d_generalized",
+      "name": "SweepSimple",
+      "family": "Dynamic 3D",
+      "rawFile": "data/environment-descriptions/SweepSimple3D.md",
+      "sha256": "f5d1a699930597965b7489746bc92ef000806a3b17d889ea5befad09b5593d57",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/dynamic3d.zip",
+        "member": "sweepsimple3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__18e456ad/2026-09-10_15-07-39/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.dynamic3d.task_families:SweepSimple3DEnv"
+      }
+    },
+    {
+      "id": "Tossing3D",
+      "environmentKey": "tossing3d_generalized",
+      "name": "Tossing",
+      "family": "Dynamic 3D",
+      "rawFile": "data/environment-descriptions/Tossing3D.md",
+      "sha256": "acd7cb99823470b3c9c8371186f5b113f3be5abec3ec20f8852ba53ecc64a7a9",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/dynamic3d.zip",
+        "member": "tossing3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__e3f09576/2026-09-11_23-13-42/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.variable_object_count_env.VariableObjectCountEnv",
+        "environmentImplementation": "kinder.envs.dynamic3d.task_families:Tossing3DEnv"
+      }
+    },
+    {
+      "id": "PddlPacking",
+      "environmentKey": "pr2packed_generalized",
+      "name": "Packing",
+      "family": "PDDLStream",
+      "rawFile": "data/environment-descriptions/PddlPacking.md",
+      "sha256": "87d346329fdd66c71452d7358ea9cb34fb36d7baac5222ca9be75e18049d1a05",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/pddlstream.zip",
+        "member": "pr2packed_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__f02e5f73/2026-09-09_13-01-39/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.pr2_tamp_variable_count_env.PR2PackedVariableCountEnv",
+        "environmentImplementation": "robocode.environments.pr2_tamp_variable_count_env.PR2PackedVariableCountEnv"
+      }
+    },
+    {
+      "id": "PddlBlocked",
+      "environmentKey": "pr2blocked_generalized",
+      "name": "Blocked",
+      "family": "PDDLStream",
+      "rawFile": "data/environment-descriptions/PddlBlocked.md",
+      "sha256": "c4037d39220e3a7251a2e22941b8d40c59a2dac3facb46803cb3ed34b3da42ec",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/pddlstream.zip",
+        "member": "pr2blocked_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__8f851c23/2026-09-09_18-30-41/replicate_42/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.pr2_tamp_blocked_variable_count_env.PR2BlockedVariableCountEnv",
+        "environmentImplementation": "robocode.environments.pr2_tamp_blocked_variable_count_env.PR2BlockedVariableCountEnv"
+      }
+    },
+    {
+      "id": "PddlRovers",
+      "environmentKey": "rovers_generalized",
+      "name": "Rovers",
+      "family": "PDDLStream",
+      "rawFile": "data/environment-descriptions/PddlRovers.md",
+      "sha256": "0c861719eb0c3ab9cdcf77370ab4a7d5ac4b65d4ad6d2424a5ecf450f8540c1b",
+      "source": {
+        "kind": "archived-experiment",
+        "archive": "Final/Blackbox/Claude Code Opus 5/rovers_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__39c67a96.zip",
+        "member": "rovers_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__39c67a96/2026-09-12_10-41-46/replicate_222/env_description.md",
+        "matchingArchivedDescriptions": 5,
+        "environmentClass": "robocode.environments.rovers_variable_count_env.RoversVariableCountEnv",
+        "environmentImplementation": "robocode.environments.rovers_variable_count_env.RoversVariableCountEnv"
+      }
+    }
+  ]
+}

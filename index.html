@@ -11,8 +11,8 @@
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#66418b">
   <link rel="icon" href="assets/prpl-robot.png" type="image/png">
-  <link rel="stylesheet" href="styles.css?v=research-4">
-  <script type="module" src="app.js?v=research-4"></script>
+  <link rel="stylesheet" href="styles.css?v=descriptions-5">
+  <script type="module" src="app.js?v=descriptions-5"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -28,7 +28,7 @@
   <div class="hero-shade"></div>
   <div class="hero-content">
     <h1 id="hero-title">Coding Agents for Generalized Task and Motion Planning Problems</h1>
-    <p class="hero-summary">We study whether coding agents can develop reusable programs for manipulation tasks across 28 simulated environments.</p>
+    <p class="hero-summary">We evaluate coding agents that synthesize reusable policies for task and motion planning across 28 simulated environments.</p>
     <div class="hero-actions">
       <a class="button" href="assets/paper.pdf" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a>
       <a class="button" href="https://github.com/tomsilver/robocode" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a>
@@ -42,8 +42,10 @@
 <section class="section setup" id="overview" aria-labelledby="setup-title">
   <h2 id="setup-title">Generalized task and motion planning</h2>
   <div class="setup-intro">
-    <p>Task and motion planning (TAMP) combines decisions about <strong>what a robot should do</strong>—such as which object to move—with decisions about <strong>how it can move</strong> while satisfying geometric and physical constraints.</p>
-    <p>Generalized TAMP seeks a reusable policy for a family of problems. The task stays the same, while the number of objects, their positions, and other instance details change. In this study, the policy is a program written by a coding agent, which we call <strong>AgenticGenPlan</strong>.</p>
+    <p>In task and motion planning (TAMP), discrete choices—such as which object to manipulate, which tool to use, or which subgoal to pursue—are coupled to continuous geometric, kinematic, and dynamic constraints.</p>
+    <p><strong>Generalized TAMP</strong> exploits regularities across problem instances to produce reusable solutions, for example by learning samplers, feasibility predictors, search heuristics, or abstractions. In this paper, we study coding agents as a synthesis method that produces a single programmatic policy for each environment: <strong>AgenticGenPlan</strong>.</p>
+    <p>Within an environment, instances may differ in object count, configuration, and geometry, while sharing the state and action spaces, transition model, and reward function. States are fully observed and object-centric; perception and language understanding are outside the scope of this study.</p>
+    <p class="paper-reference">Based on the paper’s <a href="assets/paper.pdf#page=1" target="_blank" rel="noopener">Introduction</a> and <a href="assets/paper.pdf#page=2" target="_blank" rel="noopener">Section II: Problem Setting</a>.</p>
   </div>
   <figure class="instance-example">
     <div class="instance-grid">
@@ -55,9 +57,11 @@
   </figure>
   <h3 class="setup-subheading">Experimental setup</h3>
   <div class="setup-grid">
-    <article><h4>Program synthesis</h4><p>The coding agent receives a task description, a simulator API, and a $20 synthesis budget. It can run experiments and revise its program. In the <strong>main setting</strong>, it receives neither the simulator source nor hand-designed planning abstractions. The <strong>+ source</strong> setting additionally provides the simulator source code.</p></article>
-    <article><h4>Held-out evaluation</h4><p>We freeze each program and evaluate it on 100 unseen instances, with five independent synthesis runs per method and environment. The program selects actions without further LLM calls. Environments provide fully observed, object-centric states; visual perception is outside the scope of this study.</p></article>
+    <article><h4>Program synthesis</h4><p>The initial prompt describes the task, observation and action spaces, and goal. The coding agent can interact with the simulator and choose its own tests within a $20 model-usage budget. In the <strong>main setting</strong>, its sandbox provides Python, NumPy, and SciPy, with no environment source code or hand-written TAMP predicates, operators, samplers, or skills. In the <strong>+ source</strong> setting, it can also inspect the environment implementation and import helper functions.</p></article>
+    <article><h4>Held-out evaluation</h4><p>The resulting program is frozen and selects actions without further coding-agent or LLM calls. We perform five independent runs per method and environment, evaluating programs and planners on the same 100 held-out instances sampled from the initial-state distribution used during synthesis. Each evaluation instance has a 60-second timeout.</p></article>
   </div>
+  <p class="benchmark-scope">The study includes 25 KinDER environments across four families and three PDDLStream domains: Packing, Blocked, and Rovers. <a href="#results">View each environment and the exact description given to the agent.</a></p>
+  <p class="paper-reference">Protocol: <a href="assets/paper.pdf#page=3" target="_blank" rel="noopener">Section III-A</a> and <a href="assets/paper.pdf#page=4" target="_blank" rel="noopener">Section IV-A</a>.</p>
   <div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong>700</strong><span>synthesized programs</span></div><div><strong>70,000</strong><span>evaluation episodes</span></div><div><strong>0</strong><span>LLM calls at test time</span></div></div>
 </section>
 <section class="gallery-section" aria-labelledby="gallery-title"><div class="section gallery" id="gallery">
@@ -78,7 +82,14 @@
 <div class="table-scroll" tabindex="0" role="region" aria-label="Leaderboard, scroll horizontally on smaller screens"><table class="ranking"><caption class="sr-only">Mean held-out success rate by method. The experimental setting or supplied information is shown for every method.</caption><thead><tr><th scope="col">Rank</th><th scope="col">Method / backend</th><th scope="col">Setting / access</th><th scope="col">Coverage</th><th scope="col" aria-sort="descending"><button id="sort-score">Mean success <span aria-hidden="true">↓</span></button></th></tr></thead><tbody id="ranking-body"></tbody></table></div>
 <div class="leader-note"><p>Equal-environment averages of the rounded means in Tables I–II. The source-access reference is listed separately. Missing planner results are excluded from its average.</p><a href="assets/paper.pdf#page=5" target="_blank" rel="noopener">Read the tables ↗</a></div><div class="future"><p>More coding agents on the way.</p></div>
 </section>
-<section class="results-section" id="results"><div class="section"><div class="section-heading"><div><h2>Results by environment</h2></div><p>Select an environment to compare all six methods and view an example rollout. Ranges show the minimum and maximum success rates across synthesis runs.</p></div><div class="explorer"><div class="env-list" role="group" aria-label="Select an environment" id="env-list"></div><div class="env-detail"><div class="env-title"><div><p class="eyebrow" id="env-family"></p><h3 id="env-name"></h3></div><span class="small-label">Example rollout</span></div><video id="env-video" controls muted playsinline preload="none"></video><div class="env-bars" id="env-bars"></div><p class="fine">Bars show mean success; brackets give min–max across the five runs. Example videos illustrate behavior and do not represent an average run.</p></div></div>
+<section class="results-section" id="results"><div class="section"><div class="section-heading"><div><h2>Results by environment</h2></div><p>Select an environment to read the exact description supplied to the agent in the main setting, watch an example rollout, and compare all six methods.</p></div><div class="explorer"><div class="env-list" role="group" aria-label="Select an environment" id="env-list"></div><div class="env-detail"><div class="env-title"><div><p class="eyebrow" id="env-family"></p><h3 id="env-name"></h3></div></div>
+<section class="env-description" aria-labelledby="env-description-title">
+  <div class="env-description-heading"><h4 id="env-description-title">Environment description given to the agent</h4><a id="env-description-raw" href="data/environment-descriptions/Tossing3D.md" target="_blank" rel="noopener">Original Markdown ↗</a></div>
+  <p class="env-description-note">Main setting · Verbatim from the archived experiment record.</p>
+  <div id="env-description-content" class="description-document" role="region" tabindex="0" aria-labelledby="env-description-title" aria-busy="true"><p>Loading the environment description…</p></div>
+</section>
+<p class="env-rollout-label">Example rollout</p>
+<video id="env-video" controls muted playsinline preload="none" aria-label="Example environment rollout"></video><div class="env-bars" id="env-bars"></div><p class="fine">Bars show mean success; brackets give min–max across the five runs. Example videos illustrate behavior and do not represent an average run.</p></div></div>
 <div class="insights"><article class="insight"><h3>Effect of source access</h3><p>On SweepIntoDrawer, access to source code raises Claude Code’s mean success from 0% to 57%. The agent discovers it can use the gripper itself to sweep.</p><button class="inline-link" data-select-env="SweepIntoDrawer3D">Inspect this environment ↗</button></article><article class="insight efficiency"><h3>Computation at test time</h3><div class="time-bar"><span>Main setting</span><i style="--w:14.34%;--c:var(--rust)"></i><strong>4.002 ms</strong></div><div class="time-bar"><span>+ source</span><i style="--w:100%;--c:#956d9b"></i><strong>27.900 ms</strong></div><p class="fine">Policy computation per action. Equal-environment means on 44 matched seeds across 13 environments where both settings achieve 100% success. Table III.</p></article></div>
 </div></section>
 </main>
