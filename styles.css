@@ -38,6 +38,15 @@ p strong{color:var(--ink)}
 .hero-shade{z-index:-1;background:linear-gradient(90deg,#151621e8,#171923ac 70%,#1719237a)}
 .hero-content{width:100%;max-width:1240px;margin:auto;padding:82px 44px 118px}
 .hero h1{font-size:clamp(38px,4.4vw,62px);font-weight:700;line-height:1.14;max-width:1060px;text-wrap:balance;letter-spacing:-.04em}
+.hero-byline{margin-top:28px;max-width:1100px}
+.authors,.affiliations{display:flex;flex-wrap:wrap;list-style:none;padding:0;margin:0;gap:6px 22px}
+.authors{font-size:18px;line-height:1.65}
+.authors li,.affiliations li{white-space:nowrap}
+.authors a:hover{color:white;text-decoration:underline;text-underline-offset:4px}
+.hero-byline sup{font-size:.7em;line-height:0}
+.authors sup{margin-left:3px}
+.affiliations{margin-top:12px;font-size:14px;color:#e4e0e9;gap:5px 20px}
+.author-note{margin-top:9px;color:#e4e0e9;font-size:12px}
 .hero-summary{max-width:700px;margin-top:26px;color:#f0edf3;font-size:18px;line-height:1.7}
 .hero-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:30px}
 .button{display:inline-flex;justify-content:space-between;align-items:center;gap:26px;padding:13px 22px;min-height:54px;min-width:128px;border-radius:5px;font-size:15px;font-weight:700;border:1px solid #e7e3ed;color:#302337;background:#fff}
@@ -159,6 +168,7 @@ footer p{font-size:12px;margin-top:5px}
   .nav nav{justify-content:space-between;font-size:12px;gap:8px}
   .hero{min-height:610px}.hero-content{padding:52px 20px 110px}
   .hero h1{font-size:clamp(33px,7.2vw,44px);line-height:1.18;letter-spacing:-.035em}
+  .hero-byline{margin-top:24px}.authors{font-size:16px;gap:5px 18px}.affiliations{font-size:12px;gap:4px 16px}
   .hero-summary{font-size:16px;margin-top:22px}
   .hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:440px;gap:11px;margin-top:25px}
   .button{padding:12px 16px;gap:14px;font-size:14px;min-width:0;min-height:51px}

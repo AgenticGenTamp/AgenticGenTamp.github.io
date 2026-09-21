@@ -18,7 +18,7 @@ Open http://127.0.0.1:8770/. The included server supports byte ranges for seekin
 
 ## Page structure
 
-- Header and title: the PRPL logo, the full paper title, a background rollout mosaic, and matching Paper, Code, Leaderboard, and Gallery links.
+- Header and title: the PRPL logo, the full paper title, authors and numbered affiliations, a background rollout mosaic, and matching Paper, Code, Leaderboard, and Gallery links. Author names link to their personal homepages; the asterisk identifies the corresponding author.
 - Setup: a paper-grounded definition of generalized TAMP (Introduction and Section II), three instances of the same Obstruction task, and the synthesis/evaluation protocol with links to Sections III-A and IV-A.
 - Gallery: examples near the top of the page. Clips loop silently when visible, with native playback controls. Captions describe the behavior and identify the coding agent and the paper's **Main setting / + source** terminology. Seeds and episode identifiers remain in the data, but are not displayed on cards.
 - Project video: a normal MP4 with native controls and a fixed 16:9 frame.
@@ -29,7 +29,9 @@ The background and gallery videos pause off screen or when the tab is hidden. Re
 
 ## Sources and result definitions
 
-`assets/paper.pdf` is the manuscript supplied on 19 September 2026. Its SHA-256 is recorded in `data/benchmark.json`. It remains the original manuscript, including its existing links; no author list or arXiv identifier has been invented.
+`assets/paper.pdf` is the manuscript supplied on 19 September 2026. Its SHA-256 is recorded in `data/benchmark.json`. It remains the original manuscript, including its existing links. The website's author list was supplied separately by the project maintainer, who also confirmed the affiliation mapping and Tom Silver's corresponding-author designation. No arXiv identifier has been added.
+
+The author order is Matteo Merler, Bowen Li, Josh Roy, Yichao Liang, Qianwei Wang, Yixuan Huang, and Tom Silver. The confirmed affiliations are Fondazione Bruno Kessler for Matteo, Carnegie Mellon University for Bowen, University of Cambridge for Yichao, and Princeton University for Josh, Qianwei, Yixuan, and Tom. Institutional names and homepage links were checked against the [PRPL team page](https://prpl-group.com/#team) and the personal homepages of [Matteo](https://merlerm.github.io/), [Bowen](https://jaraxxus-me.github.io/), and [Yichao](https://yichao-liang.github.io/).
 
 All success rates and run-level min/max values are transcribed from **Tables I–II**, checked against the rendered table page. Equal-environment averages use these printed two-decimal entries, so aggregates can differ slightly from averages of unrounded source logs. A zero is a measured failure rate; `null` means no planner was provided.
 
