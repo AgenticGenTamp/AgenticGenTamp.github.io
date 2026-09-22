@@ -79,9 +79,11 @@ $$('[data-select-env]').forEach(b=>b.addEventListener('click',()=>{if(!data)retu
 function markPolicyExamples() {
   if(!policyExamples)return;
   $$('[data-env]').forEach(button=>{
-    if(policyExamples.environments.some(e=>e.id===button.dataset.env)){
-      const marker=button.querySelector('span');marker.textContent='3 videos';marker.className='policy-marker';
-      button.setAttribute('aria-label',`${data.environments.find(e=>e.id===button.dataset.env).name}, three policy videos`);
+    const example=policyExamples.environments.find(e=>e.id===button.dataset.env);
+    if(example){
+      const count=example.videos.length;
+      const marker=button.querySelector('span');marker.textContent=`${count} video${count===1?'':'s'}`;marker.className='policy-marker';
+      button.setAttribute('aria-label',`${data.environments.find(e=>e.id===button.dataset.env).name}, ${count} policy video${count===1?'':'s'}`);
     }
   });
 }
@@ -94,7 +96,14 @@ function renderPolicyExamples() {
   $('#policy-comparison').hidden=!example;
   $('#policy-grid').replaceChildren();
   if(!example)return;
-  $('#policy-comparison-note').textContent='The frozen programs act on the same held-out instance. These selected examples illustrate behavioral differences, not average performance, and are not supplied to any agent. All clips use the same action playback rate; video duration is not computation time.';
+  const missing=(example.unavailable||[]).filter(item=>!item.reason.startsWith('Withheld:'));
+  const withheld=(example.unavailable||[]).filter(item=>item.reason.startsWith('Withheld:'));
+  $('#policy-comparison-note').textContent=(example.videos.length>1?'The frozen programs act on the same held-out instance. ':'This frozen program acts on a held-out instance. ')+
+    'These selected examples are not average performance or agent inputs. Clips within each environment use the same action playback rate; video duration is not computation time.'+
+    (missing.length?' Verified clips are not available for '+missing.map(item=>item.label).join(' and ')+'.':'')+
+    (withheld.length?' The '+withheld.map(item=>item.label).join(' and ')+' clip is withheld because its replay outcome differed from the archive.':'');
+  $('#play-policies').textContent=example.videos.length>1?'Play together':'Play example';
+  $('#policy-grid').style.setProperty('--policy-columns',Math.min(3,example.videos.length));
   $('#policy-grid').innerHTML=example.videos.map(clip=>`<figure class="policy-card">
     <h5>${esc(clip.label)}</h5><p>${esc(clip.setting)}</p>
     <video class="policy-video" src="${esc(clip.video)}" poster="${esc(clip.poster)}" controls muted playsinline preload="none" aria-label="${esc(clip.label)} policy in ${esc($('#env-name').textContent)}"></video>
@@ -110,7 +119,7 @@ $('#play-policies').addEventListener('click',()=>{
 });
 
 let gallery=[];
-let gallerySpeed=2;
+let gallerySpeed=8;
 const galleryVisible = new Set();
 const galleryPausedByUser = new WeakSet();
 const galleryAutomaticPauses = new WeakSet();
@@ -176,4 +185,4 @@ loadJSON('data/gallery.json').then(result=>{gallery=result;renderGallery();}).ca
 
 loadJSON('data/environment-descriptions.json?v=descriptions-5').then(result=>{descriptions=result;renderEnvironmentDescription();}).catch(error=>{console.error(error);descriptionLoadFailed=true;renderEnvironmentDescription();});
 
-loadJSON('data/policy-examples.json?v=results-8').then(result=>{policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
+loadJSON('data/policy-examples.json?v=results-9').then(result=>{policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});

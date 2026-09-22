@@ -48,18 +48,27 @@ for entry in audit['environments']:
 # Policy comparisons must use the same held-out instance, with verifiable results.
 examples=json.loads((ROOT/'data/policy-examples.json').read_text())
 assert len({e['id'] for e in examples['environments']})==len(examples['environments'])
+assert {e['id'] for e in examples['environments']}=={e['id'] for e in data['environments']}
 for entry in examples['environments']:
     assert entry['id'] in {e['id'] for e in data['environments']}
-    assert {v['method'] for v in entry['videos']}=={'claude','codex','genplan'}
-    assert len(entry['videos'])==3
-    for field in ('instanceSeed','initialFrameSha256','episode','replicateSeed'):
+    available={v['method'] for v in entry['videos']}
+    unavailable={m['method'] for m in entry.get('unavailable',[])}
+    assert available|unavailable=={'claude','codex','genplan'} and not available&unavailable
+    assert 1<=len(entry['videos'])<=3 and len(available)==len(entry['videos'])
+    assert all(m['reason'] and m['label'] for m in entry.get('unavailable',[]))
+    for field in ('instanceSeed','episode','replicateSeed'):
         assert len({v['source'][field] for v in entry['videos']})==1
+    # Exact state hashes allow harmless rasterization differences in initial frames.
+    state_hashes=[v['source'].get('initialStateSha256') for v in entry['videos']]
+    assert (all(state_hashes) and len(set(state_hashes))==1) or len({v['source']['initialFrameSha256'] for v in entry['videos']})==1
     for clip in entry['videos']:
         require(clip['video']);require(clip['poster'])
         assert hashlib.sha256((ROOT/clip['video']).read_bytes()).hexdigest()==clip['source']['videoSha256']
         assert clip['solved']==clip['source']['archivedSolved']
         assert isinstance(clip['steps'],int) and clip['steps']>0
         assert all(re.fullmatch(r'[a-f0-9]{64}',clip['source'][key]) for key in ('resultsSha256','approachSha256','initialFrameSha256'))
+        if clip['source'].get('initialStateSha256'):
+            assert re.fullmatch(r'[a-f0-9]{64}',clip['source']['initialStateSha256'])
 # Every paper environment has exactly one original, checksum-verified description.
 manifest=json.loads((ROOT/'data/environment-descriptions/sources.json').read_text())
 descriptions=json.loads((ROOT/'data/environment-descriptions.json').read_text())
