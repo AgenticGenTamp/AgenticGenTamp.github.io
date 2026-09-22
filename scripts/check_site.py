@@ -35,6 +35,31 @@ for index,(env,method) in enumerate((e,m) for e in data['environments'] for m in
 assert hashlib.sha256((ROOT/'assets/paper.pdf').read_bytes()).hexdigest()==data['source']['sha256']
 for e in data['environments']:
     require(e['video']);require(e['poster']);assert len(e['results'])==6
+# Freeze the assets actually reviewed in the environment audit.
+audit=json.loads((ROOT/'data/environment-audit.json').read_text())
+assert audit['paperSha256']==data['source']['sha256']
+assert {e['id'] for e in audit['environments']}=={e['id'] for e in data['environments']}
+for entry in audit['environments']:
+    env=next(e for e in data['environments'] if e['id']==entry['id'])
+    assert entry['video']==env['video']
+    assert hashlib.sha256((ROOT/env['video']).read_bytes()).hexdigest()==entry['videoSha256']
+    assert hashlib.sha256((ROOT/env['poster']).read_bytes()).hexdigest()==entry['posterSha256']
+    assert all(entry['checks'].values())
+# Policy comparisons must use the same held-out instance, with verifiable results.
+examples=json.loads((ROOT/'data/policy-examples.json').read_text())
+assert len({e['id'] for e in examples['environments']})==len(examples['environments'])
+for entry in examples['environments']:
+    assert entry['id'] in {e['id'] for e in data['environments']}
+    assert {v['method'] for v in entry['videos']}=={'claude','codex','genplan'}
+    assert len(entry['videos'])==3
+    for field in ('instanceSeed','initialFrameSha256','episode','replicateSeed'):
+        assert len({v['source'][field] for v in entry['videos']})==1
+    for clip in entry['videos']:
+        require(clip['video']);require(clip['poster'])
+        assert hashlib.sha256((ROOT/clip['video']).read_bytes()).hexdigest()==clip['source']['videoSha256']
+        assert clip['solved']==clip['source']['archivedSolved']
+        assert isinstance(clip['steps'],int) and clip['steps']>0
+        assert all(re.fullmatch(r'[a-f0-9]{64}',clip['source'][key]) for key in ('resultsSha256','approachSha256','initialFrameSha256'))
 # Every paper environment has exactly one original, checksum-verified description.
 manifest=json.loads((ROOT/'data/environment-descriptions/sources.json').read_text())
 descriptions=json.loads((ROOT/'data/environment-descriptions.json').read_text())
@@ -47,6 +72,8 @@ for entry in manifest['environments']:
     require(entry['rawFile'])
     digest=hashlib.sha256((ROOT/entry['rawFile']).read_bytes()).hexdigest()
     assert digest==entry['sha256']==rendered[entry['id']]['sha256']
+    audited=next(e for e in audit['environments'] if e['id']==entry['id'])
+    assert digest==audited['descriptionSha256'] and entry['environmentKey']==audited['environmentKey']
     assert entry['rawFile']==rendered[entry['id']]['rawFile']
     assert entry['source']['kind']=='archived-experiment'
     assert entry['source']['matchingArchivedDescriptions']>=5
@@ -66,4 +93,4 @@ require('assets/hero.mp4')
 require('assets/project-video.mp4')
 require('assets/prpl-robot.png')
 if errors:raise SystemExit('\n'.join(errors))
-print('PASS: HTML references, 28 environments and archived descriptions, 6 methods, paper checksum, gallery provenance, media sizes, private-path scan.')
+print('PASS: HTML references, 28 audited environments and archived descriptions, 6 methods, matched policy-example provenance, paper checksum, gallery provenance, media sizes, private-path scan.')

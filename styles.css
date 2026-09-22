@@ -46,7 +46,6 @@ p strong{color:var(--ink)}
 .hero-byline sup{font-size:.7em;line-height:0}
 .authors sup{margin-left:3px}
 .affiliations{margin-top:12px;font-size:14px;color:#e4e0e9;gap:5px 20px}
-.author-note{margin-top:9px;color:#e4e0e9;font-size:12px}
 .hero-summary{max-width:700px;margin-top:26px;color:#f0edf3;font-size:18px;line-height:1.7}
 .hero-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:30px}
 .button{display:inline-flex;justify-content:space-between;align-items:center;gap:26px;padding:13px 22px;min-height:54px;min-width:128px;border-radius:5px;font-size:15px;font-weight:700;border:1px solid #e7e3ed;color:#302337;background:#fff}
@@ -69,9 +68,8 @@ figcaption{font-size:13px;color:var(--muted);margin-top:10px}
 .stats strong{display:block;font-size:29px;font-weight:700;letter-spacing:-.04em;line-height:1.3}
 .stats span{font-size:13px;color:var(--muted);display:block;margin-top:5px}
 .gallery-section{background:var(--soft);border-block:1px solid var(--line)}
-.gallery-filters{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 32px}
-.gallery-filters button{font-size:13px;border:1px solid #d4cddd;padding:8px 15px;border-radius:5px;background:white}
-.gallery-filters button.active{background:var(--green);color:white;border-color:var(--green)}
+.gallery-speed{display:flex;align-items:center;gap:12px;margin:0 0 28px;font-size:13px;color:var(--muted)}
+.gallery-speed select{min-width:85px}
 .gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 28px}
 .gallery-card{min-width:0}
 .gallery-thumb{position:relative;aspect-ratio:4/3;width:100%;background:#e9e8ed;border:1px solid var(--line);border-radius:5px;overflow:hidden}
@@ -96,12 +94,9 @@ select{background:white;border:1px solid var(--line);padding:10px 26px 10px 12px
 .ranking{width:100%;border-collapse:collapse;min-width:850px;font-size:14px}
 .ranking th{text-align:left;font-size:12px;font-weight:700;padding:16px 14px;color:var(--muted);border-bottom:1px solid var(--line);white-space:nowrap}
 .ranking th button{font:inherit;padding:0;background:none}
-.ranking th:first-child{width:55px}
 .ranking td{padding:23px 14px;border-bottom:1px solid var(--line);vertical-align:middle}
 .ranking .method-name{font-size:18px;letter-spacing:-.02em;white-space:nowrap}
 .ranking .backend{display:block;font-size:12px;color:var(--muted);margin-top:4px}
-.rank{font-size:21px;color:var(--muted);font-variant-numeric:tabular-nums}
-.ranking tr.winner{background:#f3eef8}
 .ranking tr.reference td{border-top:2px solid #b8a8c4}
 .ranking .reference-label{font-size:11px;color:#80638d;display:block;margin-top:4px}
 .access-tag{display:inline-block;font-size:12px;border:1px solid #d6d1dd;border-radius:3px;padding:4px 7px;white-space:nowrap}
@@ -130,14 +125,14 @@ select{background:white;border:1px solid var(--line);padding:10px 26px 10px 12px
 .env-title .eyebrow{margin-bottom:6px;font-size:12px}
 .env-title h3{font-size:27px}
 .small-label{font-size:11px;color:var(--muted)}
-.env-detail>video{width:100%;height:340px;object-fit:contain;background:#eeedf1}
+#env-video{width:100%;height:340px;object-fit:contain;background:#eeedf1;border-radius:4px;margin-top:12px}
 .env-bars{padding:25px 24px 10px}
 .env-row{display:grid;grid-template-columns:155px 1fr 125px;align-items:center;gap:13px;margin-bottom:14px;font-size:11px}
 .env-row strong{font-weight:400}
 .env-row .score-track{height:7px;width:100%}
 .env-value{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 .env-value small{font-size:10px;color:var(--muted);margin-left:5px}
-.env-detail>.fine{padding:0 24px 22px}
+.env-measurements>.fine{padding:0 24px 22px}
 .fine{font-size:12px;color:var(--muted);line-height:1.7}
 .insights{display:grid;grid-template-columns:1fr 1fr;gap:45px;border-top:1px solid var(--line);margin-top:42px;padding-top:32px}
 .insight h3{font-size:22px;margin-bottom:14px}
@@ -179,7 +174,7 @@ footer p{font-size:12px;margin-top:5px}
   .instance-grid{gap:7px}.instance-grid span{padding:6px;font-size:11px}.instance-example{margin-block:24px}figcaption{font-size:12px}
   .setup-subheading{font-size:23px}
   .stats{gap:22px 12px}.stats strong{font-size:27px}.stats span{font-size:12px}
-  .gallery-grid{grid-template-columns:1fr;gap:32px}.gallery-filters{gap:7px;margin-block:22px}.gallery-filters button{font-size:12px;padding:7px 11px}
+  .gallery-grid{grid-template-columns:1fr;gap:32px}.gallery-speed{font-size:12px;margin-bottom:24px}
   .gallery-card h3{font-size:23px}.gallery-type{font-size:11px}.provenance{font-size:12px}
   .leader-toolbar{flex-direction:column;align-items:stretch;gap:13px;margin-top:25px}
   .segmented button{font-size:12px;padding:9px 11px;flex:1}.select-label{justify-content:space-between;font-size:12px}.select-label select{flex:1;max-width:220px;font-size:12px}
@@ -188,8 +183,8 @@ footer p{font-size:12px;margin-top:5px}
   .explorer{display:flex;flex-direction:column;gap:20px}.env-list{height:195px;display:flex;align-content:flex-start;flex-wrap:wrap;gap:4px 6px;padding:0 6px 10px 0;border-bottom:1px solid var(--line)}
   .env-group-title{width:100%;margin:10px 0 2px;font-size:11px}.env-list button{width:auto;padding:6px 9px;font-size:11px;background:#ebe7f0}.env-list button span{display:none}
   .env-title{padding:20px 16px}.env-title h3{font-size:24px}.env-title .eyebrow{font-size:11px}.small-label{font-size:10px;max-width:60px}
-  .env-detail>video{height:265px}.env-bars{padding:21px 13px 8px}.env-row{grid-template-columns:128px 1fr 99px;gap:7px;font-size:9px;margin-bottom:15px}.env-value small{font-size:8px;margin-left:3px}
-  .env-detail>.fine{padding:0 15px 20px;font-size:11px}
+  #env-video{height:265px}.env-bars{padding:21px 13px 8px}.env-row{grid-template-columns:128px 1fr 99px;gap:7px;font-size:9px;margin-bottom:15px}.env-value small{font-size:8px;margin-left:3px}
+  .env-measurements>.fine{padding:0 15px 20px;font-size:11px}
   .insights{grid-template-columns:1fr;margin-top:32px;gap:30px}
   footer{padding:28px 20px;flex-direction:column;align-items:flex-start;gap:20px}footer p{font-size:11px}
 }
@@ -200,8 +195,7 @@ footer p{font-size:12px;margin-top:5px}
 .paper-reference{font-size:12px;margin-top:14px;color:var(--muted)}
 .paper-reference a,.benchmark-scope a{text-decoration:underline;text-underline-offset:3px}
 .benchmark-scope{font-size:14px;margin-top:24px;max-width:1000px}
-.env-description{padding:0 24px 24px}
-.env-rollout-label{font-size:12px;margin:0 24px 10px}
+.env-description{padding:24px;border-top:1px solid var(--line)}
 .env-description-heading{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px;margin-bottom:6px}
 .env-description-heading h4{font-size:15px;letter-spacing:0}
 .env-description-heading>a{font-size:12px;color:var(--green);white-space:nowrap;text-decoration:underline;text-underline-offset:3px}
@@ -222,7 +216,7 @@ footer p{font-size:12px;margin-top:5px}
 .description-document a{color:var(--green);text-decoration:underline}
 .description-document blockquote{border-left:2px solid var(--line);padding-left:14px;margin:16px 0}
 @media(max-width:700px){
- .env-description{padding:0 15px 20px}
+ .env-description{padding:20px 15px}
  .env-description-heading h4{font-size:14px}
  .env-description-note{font-size:11px}
  .description-document{padding:15px;max-height:330px;font-size:12px}
@@ -230,3 +224,27 @@ footer p{font-size:12px;margin-top:5px}
  .description-document table{font-size:11px}.description-document th,.description-document td{padding:6px}
  .paper-reference{font-size:11px}
 }
+
+/* Reader-facing media is separate from the agent's text input. */
+.env-illustration{padding:0 24px 24px}
+.env-illustration h4,.env-measurements h4,.policy-comparison h4{font-size:16px;letter-spacing:0}
+.env-illustration>p{font-size:12px;margin-top:6px}
+.env-measurements{border-top:1px solid var(--line);padding-top:24px}
+.env-measurements>h4{padding:0 24px}
+.policy-comparison{padding:24px;border-top:1px solid var(--line);background:#faf9fc}
+.policy-comparison>p{font-size:12px;margin:10px 0 18px}
+.policy-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.policy-card{min-width:0}
+.policy-card h5{font-size:13px;line-height:1.4;margin:0 0 3px}
+.policy-card p,.policy-card figcaption{font-size:11px;line-height:1.6}
+.policy-card video{width:100%;aspect-ratio:4/3;object-fit:contain;background:white;border:1px solid var(--line);border-radius:3px;margin-top:10px}
+.policy-card figcaption strong{font-weight:700;color:var(--ink)}
+@media(max-width:700px){
+ .env-illustration{padding:0 15px 20px}.env-measurements>h4{padding:0 15px}
+ .policy-comparison{padding:20px 15px}.policy-grid{grid-template-columns:1fr;gap:22px}
+ .policy-card video{max-height:300px}.policy-card h5{font-size:14px}
+}
+
+.policy-play{font-size:12px;background:white;border:1px solid #b8a8c4;border-radius:4px;padding:7px 12px;margin-bottom:16px}
+
+.env-list button .policy-marker{display:inline;font-size:10px;white-space:nowrap;opacity:.8}

@@ -1,0 +1,516 @@
+{
+  "date": "2026-09-21",
+  "paperSha256": "0cf5e8beee22aa4fe25ee4c0409c4ba69be4c847c87329fc6c8b0cef3d423c9c",
+  "illustrationSource": {
+    "repository": "https://github.com/merlerm/agentamp-video",
+    "commit": "d81f2c1",
+    "usage": "Reader-only environment illustrations; not agent inputs or evidence of a specific method outcome."
+  },
+  "scope": "All 28 environment panels. Every numeric mean/range compared to Tables I-II; all original description hashes verified; videos fully decoded and first/middle/final frames visually inspected. Exact upstream illustration policy/run attribution remains unspecified.",
+  "environments": [
+    {
+      "id": "StickButton2D",
+      "environmentKey": "stickbutton2d_generalized",
+      "descriptionSha256": "993134fa767b554ac2d85aee0a7fbc3076bf1758dae196dfee440aaccfa5061c",
+      "video": "film/assets/clips/grid/StickButton2D.mp4",
+      "videoSha256": "00393ade79f98219419cecd0e72d8647073c22e85890088c708893037be24f97",
+      "posterSha256": "9f6addf5027584d9e35c9c4c31d59ccb36c43a9b13e2839937c3bb18a3ee8b85",
+      "durationSeconds": 7.6,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "Obstruction2D",
+      "environmentKey": "obstruction2d_generalized",
+      "descriptionSha256": "240d5820bb4a168097d097757da0a75a73f4f92f77e767784ed549d086d77469",
+      "video": "film/assets/clips/grid/Obstruction2D.mp4",
+      "videoSha256": "b567559583e3398c4fdbcc383d0fa5615736f1c08676ea228fb08dedc63fd83c",
+      "posterSha256": "ae2230d397bbb8a39959000eff42c7843967636f2e7c82993fc63febb8fb3396",
+      "durationSeconds": 7.7,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "ClutteredStorage2D",
+      "environmentKey": "clutteredstorage2d_generalized",
+      "descriptionSha256": "a47ce4560786dcc7842dedeb5b8be3c8d29f60ddd044396fa571e7a850c9c077",
+      "video": "film/assets/clips/grid/ClutteredStorage2D.mp4",
+      "videoSha256": "49298a13fc383d080927784ca13e31917d4b902651729c96af7a1be19d207553",
+      "posterSha256": "141864ce4422f56cc41840577d41b94ce2570bdfffd7724577dc2dec495c3ae5",
+      "durationSeconds": 20.0,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "ClutteredRetrieval2D",
+      "environmentKey": "clutteredretrieval2d_generalized",
+      "descriptionSha256": "d5780c5362ca609b59205b674371c43cc46c1b6c053cc1e93e206f9f2604fc58",
+      "video": "film/assets/clips/grid/ClutteredRetrieval2D.mp4",
+      "videoSha256": "b92676d21d5ce226803762ff4bd22b166e232e995d8fe315decbe780913f3082",
+      "posterSha256": "0edc20e4837ba6ac157fade680ced58ee60ed1ca5f0d1d5500da0bad3fce51df",
+      "durationSeconds": 20.0,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "Motion2D",
+      "environmentKey": "motion2d_generalized",
+      "descriptionSha256": "532f698bb1f8b0fc49ffbc00fbfd155f9bbed32e39aaf142c4f53ba1a0a876c9",
+      "video": "film/assets/clips/grid/Motion2D.mp4",
+      "videoSha256": "2ae8868286e95717f13d0d067066497bbc4cf1cd420f5adc58f933e2cdc0a37a",
+      "posterSha256": "fc03c7fe503e2a68bbbb811bba4059d90b036e4c85cc39062d8466655b78eda6",
+      "durationSeconds": 6.9,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "PushPullHook2D",
+      "environmentKey": "pushpullhook2d",
+      "descriptionSha256": "c8c0d9a1cf95bd8626ae893d7460f4b01f2efea221613b04c3892b9b3944a103",
+      "video": "film/assets/clips/grid/PushPullHook2D.mp4",
+      "videoSha256": "c1000edc02360932a70fa13a4ded3c0bfb18b8723580022d4d608fbc38382b86",
+      "posterSha256": "7cbfb0507ed5de8c32caa81db5c1fd07021d0be23517326c76d0e7c7832e08f3",
+      "durationSeconds": 4.0,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "DynObstruction2D",
+      "environmentKey": "dynobstruction2d_generalized",
+      "descriptionSha256": "44efc5c33441e5713eaafde82a6e67257262ca561872e3503a4d81c213554ed3",
+      "video": "film/assets/clips/grid/DynObstruction2D.mp4",
+      "videoSha256": "f4ee4e91f74ff82e0ff4ca154def869cbd4de70a5f3dc5c4a4ec912612a334e2",
+      "posterSha256": "586972d1e61402eb6cb6676d488a8b31645a8b6a745183107af1084b6ae444bf",
+      "durationSeconds": 7.35,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "DynPushPullHook2D",
+      "environmentKey": "dynpushpullhook2d_generalized",
+      "descriptionSha256": "d84fc3f9030b111a1ed3958785163584e4e48c59d034239c3799a0226da48bf0",
+      "video": "film/assets/clips/grid/DynPushPullHook2D.mp4",
+      "videoSha256": "e5d182c3794bc437494b3929d735d7a414da8f3e7edf2ca5222afe53b0fefcfa",
+      "posterSha256": "3e0504fb14f171b5f73b415462ebc6c34d5c522bd1ac9526c12385a63e69eed7",
+      "durationSeconds": 6.95,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "DynPushT2D",
+      "environmentKey": "dynpusht2d",
+      "descriptionSha256": "c112652aa000c5b7a4668c60b3da0c0daa70465a7f753c73200d462dfc1ca0b0",
+      "video": "film/assets/clips/grid/DynPushT2D.mp4",
+      "videoSha256": "5f62a1d612bdb7d14af81b76deae88c841fbbee51a311b31e6fe71581bcd73b5",
+      "posterSha256": "8fb9511a048c1bc32822e141cd051058beb3b1b9e98eb647a05361b75341f7bf",
+      "durationSeconds": 16.3,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "DynScoopPour2D",
+      "environmentKey": "dynscooppour2d_generalized",
+      "descriptionSha256": "86c9e63b2cc5982ca8cfe1dffcbd515b4426b4760d5a6dcb7f2233b963cc58b6",
+      "video": "film/assets/clips/grid/DynScoopPour2D.mp4",
+      "videoSha256": "0f8ac347fd60c3c5f534c0837e67fc261b6580934f1a392dc9101d9d92a9a9d1",
+      "posterSha256": "7d05a9412bd70674e43717e41003153f0c8110a6251c2eb732f591a250b57803",
+      "durationSeconds": 16.05,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "Obstruction3D",
+      "environmentKey": "obstruction3d_generalized",
+      "descriptionSha256": "e5b2b6cd52c011a7f1ec184c573d362676a5e6fe66db454b880d4ceca7cfb1b4",
+      "video": "film/assets/clips/grid/Obstruction3D.mp4",
+      "videoSha256": "71588a6d5d114c27918acfbc1ed6406aacf08f82e2b871a90acf71fcf0334b25",
+      "posterSha256": "d09291709e25677c28a25a4f9b42d9ca1f605fca598a624581ee9168b18b9a56",
+      "durationSeconds": 2.35,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "Packing3D",
+      "environmentKey": "packing3d_generalized",
+      "descriptionSha256": "cb5029e9de153ab3d356c6384ddda71e6d49d5506bacf5d0d1e49a406b427113",
+      "video": "film/assets/clips/grid/Packing3D.mp4",
+      "videoSha256": "c3c9f41bdcd4e19dab243d89b8e7e88c2c7c86e8f9467b044ce52128afe7ce0f",
+      "posterSha256": "4436873d27d8aef4941384584ba2375075010ed447d3a1f65bcacb9b3a1f0fbd",
+      "durationSeconds": 4.5,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "Transport3D",
+      "environmentKey": "transport3d_generalized",
+      "descriptionSha256": "d11231ce9c2be15567d61654cbd6324b4a4cafe8d80ce34f6a199cd09eefc11a",
+      "video": "film/assets/clips/grid/Transport3D.mp4",
+      "videoSha256": "8a175c332cd19cf1a7e604853313c981203a1c44491d85b93d48045ef9175b82",
+      "posterSha256": "d63c50314fa2e123acca3aae570040721961d3ea5c9c4d87ef0180b5af75fef4",
+      "durationSeconds": 20.0,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "Table3D",
+      "environmentKey": "table3d_generalized",
+      "descriptionSha256": "03d490f174933c17632fc8338cc92550deaeebd1a4c8d1fcdbed02406aa818ec",
+      "video": "film/assets/clips/grid/Table3D.mp4",
+      "videoSha256": "b2ac7142a232c261eca214f42b7baedb214ec613616a4c648ffa5ecd8df9cf0c",
+      "posterSha256": "5bfcf9ca19d487c9f71904b4eba480ff37c89c50a5ba7e7963fc3f25c01d8703",
+      "durationSeconds": 1.3,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "BaseMotion3D",
+      "environmentKey": "basemotion3d",
+      "descriptionSha256": "7fef02d0b070c8aa2fa25b09c69d1d7dfba6e960d77ed31ed0f4c647c66c88bf",
+      "video": "film/assets/clips/grid/BaseMotion3D.mp4",
+      "videoSha256": "b9c10b595b2ccb77eee26563de6532fb70e694dcebb19b97784a656cdc5133d2",
+      "posterSha256": "3352301da8af10583692269de955bf30eb620fb0c515324318dcde9b90d9c154",
+      "durationSeconds": 1.35,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "BalanceBeam3D",
+      "environmentKey": "balancebeam3d",
+      "descriptionSha256": "5969f474444780f186de95df1744149c7097c9ff4ff62cfab51a4729b959b6d2",
+      "video": "film/assets/clips/grid/BalanceBeam3D.mp4",
+      "videoSha256": "e6488e9d034b72e311781db672cd8b3465b77fcaa8419ab8c4b9aa43e685598a",
+      "posterSha256": "5f5d9cbb2f9a1e8aaf4c0dde480b77ce0d0e9faf9df7c2ba649c568d0c3180f8",
+      "durationSeconds": 17.65,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "ConstrainedCupboard3D",
+      "environmentKey": "constrainedcupboard3d_generalized",
+      "descriptionSha256": "f14f07cd54cd396c43a0673cd774611a7572644e2f1c310d92c6207e18605d29",
+      "video": "film/assets/clips/grid/ConstrainedCupboard3D.mp4",
+      "videoSha256": "b8245de94a05a2c4802c1b6cc706850805a769cbe47458590b0096befdccb0f6",
+      "posterSha256": "38729b9ca815b0925d2e67fd1c39bdca25c69e03d33b4cee3665b7a0baf12c22",
+      "durationSeconds": 11.9,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "Dynamo3D",
+      "environmentKey": "dynamo3d_generalized",
+      "descriptionSha256": "226c045047c931123827d922c2c0eebed7413d6804aad77919e62a2bf5d4f6fd",
+      "video": "film/assets/clips/grid/Dynamo3D.mp4",
+      "videoSha256": "ce4ef1e0a8b76983fa977680e7051f4efd4e8d1f29fd95385016a26dfa27bfa8",
+      "posterSha256": "8b52adbd9af5e7cc8b9d029f71b2eeec0872b265ec0180ef1cb6c91085d4dfd0",
+      "durationSeconds": 11.65,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "Rearrange3D",
+      "environmentKey": "rearrange3d",
+      "descriptionSha256": "603204aa7be260f3f30df4a3cfc2695852562cd3aaba0a002e6aefabc6d5ffe2",
+      "video": "film/assets/clips/grid/Rearrange3D.mp4",
+      "videoSha256": "02f84719c1cac5eb722ebd11c548abbc97fed235f8b1792c486134f45b0614ec",
+      "posterSha256": "700f19ebef6b3ee8787da2d0a57946de2c2bc7990eb8950178aa7d1d43fd334b",
+      "durationSeconds": 20.0,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "ScoopPour3D",
+      "environmentKey": "scooppour3d_generalized",
+      "descriptionSha256": "860ec59888ae2d8aa500cdf5bdae03f3797cbcfe278708e9220ec390829bd745",
+      "video": "film/assets/clips/grid/ScoopPour3D.mp4",
+      "videoSha256": "4b26103837d054bcc8c071d07ddda37d427ad558102b2e20354962892e54df8a",
+      "posterSha256": "8ac0a4de51e7477b42d4f00c66eb574deee4ddd173c7c6a29168d24130011541",
+      "durationSeconds": 16.0,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "Shelf3D",
+      "environmentKey": "dynamicshelf3d_generalized",
+      "descriptionSha256": "e8441489b81ee7f41e539f03f3e041dd32aa9edc8cb86e4e5aec6820f31a62de",
+      "video": "film/assets/clips/grid/Shelf3D.mp4",
+      "videoSha256": "bee75f37ba70045e441a4a8c540a2687fcb78aabfd2eba88af912a9fcfce4436",
+      "posterSha256": "913fc3677ddf0923dd927605803bdb2b453c38efc7ef649f120ab0fbf269d9ea",
+      "durationSeconds": 11.6,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "SortClutteredBlocks3D",
+      "environmentKey": "sortclutteredblocks3d_generalized",
+      "descriptionSha256": "848f2e65181a40af7aa735bdcabafffda2201a25431fedd3f65520fc6fe25161",
+      "video": "film/assets/clips/grid/SortClutteredBlocks3D.mp4",
+      "videoSha256": "ac2c9919442487489021b2762d64f0c56dbdc8b907a9eebedcd8bfed1f461d87",
+      "posterSha256": "3253c195db60be4e6c797af5b794f727e0a254155ce1f22425396bc04414bcfb",
+      "durationSeconds": 20.0,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "SweepIntoDrawer3D",
+      "environmentKey": "sweepintodrawer3d",
+      "descriptionSha256": "324714d0edaa4ec2165ed6453c4b59228f0efea44e6da90b9fcdaf16f25f85f6",
+      "video": "film/assets/clips/grid/SweepIntoDrawer3D.mp4",
+      "videoSha256": "a0e9d8a1d8ddab144b37e2992d8f1bde7def1dba1b7517a6ee84fd1200445455",
+      "posterSha256": "c858c665a99883f521c5c2b64081e61af85d2cbf995cb2392911048c99cfa59f",
+      "durationSeconds": 20.0,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "SweepSimple3D",
+      "environmentKey": "sweepsimple3d_generalized",
+      "descriptionSha256": "f5d1a699930597965b7489746bc92ef000806a3b17d889ea5befad09b5593d57",
+      "video": "film/assets/clips/grid/SweepSimple3D.mp4",
+      "videoSha256": "55d832ef36f37e93250bedc35370d984ec22669c809fcf2f2ac6a3c41307d7ab",
+      "posterSha256": "6bbf5f741f4c26cca20cccbfb274b82b700cd66e9b074284e0743bcc798068d2",
+      "durationSeconds": 18.55,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "Tossing3D",
+      "environmentKey": "tossing3d_generalized",
+      "descriptionSha256": "acd7cb99823470b3c9c8371186f5b113f3be5abec3ec20f8852ba53ecc64a7a9",
+      "video": "film/assets/clips/grid/Tossing3D.mp4",
+      "videoSha256": "c770b61036bc4f220501d0828cf45cbe735b8a0df3b80d94198bb27588006274",
+      "posterSha256": "7a4527479de7a028a970986f98b5d46d7dc561a68898cac43df83e7fdd916b53",
+      "durationSeconds": 19.2,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "PddlPacking",
+      "environmentKey": "pr2packed_generalized",
+      "descriptionSha256": "87d346329fdd66c71452d7358ea9cb34fb36d7baac5222ca9be75e18049d1a05",
+      "video": "film/assets/clips/grid/PddlPacking.mp4",
+      "videoSha256": "e51d5407425719a1d93a0feb23fda33efecabfabd24f0d30aa41ee6ca60b8cd5",
+      "posterSha256": "15c6d1a962d9de24e8b3e4ffa0986f67c475e2ed2c31b7aaf905994ddb50fe50",
+      "durationSeconds": 8.5,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "PddlBlocked",
+      "environmentKey": "pr2blocked_generalized",
+      "descriptionSha256": "c4037d39220e3a7251a2e22941b8d40c59a2dac3facb46803cb3ed34b3da42ec",
+      "video": "film/assets/clips/grid/PddlBlocked.mp4",
+      "videoSha256": "fa7ac99ef1f7d393483e6cb1d18c42a78536aa8adec8e9b8bb86639e69781059",
+      "posterSha256": "435f8cf258d3e453b52673f70080419e89334a5ccf969271be8f068a16da8c90",
+      "durationSeconds": 3.9,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    },
+    {
+      "id": "PddlRovers",
+      "environmentKey": "rovers_generalized",
+      "descriptionSha256": "0c861719eb0c3ab9cdcf77370ab4a7d5ac4b65d4ad6d2424a5ecf450f8540c1b",
+      "video": "film/assets/clips/grid/PddlRovers.mp4",
+      "videoSha256": "84a3210e4a44c52461c42a39d4d48dc1abbcf57612f2f0966489a5f9ee577727",
+      "posterSha256": "3791e93160230e8ba4f4f5d8b215e53565606f76c20de8620d8c9a2467446e6d",
+      "durationSeconds": 4.1,
+      "checks": {
+        "paperTable": true,
+        "originalDescription": true,
+        "fullVideoDecode": true,
+        "firstMiddleFinalFrames": true,
+        "environmentVisualMatch": true
+      },
+      "illustrationMethod": null,
+      "illustrationRun": null
+    }
+  ]
+}

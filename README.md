@@ -18,26 +18,26 @@ Open http://127.0.0.1:8770/. The included server supports byte ranges for seekin
 
 ## Page structure
 
-- Header and title: the PRPL logo, the full paper title, authors and numbered affiliations, a background rollout mosaic, and matching Paper, Code, Leaderboard, and Gallery links. Author names link to their personal homepages; the asterisk identifies the corresponding author.
+- Header and title: the PRPL logo, the full paper title, authors and numbered affiliations, a background rollout mosaic, and matching Paper, Code, Experimental results, and Gallery links. Author names link to their personal homepages.
 - Setup: a paper-grounded definition of generalized TAMP (Introduction and Section II), three instances of the same Obstruction task, and the synthesis/evaluation protocol with links to Sections III-A and IV-A.
-- Gallery: examples near the top of the page. Clips loop silently when visible, with native playback controls. Captions describe the behavior and identify the coding agent and the paper's **Main setting / + source** terminology. Seeds and episode identifiers remain in the data, but are not displayed on cards.
+- Gallery: examples near the top of the page. All examples appear in one gallery without category filters. Clips loop silently when visible at 2× by default, with a 1×/2×/4× selector and native playback controls. Captions describe the behavior and identify the coding agent and the paper's **Main setting / + source** terminology. Seeds and episode identifiers remain in the data, but are not displayed on cards.
 - Project video: a normal MP4 with native controls and a fixed 16:9 frame.
-- Leaderboard: all six methods from the paper, with environment-family and matched-planner-coverage controls. Click the score heading to reverse sorting. An unranked “Future coding agents” placeholder appears above the measured methods with an unknown score; it is excluded from benchmark data and sorting.
-- Environment explorer: all 28 environments, their verbatim agent-facing descriptions from archived main-setting runs, all six method rows, and printed run-level ranges. Descriptions include the original task, observation, action, and reward/goal text. The panel is visible by default and scrolls for long tables; a link opens the unchanged Markdown file.
+- Experimental results: all six methods from the paper, with environment-family and matched-planner-coverage controls. The table shows results without a rank column or winner highlight. Click the score heading to reverse sorting. A “Future coding agents” placeholder appears above the measured methods with an unknown score; it is excluded from benchmark data and sorting.
+- Environment explorer: all 28 environments, reader-only illustration videos, their verbatim agent-facing descriptions from archived main-setting runs, all six method rows, and printed run-level ranges. The illustration is placed above and outside the agent-input section, with an explicit note that it is not supplied to the agent. Descriptions include the original task, observation, action, and reward/goal text. The panel is visible by default and scrolls for long tables; a link opens the unchanged Markdown file.
 
 The background and gallery videos pause off screen or when the tab is hidden. Reduced-motion and data-saving preferences disable their automatic playback. Manually paused gallery clips stay paused when returning to them. The main video plays only on request and pauses other visible gallery clips while playing.
 
 ## Sources and result definitions
 
-`assets/paper.pdf` is the manuscript supplied on 19 September 2026. Its SHA-256 is recorded in `data/benchmark.json`. It remains the original manuscript, including its existing links. The website's author list was supplied separately by the project maintainer, who also confirmed the affiliation mapping and Tom Silver's corresponding-author designation. No arXiv identifier has been added.
+`assets/paper.pdf` is the manuscript supplied on 19 September 2026. Its SHA-256 is recorded in `data/benchmark.json`. It remains the original manuscript, including its existing links. The website's author list was supplied separately by the project maintainer, who also confirmed the affiliation mapping. No arXiv identifier has been added.
 
 The author order is Matteo Merler, Bowen Li, Josh Roy, Yichao Liang, Qianwei Wang, Yixuan Huang, and Tom Silver. The confirmed affiliations are Fondazione Bruno Kessler for Matteo, Carnegie Mellon University for Bowen, University of Cambridge for Yichao, and Princeton University for Josh, Qianwei, Yixuan, and Tom. Institutional names and homepage links were checked against the [PRPL team page](https://prpl-group.com/#team) and the personal homepages of [Matteo](https://merlerm.github.io/), [Bowen](https://jaraxxus-me.github.io/), and [Yichao](https://yichao-liang.github.io/).
 
 All success rates and run-level min/max values are transcribed from **Tables I–II**, checked against the rendered table page. Equal-environment averages use these printed two-decimal entries, so aggregates can differ slightly from averages of unrounded source logs. A zero is a measured failure rate; `null` means no planner was provided.
 
-- All-environment scope: 28 environments; the planner covers 16 and is shown without a rank.
+- All-environment scope: 28 environments; the planner covers 16; its partial coverage is stated explicitly.
 - Planner scope: exactly the same 16 environments for every method.
-- Source-access reference: always shown separately, unranked, because its interface differs from the main setting.
+- Source-access reference: always shown separately because its interface differs from the main setting.
 - Min/max in the explorer are across five runs, not confidence intervals.
 - Table III computation times use 44 matched seeds across 13 environments where both settings reach 100% success. They are not all-environment averages.
 
@@ -59,7 +59,7 @@ The hero and gallery posters are derived from the supplied clips. Setup stills s
 
 Replace `assets/paper.pdf`, update the SHA-256 and version in `data/benchmark.json`, and refresh table data if the manuscript changes. Paper links are local. Research-code links point to https://github.com/tomsilver/robocode; edit the links in `index.html` if the team moves it. Website-source links point to this formal repository.
 
-### Leaderboard
+### Experimental results
 
 Edit `data/benchmark.json`. Every environment must include one result for each method ID, using `{ "mean": 0.74, "min": 0.50, "max": 0.99 }` or `null`. Run `python3 scripts/export_csv.py` so the downloadable table matches the interactive one. Keep the evaluation protocol and source version explicit. Do not mix newer partial reruns into a complete published table without identifying their coverage.
 
@@ -84,13 +84,23 @@ npm run check
 
 The renderer disables raw HTML and changes only heading levels for nesting in the page. It does not rewrite the source text. The regular checks verify all 28 mappings and original-file checksums, including the dynamic Shelf and BaseMotion distinction.
 
+### Synthesized policy examples and the environment audit
+
+`data/policy-examples.json` describes 30 newly rendered clips across all 10 two-dimensional environments. Each environment has Claude Code, Codex, and LLMGenPlan acting on the same held-out instance. The JSON records the exact archive and member names, program and results hashes, replicate and episode, instance seed, shared initial-frame hash, archived outcome, replay outcome, and action count. Captions identify the method and input setting. These reader-facing clips are separate from the agent's text input.
+
+Selection is explicit: use replicate 42 from each method; among shared episodes with valid recorded action counts, prefer differing outcomes, then object count nearest 3, then the lowest episode index. Thus these examples illustrate differences and are **not representative averages**. Replay outcomes were checked against archived evaluation outcomes. Action counts describe the replay; the main-setting DynScoopPour clip uses 396 actions versus 401 in the archive, with success in both. The published table values are unchanged. Playback samples every three actions at 10 fps, with a final one-second hold; video length is not measured policy computation time. “Play together” restarts the three clips from their common initial state.
+
+Comparison coverage is currently limited to the 10 2D environments. The other 18 environments retain reader-only illustrations without an inferred method or outcome label. `data/environment-audit.json` records the audit of all 28 panels: values match Tables I–II, descriptions match archived checksums, each illustration decodes fully, and first/middle/final frames were inspected against the task. Upstream illustration files are not treated as evidence for a particular method's performance because their exact original policy/run attribution has not been independently established.
+
+When adding policy examples, use the archived frozen program and environment configuration, enable scene backgrounds wherever supported, check the shared initial state, and verify outcomes against the experiment record. Record provenance and hashes and do not use a different or easier instance to make a method appear stronger.
+
 ### Paper-grounded copy
 
 Keep the definition of generalized TAMP broader than program synthesis: the Introduction describes reusable solutions such as samplers, feasibility predictors, search heuristics, and abstractions. **AgenticGenPlan** is the coding-agent synthesis approach investigated in this paper. Section II defines the shared MDP and initial-state distribution, fully observed object-centric states, frozen policies, and evaluation metrics. Sections III-A and IV-A support the prompt contents, simulator interface, sandbox/source-access distinction, $20 model-usage budget, five runs, 100 shared held-out instances, and 60-second timeout. Do not imply that every environment varies its object count or that the website's short explanation is a verbatim prompt.
 
 ### Gallery
 
-Add an MP4 to `film/assets/clips/`, a JPEG poster to `assets/posters/`, and an entry to `data/gallery.json`. The `file` value is the common basename without the extension. Include `id`, `title`, `description`, `category`, `environment`, `method`, `backend`, `setting`, `seed`, and `episode`. Use `Main setting` or `+ source` for `setting`. Supported categories are `Strategy`, `Tool use`, and `Recovery`. Clips play at 1× in the gallery; the project video uses its own labeled playback speeds.
+Add an MP4 to `film/assets/clips/`, a JPEG poster to `assets/posters/`, and an entry to `data/gallery.json`. The `file` value is the common basename without the extension. Include `id`, `title`, `description`, `environment`, `method`, `backend`, `setting`, `seed`, and `episode`. The optional historical `category` field is not displayed or used for filtering. Use `Main setting` or `+ source` for `setting`. Clips play at 2× by default, with selectable 1×, 2×, and 4× playback. The project video uses its own labeled playback speeds.
 
 Keep titles descriptive and explain the observed behavior in plain language. Seeds, episode numbers, and method provenance should remain in the data even though the page shows a shorter caption.
 
