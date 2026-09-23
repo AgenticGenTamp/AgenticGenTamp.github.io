@@ -12,18 +12,16 @@ hero.addEventListener('play', updateMotionButton);hero.addEventListener('pause',
 $('#motion-toggle').addEventListener('click', () => { heroWanted = hero.paused; if (heroWanted) hero.play().catch(updateMotionButton); else hero.pause(); });
 new IntersectionObserver(entries => { const visible = entries[0].isIntersecting; if (visible && heroWanted && !document.hidden) hero.play().catch(updateMotionButton); else hero.pause(); }, {threshold:0.05}).observe(hero);
 reduced.addEventListener('change', () => { if (reduced.matches) {heroWanted=false;hero.pause();galleryVisible.forEach(pauseGalleryVideo);} else galleryVisible.forEach(playGalleryVideo); });
-document.addEventListener('visibilitychange',()=>{ if(document.hidden){hero.pause();$('#env-video').pause();pausePolicyExamples();galleryVisible.forEach(pauseGalleryVideo);pauseFilm();}else {if(heroWanted && $('#top').getBoundingClientRect().bottom>0)hero.play().catch(()=>{});galleryVisible.forEach(playGalleryVideo);} });
+document.addEventListener('visibilitychange',()=>{ if(document.hidden){hero.pause();pausePolicyExamples();galleryVisible.forEach(pauseGalleryVideo);pauseFilm();}else {if(heroWanted && $('#top').getBoundingClientRect().bottom>0)hero.play().catch(()=>{});galleryVisible.forEach(playGalleryVideo);} });
 let scrolled = false;
 function navState(){const next=window.scrollY>100;if(next!==scrolled){$('#nav').classList.toggle('sticky',next);scrolled=next;}}
 window.addEventListener('scroll',navState,{passive:true});navState();
 
 // Native video keeps playback controls in a fixed, responsive frame.
 const projectVideo = $('#project-video');
-const envVideo = $('#env-video');
 function pauseFilm() { projectVideo.pause(); }
-projectVideo.addEventListener('play', () => {envVideo.pause();pausePolicyExamples();galleryVisible.forEach(pauseGalleryVideo);});
+projectVideo.addEventListener('play', () => {pausePolicyExamples();galleryVisible.forEach(pauseGalleryVideo);});
 projectVideo.addEventListener('pause', () => galleryVisible.forEach(playGalleryVideo));
-envVideo.addEventListener('play', () => {pauseFilm();pausePolicyExamples();});
 new IntersectionObserver(entries => {if (!entries[0].isIntersecting) pauseFilm();}, {threshold:0.01}).observe(projectVideo);
 projectVideo.addEventListener('error', () => {
   const message = document.createElement('p');
@@ -31,9 +29,10 @@ projectVideo.addEventListener('error', () => {
   message.textContent = 'The video could not load. Please reload the page and try again.';
   if (!$('#video .video-error')) projectVideo.after(message);
 });
-new IntersectionObserver(entries => {if (!entries[0].isIntersecting) envVideo.pause();}, {threshold:0.01}).observe(envVideo);
 
 let data, descriptions, policyExamples, selectedEnvironment, descriptionLoadFailed=false;
+let policyPlaybackRequested=false, policyPlaybackVersion=0;
+const policyPlayVersions=new WeakMap();
 let scope='all', family='all', descending=true;
 function renderRanking(){
  const envs=selectEnvironments(data,scope,family);const rows=summarize(data,scope,family,descending);
@@ -66,15 +65,15 @@ function renderEnvironmentDescription() {
  panel.scrollTop=0;
  panel.scrollLeft=0;
 }
-function selectEnvironment(id){
+function selectEnvironment(id, {autoplay=false}={}){
  const env=data.environments.find(e=>e.id===id);if(!env)return;
  $$('[data-env]').forEach(b=>{b.classList.toggle('active',b.dataset.env===id);b.setAttribute('aria-pressed',String(b.dataset.env===id));});
- $('#env-family').textContent=env.family;$('#env-name').textContent=env.name;selectedEnvironment=id;renderEnvironmentDescription();renderPolicyExamples();const v=$('#env-video');v.pause();v.poster=env.poster;v.src=env.video;v.load();
+ $('#env-family').textContent=env.family;$('#env-name').textContent=env.name;selectedEnvironment=id;policyPlaybackRequested=autoplay;renderEnvironmentDescription();renderPolicyExamples();
  const order=['claude','codex','astra','genplan','oneshot','planner','source'];
  $('#env-bars').innerHTML=order.map(id=>{const m=data.methods.find(x=>x.id===id),r=env.results[id];const name={claude:'Agentic · Claude Code',codex:'Codex · GPT-5.6 Sol',astra:'Codex · GPT-6 Astra',genplan:'LLMGenPlan',oneshot:'One-shot',planner:'Planner',source:'Agentic + source'}[id];return `<div class="env-row"><strong>${name}</strong><span class="score-track"><span class="score-fill" style="--w:${r?r.mean*100:0}%;--c:${m.color}"></span></span><span class="env-value">${r?`${whole(r.mean)} <small>[${whole(r.min)}–${whole(r.max)}]</small>`:'Not available'}</span></div>`;}).join('');
 }
-function renderEnvironmentList(){let last='';$('#env-list').innerHTML=data.environments.map(e=>{const heading=e.family!==last?`<p class="env-group-title">${e.family}</p>`:'';last=e.family;return `${heading}<button data-env="${e.id}" aria-pressed="false">${e.name}<span aria-hidden="true">↗</span></button>`;}).join('');$$('[data-env]').forEach(b=>b.addEventListener('click',()=>selectEnvironment(b.dataset.env)));selectEnvironment('StickButton2D');markPolicyExamples();}
-$$('[data-select-env]').forEach(b=>b.addEventListener('click',()=>{if(!data)return;selectEnvironment(b.dataset.selectEnv);$('.explorer').scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'start'});}));
+function renderEnvironmentList(){let last='';$('#env-list').innerHTML=data.environments.map(e=>{const heading=e.family!==last?`<p class="env-group-title">${e.family}</p>`:'';last=e.family;return `${heading}<button data-env="${e.id}" aria-pressed="false">${e.name}<span aria-hidden="true">↗</span></button>`;}).join('');$$('[data-env]').forEach(b=>b.addEventListener('click',()=>selectEnvironment(b.dataset.env,{autoplay:true})));selectEnvironment('StickButton2D');markPolicyExamples();}
+$$('[data-select-env]').forEach(b=>b.addEventListener('click',()=>{if(!data)return;selectEnvironment(b.dataset.selectEnv,{autoplay:true});$('.explorer').scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'start'});}));
 
 function markPolicyExamples() {
   if(!policyExamples)return;
@@ -87,10 +86,36 @@ function markPolicyExamples() {
     }
   });
 }
-function pausePolicyExamples() { $$('.policy-video').forEach(video => video.pause()); }
-new IntersectionObserver(entries => {if(!entries[0].isIntersecting)pausePolicyExamples();},{threshold:0.01}).observe($('#policy-comparison'));
+function pausePolicyExamples({cancelPending=true}={}) {
+  if(cancelPending)policyPlaybackRequested=false;
+  policyPlaybackVersion++;
+  $$('.policy-video').forEach(video => video.pause());
+}
+function policyExamplesVisible() {
+  const panel=$('#policy-comparison'), bounds=panel.getBoundingClientRect();
+  return !panel.hidden && bounds.bottom>0 && bounds.top<window.innerHeight;
+}
+function playPolicyExamples() {
+  const videos=$$('.policy-video');
+  if(!policyPlaybackRequested || !videos.length || document.hidden || !policyExamplesVisible())return;
+  policyPlaybackRequested=false;
+  const version=++policyPlaybackVersion;
+  videos.forEach(video=>{
+    policyPlayVersions.set(video,version);
+    video.currentTime=0;
+    video.play().then(()=>{
+      // Ignore playback that finishes starting after a switch, pause, or scroll.
+      if(policyPlayVersions.get(video)!==version)return;
+      if(version!==policyPlaybackVersion || !video.isConnected || document.hidden || !policyExamplesVisible())video.pause();
+    }).catch(()=>{}); // Replay and native controls remain available if autoplay is blocked.
+  });
+}
+new IntersectionObserver(entries => {
+  if(entries[0].isIntersecting)playPolicyExamples();
+  else pausePolicyExamples({cancelPending:false});
+},{threshold:0.01}).observe($('#policy-comparison'));
 function renderPolicyExamples() {
-  pausePolicyExamples();
+  pausePolicyExamples({cancelPending:false});
   $$('.policy-video').forEach(video => {video.removeAttribute('src');video.load();});
   const example=policyExamples?.environments.find(e=>e.id===selectedEnvironment);
   $('#policy-comparison').hidden=!example;
@@ -102,7 +127,7 @@ function renderPolicyExamples() {
     'These selected examples are not average performance or agent inputs. Clips within each environment use the same action playback rate; video duration is not computation time.'+
     (missing.length?' Verified clips are not available for '+missing.map(item=>item.label).join(' and ')+'.':'')+
     (withheld.length?' The '+withheld.map(item=>item.label).join(' and ')+' clip is withheld because its replay outcome differed from the archive.':'');
-  $('#play-policies').textContent=example.videos.length>1?'Play together':'Play example';
+  $('#play-policies').textContent=example.videos.length>1?'Replay together':'Replay example';
   $('#policy-grid').style.setProperty('--policy-columns',example.videos.length===4?2:Math.min(3,example.videos.length));
   $('#policy-grid').innerHTML=example.videos.map(clip=>`<figure class="policy-card">
     <h5>${esc(clip.label)}</h5><p>${esc(clip.setting)}</p>
@@ -111,11 +136,13 @@ function renderPolicyExamples() {
   </figure>`).join('');
   $$('.policy-video').forEach(video => {
     video.muted=true;
-    video.addEventListener('play',()=>{pauseFilm();envVideo.pause();galleryVisible.forEach(pauseGalleryVideo);});
+    video.addEventListener('play',()=>{pauseFilm();galleryVisible.forEach(pauseGalleryVideo);});
   });
+  playPolicyExamples();
 }
 $('#play-policies').addEventListener('click',()=>{
-  $$('.policy-video').forEach(video=>{video.currentTime=0;video.play().catch(()=>{});});
+  policyPlaybackRequested=true;
+  playPolicyExamples();
 });
 
 let gallery=[];
