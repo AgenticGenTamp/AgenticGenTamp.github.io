@@ -11,8 +11,8 @@
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#66418b">
   <link rel="icon" href="assets/prpl-robot.png" type="image/png">
-  <link rel="stylesheet" href="styles.css?v=results-9">
-  <script type="module" src="app.js?v=codex-reruns-1"></script>
+  <link rel="stylesheet" href="styles.css?v=paper-20260922">
+  <script type="module" src="app.js?v=paper-20260922"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -21,7 +21,7 @@
     <a class="lab-logo" href="https://prpl-group.com/" target="_blank" rel="noopener" aria-label="Princeton Robot Planning and Learning lab"><img src="assets/prpl-robot.png" width="602" height="435" alt="PRPL"></a>
     <a class="wordmark" href="#top">AgenticGenTAMP</a>
   </div>
-  <nav aria-label="Main navigation"><a href="#overview">Setup</a><a href="#gallery">Gallery</a><a href="#video">Video</a><a href="#results">Results</a><a href="assets/paper.pdf" target="_blank" rel="noopener">Paper ↗</a></nav>
+  <nav aria-label="Main navigation"><a href="#overview">Setup</a><a href="#gallery">Gallery</a><a href="#video">Video</a><a href="#results">Results</a><a href="assets/paper.pdf?v=20260922" target="_blank" rel="noopener">Paper ↗</a></nav>
 </header>
 <section class="hero" id="top" aria-labelledby="hero-title">
   <video id="hero-video" class="hero-video" muted loop playsinline preload="none" poster="assets/posters/study-mosaic-240.jpg" aria-hidden="true"><source src="assets/hero.mp4" type="video/mp4"></video>
@@ -47,7 +47,7 @@
     </div>
     <p class="hero-summary">We evaluate coding agents that synthesize reusable policies for task and motion planning across 28 simulated environments.</p>
     <div class="hero-actions">
-      <a class="button" href="assets/paper.pdf" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a>
+      <a class="button" href="assets/paper.pdf?v=20260922" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a>
       <a class="button" href="https://github.com/tomsilver/robocode" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a>
       <a class="button" href="#results">Results <span aria-hidden="true">↓</span></a>
       <a class="button" href="#gallery">Gallery <span aria-hidden="true">↓</span></a>
@@ -77,7 +77,7 @@
     <article><h4>Held-out evaluation</h4><p>The resulting program is frozen and selects actions without further coding-agent or LLM calls. We perform five independent runs per method and environment, evaluating programs and planners on the same 100 held-out instances sampled from the initial-state distribution used during synthesis. Each evaluation instance has a 60-second timeout.</p></article>
   </div>
   <p class="benchmark-scope">The study includes 25 KinDER environments across four families and three PDDLStream domains: Packing, Blocked, and Rovers. <a href="#environments">View each environment and the exact description given to the agent.</a></p>
-  <p class="paper-reference">Protocol: <a href="assets/paper.pdf#page=3" target="_blank" rel="noopener">Section III-A</a> and <a href="assets/paper.pdf#page=4" target="_blank" rel="noopener">Section IV-A</a>.</p>
+  <p class="paper-reference">Protocol: <a href="assets/paper.pdf?v=20260922#page=3" target="_blank" rel="noopener">Section III-A</a> and <a href="assets/paper.pdf?v=20260922#page=4" target="_blank" rel="noopener">Section IV-A</a>.</p>
   <div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong>700</strong><span>synthesized programs</span></div><div><strong>70,000</strong><span>evaluation episodes</span></div></div>
 </section>
 <section class="gallery-section" aria-labelledby="gallery-title"><div class="section gallery" id="gallery">
@@ -96,7 +96,7 @@
 <div class="table-scroll" tabindex="0" role="region" aria-label="Experimental results, scroll horizontally on smaller screens"><table class="ranking"><caption class="sr-only">Mean held-out success rate by method. The future coding agents row is a placeholder with an unknown score.</caption><thead><tr><th scope="col">Method / backend</th><th scope="col">Setting / access</th><th scope="col">Coverage</th><th scope="col" aria-sort="descending"><button id="sort-score">Mean success <span aria-hidden="true">↓</span></button></th></tr></thead>
 <tbody class="future-methods"><tr><td><span class="method-name">Future coding agents</span><span class="backend">More and better in the future</span></td><td>—</td><td class="coverage">—</td><td class="score-cell"><span class="score-number" aria-label="Unknown">?</span></td></tr></tbody>
 <tbody id="ranking-body"></tbody></table></div>
-<div class="leader-note"><p>Equal-environment averages of the rounded means in Tables I–II. The source-access reference is listed separately. Missing planner results are excluded from its average.</p><a href="assets/paper.pdf#page=5" target="_blank" rel="noopener">Read the tables ↗</a></div>
+<div class="leader-note"><p>Equal-environment averages of the rounded means in Tables I–II. The source-access reference is listed separately. Missing planner results are excluded from its average.</p><a href="assets/paper.pdf?v=20260922#page=5" target="_blank" rel="noopener">Read the tables ↗</a></div>
 </section>
 <section class="results-section" id="environments"><div class="section"><div class="section-heading"><div><h2>Results by environment</h2></div><p>Select an environment to view an illustration, inspect the text supplied to the agent, and compare method results.</p></div><div class="explorer"><div class="env-list" role="group" aria-label="Select an environment" id="env-list"></div><div class="env-detail"><div class="env-title"><div><p class="eyebrow" id="env-family"></p><h3 id="env-name"></h3></div></div>
 <figure class="env-illustration">
@@ -111,9 +111,13 @@
 </section>
 <section class="env-measurements" aria-labelledby="env-results-title"><h4 id="env-results-title">Method results</h4><div class="env-bars" id="env-bars"></div><p class="fine">Mean success over 100 held-out instances per run; brackets give min–max across five runs.</p></section>
 <section class="policy-comparison" id="policy-comparison" aria-labelledby="policy-comparison-title" hidden><h4 id="policy-comparison-title">Synthesized policy examples</h4><p id="policy-comparison-note"></p><button class="policy-play" id="play-policies">Play together</button><div class="policy-grid" id="policy-grid"></div></section></div></div>
-<div class="insights"><article class="insight"><h3>Effect of source access</h3><p>On SweepIntoDrawer, access to source code raises Claude Code’s mean success from 0% to 57%. The agent discovers it can use the gripper itself to sweep.</p><button class="inline-link" data-select-env="SweepIntoDrawer3D">Inspect this environment ↗</button></article><article class="insight efficiency"><h3>Computation at test time</h3><div class="time-bar"><span>Main setting</span><i style="--w:14.34%;--c:var(--rust)"></i><strong>4.002 ms</strong></div><div class="time-bar"><span>+ source</span><i style="--w:100%;--c:#956d9b"></i><strong>27.900 ms</strong></div><p class="fine">Policy computation per action. Equal-environment means on 44 matched seeds across 13 environments where both settings achieve 100% success. Table III.</p></article></div>
+<div class="insights"><article class="insight"><h3>Effect of source access</h3><p>On SweepIntoDrawer, access to source code raises Claude Code’s mean success from 0% to 57%. The agent discovers it can use the gripper itself to sweep.</p><button class="inline-link" data-select-env="SweepIntoDrawer3D">Inspect this environment ↗</button></article><article class="insight efficiency"><h3>Computation at test time</h3>
+<div class="time-bar" data-efficiency="claude"><span>Claude Code<small>Opus 5 · Main setting</small></span><i style="--w:12.668%;--c:var(--rust)" aria-hidden="true"></i><strong>10.949 ms</strong></div>
+<div class="time-bar" data-efficiency="source"><span>Claude Code<small>Opus 5 · + source</small></span><i style="--w:100.000%;--c:#956d9b" aria-hidden="true"></i><strong>86.433 ms</strong></div>
+<div class="time-bar" data-efficiency="codexAstra"><span>Codex<small>GPT-6 Astra</small></span><i style="--w:2.109%;--c:#24847b" aria-hidden="true"></i><strong>1.823 ms</strong></div>
+<p class="fine">Policy computation per action on five shared environments. Each method uses its own seeds with 100% held-out success, averaged equally across environments. <a href="assets/paper.pdf?v=20260922#page=7" target="_blank" rel="noopener">Table III ↗</a></p></article></div>
 </div></section>
 </main>
-<footer><div><a class="wordmark" href="#top">AgenticGenTAMP</a><p>Coding Agents for Generalized Task and Motion Planning Problems</p></div><div class="footer-links"><a href="assets/paper.pdf" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/tomsilver/robocode" target="_blank" rel="noopener">Code ↗</a><a href="https://github.com/AgenticGenTamp/AgenticGenTamp.github.io" target="_blank" rel="noopener">Website source ↗</a></div></footer>
+<footer><div><a class="wordmark" href="#top">AgenticGenTAMP</a><p>Coding Agents for Generalized Task and Motion Planning Problems</p></div><div class="footer-links"><a href="assets/paper.pdf?v=20260922" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/tomsilver/robocode" target="_blank" rel="noopener">Code ↗</a><a href="https://github.com/AgenticGenTamp/AgenticGenTamp.github.io" target="_blank" rel="noopener">Website source ↗</a></div></footer>
 </body>
 </html>

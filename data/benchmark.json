@@ -1,10 +1,10 @@
 {
   "source": {
     "title": "Coding Agents for Generalized Task and Motion Planning Problems",
-    "version": "Author-provided manuscript \u00b7 19 September 2026",
+    "version": "Author-provided manuscript \u00b7 22 September 2026",
     "tables": "I\u2013III",
     "pdf": "assets/paper.pdf",
-    "sha256": "0cf5e8beee22aa4fe25ee4c0409c4ba69be4c847c87329fc6c8b0cef3d423c9c",
+    "sha256": "9484f20060193914f83fde41496dc7823add88ed09e200671efff5c5ea574f14",
     "precision": "Means and min/max are transcribed from the printed two-decimal entries in Tables I\u2013II. Aggregate scores are equal-environment means of those rounded entries. Missing planner entries are excluded, never treated as failures."
   },
   "protocol": {
@@ -1112,17 +1112,31 @@
     }
   ],
   "efficiency": {
-    "matchedSeeds": 44,
-    "environments": 13,
+    "sourceTable": "III",
+    "sourcePage": 7,
+    "environments": 5,
+    "environmentIds": [
+      "BalanceBeam3D",
+      "Dynamo3D",
+      "PddlPacking",
+      "PddlRovers",
+      "Tossing3D"
+    ],
+    "aggregation": "Equal-environment means. Each method uses its own seeds with 100% held-out success within the five shared environments; the min/max are across environment-level means.",
     "claude": {
-      "mean": 4.002,
-      "min": 0.043,
-      "max": 29.177
+      "mean": 10.949,
+      "min": 0.126,
+      "max": 28.351
     },
     "source": {
-      "mean": 27.9,
-      "min": 0.065,
-      "max": 96.64
+      "mean": 86.433,
+      "min": 0.303,
+      "max": 381.509
+    },
+    "codexAstra": {
+      "mean": 1.823,
+      "min": 0.033,
+      "max": 6.047
     }
   }
 }

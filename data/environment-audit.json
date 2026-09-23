@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "paperSha256": "0cf5e8beee22aa4fe25ee4c0409c4ba69be4c847c87329fc6c8b0cef3d423c9c",
+  "paperSha256": "9484f20060193914f83fde41496dc7823add88ed09e200671efff5c5ea574f14",
   "illustrationSource": {
     "repository": "https://github.com/merlerm/agentamp-video",
     "commit": "d81f2c1",
@@ -512,5 +512,7 @@
       "illustrationMethod": null,
       "illustrationRun": null
     }
-  ]
+  ],
+  "paperTableRechecked": "2026-09-22",
+  "paperTableRecheckNote": "All 28 environments and all six method means/min/max were compared with Tables I-II in the 22 September manuscript; no numerical changes. Earlier media and description checks remain unchanged."
 }

@@ -29,7 +29,7 @@ The background and gallery videos pause off screen or when the tab is hidden. Re
 
 ## Sources and result definitions
 
-`assets/paper.pdf` is the manuscript supplied on 19 September 2026. Its SHA-256 is recorded in `data/benchmark.json`. It remains the original manuscript, including its existing links. The website's author list was supplied separately by the project maintainer, who also confirmed the affiliation mapping. No arXiv identifier has been added.
+`assets/paper.pdf` is the manuscript supplied on 22 September 2026. Its SHA-256 is recorded in `data/benchmark.json`. It remains the original manuscript, including its existing links. The website's author list was supplied separately by the project maintainer, who also confirmed the affiliation mapping. No arXiv identifier has been added.
 
 The author order is Matteo Merler, Bowen Li, Josh Roy, Yichao Liang, Qianwei Wang, Yixuan Huang, and Tom Silver. The confirmed affiliations are Fondazione Bruno Kessler for Matteo, Carnegie Mellon University for Bowen, University of Cambridge for Yichao, and Princeton University for Josh, Qianwei, Yixuan, and Tom. Institutional names and homepage links were checked against the [PRPL team page](https://prpl-group.com/#team) and the personal homepages of [Matteo](https://merlerm.github.io/), [Bowen](https://jaraxxus-me.github.io/), and [Yichao](https://yichao-liang.github.io/).
 
@@ -39,7 +39,8 @@ All success rates and run-level min/max values are transcribed from **Tables Iâ€
 - Planner scope: exactly the same 16 environments for every method.
 - Source-access reference: always shown separately because its interface differs from the main setting.
 - Min/max in the explorer are across five runs, not confidence intervals.
-- Table III computation times use 44 matched seeds across 13 environments where both settings reach 100% success. They are not all-environment averages.
+- Table III computation times compare Claude Code / Opus 5, Claude Code / Opus 5 + source, and Codex / GPT-6 Astra on five shared environments: BalanceBeam 3D, Dynamo 3D, PDDLStream Packing, PDDLStream Rovers, and Tossing 3D. Each method uses its own seeds with 100% held-out success; values are equal-environment means with min/max across environment-level means. These are not all-environment averages or matched synthesis-seed comparisons. GPT-6 Astra appears only in this timing comparison because Tables Iâ€“II still report Codex / GPT-5.6 Sol.
+- The supplied PDF is kept byte-for-byte unchanged. Its Table III and caption were updated, while the nearby body text still describes the previous 44-pair timing analysis. The website uses the new table and caption: 10.949, 86.433, and 1.823 ms/action.
 
 ### Media and branding
 
