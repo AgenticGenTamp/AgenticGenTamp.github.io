@@ -1,6 +1,6 @@
 {
-  "selection": "Existing shared held-out instances are retained. Codex uses the latest available complete rerun for 13 environments from the project-maintainer-confirmed no-internet Codex Reruns collection: prefer synthesis replicate 42, otherwise the first available seed in 24, 222, 424, 444 order. Other methods and the remaining 15 Codex environments retain their original programs. Synthesis replicate seeds may differ; compared policies still use the same held-out instance, object count, and initial state. These selected examples are not representative averages. Missing program archives do not imply failure. Numerical results are transcribed separately from the paper. Astra is appended after the existing methods, using synthesis replicate 42 and each existing shared held-out episode. Its selected programs are the same archived runs used in the additional success-rate results. All replay outcomes match their archived episodes; replay action counts are recorded separately.",
-  "playback": "Frames sampled every 3 actions, encoded at 10 fps (30 actions per video second), with a one-second final hold. Same playback rate for all three methods; not wall-clock computation time.",
+  "selection": "Existing shared held-out instances are retained except ScoopPour3D, which now uses shared episode 0 with 10 objects for all four methods. Codex uses the latest available complete rerun for 13 environments from the project-maintainer-confirmed no-internet Codex Reruns collection: prefer synthesis replicate 42, otherwise the first available seed in 24, 222, 424, 444 order. Other methods and the remaining 15 Codex environments retain their original programs. Synthesis replicate seeds may differ; compared policies still use the same held-out instance, object count, and initial state. These selected examples are not representative averages. Numerical results are transcribed separately from the paper. Astra is appended after the existing methods, using synthesis replicate 42 and the same shared held-out episode as the other methods. Its selected programs are the same archived runs used in the additional success-rate results. All replay outcomes match their archived episodes; replay action counts are recorded separately. The eight previously missing program archives were supplied on 2026-09-23. Their synthesis replicate 42 programs were replayed with scene backgrounds enabled. ScoopPour3D was moved to the first episode with matching object counts in all four archives (episode 0, 10 objects), and all four policies were rerendered. All other shared held-out instances are unchanged. Outcomes and action counts match the archived episodes. All 28 environments now have four verified policy clips.",
+  "playback": "Frames sampled every 3 actions, encoded at 10 fps (30 actions per video second), with a one-second final hold. Same playback rate for all four methods; not wall-clock computation time.",
   "rendering": "Frozen archived programs replayed with their archived environment configurations. Scene backgrounds enabled wherever supported. All shown outcomes match archived evaluation outcomes. Captions report replay action counts; numerical result tables remain the original paper values.",
   "environments": [
     {
@@ -1453,6 +1453,31 @@
       "id": "BaseMotion3D",
       "videos": [
         {
+          "method": "claude",
+          "label": "Claude Code · Opus 5",
+          "setting": "Main setting",
+          "video": "assets/policies/BaseMotion3D-claude.mp4",
+          "poster": "assets/policies/BaseMotion3D-claude.jpg",
+          "solved": true,
+          "steps": 3,
+          "source": {
+            "collection": "Final/Blackbox/Claude Code Opus 5",
+            "archive": "basemotion3d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__63388c4c.zip",
+            "resultsMember": "basemotion3d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__63388c4c/2026-09-14_08-48-08/replicate_42/results.json",
+            "programMember": "basemotion3d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__63388c4c/2026-09-14_08-48-08/replicate_42/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
+            "resultsSha256": "449ca0f9b28bcb1c180728ec2d5bed6edcf477fc787d9d01d33db0d9c20a9e33",
+            "approachSha256": "4d2bcc948f0f96010680b640f81f584426bca013c29ebb69961fcad7ea04f323",
+            "archivedSolved": true,
+            "archivedSteps": 3,
+            "initialFrameSha256": "648471cdbf8854973c68d7b725b7f67229e97e8ba774b98bd0757983eae910f6",
+            "initialStateSha256": "6bb73f02b1d85099cc5791ca56360ef739dca1b23fdacc2bbfb8df7362ad1fcd",
+            "videoSha256": "04f0158840dedf84c3ed3a28a61c9b5389c94250172868051b67f05fe02623b7"
+          }
+        },
+        {
           "method": "codex",
           "label": "Codex · GPT-5.6 Sol",
           "setting": "Main setting",
@@ -1474,6 +1499,31 @@
             "archivedSteps": 3,
             "initialFrameSha256": "648471cdbf8854973c68d7b725b7f67229e97e8ba774b98bd0757983eae910f6",
             "videoSha256": "04f0158840dedf84c3ed3a28a61c9b5389c94250172868051b67f05fe02623b7"
+          }
+        },
+        {
+          "method": "genplan",
+          "label": "LLMGenPlan · Opus 5",
+          "setting": "Source code",
+          "video": "assets/policies/BaseMotion3D-genplan.mp4",
+          "poster": "assets/policies/BaseMotion3D-genplan.jpg",
+          "solved": true,
+          "steps": 4,
+          "source": {
+            "collection": "Final/Baselines/GenPlan",
+            "archive": "basemotion3d__llm_genplan__none__cli_opus5__timeout_60s__b88bf204.zip",
+            "resultsMember": "basemotion3d__llm_genplan__none__cli_opus5__timeout_60s__b88bf204/2026-09-13_18-59-33/replicate_42/results.json",
+            "programMember": "basemotion3d__llm_genplan__none__cli_opus5__timeout_60s__b88bf204/2026-09-13_18-59-33/replicate_42/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
+            "resultsSha256": "91aee08aedcc55553fbe21c16702e320e128e6eb9832003f47b0eeebde43ac38",
+            "approachSha256": "1458e8bccb49647d87460e30868629afd9e5f4a4eaeb738a8367499e746a46e1",
+            "archivedSolved": true,
+            "archivedSteps": 4,
+            "initialFrameSha256": "648471cdbf8854973c68d7b725b7f67229e97e8ba774b98bd0757983eae910f6",
+            "initialStateSha256": "6bb73f02b1d85099cc5791ca56360ef739dca1b23fdacc2bbfb8df7362ad1fcd",
+            "videoSha256": "950bdaa3252f9f72d521bff1b68e09889642a373191e8673a80a2aabf15f490e"
           }
         },
         {
@@ -1502,18 +1552,7 @@
           }
         }
       ],
-      "unavailable": [
-        {
-          "method": "genplan",
-          "label": "LLMGenPlan",
-          "reason": "No matching frozen-program archive in the final experiment collection."
-        },
-        {
-          "method": "claude",
-          "label": "Claude Code",
-          "reason": "No matching run in the available final archive."
-        }
-      ]
+      "unavailable": []
     },
     {
       "id": "BalanceBeam3D",
@@ -1671,6 +1710,31 @@
           }
         },
         {
+          "method": "genplan",
+          "label": "LLMGenPlan · Opus 5",
+          "setting": "Source code",
+          "video": "assets/policies/ConstrainedCupboard3D-genplan.mp4",
+          "poster": "assets/policies/ConstrainedCupboard3D-genplan.jpg",
+          "solved": false,
+          "steps": 1600,
+          "source": {
+            "collection": "Final/Baselines/GenPlan",
+            "archive": "constrainedcupboard3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__54c3d8f7.zip",
+            "resultsMember": "constrainedcupboard3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__54c3d8f7/2026-09-11_17-19-06/replicate_42/results.json",
+            "programMember": "constrainedcupboard3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__54c3d8f7/2026-09-11_17-19-06/replicate_42/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 2,
+            "instanceSeed": 6578458030060481490,
+            "resultsSha256": "3b3e1821a72a76bfcbbfbccbbd35abccb4fca234903886e43c75bccfda42cebf",
+            "approachSha256": "99182053f7b32982736312544e02a40bb7561f202c3609518a07776d13534f1b",
+            "archivedSolved": false,
+            "archivedSteps": 1600,
+            "initialFrameSha256": "1562799281c7cf4bd9220b14d46b8db3d31f1afc7e7143454740b574789c4810",
+            "initialStateSha256": "0e0de9da0c229835c166bf077fc413ffa79b1d53d3bfa9857a65538da5fba28c",
+            "videoSha256": "de234e3927465896930ed2291ecc2edd044968251f91c1fa39731741c6057cde"
+          }
+        },
+        {
           "method": "astra",
           "label": "Codex · GPT-6 Astra",
           "setting": "Main setting",
@@ -1696,13 +1760,7 @@
           }
         }
       ],
-      "unavailable": [
-        {
-          "method": "genplan",
-          "label": "LLMGenPlan",
-          "reason": "No matching frozen-program archive in the final experiment collection."
-        }
-      ]
+      "unavailable": []
     },
     {
       "id": "Dynamo3D",
@@ -1758,6 +1816,31 @@
           }
         },
         {
+          "method": "genplan",
+          "label": "LLMGenPlan · Opus 5",
+          "setting": "Source code",
+          "video": "assets/policies/Dynamo3D-genplan.mp4",
+          "poster": "assets/policies/Dynamo3D-genplan.jpg",
+          "solved": true,
+          "steps": 118,
+          "source": {
+            "collection": "Final/Baselines/GenPlan",
+            "archive": "dynamo3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__b64ab8a9.zip",
+            "resultsMember": "dynamo3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__b64ab8a9/2026-09-13_11-34-36/replicate_42/results.json",
+            "programMember": "dynamo3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__b64ab8a9/2026-09-13_11-34-36/replicate_42/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 1,
+            "instanceSeed": 5553887448546940950,
+            "resultsSha256": "204799d37b0e2a996e02a0517146c2712c94e73f0226eedba956d87792317827",
+            "approachSha256": "24073507459ea51c78d4af5f280584e8e841f7b01a7e10a9b2d8bb53277c63b9",
+            "archivedSolved": true,
+            "archivedSteps": 118,
+            "initialFrameSha256": "d2c621cc5529f414b531bbf2374bc30dd0b7451544f640ecd5b013f2e5ac46f3",
+            "initialStateSha256": "a57a4bf413861256f32bcea6b8f4fce832ae00bcc4650743d74ca424a8071338",
+            "videoSha256": "d235b026a50400852c33f39b5dfd5e8f48e324b3702ada0a38c862ac00758aaa"
+          }
+        },
+        {
           "method": "astra",
           "label": "Codex · GPT-6 Astra",
           "setting": "Main setting",
@@ -1783,13 +1866,7 @@
           }
         }
       ],
-      "unavailable": [
-        {
-          "method": "genplan",
-          "label": "LLMGenPlan",
-          "reason": "No matching frozen-program archive in the final experiment collection."
-        }
-      ]
+      "unavailable": []
     },
     {
       "id": "Rearrange3D",
@@ -1905,21 +1982,22 @@
           "video": "assets/policies/ScoopPour3D-claude.mp4",
           "poster": "assets/policies/ScoopPour3D-claude.jpg",
           "solved": true,
-          "steps": 250,
+          "steps": 218,
           "source": {
             "collection": "Final/Blackbox/Claude Code Opus 5",
             "archive": "dynamic3d.zip",
             "resultsMember": "scooppour3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__b7ffde94/2026-09-10_19-55-20/replicate_42/results.json",
             "programMember": "scooppour3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__b7ffde94/2026-09-10_19-55-20/replicate_42/sandbox/approach.py",
             "replicateSeed": 42,
-            "episode": 5,
-            "instanceSeed": 5716358502980765232,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
             "resultsSha256": "a4c83c58da35e246c2a9c7ca28d47fe033aa27d4fff60fa343bdb5007edeb15a",
             "approachSha256": "adff2c28a1d148f0ea5390b26931c60448cb17bf2d71edf7a4de38ce2ec4c04c",
             "archivedSolved": true,
-            "archivedSteps": 233,
-            "initialFrameSha256": "6622fbcb1bfba0e4afdde02ad9abd3bee18a602573af879d9ae08a9880df43c3",
-            "videoSha256": "b021ee960efe7d917b21931f1a073e8d45154b1a4f02df18c68200d60b7ef048"
+            "archivedSteps": 218,
+            "initialFrameSha256": "4fd293f277b7e1faed9bcc2485b04559ec9e2cc6df55ba9ffee86a342c6af563",
+            "initialStateSha256": "9bf623f093f9b87ae97fc5558dd3f0e5f247db7797c66118a61db78b2d22fc86",
+            "videoSha256": "ed999279fad9b97e4bff17626f63b27e638e62cd6131800c24a45129a62c81af"
           }
         },
         {
@@ -1936,15 +2014,40 @@
             "resultsMember": "scooppour3d__seed24/replicate_24/results.json",
             "programMember": "scooppour3d__seed24/replicate_24/sandbox/approach.py",
             "replicateSeed": 24,
-            "episode": 5,
-            "instanceSeed": 5716358502980765232,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
             "resultsSha256": "dab49449396ced5ae1f3ac50ea55073dd78c8e6c3e001542b6de160168944709",
             "approachSha256": "7629c85df762392c023e8d4a24b3bbe20de0fbc1d70b849c085de7fef0bf83a3",
             "archivedSolved": false,
             "archivedSteps": 800,
-            "initialFrameSha256": "6622fbcb1bfba0e4afdde02ad9abd3bee18a602573af879d9ae08a9880df43c3",
-            "initialStateSha256": "640d29b1659d04fe52464562479ccc83e19fa4410bd4003ae8276173644bbcc8",
-            "videoSha256": "88de7cae486d86e81bd03555a05ed1c7ff76f4cbd7cace783f64ef6f93ad9322"
+            "initialFrameSha256": "4fd293f277b7e1faed9bcc2485b04559ec9e2cc6df55ba9ffee86a342c6af563",
+            "initialStateSha256": "9bf623f093f9b87ae97fc5558dd3f0e5f247db7797c66118a61db78b2d22fc86",
+            "videoSha256": "623330421aee06649baaed345482dab0d13c2c79c891c5dc7b73d5cf35d34252"
+          }
+        },
+        {
+          "method": "genplan",
+          "label": "LLMGenPlan · Opus 5",
+          "setting": "Source code",
+          "video": "assets/policies/ScoopPour3D-genplan.mp4",
+          "poster": "assets/policies/ScoopPour3D-genplan.jpg",
+          "solved": false,
+          "steps": 800,
+          "source": {
+            "collection": "Final/Baselines/GenPlan",
+            "archive": "scooppour3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__34f2bc34.zip",
+            "resultsMember": "scooppour3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__34f2bc34/2026-09-11_17-19-45/replicate_42/results.json",
+            "programMember": "scooppour3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__34f2bc34/2026-09-11_17-19-45/replicate_42/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
+            "resultsSha256": "4b9a5b1ff6128fb45ba0f89ae44f2be945afac2b7458f64f7f8153516ce666d9",
+            "approachSha256": "5818072952898d2ff767f4089996b168bd89f0aab793ae328989980c98ad9dbc",
+            "archivedSolved": false,
+            "archivedSteps": 800,
+            "initialFrameSha256": "4fd293f277b7e1faed9bcc2485b04559ec9e2cc6df55ba9ffee86a342c6af563",
+            "initialStateSha256": "9bf623f093f9b87ae97fc5558dd3f0e5f247db7797c66118a61db78b2d22fc86",
+            "videoSha256": "cc7e2601924134a23810048814ab03a5efb2023087d475b985223461190993c9"
           }
         },
         {
@@ -1953,33 +2056,27 @@
           "setting": "Main setting",
           "video": "assets/policies/ScoopPour3D-astra.mp4",
           "poster": "assets/policies/ScoopPour3D-astra.jpg",
-          "solved": false,
-          "steps": 800,
+          "solved": true,
+          "steps": 244,
           "source": {
             "collection": "Final/Blackbox/Codex GPT6 Astra",
             "archive": "scooppour3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__caf7e5d3__seed42__2026-09-19_23-18-59.zip",
             "resultsMember": "run/results.json",
             "programMember": "run/sandbox/approach.py",
             "replicateSeed": 42,
-            "episode": 5,
-            "instanceSeed": 5716358502980765232,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
             "resultsSha256": "006908a36f19e74185255ba32afd8102a3ec31a3356044260248f6f2f902924f",
             "approachSha256": "087d44fa873aad5244dae45c73caa1938f90c8ff14f5802daf3edce95f7755b8",
-            "archivedSolved": false,
-            "archivedSteps": 800,
-            "initialFrameSha256": "6622fbcb1bfba0e4afdde02ad9abd3bee18a602573af879d9ae08a9880df43c3",
-            "initialStateSha256": "640d29b1659d04fe52464562479ccc83e19fa4410bd4003ae8276173644bbcc8",
-            "videoSha256": "af30b625ae5b76fc2567cea280d5d4dae6114f3f93f0bf30f813edbe4ecea2dd"
+            "archivedSolved": true,
+            "archivedSteps": 244,
+            "initialFrameSha256": "4fd293f277b7e1faed9bcc2485b04559ec9e2cc6df55ba9ffee86a342c6af563",
+            "initialStateSha256": "9bf623f093f9b87ae97fc5558dd3f0e5f247db7797c66118a61db78b2d22fc86",
+            "videoSha256": "2e5f403394021b7ed15300a6f2b793e31644043dff4a020892adaadaaa006677"
           }
         }
       ],
-      "unavailable": [
-        {
-          "method": "genplan",
-          "label": "LLMGenPlan",
-          "reason": "No matching frozen-program archive in the final experiment collection."
-        }
-      ]
+      "unavailable": []
     },
     {
       "id": "Shelf3D",
@@ -2138,6 +2235,31 @@
           }
         },
         {
+          "method": "genplan",
+          "label": "LLMGenPlan · Opus 5",
+          "setting": "Source code",
+          "video": "assets/policies/SortClutteredBlocks3D-genplan.mp4",
+          "poster": "assets/policies/SortClutteredBlocks3D-genplan.jpg",
+          "solved": false,
+          "steps": 1200,
+          "source": {
+            "collection": "Final/Baselines/GenPlan",
+            "archive": "sortclutteredblocks3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__63fec73d.zip",
+            "resultsMember": "sortclutteredblocks3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__63fec73d/2026-09-11_21-30-49/replicate_42/results.json",
+            "programMember": "sortclutteredblocks3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__63fec73d/2026-09-11_21-30-49/replicate_42/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 2,
+            "instanceSeed": 6578458030060481490,
+            "resultsSha256": "8f7c3827ee0643d598c2d9f4db27a7a959e08b94c95802e92fd5cc93e34a41f2",
+            "approachSha256": "95cf8dceea805f5b398c64e32981abbae90373b55ad52c23e227989b11318800",
+            "archivedSolved": false,
+            "archivedSteps": 1200,
+            "initialFrameSha256": "92f0aa262d2e20ab0065654038cb76dbb6c9f70b14ebd3435a3681162d248cda",
+            "initialStateSha256": "e8205cf7a5a7441283eae70dc5f8fe714a9a46ea4f06050dfb6f4bf7fd68afb0",
+            "videoSha256": "404b518129644ab335f3f21dea8770bd3634b32d975a313119b767ac9d02bc40"
+          }
+        },
+        {
           "method": "astra",
           "label": "Codex · GPT-6 Astra",
           "setting": "Main setting",
@@ -2163,13 +2285,7 @@
           }
         }
       ],
-      "unavailable": [
-        {
-          "method": "genplan",
-          "label": "LLMGenPlan",
-          "reason": "No matching frozen-program archive in the final experiment collection."
-        }
-      ]
+      "unavailable": []
     },
     {
       "id": "SweepIntoDrawer3D",
@@ -2328,6 +2444,31 @@
           }
         },
         {
+          "method": "genplan",
+          "label": "LLMGenPlan · Opus 5",
+          "setting": "Source code",
+          "video": "assets/policies/SweepSimple3D-genplan.mp4",
+          "poster": "assets/policies/SweepSimple3D-genplan.jpg",
+          "solved": false,
+          "steps": 620,
+          "source": {
+            "collection": "Final/Baselines/GenPlan",
+            "archive": "sweepsimple3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__7f110168.zip",
+            "resultsMember": "sweepsimple3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__7f110168/2026-09-12_00-01-25/replicate_42/results.json",
+            "programMember": "sweepsimple3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__7f110168/2026-09-12_00-01-25/replicate_42/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
+            "resultsSha256": "fb5cebe9998015fa7ecec52f5032c9337757d1ffbf04fdcce1340765aae9b6eb",
+            "approachSha256": "fa24819edd5065f0b1bd291609849c46b632dc84167012d5714f90a630d6ef1d",
+            "archivedSolved": false,
+            "archivedSteps": 620,
+            "initialFrameSha256": "5a2bd7c18b5c66275582d96f366d4fccfdfbecd954a8108cfe93cef5d6e75913",
+            "initialStateSha256": "204a5bf6b2e94784c059c8cbc49895f7ab7cee8ecd0d2d5c08c6f269c2ebd193",
+            "videoSha256": "e77472e5e343dad7057990107efb399dbc3f634aeb37127455922342d2ab6b45"
+          }
+        },
+        {
           "method": "astra",
           "label": "Codex · GPT-6 Astra",
           "setting": "Main setting",
@@ -2353,13 +2494,7 @@
           }
         }
       ],
-      "unavailable": [
-        {
-          "method": "genplan",
-          "label": "LLMGenPlan",
-          "reason": "No matching frozen-program archive in the final experiment collection."
-        }
-      ]
+      "unavailable": []
     },
     {
       "id": "Tossing3D",
@@ -2724,6 +2859,31 @@
           }
         },
         {
+          "method": "genplan",
+          "label": "LLMGenPlan · Opus 5",
+          "setting": "Source code",
+          "video": "assets/policies/PddlRovers-genplan.mp4",
+          "poster": "assets/policies/PddlRovers-genplan.jpg",
+          "solved": false,
+          "steps": 430,
+          "source": {
+            "collection": "Final/Baselines/GenPlan",
+            "archive": "rovers_generalized__llm_genplan__none__cli_opus5__timeout_60s__37459045.zip",
+            "resultsMember": "rovers_generalized__llm_genplan__none__cli_opus5__timeout_60s__37459045/2026-09-13_03-00-51/replicate_42/results.json",
+            "programMember": "rovers_generalized__llm_genplan__none__cli_opus5__timeout_60s__37459045/2026-09-13_03-00-51/replicate_42/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 6,
+            "instanceSeed": 1124563562602844589,
+            "resultsSha256": "265816495d78f1139dd8e97d9e13af567f4fbfff68afbdea903f817dd7e03e74",
+            "approachSha256": "d37b3ec61d5a62b5327f5922bc61b77bffac0c5fb8af80c76913bdf332f8dc68",
+            "archivedSolved": false,
+            "archivedSteps": 430,
+            "initialFrameSha256": "6004d60b7455bef6a79d06145c43cf82e7beb199428a4a5c023a43c2468ad4d1",
+            "initialStateSha256": "80996ce71b143a8ef347b6c3eb7a3581f8d18dbecac7fbd6fff8a9f46f87cc4a",
+            "videoSha256": "f0b1dfee4efc9d070a102ab6bb22d7d41bac5affc18317b56ea8d9c0b6d4eb35"
+          }
+        },
+        {
           "method": "astra",
           "label": "Codex · GPT-6 Astra",
           "setting": "Main setting",
@@ -2749,13 +2909,7 @@
           }
         }
       ],
-      "unavailable": [
-        {
-          "method": "genplan",
-          "label": "LLMGenPlan",
-          "reason": "No matching frozen-program archive in the final experiment collection."
-        }
-      ]
+      "unavailable": []
     }
   ],
   "codexRerunEnvironments": [
