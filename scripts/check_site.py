@@ -56,12 +56,16 @@ for entry in examples['environments']:
     assert available|unavailable=={'claude','codex','genplan'} and not available&unavailable
     assert 1<=len(entry['videos'])<=3 and len(available)==len(entry['videos'])
     assert all(m['reason'] and m['label'] for m in entry.get('unavailable',[]))
-    for field in ('instanceSeed','episode','replicateSeed'):
+    # Synthesis seeds can differ across methods; the held-out instance must match.
+    for field in ('instanceSeed','episode'):
         assert len({v['source'][field] for v in entry['videos']})==1
     # Exact state hashes allow harmless rasterization differences in initial frames.
     state_hashes=[v['source'].get('initialStateSha256') for v in entry['videos']]
     assert (all(state_hashes) and len(set(state_hashes))==1) or len({v['source']['initialFrameSha256'] for v in entry['videos']})==1
     for clip in entry['videos']:
+        assert isinstance(clip['source']['replicateSeed'],int)
+        if clip['method']=='codex' and entry['id'] in examples.get('codexRerunEnvironments',[]):
+            assert clip['source']['collection']=='Codex Reruns'
         require(clip['video']);require(clip['poster'])
         assert hashlib.sha256((ROOT/clip['video']).read_bytes()).hexdigest()==clip['source']['videoSha256']
         assert clip['solved']==clip['source']['archivedSolved']

@@ -1,5 +1,5 @@
 {
-  "selection": "Replicate 42 for each available method. Among shared held-out instances with valid archived step counts, prefer differing outcomes, then object count nearest 3, then lowest episode index. Some methods lack an available frozen-program archive; one Shelf replay could not reproduce its archived outcome and is withheld. These omissions are explicit and do not imply failure. These selected examples are not representative averages.",
+  "selection": "Existing shared held-out instances are retained. Codex uses the latest available complete rerun for 13 environments from the project-maintainer-confirmed no-internet Codex Reruns collection: prefer synthesis replicate 42, otherwise the first available seed in 24, 222, 424, 444 order. Other methods and the remaining 15 Codex environments retain their original programs. Synthesis replicate seeds may differ; compared policies still use the same held-out instance, object count, and initial state. These selected examples are not representative averages. Missing program archives do not imply failure. Numerical results are transcribed separately from the paper.",
   "playback": "Frames sampled every 3 actions, encoded at 10 fps (30 actions per video second), with a one-second final hold. Same playback rate for all three methods; not wall-clock computation time.",
   "rendering": "Frozen archived programs replayed with their archived environment configurations. Scene backgrounds enabled wherever supported. All shown outcomes match archived evaluation outcomes. Captions report replay action counts; numerical result tables remain the original paper values.",
   "environments": [
@@ -191,21 +191,22 @@
           "video": "assets/policies/ClutteredStorage2D-codex.mp4",
           "poster": "assets/policies/ClutteredStorage2D-codex.jpg",
           "solved": true,
-          "steps": 376,
+          "steps": 512,
           "source": {
-            "archive": "kinematic2d.zip",
-            "resultsMember": "clutteredstorage2d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__5f496c8a/2026-09-08_23-48-00/replicate_42/results.json",
-            "programMember": "clutteredstorage2d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__5f496c8a/2026-09-08_23-48-00/replicate_42/sandbox/approach.py",
-            "replicateSeed": 42,
+            "collection": "Codex Reruns",
+            "archive": "clutteredstorage2d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__5f496c8a.zip",
+            "resultsMember": "clutteredstorage2d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__5f496c8a/2026-09-15_21-34-41/replicate_444/results.json",
+            "programMember": "clutteredstorage2d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__5f496c8a/2026-09-15_21-34-41/replicate_444/sandbox/approach.py",
+            "replicateSeed": 444,
             "episode": 1,
             "instanceSeed": 5553887448546940950,
-            "resultsSha256": "cccb967034a52c33bb8a072e38ed5cbd9e888f699d233ff9a93afb8c536f013e",
-            "approachSha256": "bffc16a6c297df3db657c148071fa5cf82c49acc8b6a472393a4baff98464010",
+            "resultsSha256": "0434bbbbca1e02a79981bc7b977793b6a724a7d2b50591287697221a751a1dc0",
+            "approachSha256": "d3e6de8a02d6822f20362ac34a267c3fbd28229a294a0ad080e04f96e12fc6ce",
             "archivedSolved": true,
-            "archivedSteps": 376,
+            "archivedSteps": 512,
             "initialFrameSha256": "df1c9a09b0d2cc03a23fe18a88c0974bd89951ca4ecb6dc9ef8390925b2b83d7",
-            "videoSha256": "c74b6449b60642aa87f958a29bf8ee23528a460d9b8e20a31e8ac5579ddb6e61",
-            "collection": "Final/Blackbox/Codex GPT5.6 Sol"
+            "initialStateSha256": "29c10d320cd2cc231fe4a278c8bfa11ff2b91ed29755f06f2148902161bebad6",
+            "videoSha256": "fe240d492a924219ebf5ebad69df6f7e8af6e4ab157ab7cbf2d6d6cafb11221e"
           }
         },
         {
@@ -232,7 +233,8 @@
             "collection": "Final/Baselines/GenPlan"
           }
         }
-      ]
+      ],
+      "unavailable": []
     },
     {
       "id": "ClutteredRetrieval2D",
@@ -807,21 +809,22 @@
           "video": "assets/policies/Obstruction3D-codex.mp4",
           "poster": "assets/policies/Obstruction3D-codex.jpg",
           "solved": true,
-          "steps": 93,
+          "steps": 206,
           "source": {
-            "collection": "Final/Blackbox/Codex GPT5.6 Sol",
-            "archive": "kinematic3d.zip",
-            "resultsMember": "obstruction3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__8d555f92/2026-09-09_15-16-06/replicate_42/results.json",
-            "programMember": "obstruction3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__8d555f92/2026-09-09_15-16-06/replicate_42/sandbox/approach.py",
+            "collection": "Codex Reruns",
+            "archive": "obstruction3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__8d555f92.zip",
+            "resultsMember": "obstruction3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__8d555f92/2026-09-15_21-44-43_UTC/replicate_42/results.json",
+            "programMember": "obstruction3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__8d555f92/2026-09-15_21-44-43_UTC/replicate_42/sandbox/approach.py",
             "replicateSeed": 42,
             "episode": 0,
             "instanceSeed": 7449868751085282632,
-            "resultsSha256": "cf69ab4b1694c495f50ac1d24db7e81e308d6d9b6978de2d88b5c83ea29376a8",
-            "approachSha256": "adfe01b82b2d3b776860c7750298f6afa65f1bd145d4a4a1e8ddfe818c06c1b3",
+            "resultsSha256": "3a5b4b1b402cc4a3233b46ede3685ede4fe316adfb410ad4666254bb20d7f5c1",
+            "approachSha256": "9d43684f9a2d04f1169380d99323a849c6cf47c444c8f5d4c28d8f2cebe0be1a",
             "archivedSolved": true,
-            "archivedSteps": 93,
+            "archivedSteps": 206,
             "initialFrameSha256": "6e86f38231d2403cef25b53a15a15da22eb8bf00135788b5ca81b9fd09f0cf80",
-            "videoSha256": "b68e4621a7fa1ab1ac2053a1ff9f694ccd67468b6cdd847a1224f736c4e9f571"
+            "initialStateSha256": "9333c88a9b641f3797aa83e691055c09d34a0ab39d239c67feb01115a650dd85",
+            "videoSha256": "310e6b1f38f735fcbf8b58555657ec05cefd1c0281016f78dd2d49589ed83cc4"
           }
         },
         {
@@ -887,19 +890,20 @@
           "solved": false,
           "steps": 750,
           "source": {
-            "collection": "Final/Blackbox/Codex GPT5.6 Sol",
-            "archive": "kinematic3d.zip",
-            "resultsMember": "packing3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__7f330e8d/2026-09-09_12-36-35/replicate_42/results.json",
-            "programMember": "packing3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__7f330e8d/2026-09-09_12-36-35/replicate_42/sandbox/approach.py",
+            "collection": "Codex Reruns",
+            "archive": "packing3d__seed42.zip",
+            "resultsMember": "packing3d__seed42/replicate_42/results.json",
+            "programMember": "packing3d__seed42/replicate_42/sandbox/approach.py",
             "replicateSeed": 42,
             "episode": 2,
             "instanceSeed": 6578458030060481490,
-            "resultsSha256": "5c52c60f48e675f0eee585babdf89c184cd1b9082f5b0e7ef2556bb644ae75e5",
-            "approachSha256": "801df3c0c63a726dc8483b4be3f40693d2b1c206abf8c6b7e8d8b3eab959fdac",
+            "resultsSha256": "d962f5061ba8f2a0e29ff3d7ab1176e6eaf746248833b9f2ccfd917f48c9ec1a",
+            "approachSha256": "e6a9960cbee5532d20ad4059cef6198c0818ef342502a9c716a05ceed1c4d4a9",
             "archivedSolved": false,
             "archivedSteps": 750,
             "initialFrameSha256": "56d979c7ee10ea70ccd4852f0ab98bc768a0e0ef5c2e27ff8a12dca44791125c",
-            "videoSha256": "c4d57ff21d9706383682b4c3577cbcf3624531e06d0ed92c1589c8acee79a6d0"
+            "initialStateSha256": "c33745586a0ed9c0334cb411069f8372716495665aaad916740843ac423710a9",
+            "videoSha256": "cf762e82375f8dfd555510a1f6ea6df78041a50e2da1d56445af55b0dcab15f6"
           }
         },
         {
@@ -965,19 +969,20 @@
           "solved": false,
           "steps": 1700,
           "source": {
-            "collection": "Final/Blackbox/Codex GPT5.6 Sol",
-            "archive": "kinematic3d.zip",
-            "resultsMember": "transport3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__d87b83ce/2026-09-09_17-51-10/replicate_42/results.json",
-            "programMember": "transport3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__d87b83ce/2026-09-09_17-51-10/replicate_42/sandbox/approach.py",
-            "replicateSeed": 42,
+            "collection": "Codex Reruns",
+            "archive": "transport3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__d87b83ce.zip",
+            "resultsMember": "transport3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__d87b83ce/2026-09-15_19-41-13/replicate_222/results.json",
+            "programMember": "transport3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__d87b83ce/2026-09-15_19-41-13/replicate_222/sandbox/approach.py",
+            "replicateSeed": 222,
             "episode": 2,
             "instanceSeed": 6578458030060481490,
-            "resultsSha256": "ed7076f4ca787b45fe277d8a43e08b14d9627144dc5934efdb7b128e9ce8f8fc",
-            "approachSha256": "6af23154bf4d7e3e3ae11cfce2b6030c0c4977ae398c71522edcca452627aa91",
+            "resultsSha256": "fc098b01ffb0a9c32fd4fc804fd4c9cc40df1427d86fc4657c66f176fe2c0354",
+            "approachSha256": "29605aa36c4a61f2094ddc64449e41382f09d998b484022ed4a99cd4d56d3f1c",
             "archivedSolved": false,
             "archivedSteps": 1700,
             "initialFrameSha256": "2df563aaf646f4135c4bd4203be57f28796fff93f57b2bb404ef37bb6f95335f",
-            "videoSha256": "5ca43b7da241ef68d596afd8eccd3c0c8c7702fa737a54a7456064538fcaa960"
+            "initialStateSha256": "4cd937ca2a0f3fe95d7c48dc5b2aa10d263a2a05e50a836f04f4a6cc2022ada1",
+            "videoSha256": "b85c89497c19f275223f176404352fa6cd02b4949bf064e6a724238bf6b347b3"
           }
         },
         {
@@ -1237,22 +1242,23 @@
           "setting": "Main setting",
           "video": "assets/policies/ConstrainedCupboard3D-codex.mp4",
           "poster": "assets/policies/ConstrainedCupboard3D-codex.jpg",
-          "solved": true,
-          "steps": 536,
+          "solved": false,
+          "steps": 1600,
           "source": {
-            "collection": "Final/Blackbox/Codex GPT5.6 Sol",
-            "archive": "dynamic3d.zip",
-            "resultsMember": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__cef42282/2026-09-10_02-20-55/replicate_42/results.json",
-            "programMember": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__cef42282/2026-09-10_02-20-55/replicate_42/sandbox/approach.py",
+            "collection": "Codex Reruns",
+            "archive": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__cef42282.zip",
+            "resultsMember": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__cef42282/2026-09-15_17-00-38/replicate_42/results.json",
+            "programMember": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__cef42282/2026-09-15_17-00-38/replicate_42/sandbox/approach.py",
             "replicateSeed": 42,
             "episode": 2,
             "instanceSeed": 6578458030060481490,
-            "resultsSha256": "531240511a9975ba11d4a529509b1559abbee040db992e7fba1095ed8009762e",
-            "approachSha256": "9a5fb977fc4a9b03136fd08641b4515fa663fca638bc40b160dc7b93b49d88d3",
-            "archivedSolved": true,
-            "archivedSteps": 536,
+            "resultsSha256": "3049873ece80e877055894bbe5bc4351685b7aa76cb42b0267c29a10f7f0fe89",
+            "approachSha256": "c0fc5e140420fa3ebcfe004565f3a7d732f25a067d1c14d3bc94315f42ad0484",
+            "archivedSolved": false,
+            "archivedSteps": 1600,
             "initialFrameSha256": "1562799281c7cf4bd9220b14d46b8db3d31f1afc7e7143454740b574789c4810",
-            "videoSha256": "b5c7d5275e175ba5b0977affe069bd78e187d7394ffdd79cbe927cf67ebfdebd"
+            "initialStateSha256": "0e0de9da0c229835c166bf077fc413ffa79b1d53d3bfa9857a65538da5fba28c",
+            "videoSha256": "7082bf3083e06411009035c50080348dd9ca1833776e21aab71f7ccdfff249a8"
           }
         }
       ],
@@ -1301,20 +1307,20 @@
           "solved": true,
           "steps": 50,
           "source": {
-            "collection": "Final/Blackbox/Codex GPT5.6 Sol",
-            "archive": "dynamic3d.zip",
-            "resultsMember": "dynamo3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__375249f1/2026-09-10_22-43-06_repair/replicate_42/results.json",
-            "programMember": "dynamo3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__375249f1/2026-09-10_22-43-06_repair/replicate_42/sandbox/approach.py",
-            "replicateSeed": 42,
+            "collection": "Codex Reruns",
+            "archive": "dynamo3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__375249f1.zip",
+            "resultsMember": "dynamo3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__375249f1/2026-09-15_21-44-43_UTC/replicate_424/results.json",
+            "programMember": "dynamo3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__375249f1/2026-09-15_21-44-43_UTC/replicate_424/sandbox/approach.py",
+            "replicateSeed": 424,
             "episode": 1,
             "instanceSeed": 5553887448546940950,
-            "resultsSha256": "21df134b492202ecbd8857bf7591d98ade32892ffa4cf41af0f64585956fac6f",
-            "approachSha256": "ea7391cbaea8c9f017310eb05df6d6f5e1914807511d0887abc9c27d61089901",
+            "resultsSha256": "aa939411639717bbc983d6846b68e576cf94cb1a3143c974e3407fa3a4577bbd",
+            "approachSha256": "b152503a66616fd77bc729d3ff6ecb111b5df38c8c0f48614f57f2e1c0537099",
             "archivedSolved": true,
             "archivedSteps": 50,
-            "initialFrameSha256": "d2c621cc5529f414b531bbf2374bc30dd0b7451544f640ecd5b013f2e5ac46f3",
-            "videoSha256": "669b2d8e9fff37596ef516f98d9aad92f55dd7be892fa687b4ce9e561b9ea173",
-            "initialStateSha256": "a57a4bf413861256f32bcea6b8f4fce832ae00bcc4650743d74ca424a8071338"
+            "initialFrameSha256": "b94de467b67fb866b5bf53f0915872a3ef65eb402f493552142d47c812bcd297",
+            "initialStateSha256": "a57a4bf413861256f32bcea6b8f4fce832ae00bcc4650743d74ca424a8071338",
+            "videoSha256": "fbf33ff47cd07d570037486bfd63a9df6fae099ffc0269ae2b84c9ea0d391b7c"
           }
         }
       ],
@@ -1359,22 +1365,23 @@
           "setting": "Main setting",
           "video": "assets/policies/Rearrange3D-codex.mp4",
           "poster": "assets/policies/Rearrange3D-codex.jpg",
-          "solved": true,
-          "steps": 657,
+          "solved": false,
+          "steps": 1000,
           "source": {
-            "collection": "Final/Blackbox/Codex GPT5.6 Sol",
-            "archive": "dynamic3d.zip",
-            "resultsMember": "rearrange3d__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__b9b9f664/2026-09-11_10-25-30_remaining/replicate_42/results.json",
-            "programMember": "rearrange3d__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__b9b9f664/2026-09-11_10-25-30_remaining/replicate_42/sandbox/approach.py",
+            "collection": "Codex Reruns",
+            "archive": "rearrange3d__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__b9b9f664.zip",
+            "resultsMember": "rearrange3d__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__b9b9f664/2026-09-15_21-44-43_UTC/replicate_42/results.json",
+            "programMember": "rearrange3d__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__b9b9f664/2026-09-15_21-44-43_UTC/replicate_42/sandbox/approach.py",
             "replicateSeed": 42,
             "episode": 0,
             "instanceSeed": 7449868751085282632,
-            "resultsSha256": "afd5f34ea11701d936fafd9be7af993c6277548f4abcdf53c2119dd44106b4a7",
-            "approachSha256": "f8ba3d3cbc9a32943070dbb22cd238da429112f807ac86da859a1563b940ee58",
-            "archivedSolved": true,
-            "archivedSteps": 672,
+            "resultsSha256": "7636bf5e25e8eded8cc8299762decb31ca24e2c530119f48f84a7b451ab104b9",
+            "approachSha256": "f1aca39bc7722dc331a1cb821e2e162697742d00326191978ac0afc97a577753",
+            "archivedSolved": false,
+            "archivedSteps": 1000,
             "initialFrameSha256": "898789d99e9a1823adbdf3e06e424413291d3054889372722175e8cbbaffcc98",
-            "videoSha256": "841f7c763e6ed8bb9e3bab06e22f791d3d0e63be326457ecbba61f6c4738aa9e"
+            "initialStateSha256": "7fd62aa4ca78bc5d00e5ff8308bbc0104af73708f158b446930f41046bb60c0c",
+            "videoSha256": "8b21293d9b7d7fa58f7db0298b04bb56379b3cce89543a5b5eb67fe1e3f29349"
           }
         },
         {
@@ -1440,19 +1447,20 @@
           "solved": false,
           "steps": 800,
           "source": {
-            "collection": "Final/Blackbox/Codex GPT5.6 Sol",
-            "archive": "dynamic3d.zip",
-            "resultsMember": "scooppour3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__335203f0/2026-09-10_13-43-51/replicate_42/results.json",
-            "programMember": "scooppour3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__335203f0/2026-09-10_13-43-51/replicate_42/sandbox/approach.py",
-            "replicateSeed": 42,
+            "collection": "Codex Reruns",
+            "archive": "scooppour3d__seed24.zip",
+            "resultsMember": "scooppour3d__seed24/replicate_24/results.json",
+            "programMember": "scooppour3d__seed24/replicate_24/sandbox/approach.py",
+            "replicateSeed": 24,
             "episode": 5,
             "instanceSeed": 5716358502980765232,
-            "resultsSha256": "bfa1ca4f1b5d825f29662e2bc94f5c9eacdaa3f7b50595d8247cb766c12675cd",
-            "approachSha256": "7e3056a74ff550a82f1e5dd1d4ceab0c4ed5c2488f3bf84f4dca62c3be09a25a",
+            "resultsSha256": "dab49449396ced5ae1f3ac50ea55073dd78c8e6c3e001542b6de160168944709",
+            "approachSha256": "7629c85df762392c023e8d4a24b3bbe20de0fbc1d70b849c085de7fef0bf83a3",
             "archivedSolved": false,
             "archivedSteps": 800,
             "initialFrameSha256": "6622fbcb1bfba0e4afdde02ad9abd3bee18a602573af879d9ae08a9880df43c3",
-            "videoSha256": "60fdabbb42868543e0efbccaa041382ca6b4e6f387589a17c120313675d7a7f1"
+            "initialStateSha256": "640d29b1659d04fe52464562479ccc83e19fa4410bd4003ae8276173644bbcc8",
+            "videoSha256": "88de7cae486d86e81bd03555a05ed1c7ff76f4cbd7cace783f64ef6f93ad9322"
           }
         }
       ],
@@ -1492,6 +1500,31 @@
           }
         },
         {
+          "method": "codex",
+          "label": "Codex · GPT-5.6 Sol",
+          "setting": "Main setting",
+          "video": "assets/policies/Shelf3D-codex.mp4",
+          "poster": "assets/policies/Shelf3D-codex.jpg",
+          "solved": true,
+          "steps": 940,
+          "source": {
+            "collection": "Codex Reruns",
+            "archive": "dynamicshelf3d__seed42.zip",
+            "resultsMember": "dynamicshelf3d__seed42/replicate_42/results.json",
+            "programMember": "dynamicshelf3d__seed42/replicate_42/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 1,
+            "instanceSeed": 5553887448546940950,
+            "resultsSha256": "02eb06a1d1e940877a5029ed85ce81888ceb2a78610fa476f2fd9e28ec257f16",
+            "approachSha256": "bbd1d918d091db403adedd6f9defc34ef77bbbe7bedc7cfd309ce6f9b3a630bc",
+            "archivedSolved": true,
+            "archivedSteps": 940,
+            "initialFrameSha256": "44825719a4aa09a5ac03681ceb1c35ed4e9c990583104dd0802a819eb56fd62e",
+            "initialStateSha256": "792af1b57f997439515f6c984dfa549d3f45e2ab2fae4533ec7482acea57f82b",
+            "videoSha256": "e9f39bf6e5853f08bcbbe9fbd086710ea47e4d98bff8f98493e09de101f2a7e4"
+          }
+        },
+        {
           "method": "genplan",
           "label": "LLMGenPlan · Opus 5",
           "setting": "Source code",
@@ -1516,13 +1549,7 @@
           }
         }
       ],
-      "unavailable": [
-        {
-          "method": "codex",
-          "label": "Codex",
-          "reason": "Withheld: replay did not reproduce the archived success on episodes 1 and 7; episode 1 also failed with the original background configuration."
-        }
-      ]
+      "unavailable": []
     },
     {
       "id": "SortClutteredBlocks3D",
@@ -1560,19 +1587,20 @@
           "solved": false,
           "steps": 1200,
           "source": {
-            "collection": "Final/Blackbox/Codex GPT5.6 Sol",
-            "archive": "dynamic3d.zip",
-            "resultsMember": "sortclutteredblocks3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__23d54656/2026-09-10_12-00-16/replicate_42/results.json",
-            "programMember": "sortclutteredblocks3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__23d54656/2026-09-10_12-00-16/replicate_42/sandbox/approach.py",
+            "collection": "Codex Reruns",
+            "archive": "sortclutteredblocks3d__seed42.zip",
+            "resultsMember": "sortclutteredblocks3d__seed42/replicate_42/results.json",
+            "programMember": "sortclutteredblocks3d__seed42/replicate_42/sandbox/approach.py",
             "replicateSeed": 42,
             "episode": 2,
             "instanceSeed": 6578458030060481490,
-            "resultsSha256": "c802121d728b10bfa91a7f4638b68e8172db4dc9089e4c0d7924a1ba6c73078f",
-            "approachSha256": "3eafacf7369daeb7927e844bcb625e5da10fd7e21fc076057eb81cab2fb7a699",
+            "resultsSha256": "6d8262f8647b6cd7bf5b33813f5bb11f9c547930a1b6b3a1407e632e67941949",
+            "approachSha256": "d38887378a2f2954af8edb36d03d9b036f8eacfff027c21e601e1fae27e06235",
             "archivedSolved": false,
             "archivedSteps": 1200,
             "initialFrameSha256": "92f0aa262d2e20ab0065654038cb76dbb6c9f70b14ebd3435a3681162d248cda",
-            "videoSha256": "609586caf0280dd37d33b961e6876a782c93fd4cf45cbb1c5574ab1d9da540cb"
+            "initialStateSha256": "e8205cf7a5a7441283eae70dc5f8fe714a9a46ea4f06050dfb6f4bf7fd68afb0",
+            "videoSha256": "da9c7cad6ee16431b88474104038df9314eb949014b811f52be2f806f67dcffe"
           }
         }
       ],
@@ -1699,20 +1727,20 @@
           "solved": false,
           "steps": 620,
           "source": {
-            "collection": "Final/Blackbox/Codex GPT5.6 Sol",
-            "archive": "dynamic3d.zip",
-            "resultsMember": "sweepsimple3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__f81825ae/2026-09-10_10-51-33/replicate_42/results.json",
-            "programMember": "sweepsimple3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__f81825ae/2026-09-10_10-51-33/replicate_42/sandbox/approach.py",
+            "collection": "Codex Reruns",
+            "archive": "sweepsimple3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__f81825ae.zip",
+            "resultsMember": "sweepsimple3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__f81825ae/2026-09-15_17-01-01/replicate_42/results.json",
+            "programMember": "sweepsimple3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__f81825ae/2026-09-15_17-01-01/replicate_42/sandbox/approach.py",
             "replicateSeed": 42,
             "episode": 0,
             "instanceSeed": 7449868751085282632,
-            "resultsSha256": "a7de0b79353c33f3c61f194357986b3df3da38cd62a4497b40df0e5642f656b4",
-            "approachSha256": "26f3ac8b4277c07195a855519e40489fb9143ef9f271e01eb1d9cdd6a8f6178a",
+            "resultsSha256": "52fff529be3d7eb1b60cd626d28ad9326439875401bd54516fa8dde28df6a4d4",
+            "approachSha256": "96ceda8606b3e7e9d0acea2062ec8437a3d0e2afa6a9122d6776e9403bcd39f1",
             "archivedSolved": false,
             "archivedSteps": 620,
-            "initialFrameSha256": "795aa0b888689a3049b0b49bf553822595eda3e051f4af90d6baf83dd0452c3a",
-            "videoSha256": "1d15daffe44cfe79db076570cd87ec1a4ec99d5f5b54f91564426b5004dea2a4",
-            "initialStateSha256": "204a5bf6b2e94784c059c8cbc49895f7ab7cee8ecd0d2d5c08c6f269c2ebd193"
+            "initialFrameSha256": "a849e40732c29be920dafbde1240e3675889139c5fe6092a70f303c58e70a1aa",
+            "initialStateSha256": "204a5bf6b2e94784c059c8cbc49895f7ab7cee8ecd0d2d5c08c6f269c2ebd193",
+            "videoSha256": "e2c037c9528fb18f8706641893f37a5b180a2627dd417fb4567f3876db98b821"
           }
         }
       ],
@@ -1760,19 +1788,20 @@
           "solved": false,
           "steps": 1200,
           "source": {
-            "collection": "Final/Blackbox/Codex GPT5.6 Sol",
-            "archive": "tossing3d.zip",
-            "resultsMember": "tossing3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__2fc17c56/2026-09-11_21-46-59/replicate_42/results.json",
-            "programMember": "tossing3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__2fc17c56/2026-09-11_21-46-59/replicate_42/sandbox/approach.py",
+            "collection": "Codex Reruns",
+            "archive": "tossing3d__seed42.zip",
+            "resultsMember": "tossing3d__seed42/replicate_42/results.json",
+            "programMember": "tossing3d__seed42/replicate_42/sandbox/approach.py",
             "replicateSeed": 42,
             "episode": 1,
             "instanceSeed": 5553887448546940950,
-            "resultsSha256": "4412eafa5077ad5f1b8658c92fc5b756359a5c6a0ef05dd5ea7c6026f6870e43",
-            "approachSha256": "e22cbc1da6ef77dc160caa3d7c2428d3290cc00e13194d064684ebdc13966620",
+            "resultsSha256": "323060f300ed237d1bb12112601c67942cee92b75bbdff4c112576b8e87fd427",
+            "approachSha256": "148d1fb1ca044919f952f902f6feae4fc640875db74fa0c521406830e11d878f",
             "archivedSolved": false,
             "archivedSteps": 1200,
             "initialFrameSha256": "b31f77f96c8b22bfe12d10b2bde45ccfeb00ee48cc5c06e0573e106cce7f174d",
-            "videoSha256": "761ff967affb56c28b3673d53a680c5765a431c6b16e532ef5e558edae4b2759"
+            "initialStateSha256": "7565a88e63b31b6247b5bf8c4c2d284118775ce898bd16bb16c37121174a3bbd",
+            "videoSha256": "4352b6a49bb048f1943557a541e0e19f73864b5c30dc3433dfc138dad9c600d8"
           }
         },
         {
@@ -1914,21 +1943,22 @@
           "video": "assets/policies/PddlBlocked-codex.mp4",
           "poster": "assets/policies/PddlBlocked-codex.jpg",
           "solved": true,
-          "steps": 322,
+          "steps": 106,
           "source": {
-            "collection": "Final/Blackbox/Codex GPT5.6 Sol",
-            "archive": "pddlstream.zip",
-            "resultsMember": "pr2blocked_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__28cf8f22/2026-09-10_00-32-43/replicate_42/results.json",
-            "programMember": "pr2blocked_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__28cf8f22/2026-09-10_00-32-43/replicate_42/sandbox/approach.py",
+            "collection": "Codex Reruns",
+            "archive": "pr2blocked_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__28cf8f22.zip",
+            "resultsMember": "pr2blocked_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__28cf8f22/2026-09-15_19-41-44/replicate_42/results.json",
+            "programMember": "pr2blocked_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__28cf8f22/2026-09-15_19-41-44/replicate_42/sandbox/approach.py",
             "replicateSeed": 42,
             "episode": 3,
             "instanceSeed": 5070999126167511316,
-            "resultsSha256": "172cc3fc8aa3f79f5b8e36347f827355b1bec587d1ab07771a5ed77333eba137",
-            "approachSha256": "3d8d206b52251ecf1cd2045bcdc94b72a29984291ee1c79f580b04e1a7916c85",
+            "resultsSha256": "8d72e2b0cadb353fd18d50b80fd168830ee9a160999c9505e722a721bdf37391",
+            "approachSha256": "e496a753d9bf4acd148418dfb663cf55433da59c34843880e17f766ae0025ef9",
             "archivedSolved": true,
-            "archivedSteps": 322,
+            "archivedSteps": 106,
             "initialFrameSha256": "b1dd1da6868d281571fbee889c8a3b1a555618fffea8c245e131d6c98ed58292",
-            "videoSha256": "7f109c375b312db1721100998a816a5ede8fdf23e03abde360403ecb8d507c54"
+            "initialStateSha256": "837bd2d62a0f47a3804d1183b50ef72358f016b4146e47d4384b6620ec901e13",
+            "videoSha256": "4136ec6455ccf82090ebd0cba5e98932d46a7580a3dae2f1702c69d8960b51c9"
           }
         },
         {
@@ -2018,5 +2048,20 @@
         }
       ]
     }
+  ],
+  "codexRerunEnvironments": [
+    "ClutteredStorage2D",
+    "ConstrainedCupboard3D",
+    "Dynamo3D",
+    "Obstruction3D",
+    "Packing3D",
+    "PddlBlocked",
+    "Rearrange3D",
+    "ScoopPour3D",
+    "Shelf3D",
+    "SortClutteredBlocks3D",
+    "SweepSimple3D",
+    "Tossing3D",
+    "Transport3D"
   ]
 }

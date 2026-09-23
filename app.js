@@ -106,7 +106,7 @@ function renderPolicyExamples() {
   $('#policy-grid').style.setProperty('--policy-columns',Math.min(3,example.videos.length));
   $('#policy-grid').innerHTML=example.videos.map(clip=>`<figure class="policy-card">
     <h5>${esc(clip.label)}</h5><p>${esc(clip.setting)}</p>
-    <video class="policy-video" src="${esc(clip.video)}" poster="${esc(clip.poster)}" controls muted playsinline preload="none" aria-label="${esc(clip.label)} policy in ${esc($('#env-name').textContent)}"></video>
+    <video class="policy-video" src="${esc(clip.video)}?v=${clip.source.videoSha256.slice(0,12)}" poster="${esc(clip.poster)}" controls muted playsinline preload="none" aria-label="${esc(clip.label)} policy in ${esc($('#env-name').textContent)}"></video>
     <figcaption><strong>${clip.solved?'Success':'Failure'}</strong> · ${clip.steps} actions</figcaption>
   </figure>`).join('');
   $$('.policy-video').forEach(video => {
@@ -185,4 +185,4 @@ loadJSON('data/gallery.json').then(result=>{gallery=result;renderGallery();}).ca
 
 loadJSON('data/environment-descriptions.json?v=descriptions-5').then(result=>{descriptions=result;renderEnvironmentDescription();}).catch(error=>{console.error(error);descriptionLoadFailed=true;renderEnvironmentDescription();});
 
-loadJSON('data/policy-examples.json?v=results-9').then(result=>{policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
+loadJSON('data/policy-examples.json?v=codex-reruns-1').then(result=>{policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
