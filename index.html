@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#66418b">
   <link rel="icon" href="assets/prpl-robot.png" type="image/png">
-  <link rel="stylesheet" href="styles.css?v=compact-gallery-1">
+  <link rel="stylesheet" href="styles.css?v=setup-constraints-1">
   <script type="module" src="app.js?v=main-video-20260922"></script>
 </head>
 <body>
@@ -73,11 +73,31 @@
   </figure>
   <h3 class="setup-subheading">Experimental setup</h3>
   <div class="setup-grid">
-    <article><h4>Program synthesis</h4><p>The initial prompt describes the task, observation and action spaces, and goal. The coding agent can interact with the simulator and choose its own tests within a $20 model-usage budget. In the <strong>main setting</strong>, its sandbox provides Python, NumPy, and SciPy, with no environment source code or hand-written TAMP predicates, operators, samplers, or skills. In the <strong>+ source</strong> setting, it can also inspect the environment implementation and import helper functions.</p></article>
-    <article><h4>Held-out evaluation</h4><p>The resulting program is frozen and selects actions without further coding-agent or LLM calls. We perform five independent runs per method and environment, evaluating programs and planners on the same 100 held-out instances sampled from the initial-state distribution used during synthesis. Each evaluation instance has a 60-second timeout.</p></article>
+    <article>
+      <h4>Strict access restrictions in the main setting</h4>
+      <p>The agent receives a description of the task, observation and action spaces, and goal. It chooses its own simulator tests within a <strong>$20 model-usage budget per synthesis run</strong>.</p>
+      <ul class="setup-constraints">
+        <li><strong>No network or host-filesystem access.</strong> Code runs in an isolated Docker container with a separate filesystem.</li>
+        <li><strong>No environment source code.</strong> A client API provides reset, step, and rendering. The simulator implementation runs outside the container and is inaccessible to the agent.</li>
+        <li><strong>Only Python, NumPy, and SciPy.</strong> The agent must generate its own end-to-end policy.</li>
+        <li><strong>No supplied TAMP components.</strong> We provide no hand-written predicates, operators, samplers, or skills.</li>
+      </ul>
+      <p class="setup-audit">We test this isolation through red-teaming: attempts to recover source code, import forbidden libraries, access host files, or reach the network.</p>
+    </article>
+    <article>
+      <h4>Held-out evaluation</h4>
+      <p>The resulting program is <strong>frozen</strong>. It selects actions with <strong>no further coding-agent or LLM calls</strong>.</p>
+      <ul class="setup-constraints">
+        <li><strong>Five independent runs</strong> per method and environment.</li>
+        <li><strong>The same 100 held-out instances</strong> per environment for all programs and planners, sampled from the initial-state distribution used during synthesis.</li>
+        <li><strong>Evaluation seeds checked for overlap.</strong> Seeds are generated randomly, and we verify afterward that none were used during synthesis.</li>
+        <li><strong>60 seconds per evaluation instance</strong> for every method.</li>
+      </ul>
+    </article>
   </div>
+  <p class="setup-source"><strong>+ source comparison.</strong> In this additional Claude Code setting, the agent can inspect the environment implementation and import its helper functions, including inverse kinematics solvers. During synthesis, it can also set arbitrary simulator states.</p>
   <p class="benchmark-scope">The study includes 25 KinDER environments across four families and three PDDLStream domains: Packing, Blocked, and Rovers. <a href="#environments">View each environment and the exact description given to the agent.</a></p>
-  <p class="paper-reference">Protocol: <a href="assets/paper.pdf?v=20260922#page=3" target="_blank" rel="noopener">Section III-A</a> and <a href="assets/paper.pdf?v=20260922#page=4" target="_blank" rel="noopener">Section IV-A</a>.</p>
+  <p class="paper-reference">Protocol: <a href="assets/paper.pdf?v=20260922#page=2" target="_blank" rel="noopener">Sections II-C and III-A</a> and <a href="assets/paper.pdf?v=20260922#page=4" target="_blank" rel="noopener">Section IV-A</a>.</p>
   <div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong>840</strong><span>synthesized programs</span></div><div><strong>84,000</strong><span>evaluation episodes</span></div></div>
   <p class="fine">Includes 140 additional GPT-6 Astra programs and 14,000 evaluation episodes.</p>
 </section>
