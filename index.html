@@ -12,7 +12,7 @@
   <meta name="theme-color" content="#66418b">
   <link rel="icon" href="assets/prpl-robot.png" type="image/png">
   <link rel="stylesheet" href="styles.css?v=compact-gallery-1">
-  <script type="module" src="app.js?v=environment-layout-1"></script>
+  <script type="module" src="app.js?v=main-video-20260922"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -85,11 +85,11 @@
   <div class="section-heading"><h2 id="gallery-title">Gallery</h2><p>Examples of tool use, task strategies, and failure recovery in the synthesized programs. Main setting uses the simulator API; + source also provides the environment source code.</p></div>
   <label class="gallery-speed">Playback speed <select id="gallery-speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option><option value="8" selected>8×</option></select></label>
   <div class="gallery-grid" id="gallery-grid"></div>
-  <noscript><p>Enable JavaScript to view the interactive gallery and results, or <a href="assets/project-video.mp4">watch the project video</a> and <a href="data/benchmark.csv">download the results</a>.</p></noscript>
+  <noscript><p>Enable JavaScript to view the interactive gallery and results, or <a href="assets/project-video.mp4?v=a9fc3fad1bcc">watch the project video</a> and <a href="data/benchmark.csv">download the results</a>.</p></noscript>
 </div></section>
 <section class="section video-section" id="video" aria-labelledby="video-title">
   <div class="section-heading"><h2 id="video-title">Project video</h2><p>An overview of the task setup, a synthesis example, experimental results, and selected behaviors.</p></div>
-  <video id="project-video" controls playsinline preload="metadata" poster="assets/posters/project-video.jpg" aria-label="Project video: Coding Agents for Generalized Task and Motion Planning Problems"><source src="assets/project-video.mp4" type="video/mp4">Your browser cannot play this video. <a href="assets/project-video.mp4">Download the MP4</a>.</video>
+  <video id="project-video" controls playsinline preload="metadata" poster="assets/posters/project-video.jpg?v=a9fc3fad1bcc" aria-label="Project video: Coding Agents for Generalized Task and Motion Planning Problems"><source src="assets/project-video.mp4?v=a9fc3fad1bcc" type="video/mp4">Your browser cannot play this video. <a href="assets/project-video.mp4?v=a9fc3fad1bcc">Download the MP4</a>.</video>
 </section>
 <section class="section leaderboard" id="results"><div class="section-heading"><div><h2>Experimental results</h2></div><div><p>Mean success rates over 100 held-out instances per run, averaged across five runs and the selected environments.</p><a class="inline-link" href="data/benchmark.csv" download>Download the results <span>↓</span></a></div></div>
 <div class="leader-toolbar"><div class="segmented" role="group" aria-label="Evaluation coverage"><button class="active" data-scope="all" aria-pressed="true">All 28 environments</button><button data-scope="shared" aria-pressed="false">Planner subset · 16</button></div><label class="select-label">Family <select id="family-filter"><option value="all">All families</option><option>Kinematic 2D</option><option>Dynamic 2D</option><option>Kinematic 3D</option><option>Dynamic 3D</option><option>PDDLStream</option></select></label></div>
