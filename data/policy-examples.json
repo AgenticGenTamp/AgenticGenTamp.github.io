@@ -1,5 +1,5 @@
 {
-  "selection": "Existing shared held-out instances are retained. Codex uses the latest available complete rerun for 13 environments from the project-maintainer-confirmed no-internet Codex Reruns collection: prefer synthesis replicate 42, otherwise the first available seed in 24, 222, 424, 444 order. Other methods and the remaining 15 Codex environments retain their original programs. Synthesis replicate seeds may differ; compared policies still use the same held-out instance, object count, and initial state. These selected examples are not representative averages. Missing program archives do not imply failure. Numerical results are transcribed separately from the paper.",
+  "selection": "Existing shared held-out instances are retained. Codex uses the latest available complete rerun for 13 environments from the project-maintainer-confirmed no-internet Codex Reruns collection: prefer synthesis replicate 42, otherwise the first available seed in 24, 222, 424, 444 order. Other methods and the remaining 15 Codex environments retain their original programs. Synthesis replicate seeds may differ; compared policies still use the same held-out instance, object count, and initial state. These selected examples are not representative averages. Missing program archives do not imply failure. Numerical results are transcribed separately from the paper. Astra is appended after the existing methods, using synthesis replicate 42 and each existing shared held-out episode. Its selected programs are the same archived runs used in the additional success-rate results. All replay outcomes match their archived episodes; replay action counts are recorded separately.",
   "playback": "Frames sampled every 3 actions, encoded at 10 fps (30 actions per video second), with a one-second final hold. Same playback rate for all three methods; not wall-clock computation time.",
   "rendering": "Frozen archived programs replayed with their archived environment configurations. Scene backgrounds enabled wherever supported. All shown outcomes match archived evaluation outcomes. Captions report replay action counts; numerical result tables remain the original paper values.",
   "environments": [
@@ -77,8 +77,34 @@
             "videoSha256": "2a916d336eb13ca59b4c3d1a2b6979b5b0c2dee104cc8084de837bf3d9ad6f9f",
             "collection": "Final/Baselines/GenPlan"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/StickButton2D-astra.mp4",
+          "poster": "assets/policies/StickButton2D-astra.jpg",
+          "solved": true,
+          "steps": 66,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "stickbutton2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__5d9d2017__seed42__2026-09-20_01-09-21.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 12,
+            "instanceSeed": 5759426138040833787,
+            "resultsSha256": "7b5a0c69981e30efcf6e2c08f45abe9dc6a6d1fc02502ccce91a5282a622b1d5",
+            "approachSha256": "0ef004cebf88c87df8fb2e0af9f4b5059d8ee1a2769588a73e8e1a15fd239748",
+            "archivedSolved": true,
+            "archivedSteps": 66,
+            "initialFrameSha256": "c4cc6a0fc9426ffd02b7b6f95fcb05b58c4b7cc510f5a9012531cc3fa1b79bd9",
+            "initialStateSha256": "b51619d68c1a6c0e3e09d6142a3dc46f6ef23af7eaf6f48fcb2adc07b8bf31d3",
+            "videoSha256": "9a21d53ad882779f4db362fc7cdc31ff654259d8180c96639187fae378db3b2e"
+          }
         }
-      ]
+      ],
+      "unavailable": []
     },
     {
       "id": "Obstruction2D",
@@ -154,8 +180,34 @@
             "videoSha256": "43fac03007bef1081e695d3144cae5bbf3bdfa7d687f6a18136acb3e256238d2",
             "collection": "Final/Baselines/GenPlan"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/Obstruction2D-astra.mp4",
+          "poster": "assets/policies/Obstruction2D-astra.jpg",
+          "solved": true,
+          "steps": 84,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "obstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__367ccfc4__seed42__2026-09-20_01-07-48.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 3,
+            "instanceSeed": 5070999126167511316,
+            "resultsSha256": "0b6f12caeeabc1f19400ec42a27a5d9f5ab675d9a2a4c2790f5780b73759550a",
+            "approachSha256": "c6a516ad9e47c6148a3c62d277a47d627ab489ee575f6f0a221f7611a8a60eb2",
+            "archivedSolved": true,
+            "archivedSteps": 84,
+            "initialFrameSha256": "5ead9b65ebbf23daa32ff1543e06cb305c24790c64a08749ba874c835a1a6e88",
+            "initialStateSha256": "a0b8de3c824c0bc822e5a5cf4bfa26fbb4a6893d1f43c384fd5d9009e0c790d9",
+            "videoSha256": "8c2b1d81389e1e553a97751602228c170e5c667c14d7a48e924c69a1bb41ac6f"
+          }
         }
-      ]
+      ],
+      "unavailable": []
     },
     {
       "id": "ClutteredStorage2D",
@@ -231,6 +283,31 @@
             "initialFrameSha256": "df1c9a09b0d2cc03a23fe18a88c0974bd89951ca4ecb6dc9ef8390925b2b83d7",
             "videoSha256": "c03e80249dced012b925ecb16988a4cea771a685afa2331830eea4ff1d03d1e7",
             "collection": "Final/Baselines/GenPlan"
+          }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/ClutteredStorage2D-astra.mp4",
+          "poster": "assets/policies/ClutteredStorage2D-astra.jpg",
+          "solved": true,
+          "steps": 216,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "clutteredstorage2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__bfd00b1b__seed42__2026-09-20_00-36-06.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 1,
+            "instanceSeed": 5553887448546940950,
+            "resultsSha256": "e97a465ff92e2f0ddc659465564da5541bc7ea867512ce32811c3e77bcc050a4",
+            "approachSha256": "e974d684772ac17aced4ff66826cd2ec7df6c5b9e3c51cace7a0fcf255c03de4",
+            "archivedSolved": true,
+            "archivedSteps": 216,
+            "initialFrameSha256": "df1c9a09b0d2cc03a23fe18a88c0974bd89951ca4ecb6dc9ef8390925b2b83d7",
+            "initialStateSha256": "29c10d320cd2cc231fe4a278c8bfa11ff2b91ed29755f06f2148902161bebad6",
+            "videoSha256": "482b26233fbf5b88df39da49786f821304bd2ce0bd22b509be9be203360375dc"
           }
         }
       ],
@@ -310,8 +387,34 @@
             "videoSha256": "deae23d261667524da9056ce4fec7b9e6ae84c294859867971baaeed247fa5a8",
             "collection": "Final/Baselines/GenPlan"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/ClutteredRetrieval2D-astra.mp4",
+          "poster": "assets/policies/ClutteredRetrieval2D-astra.jpg",
+          "solved": true,
+          "steps": 41,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "clutteredretrieval2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__c9a649a5__seed42__cachefix_2026-09-19_22-33-50.zip",
+            "resultsMember": "run/replicate_42/results.json",
+            "programMember": "run/replicate_42/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 1,
+            "instanceSeed": 5553887448546940950,
+            "resultsSha256": "cdc443e0397cd3bddffab53a7b4638d100007cee0ac11992ac59c02ca4190add",
+            "approachSha256": "ade6671ef2532c0dcdd8a0e84639948bb7b01114125bdce096c81b5418e14074",
+            "archivedSolved": true,
+            "archivedSteps": 41,
+            "initialFrameSha256": "c56814fe51142528765aa23c7be9a2db467f44ba121fc4fd6e7ae712e87035fd",
+            "initialStateSha256": "d27722b8828dcab4ba6959ae73d7269dbcc2de8257894796a3e097330aadb005",
+            "videoSha256": "602832dc3c37d32d344ea25fbb7c586829b8f23fe2d21687e070da09448befe4"
+          }
         }
-      ]
+      ],
+      "unavailable": []
     },
     {
       "id": "Motion2D",
@@ -387,8 +490,34 @@
             "videoSha256": "2cdc682b647c708d3b339386de1d32f2ff0fcef979cb8eb043374f51969c2e24",
             "collection": "Final/Baselines/GenPlan"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/Motion2D-astra.mp4",
+          "poster": "assets/policies/Motion2D-astra.jpg",
+          "solved": true,
+          "steps": 63,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "motion2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__03e086b6__seed42__2026-09-20_01-03-37.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 99,
+            "instanceSeed": 2396529055829695215,
+            "resultsSha256": "4af82327bf02f75702f42d26fc870120dd07fd9125dcdee809145eec2e2f56f0",
+            "approachSha256": "95955f843a0c95c2817cec8b2972c802491e2d2485150a7ac9cef1f307b8c9c4",
+            "archivedSolved": true,
+            "archivedSteps": 63,
+            "initialFrameSha256": "56a42becd3f17cdbd0a7ae038793eda6346484dcfbf099ae7305c5207ec03f49",
+            "initialStateSha256": "1ad7af94d0df3b277cec5a3db62d3dc8d86c181b2febfda372827a366d3a87b7",
+            "videoSha256": "788e135f83581e71a1a141b1e79ce2a04b2e27e7c6013e908ff545ddebe6787a"
+          }
         }
-      ]
+      ],
+      "unavailable": []
     },
     {
       "id": "PushPullHook2D",
@@ -464,8 +593,34 @@
             "videoSha256": "5609b2057c503a9ab1c50f77492c894deab9d984cd3a01920943a2c2dc89973d",
             "collection": "Final/Baselines/GenPlan"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/PushPullHook2D-astra.mp4",
+          "poster": "assets/policies/PushPullHook2D-astra.jpg",
+          "solved": true,
+          "steps": 117,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "pushpullhook2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__cca6b957__seed42__2026-09-20_00-28-41.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
+            "resultsSha256": "4636205eb281528f1be0d264aaec48071285258471661c699e8e6ed979fd92eb",
+            "approachSha256": "4bd7a1706f06048d90f07657e78ac27894f46d6ecdb9752d02a3cb8b6df16694",
+            "archivedSolved": true,
+            "archivedSteps": 117,
+            "initialFrameSha256": "1419a1987741a43fae939ae3d51c86893d2c2cfddfb1ba2e4bb6b68575a881f3",
+            "initialStateSha256": "b801b471fb5354c0dc949d1704a336373bb4994716634f66898d5ee9798c913e",
+            "videoSha256": "8326c89048b83eef635e25d83186ce64645029883cf6ccb34e52091f25455353"
+          }
         }
-      ]
+      ],
+      "unavailable": []
     },
     {
       "id": "DynObstruction2D",
@@ -541,8 +696,34 @@
             "videoSha256": "9e24d94844eab8f7a19bad4799f37b9bf9afa776fda9b0b22274e0fe7cb5feb1",
             "collection": "Final/Baselines/GenPlan"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/DynObstruction2D-astra.mp4",
+          "poster": "assets/policies/DynObstruction2D-astra.jpg",
+          "solved": true,
+          "steps": 96,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "dynobstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__313eaa4d__seed42__2026-09-20_00-04-36.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
+            "resultsSha256": "89140be8574668f9f6d2dd106aa7fdd247ced7b75865b15120c4b6368d2da8b8",
+            "approachSha256": "f31c5f5da448e40fa178065a48becfd54fbe3b7db1ee95f09b67e98e30417d93",
+            "archivedSolved": true,
+            "archivedSteps": 96,
+            "initialFrameSha256": "e6a4ba20f93e1a05fff95752b8bbd14e8e597156779d711378b3c74693bf462b",
+            "initialStateSha256": "589b08e4dac3211d847978cacfcb8a1a299bcef0ec7fd44de668716e3128a578",
+            "videoSha256": "9997e6b98b659f4671535d6b7e92c5fe88cda331e11fa7f7713f8794cdb9a025"
+          }
         }
-      ]
+      ],
+      "unavailable": []
     },
     {
       "id": "DynPushPullHook2D",
@@ -618,8 +799,34 @@
             "videoSha256": "542b5786c015b6cedc9997e9a1c2a08e38b514bbb349be16ce0e524ace72140d",
             "collection": "Final/Baselines/GenPlan"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/DynPushPullHook2D-astra.mp4",
+          "poster": "assets/policies/DynPushPullHook2D-astra.jpg",
+          "solved": true,
+          "steps": 194,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "dynpushpullhook2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__e6c1d28c__seed42__2026-09-19_23-48-07.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 3,
+            "instanceSeed": 5070999126167511316,
+            "resultsSha256": "aaad50b42473ec4b3e5c4fd83965e9723c6e7b889e2543934459d955bafcc2c0",
+            "approachSha256": "9aed29a71c7035246ba9b47558c0e3a1c81036dd602dfd6ba02f1ca0612b6cdc",
+            "archivedSolved": true,
+            "archivedSteps": 191,
+            "initialFrameSha256": "5881c8dd7ef185c51e564716497bff63bc32c3ddec4bb1f9c3f870f95eff7719",
+            "initialStateSha256": "144be869b7a9e455d725737b34185cd25a430a19b9e96e055dbeb1c3ef0aef90",
+            "videoSha256": "d2c0b86ae39ff506e0b6afa259d275ed1f65d3cb1db3a72cec4e868d5e224b53"
+          }
         }
-      ]
+      ],
+      "unavailable": []
     },
     {
       "id": "DynPushT2D",
@@ -695,8 +902,34 @@
             "videoSha256": "5bee2c04abe692b103a5c7febbc99fdcabb741d87bb51459438f5e1b2d267636",
             "collection": "Final/Baselines/GenPlan"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/DynPushT2D-astra.mp4",
+          "poster": "assets/policies/DynPushT2D-astra.jpg",
+          "solved": true,
+          "steps": 182,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "dynpusht2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__d24423b4__seed42__2026-09-20_00-59-17.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
+            "resultsSha256": "392f1c29f709778de635d49b485a21ee820299971f381e90c177a308d79e980f",
+            "approachSha256": "e42da15afa58ee50b90e9e26add48998ee6852e078d7f8958780a47c1283e814",
+            "archivedSolved": true,
+            "archivedSteps": 182,
+            "initialFrameSha256": "b147d6ce2f1d9481e9ae07c1639a0dac66b857fa8bb569ee13b77e2ff1e08049",
+            "initialStateSha256": "d73076c37bc0cdabb86a2059ca9b253231d033aa3c8aa7d1804e8f09f1751cfa",
+            "videoSha256": "318ceaa1b67a1950492d9e2acf622ad92b91cc841b15ba4450e490ac708df52f"
+          }
         }
-      ]
+      ],
+      "unavailable": []
     },
     {
       "id": "DynScoopPour2D",
@@ -772,8 +1005,34 @@
             "videoSha256": "85b186f1956052532676fd459dfaa863b20ba942054ea9d43019898eeb196484",
             "collection": "Final/Baselines/GenPlan"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/DynScoopPour2D-astra.mp4",
+          "poster": "assets/policies/DynScoopPour2D-astra.jpg",
+          "solved": true,
+          "steps": 360,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "dynscooppour2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__9be19fe6__seed42__2026-09-20_00-18-39.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
+            "resultsSha256": "222f416824afc2de7682940cb8fb37e10fa90853358b5e9fc5ebcafe7f107a39",
+            "approachSha256": "0e107132ba18917613324b7fddc80d848be5db33181909a8acf18cd912da27b4",
+            "archivedSolved": true,
+            "archivedSteps": 403,
+            "initialFrameSha256": "098181d8ade2ae2bfb08731047257ec8b7975b66aed34847883261bcc51b58d9",
+            "initialStateSha256": "28d98571b500afa9619b927e3878a0d89b2d6a0fe0ca8fddecb62df00a8eeb21",
+            "videoSha256": "21f5975432045bfa1ab792efc63e018ddf215de037fafbdb5243bb38a705eb4b"
+          }
         }
-      ]
+      ],
+      "unavailable": []
     },
     {
       "id": "Obstruction3D",
@@ -849,6 +1108,31 @@
             "archivedSteps": 300,
             "initialFrameSha256": "6e86f38231d2403cef25b53a15a15da22eb8bf00135788b5ca81b9fd09f0cf80",
             "videoSha256": "1fa4d6710966f29fa09ec8317efeaa5839008c40b57319a6a8470d178b5a2fa3"
+          }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/Obstruction3D-astra.mp4",
+          "poster": "assets/policies/Obstruction3D-astra.jpg",
+          "solved": true,
+          "steps": 34,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "obstruction3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__dc87b702__seed42__2026-09-19_23-58-36.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
+            "resultsSha256": "a8dae13c78a95a9a3cf936fb9defb2cbbcbd545807a8b587087e23c9f08d4846",
+            "approachSha256": "ce775357e35928a8dbae3c380451be1ffc8526bf36dd90a3a5c512c20d391420",
+            "archivedSolved": true,
+            "archivedSteps": 34,
+            "initialFrameSha256": "6e86f38231d2403cef25b53a15a15da22eb8bf00135788b5ca81b9fd09f0cf80",
+            "initialStateSha256": "9333c88a9b641f3797aa83e691055c09d34a0ab39d239c67feb01115a650dd85",
+            "videoSha256": "3f2e382795fd2b98dc7a71a98b65afe6fd00fa600029dbaa28dc3735f69f07fa"
           }
         }
       ],
@@ -929,6 +1213,31 @@
             "initialFrameSha256": "56d979c7ee10ea70ccd4852f0ab98bc768a0e0ef5c2e27ff8a12dca44791125c",
             "videoSha256": "bf59d0016db7d4c971d20bdb959c35f613afea7920473fb810da516e08952656"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/Packing3D-astra.mp4",
+          "poster": "assets/policies/Packing3D-astra.jpg",
+          "solved": true,
+          "steps": 93,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "packing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__7fe70f93__seed42__2026-09-19_23-44-05.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 2,
+            "instanceSeed": 6578458030060481490,
+            "resultsSha256": "3ff9fde7202d3c5574118a8ac108064d17e926a995b3fc4049df299fd3c44cb6",
+            "approachSha256": "d0cef2883e521a816001773a9697c602b37539a370c0935cb09dc3ba10eb45d8",
+            "archivedSolved": true,
+            "archivedSteps": 93,
+            "initialFrameSha256": "56d979c7ee10ea70ccd4852f0ab98bc768a0e0ef5c2e27ff8a12dca44791125c",
+            "initialStateSha256": "c33745586a0ed9c0334cb411069f8372716495665aaad916740843ac423710a9",
+            "videoSha256": "f77d0846ebbcb79fb6a577e9e34e1bb4c4a32f795f1167f17ed884198bb29a7f"
+          }
         }
       ],
       "unavailable": []
@@ -1008,6 +1317,31 @@
             "initialFrameSha256": "2df563aaf646f4135c4bd4203be57f28796fff93f57b2bb404ef37bb6f95335f",
             "videoSha256": "58cacde68efd01cd49b6cb1d8ad4854a0a05721d5112a95d6b4f51cc25552fad"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/Transport3D-astra.mp4",
+          "poster": "assets/policies/Transport3D-astra.jpg",
+          "solved": true,
+          "steps": 225,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "transport3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__fc203b23__seed42__2026-09-20_00-51-47.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 2,
+            "instanceSeed": 6578458030060481490,
+            "resultsSha256": "be41f3fdb936efd37a43478fa1af9005fb491bace9ec2eb97f216e8fd008030c",
+            "approachSha256": "8df8a18b06437104aa279ede0bb05f05bc914755d62564c78f5ac8f4763a554d",
+            "archivedSolved": true,
+            "archivedSteps": 225,
+            "initialFrameSha256": "2df563aaf646f4135c4bd4203be57f28796fff93f57b2bb404ef37bb6f95335f",
+            "initialStateSha256": "4cd937ca2a0f3fe95d7c48dc5b2aa10d263a2a05e50a836f04f4a6cc2022ada1",
+            "videoSha256": "97f71d5fcece817c40c6ece07fd416915eb301549c4df823ac61ee8e2995594a"
+          }
         }
       ],
       "unavailable": []
@@ -1086,6 +1420,31 @@
             "initialFrameSha256": "47e9d1ce7f65ee0e0dd586cf327512f12ff38c10c95228f4f37280a9729af991",
             "videoSha256": "477a1488565e4c4f918fde15df0a98e900d6db4754de3fc7ae24f23e6acd471d"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/Table3D-astra.mp4",
+          "poster": "assets/policies/Table3D-astra.jpg",
+          "solved": true,
+          "steps": 3,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "table3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__cacee12a__seed42__2026-09-20_01-10-47.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 37,
+            "instanceSeed": 3206203727921791616,
+            "resultsSha256": "b28dad1034bfa750d944a7c478e8e2c0fdfe6010687068f0521c180887991c83",
+            "approachSha256": "a07115ee2f742cb1269792c36b26dabe8955aba7bf3408014a5313e1a1473f5a",
+            "archivedSolved": true,
+            "archivedSteps": 3,
+            "initialFrameSha256": "47e9d1ce7f65ee0e0dd586cf327512f12ff38c10c95228f4f37280a9729af991",
+            "initialStateSha256": "a17e420eac560734848da4df6ebe77e161dc804d941df3acf9539a2e351e43e7",
+            "videoSha256": "cda334d2739b895c97b038d80482bb23172afa3a7aecf359f431b86b6c63cbc1"
+          }
         }
       ],
       "unavailable": []
@@ -1114,6 +1473,31 @@
             "archivedSolved": true,
             "archivedSteps": 3,
             "initialFrameSha256": "648471cdbf8854973c68d7b725b7f67229e97e8ba774b98bd0757983eae910f6",
+            "videoSha256": "04f0158840dedf84c3ed3a28a61c9b5389c94250172868051b67f05fe02623b7"
+          }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/BaseMotion3D-astra.mp4",
+          "poster": "assets/policies/BaseMotion3D-astra.jpg",
+          "solved": true,
+          "steps": 3,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "basemotion3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__28891e32__seed42__2026-09-21_17-41-02.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
+            "resultsSha256": "4d1e2ad27b8bc6dbce3c34cdf17c1f4d6280f2bb46e4a1c603cf175c505fe375",
+            "approachSha256": "f426ab1788735b45338ad8b432d945a30a3a41d1a50b4e0a6f0a79ccdfd68487",
+            "archivedSolved": true,
+            "archivedSteps": 3,
+            "initialFrameSha256": "648471cdbf8854973c68d7b725b7f67229e97e8ba774b98bd0757983eae910f6",
+            "initialStateSha256": "6bb73f02b1d85099cc5791ca56360ef739dca1b23fdacc2bbfb8df7362ad1fcd",
             "videoSha256": "04f0158840dedf84c3ed3a28a61c9b5389c94250172868051b67f05fe02623b7"
           }
         }
@@ -1205,6 +1589,31 @@
             "initialFrameSha256": "29c9922cda55c21a32af46b34140cebd1b9f20056d1557af90bb9682aa2ed460",
             "videoSha256": "0122b24e8cbadf24404ae142f8bae1db3c328b3c0b728c4ae0796af737da0286"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/BalanceBeam3D-astra.mp4",
+          "poster": "assets/policies/BalanceBeam3D-astra.jpg",
+          "solved": true,
+          "steps": 478,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "balancebeam3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__7903d67b__seed42__2026-09-20_00-27-07.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
+            "resultsSha256": "d7161469112ebcc4d5e9714878f3ba000a5ca860af1f11a2369a3f9a23029864",
+            "approachSha256": "ab0c5f052f95c1015a04ae09ea7ff9ca883d6ffe57f58ebd3d84ac1042a7f004",
+            "archivedSolved": true,
+            "archivedSteps": 478,
+            "initialFrameSha256": "29c9922cda55c21a32af46b34140cebd1b9f20056d1557af90bb9682aa2ed460",
+            "initialStateSha256": "668181af13b4ca8c0e6940f1a90866f3b3385d201e5ac9ddf9ecc0b5b73b2904",
+            "videoSha256": "6c4eae8d1906f90f2228ea8b753dd515ab7130726b574eafd07a749138242ece"
+          }
         }
       ],
       "unavailable": []
@@ -1259,6 +1668,31 @@
             "initialFrameSha256": "1562799281c7cf4bd9220b14d46b8db3d31f1afc7e7143454740b574789c4810",
             "initialStateSha256": "0e0de9da0c229835c166bf077fc413ffa79b1d53d3bfa9857a65538da5fba28c",
             "videoSha256": "7082bf3083e06411009035c50080348dd9ca1833776e21aab71f7ccdfff249a8"
+          }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/ConstrainedCupboard3D-astra.mp4",
+          "poster": "assets/policies/ConstrainedCupboard3D-astra.jpg",
+          "solved": true,
+          "steps": 647,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__a162bdcd__seed42__2026-09-19_23-17-29.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 2,
+            "instanceSeed": 6578458030060481490,
+            "resultsSha256": "bd8b629afa2e9624cf78717aca3560a9c55d079fc333d2d8e8f06e61298a6b0a",
+            "approachSha256": "b20388d01ea00652824e6905b9bbde5bd8e635a21900a1570cabde7a5a5f0a2a",
+            "archivedSolved": true,
+            "archivedSteps": 647,
+            "initialFrameSha256": "1562799281c7cf4bd9220b14d46b8db3d31f1afc7e7143454740b574789c4810",
+            "initialStateSha256": "0e0de9da0c229835c166bf077fc413ffa79b1d53d3bfa9857a65538da5fba28c",
+            "videoSha256": "8434386a5ff34b8ee895740b887aeb4638233454ae33b5d23ffea2417c34a257"
           }
         }
       ],
@@ -1321,6 +1755,31 @@
             "initialFrameSha256": "b94de467b67fb866b5bf53f0915872a3ef65eb402f493552142d47c812bcd297",
             "initialStateSha256": "a57a4bf413861256f32bcea6b8f4fce832ae00bcc4650743d74ca424a8071338",
             "videoSha256": "fbf33ff47cd07d570037486bfd63a9df6fae099ffc0269ae2b84c9ea0d391b7c"
+          }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/Dynamo3D-astra.mp4",
+          "poster": "assets/policies/Dynamo3D-astra.jpg",
+          "solved": true,
+          "steps": 50,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "dynamo3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__5e971404__seed42__2026-09-20_00-16-14.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 1,
+            "instanceSeed": 5553887448546940950,
+            "resultsSha256": "58260230d763fb9a7063e1a4377db6be817ce985118c21dc5ffb111cc5bcab10",
+            "approachSha256": "c96453547600e3ce518d4fd9899ab5290bea602b6589ddf9721ceba3122c62f2",
+            "archivedSolved": true,
+            "archivedSteps": 50,
+            "initialFrameSha256": "d2c621cc5529f414b531bbf2374bc30dd0b7451544f640ecd5b013f2e5ac46f3",
+            "initialStateSha256": "a57a4bf413861256f32bcea6b8f4fce832ae00bcc4650743d74ca424a8071338",
+            "videoSha256": "5b441d3f38eca8b689b735ab289b7ef57335775539d1a673eb69358598ead78a"
           }
         }
       ],
@@ -1407,6 +1866,31 @@
             "initialFrameSha256": "898789d99e9a1823adbdf3e06e424413291d3054889372722175e8cbbaffcc98",
             "videoSha256": "fec781cb2152c9b509a0e14cf0b3566d4e4dc02fcd96b2565336e5d1f1387057"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/Rearrange3D-astra.mp4",
+          "poster": "assets/policies/Rearrange3D-astra.jpg",
+          "solved": true,
+          "steps": 358,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "rearrange3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__9218ca49__seed42__2026-09-19_23-23-29.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
+            "resultsSha256": "7e540a003cc5d73fc08b0e20317deb66b216a9175a436e5271cc0c45238511aa",
+            "approachSha256": "371dc49fabcc90b4a9ae30c625f407ccaec2c272b2dab1fb7de9ac38afe0a43f",
+            "archivedSolved": true,
+            "archivedSteps": 358,
+            "initialFrameSha256": "898789d99e9a1823adbdf3e06e424413291d3054889372722175e8cbbaffcc98",
+            "initialStateSha256": "7fd62aa4ca78bc5d00e5ff8308bbc0104af73708f158b446930f41046bb60c0c",
+            "videoSha256": "ce919e4b6ab7b5e2148e0de069cfbdf3b13cc6d8acf16c3569e74ef5d735aa48"
+          }
         }
       ],
       "unavailable": []
@@ -1461,6 +1945,31 @@
             "initialFrameSha256": "6622fbcb1bfba0e4afdde02ad9abd3bee18a602573af879d9ae08a9880df43c3",
             "initialStateSha256": "640d29b1659d04fe52464562479ccc83e19fa4410bd4003ae8276173644bbcc8",
             "videoSha256": "88de7cae486d86e81bd03555a05ed1c7ff76f4cbd7cace783f64ef6f93ad9322"
+          }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/ScoopPour3D-astra.mp4",
+          "poster": "assets/policies/ScoopPour3D-astra.jpg",
+          "solved": false,
+          "steps": 800,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "scooppour3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__caf7e5d3__seed42__2026-09-19_23-18-59.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 5,
+            "instanceSeed": 5716358502980765232,
+            "resultsSha256": "006908a36f19e74185255ba32afd8102a3ec31a3356044260248f6f2f902924f",
+            "approachSha256": "087d44fa873aad5244dae45c73caa1938f90c8ff14f5802daf3edce95f7755b8",
+            "archivedSolved": false,
+            "archivedSteps": 800,
+            "initialFrameSha256": "6622fbcb1bfba0e4afdde02ad9abd3bee18a602573af879d9ae08a9880df43c3",
+            "initialStateSha256": "640d29b1659d04fe52464562479ccc83e19fa4410bd4003ae8276173644bbcc8",
+            "videoSha256": "af30b625ae5b76fc2567cea280d5d4dae6114f3f93f0bf30f813edbe4ecea2dd"
           }
         }
       ],
@@ -1547,6 +2056,31 @@
             "initialFrameSha256": "44825719a4aa09a5ac03681ceb1c35ed4e9c990583104dd0802a819eb56fd62e",
             "videoSha256": "5eb14e83fc13c41fc60db17d197486e6a1eb3f4a312191fa2c06bb6afb143f56"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/Shelf3D-astra.mp4",
+          "poster": "assets/policies/Shelf3D-astra.jpg",
+          "solved": true,
+          "steps": 214,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "dynamicshelf3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__64dd9d55__seed42__2026-09-19_23-24-59.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 1,
+            "instanceSeed": 5553887448546940950,
+            "resultsSha256": "27c7ce728c127bb0314815410ab4358b3790c8725d5d422b1e96ac5eede9d199",
+            "approachSha256": "f2ff7a4da367ba54e2a5944d7a807c5febc166a89907641657eecc28974a6fb5",
+            "archivedSolved": true,
+            "archivedSteps": 214,
+            "initialFrameSha256": "44825719a4aa09a5ac03681ceb1c35ed4e9c990583104dd0802a819eb56fd62e",
+            "initialStateSha256": "792af1b57f997439515f6c984dfa549d3f45e2ab2fae4533ec7482acea57f82b",
+            "videoSha256": "12ed9455f582c58240adc5f8b1a99e723a036a48b988af047b68c5a0be22dd5f"
+          }
         }
       ],
       "unavailable": []
@@ -1601,6 +2135,31 @@
             "initialFrameSha256": "92f0aa262d2e20ab0065654038cb76dbb6c9f70b14ebd3435a3681162d248cda",
             "initialStateSha256": "e8205cf7a5a7441283eae70dc5f8fe714a9a46ea4f06050dfb6f4bf7fd68afb0",
             "videoSha256": "da9c7cad6ee16431b88474104038df9314eb949014b811f52be2f806f67dcffe"
+          }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/SortClutteredBlocks3D-astra.mp4",
+          "poster": "assets/policies/SortClutteredBlocks3D-astra.jpg",
+          "solved": true,
+          "steps": 440,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "sortclutteredblocks3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__577f597c__seed42__2026-09-19_23-20-29.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 2,
+            "instanceSeed": 6578458030060481490,
+            "resultsSha256": "38f0a2bca87ae7f45c79bdcf9865cf1f1ea45c741b3a193cf4f594d9af32103e",
+            "approachSha256": "50d0673055766585a70ebb658029b6d7f112702267c4116ff3052ad89e8dc83e",
+            "archivedSolved": true,
+            "archivedSteps": 384,
+            "initialFrameSha256": "92f0aa262d2e20ab0065654038cb76dbb6c9f70b14ebd3435a3681162d248cda",
+            "initialStateSha256": "e8205cf7a5a7441283eae70dc5f8fe714a9a46ea4f06050dfb6f4bf7fd68afb0",
+            "videoSha256": "c4c41733604413fafe89b32bebeeb7879116fb83bbbc0ff3255081a33344938d"
           }
         }
       ],
@@ -1686,6 +2245,31 @@
             "initialFrameSha256": "568d4a89fa3c0f4b598cec4fd2414de328bda3a2c2ba4ae66496bcf532aa4b00",
             "videoSha256": "e57f49b934701e5f2747b732b3044a22064dcdb41199dca93dfba17f6921e7cf"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/SweepIntoDrawer3D-astra.mp4",
+          "poster": "assets/policies/SweepIntoDrawer3D-astra.jpg",
+          "solved": true,
+          "steps": 987,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "sweepintodrawer3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__e740c304__seed42__2026-09-19_23-14-29.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
+            "resultsSha256": "4275499697fb31b71cc8ddab566ab13814bdedf4105471d5daa16db5ad699dde",
+            "approachSha256": "427f116e5d362fdff0daba3db975e4a63b24b91b04bfa1726de1f70d21e22c83",
+            "archivedSolved": true,
+            "archivedSteps": 810,
+            "initialFrameSha256": "568d4a89fa3c0f4b598cec4fd2414de328bda3a2c2ba4ae66496bcf532aa4b00",
+            "initialStateSha256": "a5ac3fa6253589aa5bb94b8915802d737c513be0a1885e2df6304482f4ac9e03",
+            "videoSha256": "fefe6cba0e7ddcad8fc783799b6b7025410d4129e828ddf3a748442b2b02f901"
+          }
         }
       ],
       "unavailable": []
@@ -1741,6 +2325,31 @@
             "initialFrameSha256": "a849e40732c29be920dafbde1240e3675889139c5fe6092a70f303c58e70a1aa",
             "initialStateSha256": "204a5bf6b2e94784c059c8cbc49895f7ab7cee8ecd0d2d5c08c6f269c2ebd193",
             "videoSha256": "e2c037c9528fb18f8706641893f37a5b180a2627dd417fb4567f3876db98b821"
+          }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/SweepSimple3D-astra.mp4",
+          "poster": "assets/policies/SweepSimple3D-astra.jpg",
+          "solved": false,
+          "steps": 620,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "sweepsimple3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__359c21ef__seed42__2026-09-19_23-15-59.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 0,
+            "instanceSeed": 7449868751085282632,
+            "resultsSha256": "00101cabcf4811c5568aba466bc420a62b38700ab2780a52861d2873743fe8b6",
+            "approachSha256": "6e5b29bb44c1c6220ece31179f55ec24d88f550252ef58c98fde039b72ddd178",
+            "archivedSolved": false,
+            "archivedSteps": 620,
+            "initialFrameSha256": "96ef70ee1daf25ad60700bce6f60771308b102165937c139f0ed349fcde8d5ee",
+            "initialStateSha256": "204a5bf6b2e94784c059c8cbc49895f7ab7cee8ecd0d2d5c08c6f269c2ebd193",
+            "videoSha256": "2f2efad78c0e82773d54f18bcca6426be7e6c657e3e8a0a062b738a0c5279583"
           }
         }
       ],
@@ -1827,6 +2436,31 @@
             "initialFrameSha256": "b31f77f96c8b22bfe12d10b2bde45ccfeb00ee48cc5c06e0573e106cce7f174d",
             "videoSha256": "cf7415352a6f82052a626535c2bee64193eeea3dca8f09287135f48fb0e8acb0"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/Tossing3D-astra.mp4",
+          "poster": "assets/policies/Tossing3D-astra.jpg",
+          "solved": true,
+          "steps": 261,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "tossing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__cb00e8df__seed42__2026-09-20_00-31-36.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 1,
+            "instanceSeed": 5553887448546940950,
+            "resultsSha256": "6ca37a9ef4ba3d2e925a68fcc03b60d3147c5923d5114f359bd4913e3aa200a7",
+            "approachSha256": "5458166a6d1abceaa8cdd09510483b14f8c36e8853e415f18b93bbe0480bdeaa",
+            "archivedSolved": true,
+            "archivedSteps": 261,
+            "initialFrameSha256": "b31f77f96c8b22bfe12d10b2bde45ccfeb00ee48cc5c06e0573e106cce7f174d",
+            "initialStateSha256": "7565a88e63b31b6247b5bf8c4c2d284118775ce898bd16bb16c37121174a3bbd",
+            "videoSha256": "f7995c53facc3ff55736e28f1e50e55cf61e6d797904b475c59cf467299d5c62"
+          }
         }
       ],
       "unavailable": []
@@ -1904,6 +2538,31 @@
             "archivedSteps": 390,
             "initialFrameSha256": "8e99e90b785f4b6a9d5faa163a6d861c92c617cce92d045ef0bc815de15854b8",
             "videoSha256": "045bab864e35e77214132e41561031cbd5aec8197eaf80649d1ae12f951e46c6"
+          }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/PddlPacking-astra.mp4",
+          "poster": "assets/policies/PddlPacking-astra.jpg",
+          "solved": true,
+          "steps": 45,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "pr2packed_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__4a10d310__seed42__2026-09-20_00-57-54.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 2,
+            "instanceSeed": 6578458030060481490,
+            "resultsSha256": "8091111c5a1248beb1ece6bb8e35ee3e5514b3325597c36c5b9ccb592415be7f",
+            "approachSha256": "7bfd604a4221508699a2c4118f5a5e6b7b7b8e4ecc8865a834c851ad286e173a",
+            "archivedSolved": true,
+            "archivedSteps": 45,
+            "initialFrameSha256": "8e99e90b785f4b6a9d5faa163a6d861c92c617cce92d045ef0bc815de15854b8",
+            "initialStateSha256": "a6212295905f886da61ac5697828c9e97d6c945da9333e3eec928cc12399a5c6",
+            "videoSha256": "81148672cfcadad6ae7d78f5202bfee77d8f760992abad356dae7246da0e20fb"
           }
         }
       ],
@@ -1984,6 +2643,31 @@
             "initialFrameSha256": "b1dd1da6868d281571fbee889c8a3b1a555618fffea8c245e131d6c98ed58292",
             "videoSha256": "1bb521c64814edee93009a99641eeb685e63218e098fbdbda1a1700a30bec420"
           }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/PddlBlocked-astra.mp4",
+          "poster": "assets/policies/PddlBlocked-astra.jpg",
+          "solved": true,
+          "steps": 73,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "pr2blocked_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__744dcd42__seed42__2026-09-19_23-21-59.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 3,
+            "instanceSeed": 5070999126167511316,
+            "resultsSha256": "9af442ecfd118e27b2c3e3b71c7763420cd027b8cd361616347f4627f5b1cb25",
+            "approachSha256": "640a0da4ef04da312c9acee0633762bdfb58c57e73d3f457299e3066d9b6a1e3",
+            "archivedSolved": true,
+            "archivedSteps": 73,
+            "initialFrameSha256": "b1dd1da6868d281571fbee889c8a3b1a555618fffea8c245e131d6c98ed58292",
+            "initialStateSha256": "837bd2d62a0f47a3804d1183b50ef72358f016b4146e47d4384b6620ec901e13",
+            "videoSha256": "b1ff91a738e97e5e5f69d7dd85cb0a2e59972f5894ac6b3b4fafa1d870691b9d"
+          }
         }
       ],
       "unavailable": []
@@ -2037,6 +2721,31 @@
             "archivedSteps": 38,
             "initialFrameSha256": "6004d60b7455bef6a79d06145c43cf82e7beb199428a4a5c023a43c2468ad4d1",
             "videoSha256": "8b77e188df4ead6c6cdc7bd97cbc8a9340a687805c66f3ec865be973778bee65"
+          }
+        },
+        {
+          "method": "astra",
+          "label": "Codex · GPT-6 Astra",
+          "setting": "Main setting",
+          "video": "assets/policies/PddlRovers-astra.mp4",
+          "poster": "assets/policies/PddlRovers-astra.jpg",
+          "solved": true,
+          "steps": 26,
+          "source": {
+            "collection": "Final/Blackbox/Codex GPT6 Astra",
+            "archive": "rovers_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__618ce91e__seed42__2026-09-20_00-30-06.zip",
+            "resultsMember": "run/results.json",
+            "programMember": "run/sandbox/approach.py",
+            "replicateSeed": 42,
+            "episode": 6,
+            "instanceSeed": 1124563562602844589,
+            "resultsSha256": "8d61b95ba1435e7cf5db9200c0e2c68b1a07f4c1bc3d6864000380b972ee8490",
+            "approachSha256": "678459617b1496f0b75ad96e98acf6807777c4abd784bb27865b01e42069a702",
+            "archivedSolved": true,
+            "archivedSteps": 26,
+            "initialFrameSha256": "6004d60b7455bef6a79d06145c43cf82e7beb199428a4a5c023a43c2468ad4d1",
+            "initialStateSha256": "80996ce71b143a8ef347b6c3eb7a3581f8d18dbecac7fbd6fff8a9f46f87cc4a",
+            "videoSha256": "cd4f4f37224aeec1b9ccda73d5d56b0cf03e2789fda7f5edbd781ebec3601e3d"
           }
         }
       ],

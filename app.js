@@ -70,8 +70,8 @@ function selectEnvironment(id){
  const env=data.environments.find(e=>e.id===id);if(!env)return;
  $$('[data-env]').forEach(b=>{b.classList.toggle('active',b.dataset.env===id);b.setAttribute('aria-pressed',String(b.dataset.env===id));});
  $('#env-family').textContent=env.family;$('#env-name').textContent=env.name;selectedEnvironment=id;renderEnvironmentDescription();renderPolicyExamples();const v=$('#env-video');v.pause();v.poster=env.poster;v.src=env.video;v.load();
- const order=['claude','codex','genplan','oneshot','planner','source'];
- $('#env-bars').innerHTML=order.map(id=>{const m=data.methods.find(x=>x.id===id),r=env.results[id];const name={claude:'Agentic · Claude Code',codex:'Agentic · Codex',genplan:'LLMGenPlan',oneshot:'One-shot',planner:'Planner',source:'Agentic + source'}[id];return `<div class="env-row"><strong>${name}</strong><span class="score-track"><span class="score-fill" style="--w:${r?r.mean*100:0}%;--c:${m.color}"></span></span><span class="env-value">${r?`${whole(r.mean)} <small>[${whole(r.min)}–${whole(r.max)}]</small>`:'Not available'}</span></div>`;}).join('');
+ const order=['claude','codex','astra','genplan','oneshot','planner','source'];
+ $('#env-bars').innerHTML=order.map(id=>{const m=data.methods.find(x=>x.id===id),r=env.results[id];const name={claude:'Agentic · Claude Code',codex:'Codex · GPT-5.6 Sol',astra:'Codex · GPT-6 Astra',genplan:'LLMGenPlan',oneshot:'One-shot',planner:'Planner',source:'Agentic + source'}[id];return `<div class="env-row"><strong>${name}</strong><span class="score-track"><span class="score-fill" style="--w:${r?r.mean*100:0}%;--c:${m.color}"></span></span><span class="env-value">${r?`${whole(r.mean)} <small>[${whole(r.min)}–${whole(r.max)}]</small>`:'Not available'}</span></div>`;}).join('');
 }
 function renderEnvironmentList(){let last='';$('#env-list').innerHTML=data.environments.map(e=>{const heading=e.family!==last?`<p class="env-group-title">${e.family}</p>`:'';last=e.family;return `${heading}<button data-env="${e.id}" aria-pressed="false">${e.name}<span aria-hidden="true">↗</span></button>`;}).join('');$$('[data-env]').forEach(b=>b.addEventListener('click',()=>selectEnvironment(b.dataset.env)));selectEnvironment('StickButton2D');markPolicyExamples();}
 $$('[data-select-env]').forEach(b=>b.addEventListener('click',()=>{if(!data)return;selectEnvironment(b.dataset.selectEnv);$('.explorer').scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'start'});}));
@@ -103,7 +103,7 @@ function renderPolicyExamples() {
     (missing.length?' Verified clips are not available for '+missing.map(item=>item.label).join(' and ')+'.':'')+
     (withheld.length?' The '+withheld.map(item=>item.label).join(' and ')+' clip is withheld because its replay outcome differed from the archive.':'');
   $('#play-policies').textContent=example.videos.length>1?'Play together':'Play example';
-  $('#policy-grid').style.setProperty('--policy-columns',Math.min(3,example.videos.length));
+  $('#policy-grid').style.setProperty('--policy-columns',example.videos.length===4?2:Math.min(3,example.videos.length));
   $('#policy-grid').innerHTML=example.videos.map(clip=>`<figure class="policy-card">
     <h5>${esc(clip.label)}</h5><p>${esc(clip.setting)}</p>
     <video class="policy-video" src="${esc(clip.video)}?v=${clip.source.videoSha256.slice(0,12)}" poster="${esc(clip.poster)}" controls muted playsinline preload="none" aria-label="${esc(clip.label)} policy in ${esc($('#env-name').textContent)}"></video>
@@ -180,9 +180,9 @@ $('#gallery-speed').addEventListener('change', event => {
   $$('.gallery-video').forEach(video => {video.defaultPlaybackRate=gallerySpeed;video.playbackRate=gallerySpeed;});
 });
 async function loadJSON(path){const res=await fetch(path);if(!res.ok)throw new Error(`Cannot load ${path}: ${res.status}`);return res.json();}
-loadJSON('data/benchmark.json?v=paper-20260922').then(result=>{data=result;renderRanking();renderEnvironmentList();}).catch(error=>{console.error(error);$('#scope-note').textContent='The interactive results could not load. Please download the CSV or read Tables I–II in the paper.';});
+loadJSON('data/benchmark.json?v=astra-results-1').then(result=>{data=result;renderRanking();renderEnvironmentList();}).catch(error=>{console.error(error);$('#scope-note').textContent='The interactive results could not load. Please download the CSV or read Tables I–II in the paper.';});
 loadJSON('data/gallery.json').then(result=>{gallery=result;renderGallery();}).catch(error=>{console.error(error);$('#gallery-grid').innerHTML='<p>The gallery could not load. <a href="assets/project-video.mp4">Watch the project video ↗</a></p>';});
 
 loadJSON('data/environment-descriptions.json?v=descriptions-5').then(result=>{descriptions=result;renderEnvironmentDescription();}).catch(error=>{console.error(error);descriptionLoadFailed=true;renderEnvironmentDescription();});
 
-loadJSON('data/policy-examples.json?v=codex-reruns-1').then(result=>{policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
+loadJSON('data/policy-examples.json?v=astra-rollouts-1').then(result=>{policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});

@@ -1,0 +1,2150 @@
+{
+  "method": "astra",
+  "backend": "Codex · GPT-6 Astra",
+  "setting": "Main setting",
+  "snapshotDate": "2026-09-22",
+  "collection": "Final/Blackbox/Codex GPT6 Astra",
+  "selection": "Exclude the bad - too little tokens folder. For each environment and synthesis seed, select the latest complete 100-instance evaluation. Duplicate revisions do not add weight.",
+  "precision": "Compute each per-run success rate from its 100 per-episode outcomes. Average the five rates, rounded to two decimals (round half up) to match the printed paper precision. Record unrounded means separately.",
+  "runsPerEnvironment": 5,
+  "heldOutInstancesPerRun": 100,
+  "replicateSeeds": [
+    24,
+    42,
+    222,
+    424,
+    444
+  ],
+  "completeRuns": 140,
+  "evaluationEpisodes": 14000,
+  "environments": [
+    {
+      "id": "StickButton2D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-21_13-50-53",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/stickbutton2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__2d58bcf6/2026-09-21_13-50-53/replicate_24/results.json",
+          "programMember": "0921/stickbutton2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__2d58bcf6/2026-09-21_13-50-53/replicate_24/sandbox/approach.py",
+          "resultsSha256": "34b3600c6033c153b9901ced29ea25163267479c4265ef73ab91aba252641da4",
+          "approachSha256": "d998d7ee137a18c51134a39c6908243fc2cd3244e91e8e79fd6d05fd4dc69027",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_01-09-21",
+          "archive": "stickbutton2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__5d9d2017__seed42__2026-09-20_01-09-21.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "7b5a0c69981e30efcf6e2c08f45abe9dc6a6d1fc02502ccce91a5282a622b1d5",
+          "approachSha256": "0ef004cebf88c87df8fb2e0af9f4b5059d8ee1a2769588a73e8e1a15fd239748",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_17-46-10",
+          "archive": "stickbutton2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__9d732cf1__seed222__2026-09-21_17-46-10.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "b52d991c3759d96ddcaaf061100c30ccbc45a6dfefdc5633ff0a6a5e39fa82d2",
+          "approachSha256": "f5754b06b69ffe328c59282aa91b17f3ae08aa523848cd74bb8080ed50b09855",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_22-23-42",
+          "archive": "stickbutton2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__3bc36820__seed424__2026-09-21_22-23-42.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "d0d33851395a16264f31cc2e58d4db921805e423a43e237d4c23d99cde08d73a",
+          "approachSha256": "c06f0985d199a600ad93f476227aa4eff5045d0dfd5b9836d94f4df05efa1dd2",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_23-33-29",
+          "archive": "stickbutton2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__f0d9dc9e__seed444__2026-09-21_23-33-29.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "38901f3e2eb78230632579b5e179ab5e4cb6ebde486fd832cec139666655affe",
+          "approachSha256": "22f041471de9a5ffee1dbb5debc142fbb3d41d6640a9945c9a0d4ea63de15330",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Obstruction2D",
+      "result": {
+        "mean": 1.0,
+        "min": 0.99,
+        "max": 1.0
+      },
+      "unroundedMean": 0.996,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-21_13-17-16",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/obstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__d0148e6c/2026-09-21_13-17-16/replicate_24/results.json",
+          "programMember": "0921/obstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__d0148e6c/2026-09-21_13-17-16/replicate_24/sandbox/approach.py",
+          "resultsSha256": "bf277fceb59bbd7ef82fccaf19cf271a89bdb668027b919ee82f8179404fb6db",
+          "approachSha256": "c7c9db30a99eb3764bb063ed6b03030573cfa8e0d5623c189cac5c65e31afb38",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_01-07-48",
+          "archive": "obstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__367ccfc4__seed42__2026-09-20_01-07-48.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "0b6f12caeeabc1f19400ec42a27a5d9f5ab675d9a2a4c2790f5780b73759550a",
+          "approachSha256": "c6a516ad9e47c6148a3c62d277a47d627ab489ee575f6f0a221f7611a8a60eb2",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_17-44-57",
+          "archive": "obstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__efc62cc2__seed222__2026-09-21_17-44-57.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "a083a463ff1e5f14d24d047b9511f294e6eea6d3a19ac9d0e3c2b2cb5522cb48",
+          "approachSha256": "135cf2d3b35ea4d33439c063654cc952c15a442403810a7149847b12e45b848d",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_22-22-01",
+          "archive": "obstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__7b0dab54__seed424__2026-09-21_22-22-01.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "3f8c0defe2cdb0f5c189bba34d99204b4c3892b5b3191376adfe291fcaf61b92",
+          "approachSha256": "76a785db8796febc9c10d2ab83f6ceeff9d454a9459bb9ff283beed0e26b54d2",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_23-29-57",
+          "archive": "obstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__67142638__seed444__2026-09-21_23-29-57.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "f257a8c393030537802bbbd911429649711a272ed508b0cff3a2f3014c2cc441",
+          "approachSha256": "dfd0a2bea80b408279f3d5543844f5862e807844e6de6230a522b133af6d7d15",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "ClutteredStorage2D",
+      "result": {
+        "mean": 1.0,
+        "min": 0.99,
+        "max": 1.0
+      },
+      "unroundedMean": 0.998,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-21_11-21-49",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/clutteredstorage2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__7ffb9866/2026-09-21_11-21-49/replicate_24/results.json",
+          "programMember": "0921/clutteredstorage2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__7ffb9866/2026-09-21_11-21-49/replicate_24/sandbox/approach.py",
+          "resultsSha256": "b33f530d4ef42edb13739f85a336beee10fc88b5cabb34729c5e99a15a65ee64",
+          "approachSha256": "23f840b6034d1207f92091e7589303ce29a683ba34cd681a18421bbe0329a145",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_00-36-06",
+          "archive": "clutteredstorage2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__bfd00b1b__seed42__2026-09-20_00-36-06.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "e97a465ff92e2f0ddc659465564da5541bc7ea867512ce32811c3e77bcc050a4",
+          "approachSha256": "e974d684772ac17aced4ff66826cd2ec7df6c5b9e3c51cace7a0fcf255c03de4",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_13-38-32",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/clutteredstorage2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__9b0745b7/2026-09-21_13-38-32/replicate_222/results.json",
+          "programMember": "0921/clutteredstorage2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__9b0745b7/2026-09-21_13-38-32/replicate_222/sandbox/approach.py",
+          "resultsSha256": "dd79ac82514b8bacd488e10175bb339ee822d945ce8bb26e047ce4fa0ccecf26",
+          "approachSha256": "3998397cdae870dde2c4a7c027c7e7c5bde5778175d0b3a3634a58151a2aac7c",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_21-00-16",
+          "archive": "clutteredstorage2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__12469cd9__seed424__2026-09-21_21-00-16.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "730c4fdc8c1755de2a1bec27ed10c01b3ea80675fea590d937d586c6af09047a",
+          "approachSha256": "d4898228e719f18ff1da38f39f5bae7144b4775fa5a865afb50688fa03775912",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_22-46-57",
+          "archive": "clutteredstorage2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__eb5d63f9__seed444__2026-09-21_22-46-57.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "ff5b5e63225d90934605152f6172e8a4287d00032c56b4a3145c22b046e024b7",
+          "approachSha256": "b57130695f994da25d0549d9641d058996fc486c7dcd80990e48cb2093cbf147",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "ClutteredRetrieval2D",
+      "result": {
+        "mean": 0.96,
+        "min": 0.91,
+        "max": 1.0
+      },
+      "unroundedMean": 0.962,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_02-19-52",
+          "archive": "clutteredretrieval2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__8947595d__seed24__2026-09-20_02-19-52.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "cf69520f59a8f932a153b68b186feafd9b9351f536688f2915fa39fb5bdf80cf",
+          "approachSha256": "9dd8a8445cde69e01c12d4cb0a8005cdc7bfb58180257b1a214fc41eadec7457",
+          "solved": 91,
+          "episodes": 100,
+          "rate": 0.91,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-19_22-33-50",
+          "archive": "clutteredretrieval2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__c9a649a5__seed42__cachefix_2026-09-19_22-33-50.zip",
+          "member": "run/replicate_42/results.json",
+          "programMember": "run/replicate_42/sandbox/approach.py",
+          "resultsSha256": "cdc443e0397cd3bddffab53a7b4638d100007cee0ac11992ac59c02ca4190add",
+          "approachSha256": "ade6671ef2532c0dcdd8a0e84639948bb7b01114125bdce096c81b5418e14074",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-20_23-00-48",
+          "archive": "multirun_bowen_astra_0920.zip",
+          "member": "multirun/clutteredretrieval2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__30a50255/2026-09-20_23-00-48/replicate_222/results.json",
+          "programMember": "multirun/clutteredretrieval2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__30a50255/2026-09-20_23-00-48/replicate_222/sandbox/approach.py",
+          "resultsSha256": "0723326177d243d7c268347e02d7602113326ede0588998f6b3dda8ca339f69f",
+          "approachSha256": "84ca8d5e79067851ac57d7c1c03e29ee468177c4ff0b93f37de207e381aac576",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_18-16-21",
+          "archive": "clutteredretrieval2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__c632b848__seed424__2026-09-21_18-16-21.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "a84aaa68668c91cb10836df87cf60b499d44f303f43136ad0d76e1acc711c735",
+          "approachSha256": "c3b8a02ff57aadb08e58e8ac80fc8c3f3f39fd343342150a2df322b0cdcf3641",
+          "solved": 97,
+          "episodes": 100,
+          "rate": 0.97,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_19-56-43",
+          "archive": "clutteredretrieval2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__45ab9bbf__seed444__2026-09-21_19-56-43.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "f28b4ce951679167e397ad914f60881092541e660da223989fcb80e2918a7f18",
+          "approachSha256": "ab4b7fadf345cb4e1f797e69144fe12c531036d895bd2b81dc4ff4f138a73832",
+          "solved": 94,
+          "episodes": 100,
+          "rate": 0.94,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Motion2D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-21_12-58-44",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/motion2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__54829653/2026-09-21_12-58-44/replicate_24/results.json",
+          "programMember": "0921/motion2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__54829653/2026-09-21_12-58-44/replicate_24/sandbox/approach.py",
+          "resultsSha256": "e4a726ee4bae5cf6c41395184929fc31733d7145f91cc72fc2e49fa21dee5a25",
+          "approachSha256": "1934a544d1dca6e1f7f00b8127025e460ceb5e08dfd62904ce6af327fc89d162",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_01-03-37",
+          "archive": "motion2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__03e086b6__seed42__2026-09-20_01-03-37.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "4af82327bf02f75702f42d26fc870120dd07fd9125dcdee809145eec2e2f56f0",
+          "approachSha256": "95955f843a0c95c2817cec8b2972c802491e2d2485150a7ac9cef1f307b8c9c4",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_20-59-29",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/motion2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__154f05c7/2026-09-21_20-59-29/replicate_222/results.json",
+          "programMember": "0921/motion2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__154f05c7/2026-09-21_20-59-29/replicate_222/sandbox/approach.py",
+          "resultsSha256": "868246c65b403b0f79132566483b8daca6b4e14c82cfbc1699785e06089db881",
+          "approachSha256": "cf68aff7196d8f8aeae57a3c3f51dc3d90b3e1eaa9ef05b50fef84f950f6d7f9",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_22-20-47",
+          "archive": "motion2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__ab1c6ed9__seed424__2026-09-21_22-20-47.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "391a401586b8a31ebc443e58d11305487a75efe8d5f64b465a46ebe2a3376467",
+          "approachSha256": "abefd1979891fcff0928d7c913fbbccee69a069a4e150cf32f5ed4de2c4775dd",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_23-20-07",
+          "archive": "motion2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__1eb66958__seed444__2026-09-21_23-20-07.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "9b967b736b3bc4c0c2f30352477146c015042b9e6a8073bb5b5ae9c05dbfc171",
+          "approachSha256": "c6f75371a0e368fb823bebcad070712528e4e16b631c55e73936b5234c51868e",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "PushPullHook2D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_03-37-50",
+          "archive": "pushpullhook2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__e9833d9f__seed24__2026-09-20_03-37-50.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "c29ba92895abbf7b18163fac603fcc66d34c4fedd285a862231e52d3932c3422",
+          "approachSha256": "41c2c584f590972501c0eefbc67f37fd5a11d5261a0c8e1a7d104e138d3980c2",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_00-28-41",
+          "archive": "pushpullhook2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__cca6b957__seed42__2026-09-20_00-28-41.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "4636205eb281528f1be0d264aaec48071285258471661c699e8e6ed979fd92eb",
+          "approachSha256": "4bd7a1706f06048d90f07657e78ac27894f46d6ecdb9752d02a3cb8b6df16694",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_12-22-55",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/pushpullhook2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__b7e2e339/2026-09-21_12-22-55/replicate_222/results.json",
+          "programMember": "0921/pushpullhook2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__b7e2e339/2026-09-21_12-22-55/replicate_222/sandbox/approach.py",
+          "resultsSha256": "ef85b7fa0c16727fcfaccdce1729e94dd487ff3b3bf53ba9c35ec82232711e29",
+          "approachSha256": "602c29cceaca11b5427fe5d6a312b19703b5ca437c44ee4eb6ad38bcd1f222f2",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_21-40-20",
+          "archive": "pushpullhook2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__6927c086__seed424__2026-09-21_21-40-20.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "3993695857f2c542177bff311a525af6d8895f8457b68b881ad29df618084a78",
+          "approachSha256": "47d4c05e357143b23d2dfdc386c2115ba2722048c53df39a45eb4f9c513a2073",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_23-11-56",
+          "archive": "pushpullhook2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__4f87a5a7__seed444__2026-09-21_23-11-56.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "a8a3eb87f37d01d37d6d22e5792b8afd1c2e890d7fa437f30d25685a40021b70",
+          "approachSha256": "5c6bb188c07a16be520f6f920e37d170ffe154b74395d7f53570db288c8262d6",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "DynObstruction2D",
+      "result": {
+        "mean": 0.96,
+        "min": 0.94,
+        "max": 0.98
+      },
+      "unroundedMean": 0.96,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_02-45-58",
+          "archive": "dynobstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__e74f0d0c__seed24__2026-09-20_02-45-58.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "e69a61ac2f059adbecf8ee865736529cf3aeca937a92be4d56e883ce84c29b4e",
+          "approachSha256": "dd9871b7d3d16e5ebc0aa133f703f4e07b112ee6c6238445a420a0b1d90e05c5",
+          "solved": 96,
+          "episodes": 100,
+          "rate": 0.96,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_00-04-36",
+          "archive": "dynobstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__313eaa4d__seed42__2026-09-20_00-04-36.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "89140be8574668f9f6d2dd106aa7fdd247ced7b75865b15120c4b6368d2da8b8",
+          "approachSha256": "f31c5f5da448e40fa178065a48becfd54fbe3b7db1ee95f09b67e98e30417d93",
+          "solved": 94,
+          "episodes": 100,
+          "rate": 0.94,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_00-20-27",
+          "archive": "multirun_bowen_astra_0920.zip",
+          "member": "multirun/dynobstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__6e7ebec4/2026-09-21_00-20-27/replicate_222/results.json",
+          "programMember": "multirun/dynobstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__6e7ebec4/2026-09-21_00-20-27/replicate_222/sandbox/approach.py",
+          "resultsSha256": "81812f1018c008e40e684c583ee9eb6687982f4a88a6e760a8663bd958a749b2",
+          "approachSha256": "a6bf3b485502a0184e06c0252e7195faf10951b927a974be507b321975203ae5",
+          "solved": 98,
+          "episodes": 100,
+          "rate": 0.98,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_18-32-17",
+          "archive": "dynobstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__9416fba6__seed424__2026-09-21_18-32-17.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "d19a1ecabd7f8e602126ff3f96038e9fefc01eb9cb28e6d64a6318dc4765531d",
+          "approachSha256": "cedb6eeab9cb80d85738ea298cec2ef3347f1e31e2a9834d9097612a4867ffa5",
+          "solved": 96,
+          "episodes": 100,
+          "rate": 0.96,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_20-25-04",
+          "archive": "dynobstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__24adaa52__seed444__2026-09-21_20-25-04.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "c1b9f4390d079f53373b393d3101c8909994278ce27f1f613d21d05c5c66088e",
+          "approachSha256": "1a2284ed6dad817d97ee1a5a1609c394b24ce4461127bd93f41f51ee2906a500",
+          "solved": 96,
+          "episodes": 100,
+          "rate": 0.96,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "DynPushPullHook2D",
+      "result": {
+        "mean": 0.91,
+        "min": 0.79,
+        "max": 1.0
+      },
+      "unroundedMean": 0.91,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_02-23-52",
+          "archive": "dynpushpullhook2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__e37b5616__seed24__2026-09-20_02-23-52.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "61e820f66cedec5230bb9e9aa528751b4ba3730a9be8865ce02d9f6307ecc822",
+          "approachSha256": "bc81741eb6a98efe62be88c1b8377033b775d9ab534fdfc04ffb5bca6e3ed9a5",
+          "solved": 79,
+          "episodes": 100,
+          "rate": 0.79,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-19_23-48-07",
+          "archive": "dynpushpullhook2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__e6c1d28c__seed42__2026-09-19_23-48-07.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "aaad50b42473ec4b3e5c4fd83965e9723c6e7b889e2543934459d955bafcc2c0",
+          "approachSha256": "9aed29a71c7035246ba9b47558c0e3a1c81036dd602dfd6ba02f1ca0612b6cdc",
+          "solved": 93,
+          "episodes": 100,
+          "rate": 0.93,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-20_23-23-45",
+          "archive": "multirun_bowen_astra_0920.zip",
+          "member": "multirun/dynpushpullhook2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__ae02c288/2026-09-20_23-23-45/replicate_222/results.json",
+          "programMember": "multirun/dynpushpullhook2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__ae02c288/2026-09-20_23-23-45/replicate_222/sandbox/approach.py",
+          "resultsSha256": "48519259b91bb8797164787c203bd9872dbbabe58b2239837fcd1e73b910c155",
+          "approachSha256": "8577dce62c205234dc6e90d19fa97a7ff638ebbbb1e9155eb29cbdeaa8c4d824",
+          "solved": 90,
+          "episodes": 100,
+          "rate": 0.9,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_18-18-49",
+          "archive": "dynpushpullhook2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__71e73cd1__seed424__2026-09-21_18-18-49.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "786751899a896cbdbb1f4c0ad5443a65e6c77d9025b3729ff26342fea79e0edd",
+          "approachSha256": "41b5bf3b410d4939ed00b2259619622ed32413bba902dc7739358a5155cfee40",
+          "solved": 93,
+          "episodes": 100,
+          "rate": 0.93,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_20-21-22",
+          "archive": "dynpushpullhook2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__62fca24d__seed444__2026-09-21_20-21-22.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "d9b5ce480846908e60d358c42f7d63a8901cb659e714e0ace90c0d733ddcbb79",
+          "approachSha256": "d6f2e6fa703a3f86a20306801a3c8d63ac127e66cba315fe2618a0234c5dfd9c",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "DynPushT2D",
+      "result": {
+        "mean": 1.0,
+        "min": 0.99,
+        "max": 1.0
+      },
+      "unroundedMean": 0.998,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-21_12-39-55",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/dynpusht2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__6fad45c9/2026-09-21_12-39-55/replicate_24/results.json",
+          "programMember": "0921/dynpusht2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__6fad45c9/2026-09-21_12-39-55/replicate_24/sandbox/approach.py",
+          "resultsSha256": "304d2142bbe470d387c82d549582f823af5b79d361704b23e8333bc22bb2501e",
+          "approachSha256": "3dbbda02979672e5c23a61ec92227a1c8850e312c9342dfd06f9c9d7eb7c3eee",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_00-59-17",
+          "archive": "dynpusht2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__d24423b4__seed42__2026-09-20_00-59-17.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "392f1c29f709778de635d49b485a21ee820299971f381e90c177a308d79e980f",
+          "approachSha256": "e42da15afa58ee50b90e9e26add48998ee6852e078d7f8958780a47c1283e814",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_20-36-27",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/dynpusht2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__c9fcf0a9/2026-09-21_20-36-27/replicate_222/results.json",
+          "programMember": "0921/dynpusht2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__c9fcf0a9/2026-09-21_20-36-27/replicate_222/sandbox/approach.py",
+          "resultsSha256": "8183567ec860505b77fed0520b541184bbc5c19b50efbeccad632a259d2373d3",
+          "approachSha256": "8f0f62b7e3fbae730a25846f190f5528823907063762eecd48a5e62c60aad8c1",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_22-16-22",
+          "archive": "dynpusht2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__b111212d__seed424__2026-09-21_22-16-22.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "2c942dab729229aa51a8deeb4e989fb594fe111cecd3663591be49a79e83c143",
+          "approachSha256": "1ea4e922e582d867c6d6a7426a35dbd8aa8922d91fb47cac3152e21e56174f8d",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_23-18-01",
+          "archive": "dynpusht2d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__be58c2a9__seed444__2026-09-21_23-18-01.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "3b60f2e897790c72a964478385ae0dc9be33c281420761a8739a103e72bdca60",
+          "approachSha256": "c9f8b811a6e0405a48b17648776af998bcb1b505decaec6cd958a56fc060906c",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "DynScoopPour2D",
+      "result": {
+        "mean": 1.0,
+        "min": 0.99,
+        "max": 1.0
+      },
+      "unroundedMean": 0.996,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_03-20-48",
+          "archive": "dynscooppour2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__e8cf3a38__seed24__2026-09-20_03-20-48.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "1cf707177f22b058dc5f61bbfa7f50a9ace3149ad98aee9eb9935d3fa1e47c03",
+          "approachSha256": "b3262dfb16b5e80b689f84e48b525a62a1fcfdfdadb1571d94c2ff2998afb519",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_00-18-39",
+          "archive": "dynscooppour2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__9be19fe6__seed42__2026-09-20_00-18-39.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "222f416824afc2de7682940cb8fb37e10fa90853358b5e9fc5ebcafe7f107a39",
+          "approachSha256": "0e107132ba18917613324b7fddc80d848be5db33181909a8acf18cd912da27b4",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_11-22-03",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/dynscooppour2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__464dfcb9/2026-09-21_11-22-03/replicate_222/results.json",
+          "programMember": "0921/dynscooppour2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__464dfcb9/2026-09-21_11-22-03/replicate_222/sandbox/approach.py",
+          "resultsSha256": "9bd571768fee4cc385887d5c7ce3050300bb3e413888e9fc29593f019d6d469e",
+          "approachSha256": "0144708ea22885018ddb58aaee0cef243368c60f1c4a0782ba44c3b90cb47b60",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_21-27-18",
+          "archive": "dynscooppour2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__43ed8b23__seed424__2026-09-21_21-27-18.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "04a590bdb1d62dd34b1d5f23c3e21f2b3921e4d8428f6f70ebce34d6f5ffc9a1",
+          "approachSha256": "9e2d4866f773e35f5e950d0a025cb1db419dcc3b4b91eeccfd7267acc34fc4a0",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_23-02-21",
+          "archive": "dynscooppour2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__9a742fed__seed444__2026-09-21_23-02-21.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "c806ae5fafa46316985ddea04378118e638f2b577494fb3816d268b3fb4c6aaf",
+          "approachSha256": "ab0b74a4b1e503886dd155b287678ff75f902b91f9c6e5da4d843f44d1a43303",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Obstruction3D",
+      "result": {
+        "mean": 0.97,
+        "min": 0.92,
+        "max": 0.99
+      },
+      "unroundedMean": 0.974,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_02-39-58",
+          "archive": "obstruction3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__bf1ef19e__seed24__2026-09-20_02-39-58.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "4016030c67549a97cbf2fec7618d9645535c7b3c1e70135eac9097e49596146f",
+          "approachSha256": "b56d2a95db8f353f761f40aeb49e2a2a6c6c1c0837e043ced71ef4a6e5bd0e52",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-19_23-58-36",
+          "archive": "obstruction3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__dc87b702__seed42__2026-09-19_23-58-36.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "a8dae13c78a95a9a3cf936fb9defb2cbbcbd545807a8b587087e23c9f08d4846",
+          "approachSha256": "ce775357e35928a8dbae3c380451be1ffc8526bf36dd90a3a5c512c20d391420",
+          "solved": 98,
+          "episodes": 100,
+          "rate": 0.98,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-20_23-51-55",
+          "archive": "multirun_bowen_astra_0920.zip",
+          "member": "multirun/obstruction3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__26394f99/2026-09-20_23-51-55/replicate_222/results.json",
+          "programMember": "multirun/obstruction3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__26394f99/2026-09-20_23-51-55/replicate_222/sandbox/approach.py",
+          "resultsSha256": "e38a94b00f4687d03d9337f444f19a951c04147e1f849276ceea78a877bfc14d",
+          "approachSha256": "c9d0223e4df37328d2661343ba789dd184ff70610d9926ef30d19a650f975b43",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_18-23-44",
+          "archive": "obstruction3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__61018f09__seed424__2026-09-21_18-23-44.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "97a1ebab5c938c0063f22fb50053a0867020e76915117ac9504a1a1962780ec1",
+          "approachSha256": "703e11c4a7b1a401a8825237045264eee42875587ce6b35f8b9fbdc3d8e9d262",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_20-23-31",
+          "archive": "obstruction3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__ce13ac5a__seed444__2026-09-21_20-23-31.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "904d6fa1fb06d92b6319253cf19b06b04aa5f13ca13e417d4c16bab69552d52a",
+          "approachSha256": "3375585b7058729a2b6f9e7c00bc573da84bfa992cae07d4daea26d4ccddd41e",
+          "solved": 92,
+          "episodes": 100,
+          "rate": 0.92,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Packing3D",
+      "result": {
+        "mean": 0.89,
+        "min": 0.67,
+        "max": 1.0
+      },
+      "unroundedMean": 0.892,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_01-58-37",
+          "archive": "packing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__580d7fe8__seed24__2026-09-20_01-58-37.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "ac3e798d915ee78cb7ec4b9f14e923c3a5b6a63cef8a3826e39e523ca7b76a79",
+          "approachSha256": "98ef7689951f28ead8de9a58a02b6755fc8ba63d189d07d246b62741e38edc7b",
+          "solved": 79,
+          "episodes": 100,
+          "rate": 0.79,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-19_23-44-05",
+          "archive": "packing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__7fe70f93__seed42__2026-09-19_23-44-05.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "3ff9fde7202d3c5574118a8ac108064d17e926a995b3fc4049df299fd3c44cb6",
+          "approachSha256": "d0cef2883e521a816001773a9697c602b37539a370c0935cb09dc3ba10eb45d8",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-20_22-10-43",
+          "archive": "multirun_bowen_astra_0920.zip",
+          "member": "multirun/packing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__ba39bb6b/2026-09-20_22-10-43/replicate_222/results.json",
+          "programMember": "multirun/packing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__ba39bb6b/2026-09-20_22-10-43/replicate_222/sandbox/approach.py",
+          "resultsSha256": "9e878f2928a2e93880f03e59349d7749ef0aa0b85a21d4c6502d91b0af6fbb85",
+          "approachSha256": "f8758ba8dbf87028036d3e4db9004c4391cb8b3706ec9129d441bf03b6b8651e",
+          "solved": 67,
+          "episodes": 100,
+          "rate": 0.67,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_18-11-23",
+          "archive": "packing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__c9778121__seed424__2026-09-21_18-11-23.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "e0e8eec0f27462d87a37161d4195f52f264c64787591f62d4a598ffa5830524d",
+          "approachSha256": "0446245632a45dda8b6a88995800d6428df31d60ae030020817e05732cd0544c",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_19-41-52",
+          "archive": "packing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__49f4b10f__seed444__2026-09-21_19-41-52.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "2a4be64ca33c95651aa7887061ee82455c068a177e6e2c6690efc25a2b91e5b9",
+          "approachSha256": "07a4124b8668947c83404e020bbdc5a3609ce5d7954429f9fd8e7671c6640240",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Transport3D",
+      "result": {
+        "mean": 0.78,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "unroundedMean": 0.78,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-21_11-56-12",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/transport3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__7bddd27e/2026-09-21_11-56-12/replicate_24/results.json",
+          "programMember": "0921/transport3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__7bddd27e/2026-09-21_11-56-12/replicate_24/sandbox/approach.py",
+          "resultsSha256": "cb180f74bc62991f1e0efb321f2d0225f515675c06951f79cc5fda74b403a777",
+          "approachSha256": "96798e7bcbd98d193be6ae977944e47b8e4d426eb0fa54e6f062932349a98ec9",
+          "solved": 90,
+          "episodes": 100,
+          "rate": 0.9,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_00-51-47",
+          "archive": "transport3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__fc203b23__seed42__2026-09-20_00-51-47.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "be41f3fdb936efd37a43478fa1af9005fb491bace9ec2eb97f216e8fd008030c",
+          "approachSha256": "8df8a18b06437104aa279ede0bb05f05bc914755d62564c78f5ac8f4763a554d",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_19-53-18",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/transport3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__5f24c52e/2026-09-21_19-53-18/replicate_222/results.json",
+          "programMember": "0921/transport3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__5f24c52e/2026-09-21_19-53-18/replicate_222/sandbox/approach.py",
+          "resultsSha256": "bd9926b0913a6386df318f529fb15f465585ed2481e050e9c2d7be7a190202c4",
+          "approachSha256": "bd3b95c5b85be38067749a5d7d66c39342a49f92871d177ccf72bec0e07ecf34",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_21-01-30",
+          "archive": "transport3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__d90c848d__seed424__2026-09-21_21-01-30.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "8775cdd8cc3940ba3bf3bcb932ef7b8debf3a49faba4a20ec23101cc966f5d8f",
+          "approachSha256": "762cd7376136920634293056b23a71f001b4d82063e8587a554ca5dbe6db371c",
+          "solved": 0,
+          "episodes": 100,
+          "rate": 0.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_22-48-12",
+          "archive": "transport3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__6799a53e__seed444__2026-09-21_22-48-12.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "d678b458d05f182d4b25a8da73e584cc74f037f8514ccda857524ac7a217ffbe",
+          "approachSha256": "89bb8e0f7d3c4798cfbe8768e14385097cf879b348c3186b614f5ea6d4e7ad6a",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Table3D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-21_20-15-20",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/table3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__75abd470/2026-09-21_20-15-20/replicate_24/results.json",
+          "programMember": "0921/table3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__75abd470/2026-09-21_20-15-20/replicate_24/sandbox/approach.py",
+          "resultsSha256": "a6428c599c1c70facd8538f031dc88eab0a4c9391cd3d9264ccbc81ee5249a6b",
+          "approachSha256": "38ca31d0246bd0f58651f51783b2891c332bf3432ab61901f0c73deb07815b4d",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_01-10-47",
+          "archive": "table3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__cacee12a__seed42__2026-09-20_01-10-47.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "b28dad1034bfa750d944a7c478e8e2c0fdfe6010687068f0521c180887991c83",
+          "approachSha256": "a07115ee2f742cb1269792c36b26dabe8955aba7bf3408014a5313e1a1473f5a",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_17-48-44",
+          "archive": "table3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__239db0b6__seed222__2026-09-21_17-48-44.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "0df7b3d29bd02c1afd065acdd50e99f3cd91a0112086f1dd18bb910aed5e50c1",
+          "approachSha256": "9a6d23638737e9334504769207a3b29188ba6f1e1cb158fc9ea12647133d60f3",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_22-38-00",
+          "archive": "table3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__f31bf99d__seed424__2026-09-21_22-38-00.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "fa95acc70227a277542df5d5618cb34a6263d97db11101d010f51afcba5964aa",
+          "approachSha256": "b080c99beb4b553ea921692bf6b132f0fa6b23df9753f30b172b2ac9a8760b2c",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_23-44-21",
+          "archive": "table3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__54aef116__seed444__2026-09-21_23-44-21.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "ddb2b14b4c3d599d311e7082dd7d42b165f120c913e85a0a08660ab26a115fea",
+          "approachSha256": "6b3768d6d8271f8abd61231c9dab14e5f00a32986ed133d8038ebb860f718ec2",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "BaseMotion3D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-21_19-53-34",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/basemotion3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__83f0bdfc/2026-09-21_19-53-34/replicate_24/results.json",
+          "programMember": "0921/basemotion3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__83f0bdfc/2026-09-21_19-53-34/replicate_24/sandbox/approach.py",
+          "resultsSha256": "9bcbf39e2a9c0d74cabd71b3990429a7263da640cbcb85373100c126a35b8abe",
+          "approachSha256": "35b2f362139ee63ce395bb56187be74dd5c3585b822c40a160b70e7d6009c431",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-21_17-41-02",
+          "archive": "basemotion3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__28891e32__seed42__2026-09-21_17-41-02.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "4d1e2ad27b8bc6dbce3c34cdf17c1f4d6280f2bb46e4a1c603cf175c505fe375",
+          "approachSha256": "f426ab1788735b45338ad8b432d945a30a3a41d1a50b4e0a6f0a79ccdfd68487",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_17-47-28",
+          "archive": "basemotion3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__4d695d38__seed222__2026-09-21_17-47-28.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "3e4152f79d59e7d048bbe007b43f6c39816177340f7ca0ecb0f794e3a67c51e9",
+          "approachSha256": "8ea47854781f94a3f99a63be5f70f8e3447e527d14f501a17119b97fd66436bf",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_22-36-41",
+          "archive": "basemotion3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__cf6cc9df__seed424__2026-09-21_22-36-41.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "c0e19b2c5d87e74ea672befa8a247a077f9b39138d0a63b4ff2cb5770da8007a",
+          "approachSha256": "cbb8255798fa02e0ca684fb8b1170a14f95de5792bad6191dfd64b4a3a186346",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_23-35-48",
+          "archive": "basemotion3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__7a2e057f__seed444__2026-09-21_23-35-48.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "f4510bd84273f4aa87390ea4c79902cfc698a48ac25030f6d0e038ec114e39db",
+          "approachSha256": "510f44c02d9c6fdbded10c346397f9150d16460d23bd27c6c4b3a46ee84be919",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "BalanceBeam3D",
+      "result": {
+        "mean": 1.0,
+        "min": 0.99,
+        "max": 1.0
+      },
+      "unroundedMean": 0.998,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_03-29-50",
+          "archive": "balancebeam3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__776beedf__seed24__2026-09-20_03-29-50.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "64e3992b38349963b7b13b7bae4d5b7c9469a07fb011d11c4e990dba04513959",
+          "approachSha256": "e05de34263ac46ea1c707c1d0f606d6fe607dd448c2d1e0f8675d432a215c327",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_00-27-07",
+          "archive": "balancebeam3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__7903d67b__seed42__2026-09-20_00-27-07.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "d7161469112ebcc4d5e9714878f3ba000a5ca860af1f11a2369a3f9a23029864",
+          "approachSha256": "ab0c5f052f95c1015a04ae09ea7ff9ca883d6ffe57f58ebd3d84ac1042a7f004",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_11-56-42",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/balancebeam3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__80c747e2/2026-09-21_11-56-42/replicate_222/results.json",
+          "programMember": "0921/balancebeam3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__80c747e2/2026-09-21_11-56-42/replicate_222/sandbox/approach.py",
+          "resultsSha256": "717eb07828e19553109462829f4cebce4b7648649d260887bd1186c652de5d5d",
+          "approachSha256": "be636f5e122f5acb1d33132a5aca6cd4145210020addb0541faee6442ef37269",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_21-37-40",
+          "archive": "balancebeam3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__3b4c6bb0__seed424__2026-09-21_21-37-40.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "9e6d5f9c09718e2f4cbb755f25d9a6ad45e291ac27adafbdbaf156cfb912eb7d",
+          "approachSha256": "44a3198d6d7d6fec8a37213b5de489aa57857bc1070e69c701f0407508d58d7d",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_23-04-30",
+          "archive": "balancebeam3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__e89d4835__seed444__2026-09-21_23-04-30.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "047f9f304c4b7bd42d510a39ba0b18ff3197055169246cff5e95271c5aaf8a0b",
+          "approachSha256": "eca26e34957e8af060b178de543ae9acf94e9bb390a80ee69d6c39ae8f2e409b",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "ConstrainedCupboard3D",
+      "result": {
+        "mean": 0.29,
+        "min": 0.04,
+        "max": 0.63
+      },
+      "unroundedMean": 0.292,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_01-26-06",
+          "archive": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__d4893e06__seed24__2026-09-20_01-26-06.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "20eb186d64c3830f6a27fce55a5e2a68c46a2b8f645ae9c7901da7cf6d0d27b4",
+          "approachSha256": "e2ff3cd67c03113fd4a8b714e215fa4a9014b6009b57b2fe4e113599bec301c0",
+          "solved": 4,
+          "episodes": 100,
+          "rate": 0.04,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-19_23-17-29",
+          "archive": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__a162bdcd__seed42__2026-09-19_23-17-29.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "bd8b629afa2e9624cf78717aca3560a9c55d079fc333d2d8e8f06e61298a6b0a",
+          "approachSha256": "b20388d01ea00652824e6905b9bbde5bd8e635a21900a1570cabde7a5a5f0a2a",
+          "solved": 63,
+          "episodes": 100,
+          "rate": 0.63,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-20_03-00-10",
+          "archive": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__702a9451__seed222__2026-09-20_03-00-10.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "14f162dd931dd1a7edb9036ead070f10ca51d0156daaf878d6e2b35eb88b590d",
+          "approachSha256": "8912a206fd66ce680083ce95f2bde6a89eff2aba1378adb94a2c2d62a0853c7d",
+          "solved": 34,
+          "episodes": 100,
+          "rate": 0.34,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_18-51-32",
+          "archive": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__efb32bf0__seed424__2026-09-21_18-51-32.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "c729e9ce75ec46fcecbf1ff4f781f3755c95cffac9125bb2513a8cede65365a8",
+          "approachSha256": "44c71f693a1e05c5d77d7bc4ced9a97dd4cea22b93b20d61b5dc6468ec7286cc",
+          "solved": 28,
+          "episodes": 100,
+          "rate": 0.28,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_20-58-56",
+          "archive": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__ce46b7cb__seed444__2026-09-21_20-58-56.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "279d44efed542eba9b21b0fa203e74d6b5865ba42fbdffb7cd3958931ae2fcaf",
+          "approachSha256": "25fba41959da6fbfa98fd7382760ff1e29c8cae446bce1ba81d058e9243c9ec2",
+          "solved": 17,
+          "episodes": 100,
+          "rate": 0.17,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Dynamo3D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_03-19-33",
+          "archive": "dynamo3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__3771c5f1__seed24__2026-09-20_03-19-33.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "c6cd7a7c6ccda6fba62347206b0259af3c06fd86f0d66909ed4da9daf93146c4",
+          "approachSha256": "e10d5a49ed6af8b96ffce74d0f82584ecab6db97a1218f4207ccb2322289b9de",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_00-16-14",
+          "archive": "dynamo3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__5e971404__seed42__2026-09-20_00-16-14.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "58260230d763fb9a7063e1a4377db6be817ce985118c21dc5ffb111cc5bcab10",
+          "approachSha256": "c96453547600e3ce518d4fd9899ab5290bea602b6589ddf9721ceba3122c62f2",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_20-24-29",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/dynamo3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__177cbe54/2026-09-21_20-24-29/replicate_222/results.json",
+          "programMember": "0921/dynamo3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__177cbe54/2026-09-21_20-24-29/replicate_222/sandbox/approach.py",
+          "resultsSha256": "fc923bfacf7e8b3b7a23fe84799b508d8fc1324b33da01a817059a417200ca30",
+          "approachSha256": "d53abd409be9e716b81a80e379f13ca6c8837aa892d91447b11c5607f1336e4c",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_21-23-32",
+          "archive": "dynamo3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__d399ec8d__seed424__2026-09-21_21-23-32.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "f0d5a64b5e6b5959176c14675e2179599c068b29dd5510584798dde4316dad55",
+          "approachSha256": "fcd9b16400741c065ea3a76f3f404d43572d2d9635ef1db411f9872a3fe9c060",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_22-59-39",
+          "archive": "dynamo3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__ff116efe__seed444__2026-09-21_22-59-39.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "b6e277c71bfb2c71eb24664eb55bb878b6cf3f2fc9d9b656c5105edb6eba79b1",
+          "approachSha256": "0cf79ae351e541bac41755713a54e7310fe9041cddc994a42104053f8ca7964f",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Rearrange3D",
+      "result": {
+        "mean": 0.96,
+        "min": 0.93,
+        "max": 0.98
+      },
+      "unroundedMean": 0.96,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_01-34-28",
+          "archive": "rearrange3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__fa390c8c__seed24__2026-09-20_01-34-28.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "8c36d30370fad7e3680c2f4871d79c932d944360f2731261bff2d69d695c4357",
+          "approachSha256": "9116bfac8a9b60d96b4e8402ba4a1935183e954824ccf6fd4cd5f1368eba6f17",
+          "solved": 96,
+          "episodes": 100,
+          "rate": 0.96,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-19_23-23-29",
+          "archive": "rearrange3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__9218ca49__seed42__2026-09-19_23-23-29.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "7e540a003cc5d73fc08b0e20317deb66b216a9175a436e5271cc0c45238511aa",
+          "approachSha256": "371dc49fabcc90b4a9ae30c625f407ccaec2c272b2dab1fb7de9ac38afe0a43f",
+          "solved": 98,
+          "episodes": 100,
+          "rate": 0.98,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_04-54-17",
+          "archive": "multirun_bowen_astra_0920.zip",
+          "member": "multirun/rearrange3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__4da55ad4/2026-09-21_04-54-17/replicate_222/results.json",
+          "programMember": "multirun/rearrange3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__4da55ad4/2026-09-21_04-54-17/replicate_222/sandbox/approach.py",
+          "resultsSha256": "8ac4d56ad13f56c1564cf8acbf42ba6f40783f0b19037310f948c10a19917923",
+          "approachSha256": "810f3c52ca796ae65e58da0f118963f5f07f6b12584f83ac296b57886bb03bed",
+          "solved": 97,
+          "episodes": 100,
+          "rate": 0.97,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_18-08-38",
+          "archive": "rearrange3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__f00b50c7__seed424__2026-09-21_18-08-38.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "2b0c1f368c27fb472e8cb329d31104fea4e5ff591f4f14eb93562aa7247c449e",
+          "approachSha256": "65d24e9ac3113c1684140fb85dcadf8d88fd4c167fae3eea55372fb77bc066a6",
+          "solved": 96,
+          "episodes": 100,
+          "rate": 0.96,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_19-06-12",
+          "archive": "rearrange3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__1ba903a1__seed444__2026-09-21_19-06-12.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "ed621ad5728265a4ba624b079d10aab2cde00ccaa0f2e8c9b0649495e69e878e",
+          "approachSha256": "1010c41432b6bcd9f95fe39810dcb21b8c72a025b4f549fff8b404d6d5a7a800",
+          "solved": 93,
+          "episodes": 100,
+          "rate": 0.93,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "ScoopPour3D",
+      "result": {
+        "mean": 0.14,
+        "min": 0.0,
+        "max": 0.23
+      },
+      "unroundedMean": 0.144,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_01-29-55",
+          "archive": "scooppour3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__01c75869__seed24__2026-09-20_01-29-55.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "f457d54bbd3308745e12b471f13554e8659263564bd4d0691cacb698e2c86476",
+          "approachSha256": "5020f85c07f757c0ab998c196404c0a94d896ef0b4753cf44eed34274c54f996",
+          "solved": 0,
+          "episodes": 100,
+          "rate": 0.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-19_23-18-59",
+          "archive": "scooppour3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__caf7e5d3__seed42__2026-09-19_23-18-59.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "006908a36f19e74185255ba32afd8102a3ec31a3356044260248f6f2f902924f",
+          "approachSha256": "087d44fa873aad5244dae45c73caa1938f90c8ff14f5802daf3edce95f7755b8",
+          "solved": 17,
+          "episodes": 100,
+          "rate": 0.17,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-20_22-10-13",
+          "archive": "multirun_bowen_astra_0920.zip",
+          "member": "multirun/scooppour3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__f180770d/2026-09-20_22-10-13/replicate_222/results.json",
+          "programMember": "multirun/scooppour3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__f180770d/2026-09-20_22-10-13/replicate_222/sandbox/approach.py",
+          "resultsSha256": "e336a6764b7c725bb7a68da43328582bfd184c2949f83ba94f7b32aac40505ae",
+          "approachSha256": "ebd02e01dbfe038df3a6ce96510f203bf3d983316d957e2e2878c48a5436dd21",
+          "solved": 10,
+          "episodes": 100,
+          "rate": 0.1,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_17-50-07",
+          "archive": "scooppour3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__8a3175d2__seed424__2026-09-21_17-50-07.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "adbf38f44d9c5bb5385e1bdef2caa1fa128fbf4ec4aea40ba26e76794e2527f5",
+          "approachSha256": "52ce55e447d0da390b11de6912c0b6ad4882e687c92eba4b72b4b87029d87028",
+          "solved": 22,
+          "episodes": 100,
+          "rate": 0.22,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_18-53-09",
+          "archive": "scooppour3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__b43418e4__seed444__2026-09-21_18-53-09.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "f603c1c5cba9af587973f8fc6a40fac2ef7d90a6e28a50b2c37a346a71173ae6",
+          "approachSha256": "f5a422ee0e8543405a9337eea527ac18fcfcb1cd936626c3bdc92e616abf6244",
+          "solved": 23,
+          "episodes": 100,
+          "rate": 0.23,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Shelf3D",
+      "result": {
+        "mean": 1.0,
+        "min": 0.98,
+        "max": 1.0
+      },
+      "unroundedMean": 0.996,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_01-36-01",
+          "archive": "dynamicshelf3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__7837c590__seed24__2026-09-20_01-36-01.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "91749bee9b69e04baad3cb1a679cb9696df759676fd069f28d5babe7700b35a7",
+          "approachSha256": "c4302c7efbe40e6992941ad13de71ad3097005ab7c0e60f813cbde0ddc9d6f8a",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-19_23-24-59",
+          "archive": "dynamicshelf3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__64dd9d55__seed42__2026-09-19_23-24-59.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "27c7ce728c127bb0314815410ab4358b3790c8725d5d422b1e96ac5eede9d199",
+          "approachSha256": "f2ff7a4da367ba54e2a5944d7a807c5febc166a89907641657eecc28974a6fb5",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_05-41-53",
+          "archive": "multirun_bowen_astra_0920.zip",
+          "member": "multirun/dynamicshelf3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__351a1100/2026-09-21_05-41-53/replicate_222/results.json",
+          "programMember": "multirun/dynamicshelf3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__351a1100/2026-09-21_05-41-53/replicate_222/sandbox/approach.py",
+          "resultsSha256": "a914281b4828b5b86628623cc8377de59431b5970d0841081b5b88ce99940eb1",
+          "approachSha256": "7db82370e05bd55d9d7820bf6dc60291863ab07991ccb539e1f6163d64bf6c5f",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_18-09-58",
+          "archive": "dynamicshelf3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__2d770e1c__seed424__2026-09-21_18-09-58.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "099e23e9ae5b2d8d71b05119e9e21409c60e5e72feb6cb3009ddfe1ead3cba9a",
+          "approachSha256": "69e036fe6709a15e9cea458d20da45e4efd298071660ac68523d07713d70297a",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_19-11-22",
+          "archive": "dynamicshelf3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__f8aece53__seed444__2026-09-21_19-11-22.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "2b8e72f1e15d2f7b7db1710f2077a43b4686e3b923c9eb19b2c9eb7fd065e1f6",
+          "approachSha256": "bb040bc0e7449524c979e379e8fee234afe2937431879ba163d4d833bab5ee98",
+          "solved": 98,
+          "episodes": 100,
+          "rate": 0.98,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "SortClutteredBlocks3D",
+      "result": {
+        "mean": 0.43,
+        "min": 0.31,
+        "max": 0.5
+      },
+      "unroundedMean": 0.426,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_01-31-15",
+          "archive": "sortclutteredblocks3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__5626b517__seed24__2026-09-20_01-31-15.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "f5cde7919d0ed7be94bcadb52fe3e860d599c704c12d63045b2a4969613630e6",
+          "approachSha256": "d5469e3c34f41f11a0e38e941588603bc76ac66b637f7796e27568b698d94773",
+          "solved": 38,
+          "episodes": 100,
+          "rate": 0.38,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-19_23-20-29",
+          "archive": "sortclutteredblocks3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__577f597c__seed42__2026-09-19_23-20-29.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "38f0a2bca87ae7f45c79bdcf9865cf1f1ea45c741b3a193cf4f594d9af32103e",
+          "approachSha256": "50d0673055766585a70ebb658029b6d7f112702267c4116ff3052ad89e8dc83e",
+          "solved": 50,
+          "episodes": 100,
+          "rate": 0.5,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_01-32-01",
+          "archive": "multirun_bowen_astra_0920.zip",
+          "member": "multirun/sortclutteredblocks3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__3f0e3ad6/2026-09-21_01-32-01/replicate_222/results.json",
+          "programMember": "multirun/sortclutteredblocks3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__3f0e3ad6/2026-09-21_01-32-01/replicate_222/sandbox/approach.py",
+          "resultsSha256": "f0b90d5637f9e5e7b2e3fa70ca55165d70cda0fa738abfda8a5d86f487c04266",
+          "approachSha256": "d301aa4290539092fccc9c0049388de06450e47e242bf064586df16ec9929400",
+          "solved": 45,
+          "episodes": 100,
+          "rate": 0.45,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_18-01-27",
+          "archive": "sortclutteredblocks3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__234cac06__seed424__2026-09-21_18-01-27.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "bd60b83c612c6b123cc31ed84fbd544d9014fbb721ff7b8987ae4861ab15f048",
+          "approachSha256": "bc86021a73cf45f7ba0366e7b3f437e9f47024bd7a99739e8f095f64c7a8e7b6",
+          "solved": 31,
+          "episodes": 100,
+          "rate": 0.31,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_18-59-45",
+          "archive": "sortclutteredblocks3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__66adedbe__seed444__2026-09-21_18-59-45.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "c91c929356cf0c31bcefb4eca791c02d3398efe6755385af13d8e977fcdc63bf",
+          "approachSha256": "f77baf1a053d90f103ded330d89156c8d76cb03394f6f917d36497d1310ecbbe",
+          "solved": 49,
+          "episodes": 100,
+          "rate": 0.49,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "SweepIntoDrawer3D",
+      "result": {
+        "mean": 0.72,
+        "min": 0.15,
+        "max": 1.0
+      },
+      "unroundedMean": 0.722,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_01-22-07",
+          "archive": "sweepintodrawer3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__8c2e1538__seed24__2026-09-20_01-22-07.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "20741bff8ccfce2ec5f21a0822522ef7b5d754b802ff705518711d2cf934ac39",
+          "approachSha256": "73ae50a5455b186cd0d049b529106a698262954aec970af54dc3fdf7c9b41ef4",
+          "solved": 84,
+          "episodes": 100,
+          "rate": 0.84,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-19_23-14-29",
+          "archive": "sweepintodrawer3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__e740c304__seed42__2026-09-19_23-14-29.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "4275499697fb31b71cc8ddab566ab13814bdedf4105471d5daa16db5ad699dde",
+          "approachSha256": "427f116e5d362fdff0daba3db975e4a63b24b91b04bfa1726de1f70d21e22c83",
+          "solved": 84,
+          "episodes": 100,
+          "rate": 0.84,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-20_02-54-58",
+          "archive": "sweepintodrawer3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__96256489__seed222__2026-09-20_02-54-58.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "50c255d1624aeedec612603ebb9693b3b1ca5f8e5b04ee439c8a38667d4658eb",
+          "approachSha256": "6c1e41e3232510866a4d619f9561da1c8e62b95963eda7fd72c80570d74bd79f",
+          "solved": 78,
+          "episodes": 100,
+          "rate": 0.78,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_18-41-11",
+          "archive": "sweepintodrawer3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__71267f1d__seed424__2026-09-21_18-41-11.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "ea6fd05bf14ecfed45a999cf8ca81e7fea0636d17c7406df17bbfdfdc25dbb86",
+          "approachSha256": "ee5c1223f5cf3b232c9df027670cc6cbd09cfcff0ff134840d854133ee681bf6",
+          "solved": 15,
+          "episodes": 100,
+          "rate": 0.15,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_20-31-59",
+          "archive": "sweepintodrawer3d__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__75be01b0__seed444__2026-09-21_20-31-59.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "aecf1038801005cc4fdb783f703e7ac4ba524cf1b265de117377dab753c77be7",
+          "approachSha256": "c4571a7f4d18ccfc9c5b4462907ec3fe24bcd4f492fb8c197e78c1a57c41c4e2",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "SweepSimple3D",
+      "result": {
+        "mean": 0.03,
+        "min": 0.0,
+        "max": 0.15
+      },
+      "unroundedMean": 0.03,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_01-24-36",
+          "archive": "sweepsimple3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__d47c369c__seed24__2026-09-20_01-24-36.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "a35e63e38b542bbedfbad89f78659a47d2c9d56ce1d94b82ea812395623f14b5",
+          "approachSha256": "7d1f4f87fc8568b828c935848222c462915dd112a1cd492204cab3d06227a0fc",
+          "solved": 0,
+          "episodes": 100,
+          "rate": 0.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-19_23-15-59",
+          "archive": "sweepsimple3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__359c21ef__seed42__2026-09-19_23-15-59.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "00101cabcf4811c5568aba466bc420a62b38700ab2780a52861d2873743fe8b6",
+          "approachSha256": "6e5b29bb44c1c6220ece31179f55ec24d88f550252ef58c98fde039b72ddd178",
+          "solved": 15,
+          "episodes": 100,
+          "rate": 0.15,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-20_02-58-54",
+          "archive": "sweepsimple3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__8deda298__seed222__2026-09-20_02-58-54.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "1594160c3982c89afb6cf8c205d88574dc8f79e47b47dbe846b02ad501bb7b26",
+          "approachSha256": "6b3a713d0c4d4a12d7694540887c48adbced3b693a42c9e572bf9c0b1b15cb6f",
+          "solved": 0,
+          "episodes": 100,
+          "rate": 0.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_18-46-45",
+          "archive": "sweepsimple3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__183ae399__seed424__2026-09-21_18-46-45.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "de9a0da1f81ea5586ed5e5cfeeb6a27842b44fda186529edecccbd58934dd0b6",
+          "approachSha256": "784674a84ad164d1aa56e63a91bdf7d37acc26f32115c2e0d6a2a93d2899c662",
+          "solved": 0,
+          "episodes": 100,
+          "rate": 0.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_20-57-02",
+          "archive": "sweepsimple3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__2d8462ad__seed444__2026-09-21_20-57-02.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "bbb3d7014d9a1246aff970bf9dc8e18c55fc73fcb1a60d43fb8696ed9847f741",
+          "approachSha256": "2960415d9d452167a9f905e75a8fd0d86b54d6568c2cbea37a3d98245f230d1d",
+          "solved": 0,
+          "episodes": 100,
+          "rate": 0.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Tossing3D",
+      "result": {
+        "mean": 0.96,
+        "min": 0.82,
+        "max": 1.0
+      },
+      "unroundedMean": 0.964,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_04-00-07",
+          "archive": "tossing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__cca6bc9f__seed24__2026-09-20_04-00-07.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "9c6bb5f0878d2d970ee9d028396a5ab22089383031c103779ebb42fa3ca0c80e",
+          "approachSha256": "675d5fca19191a258414d120101a77934572fed70cd348dd5e79808a365a723c",
+          "solved": 82,
+          "episodes": 100,
+          "rate": 0.82,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_00-31-36",
+          "archive": "tossing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__cb00e8df__seed42__2026-09-20_00-31-36.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "6ca37a9ef4ba3d2e925a68fcc03b60d3147c5923d5114f359bd4913e3aa200a7",
+          "approachSha256": "5458166a6d1abceaa8cdd09510483b14f8c36e8853e415f18b93bbe0480bdeaa",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_13-10-35",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/tossing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__f57080df/2026-09-21_13-10-35/replicate_222/results.json",
+          "programMember": "0921/tossing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__f57080df/2026-09-21_13-10-35/replicate_222/sandbox/approach.py",
+          "resultsSha256": "c1b777664c3fd2f2a6e733f63b7e1e80214ec6705ab988b023a767084c153973",
+          "approachSha256": "75508c11ee75bad51c49d48736ca1292d129113a2b8fc9887fbb3724ae80843d",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_22-15-07",
+          "archive": "tossing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__c73d871e__seed424__2026-09-21_22-15-07.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "d2e7bfa5c38eea11eb60d0f1c132599402bb9a70439d1f6a84303007ecfc4991",
+          "approachSha256": "f14e717719f457d526d477040ca9d8db709e203c653c3b4041a3797ed8728e9b",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_23-15-38",
+          "archive": "tossing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__7a9fad4a__seed444__2026-09-21_23-15-38.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "f35c04f67e23e10cc3154a282a76bd79c00d03a6a24fcf1b0b194e239eda55ba",
+          "approachSha256": "4229c6f356ce0b729cde1ef913245ff7ac4c036dc1107428badeb2c2baf4a268",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "PddlPacking",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-21_12-22-45",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/pr2packed_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__464ab83f/2026-09-21_12-22-45/replicate_24/results.json",
+          "programMember": "0921/pr2packed_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__464ab83f/2026-09-21_12-22-45/replicate_24/sandbox/approach.py",
+          "resultsSha256": "6fa71f205c00dd5991ff6ff3c3d78957f5e65e4bfa963c5f1791b658ed614aec",
+          "approachSha256": "fe0d827b8a93aaf98a463437e830fb9af69f8e819881702c011d4316851aa205",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_00-57-54",
+          "archive": "pr2packed_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__4a10d310__seed42__2026-09-20_00-57-54.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "8091111c5a1248beb1ece6bb8e35ee3e5514b3325597c36c5b9ccb592415be7f",
+          "approachSha256": "7bfd604a4221508699a2c4118f5a5e6b7b7b8e4ecc8865a834c851ad286e173a",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_20-16-36",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/pr2packed_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__4e793a00/2026-09-21_20-16-36/replicate_222/results.json",
+          "programMember": "0921/pr2packed_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__4e793a00/2026-09-21_20-16-36/replicate_222/sandbox/approach.py",
+          "resultsSha256": "b8bd3082c1863da247602e74f94942cee9c9677d92f185ddb3a238e76e97a469",
+          "approachSha256": "9ef417fd59c5e60c4a239a7986a8d301711e91b2a5b52a4e8c88853ed6c9e08f",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_21-02-47",
+          "archive": "pr2packed_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__6e78081d__seed424__2026-09-21_21-02-47.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "97af207bfffe9e2b05a5419014404c2616c27ccbc69e25be5658ee9dad9225a3",
+          "approachSha256": "7033c36ff59314d2a72780691faa02ca8c8cacaefde03f361012ef2d552d93ec",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_22-58-00",
+          "archive": "pr2packed_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__256ef4cc__seed444__2026-09-21_22-58-00.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "18207eff71992466c159a68c853519c15c5794f0ae4a29ccc46bfc24967de29f",
+          "approachSha256": "5e1b860a2e0d3906408bf837c9dd46c0f5f645fd6655853a413e12cc5405358b",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "PddlBlocked",
+      "result": {
+        "mean": 0.99,
+        "min": 0.98,
+        "max": 1.0
+      },
+      "unroundedMean": 0.994,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_01-33-02",
+          "archive": "pr2blocked_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__a4fdf405__seed24__2026-09-20_01-33-02.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "9a4be6268cdea3b21b3ebff3ccae09eef2785ebe9fb4945adced0f4eb5b973d6",
+          "approachSha256": "ea1c011d991cad9ba094dfd50da36608fca181004a465671a57e803e5f1a55c4",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-19_23-21-59",
+          "archive": "pr2blocked_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__744dcd42__seed42__2026-09-19_23-21-59.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "9af442ecfd118e27b2c3e3b71c7763420cd027b8cd361616347f4627f5b1cb25",
+          "approachSha256": "640a0da4ef04da312c9acee0633762bdfb58c57e73d3f457299e3066d9b6a1e3",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_04-23-40",
+          "archive": "multirun_bowen_astra_0920.zip",
+          "member": "multirun/pr2blocked_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__27d91bd0/2026-09-21_04-23-40/replicate_222/results.json",
+          "programMember": "multirun/pr2blocked_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__27d91bd0/2026-09-21_04-23-40/replicate_222/sandbox/approach.py",
+          "resultsSha256": "9cd591d12321a2d5bac4c6dc0bcf3a33fd6d1d6e3584b333e9269082b609cce9",
+          "approachSha256": "6bcee72e0be87a4c289d2fa8646c8affb177f7031c8a9be6307d1331ae114763",
+          "solved": 98,
+          "episodes": 100,
+          "rate": 0.98,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_18-06-09",
+          "archive": "pr2blocked_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__05a5d06a__seed424__2026-09-21_18-06-09.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "e943d645b9f45ac22d67692eb100e77bc5faa14c663315db84464bd592d97414",
+          "approachSha256": "e1bd663cdc72f4943f3929c50198bb76afded1d91090d0c17b1185dea49c317a",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_19-02-06",
+          "archive": "pr2blocked_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__313306df__seed444__2026-09-21_19-02-06.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "2da094a7b029d6800677f417bead9bae89b09658ac907c7851631e8b338804ff",
+          "approachSha256": "3fe905a3ec8f5d0d4d892b9a20bd4f0601c8f82916404093911741cf99ae0603",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "PddlRovers",
+      "result": {
+        "mean": 1.0,
+        "min": 0.99,
+        "max": 1.0
+      },
+      "unroundedMean": 0.996,
+      "runs": [
+        {
+          "seed": 24,
+          "timestamp": "2026-09-20_03-45-58",
+          "archive": "rovers_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__bb57c256__seed24__2026-09-20_03-45-58.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "91cd8fb0fd6c952959e3d69157b528da4834fd97a43a8c7ce26d0886d5bba7ac",
+          "approachSha256": "a7c260a825f88845383d6ae950f031d307431d409d8aa778acb66db7bd4752f7",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "timestamp": "2026-09-20_00-30-06",
+          "archive": "rovers_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__618ce91e__seed42__2026-09-20_00-30-06.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "8d61b95ba1435e7cf5db9200c0e2c68b1a07f4c1bc3d6864000380b972ee8490",
+          "approachSha256": "678459617b1496f0b75ad96e98acf6807777c4abd784bb27865b01e42069a702",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "timestamp": "2026-09-21_12-44-33",
+          "archive": "bowen_astra_0921.zip",
+          "member": "0921/rovers_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__d2a8c165/2026-09-21_12-44-33/replicate_222/results.json",
+          "programMember": "0921/rovers_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__d2a8c165/2026-09-21_12-44-33/replicate_222/sandbox/approach.py",
+          "resultsSha256": "cad12dae354c9ad51965d9b456e665e5d1e8b6919ca3761f6a87100698880500",
+          "approachSha256": "bfdac3442b47b837a49d17663feeb4d09e32a4420fd346dd0b48e3d501a597c6",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "timestamp": "2026-09-21_22-01-34",
+          "archive": "rovers_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__7b143aaf__seed424__2026-09-21_22-01-34.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "556e77a67fb09c9416dedab8c8fc4ee2c03fe5142346e124b617619d418cdfdb",
+          "approachSha256": "ea6d21baf4eeb001ee0f8985caed48cf41b12a364764596f37603c05126a6af8",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-09-21_23-13-57",
+          "archive": "rovers_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__e22b0cea__seed444__2026-09-21_23-13-57.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "resultsSha256": "55aee64b69353b19c497d7e0a597d034df8c8ac570b6ef889bc6ac438385f4f5",
+          "approachSha256": "1e696a287addd1ef1116c5e47766cf3dfc52b946d5a566969ed59be266ae788f",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 from pathlib import Path
 from html.parser import HTMLParser
 import json, re, hashlib, csv
+from decimal import Decimal, ROUND_HALF_UP
 ROOT=Path(__file__).resolve().parents[1]
 errors=[]
 def require(path):
@@ -22,10 +23,10 @@ for p in ROOT.rglob('*'):
     if p.suffix in ('.js','.css','.html','.json','.md'):
         if re.search(r'/home/|/Users/|AIza[\w-]{30}|gh[pousr]_[\w]{25}',p.read_text()):errors.append(f'Private path or credential pattern: {p.relative_to(ROOT)}')
 data=json.loads((ROOT/'data/benchmark.json').read_text())
-assert len(data['environments'])==28 and len(data['methods'])==6
+assert len(data['environments'])==28 and len(data['methods'])==7
 with (ROOT/'data/benchmark.csv').open() as stream:
     csv_rows=list(csv.DictReader(stream))
-assert len(csv_rows)==28*6
+assert len(csv_rows)==28*len(data['methods'])
 for index,(env,method) in enumerate((e,m) for e in data['environments'] for m in data['methods']):
     row=csv_rows[index];result=env['results'][method['id']]
     assert row['environment']==env['name'] and row['family']==env['family']
@@ -34,7 +35,22 @@ for index,(env,method) in enumerate((e,m) for e in data['environments'] for m in
         assert (float(row[field]) if row[field] else None)==(result[key] if result else None)
 assert hashlib.sha256((ROOT/'assets/paper.pdf').read_bytes()).hexdigest()==data['source']['sha256']
 for e in data['environments']:
-    require(e['video']);require(e['poster']);assert len(e['results'])==6
+    require(e['video']);require(e['poster']);assert len(e['results'])==len(data['methods'])
+# Astra's additional results come from complete raw evaluations, not Tables I-II.
+astra=json.loads((ROOT/'data/astra-results.json').read_text())
+assert {e['id'] for e in astra['environments']}=={e['id'] for e in data['environments']}
+assert astra['completeRuns']==140 and astra['evaluationEpisodes']==14000
+for entry in astra['environments']:
+    runs=entry['runs'];assert len(runs)==5 and {r['seed'] for r in runs}=={24,42,222,424,444}
+    assert all(r['episodes']==100 and r['rate']==r['solved']/100 for r in runs)
+    exact=Decimal(sum(r['solved'] for r in runs))/500
+    expected={'mean':float(exact.quantize(Decimal('.01'),rounding=ROUND_HALF_UP)),
+              'min':min(r['rate'] for r in runs),'max':max(r['rate'] for r in runs)}
+    assert entry['unroundedMean']==float(exact) and entry['result']==expected
+    env=next(e for e in data['environments'] if e['id']==entry['id'])
+    assert env['results']['astra']==expected
+    assert all('bad - too little tokens' not in r['archive'] for r in runs)
+    assert all(re.fullmatch(r'[a-f0-9]{64}',r['resultsSha256']) for r in runs)
 # Freeze the assets actually reviewed in the environment audit.
 audit=json.loads((ROOT/'data/environment-audit.json').read_text())
 assert audit['paperSha256']==data['source']['sha256']
@@ -53,8 +69,8 @@ for entry in examples['environments']:
     assert entry['id'] in {e['id'] for e in data['environments']}
     available={v['method'] for v in entry['videos']}
     unavailable={m['method'] for m in entry.get('unavailable',[])}
-    assert available|unavailable=={'claude','codex','genplan'} and not available&unavailable
-    assert 1<=len(entry['videos'])<=3 and len(available)==len(entry['videos'])
+    assert available|unavailable=={'claude','codex','genplan','astra'} and not available&unavailable
+    assert 1<=len(entry['videos'])<=4 and len(available)==len(entry['videos'])
     assert all(m['reason'] and m['label'] for m in entry.get('unavailable',[]))
     # Synthesis seeds can differ across methods; the held-out instance must match.
     for field in ('instanceSeed','episode'):
@@ -66,6 +82,11 @@ for entry in examples['environments']:
         assert isinstance(clip['source']['replicateSeed'],int)
         if clip['method']=='codex' and entry['id'] in examples.get('codexRerunEnvironments',[]):
             assert clip['source']['collection']=='Codex Reruns'
+        if clip['method']=='astra':
+            assert entry['videos'][-1]['method']=='astra'
+            run=next(r for e in astra['environments'] if e['id']==entry['id'] for r in e['runs'] if r['seed']==clip['source']['replicateSeed'])
+            assert clip['source']['resultsSha256']==run['resultsSha256']
+            assert clip['source']['approachSha256']==run['approachSha256']
         require(clip['video']);require(clip['poster'])
         assert hashlib.sha256((ROOT/clip['video']).read_bytes()).hexdigest()==clip['source']['videoSha256']
         assert clip['solved']==clip['source']['archivedSolved']
@@ -106,4 +127,4 @@ require('assets/hero.mp4')
 require('assets/project-video.mp4')
 require('assets/prpl-robot.png')
 if errors:raise SystemExit('\n'.join(errors))
-print('PASS: HTML references, 28 audited environments and archived descriptions, 6 methods, matched policy-example provenance, paper checksum, gallery provenance, media sizes, private-path scan.')
+print('PASS: HTML references, 28 audited environments and archived descriptions, 7 methods, 140 complete Astra runs, matched policy-example provenance, paper checksum, gallery provenance, media sizes, private-path scan.')

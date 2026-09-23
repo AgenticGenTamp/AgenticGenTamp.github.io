@@ -7,13 +7,14 @@ test('full coverage ranks exclude a partial-coverage planner and source referenc
  const rows=summarize(data);const planner=rows.find(x=>x.id==='planner');
  assert.equal(planner.count,16);assert.equal(planner.rank,null);
  assert.equal(rows.find(x=>x.id==='source').rank,null);
- assert.equal(rows.find(x=>x.id==='claude').rank,1);
+ assert.equal(rows.find(x=>x.id==='astra').rank,1);
+ assert.equal(rows.find(x=>x.id==='claude').rank,2);
  assert.ok(Math.abs(planner.mean-.466875)<1e-8);
 });
 test('matched planner comparison uses precisely the same 16 environments for every method',()=>{
  const rows=summarize(data,'shared');assert.equal(selectEnvironments(data,'shared').length,16);
  for(const r of rows){assert.equal(r.count,16);assert.equal(r.total,16);}
- assert.equal(rows.find(x=>x.id==='planner').rank,3);
+ assert.equal(rows.find(x=>x.id==='planner').rank,4);
 });
 test('zero success is retained; unavailable planner entries are never turned into zeros',()=>{
  const family=selectEnvironments(data,'all','Dynamic 3D');assert.equal(family.length,10);

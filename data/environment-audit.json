@@ -514,5 +514,22 @@
     }
   ],
   "paperTableRechecked": "2026-09-22",
-  "paperTableRecheckNote": "All 28 environments and all six method means/min/max were compared with Tables I-II in the 22 September manuscript; no numerical changes. Earlier media and description checks remain unchanged."
+  "paperTableRecheckNote": "All 28 environments and all six method means/min/max were compared with Tables I-II in the 22 September manuscript; no numerical changes. Earlier media and description checks remain unchanged.",
+  "paperMethodIds": [
+    "planner",
+    "oneshot",
+    "genplan",
+    "codex",
+    "claude",
+    "source"
+  ],
+  "additionalResults": {
+    "astra": {
+      "source": "data/astra-results.json",
+      "runs": 140,
+      "environments": 28,
+      "episodesPerRun": 100,
+      "date": "2026-09-22"
+    }
+  }
 }
