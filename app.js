@@ -182,13 +182,16 @@ function renderGallery() {
   galleryObserver.disconnect();
   galleryVisible.clear();
   $$('.gallery-video').forEach(video => {pauseGalleryVideo(video);video.removeAttribute('src');video.load();});
-  $('#gallery-grid').innerHTML=gallery.map(g=>`<article class="gallery-card">
+  const card=g=>`<article class="gallery-card">
     <div class="gallery-thumb"><video class="gallery-video" data-gallery="${g.id}" data-src="film/assets/clips/${g.file}.mp4" poster="assets/posters/${g.file}.jpg" muted loop playsinline controls preload="none" aria-labelledby="gallery-title-${g.id}" aria-describedby="gallery-provenance-${g.id}"></video></div>
     <p class="gallery-type">${esc(g.environment)}</p>
     <h3 id="gallery-title-${g.id}">${esc(g.title)}</h3>
     <p class="description">${esc(g.description)}</p>
     <p class="provenance" id="gallery-provenance-${g.id}"><strong>${esc(g.backend)}</strong> · ${esc(g.setting)}</p>
-  </article>`).join('');
+  </article>`;
+  const isFailure=g=>g.category==='Failure';
+  const groups=[['#gallery-grid','#gallery-count-main',gallery.filter(g=>!isFailure(g))],['#gallery-grid-failures','#gallery-count-failures',gallery.filter(isFailure)]];
+  for (const [grid,count,items] of groups) {$(grid).innerHTML=items.map(card).join('');$(count).textContent=`${items.length} examples, scroll for more`;}
   $$('.gallery-video').forEach(video => {
     video.muted = true;
     video.defaultPlaybackRate = gallerySpeed;

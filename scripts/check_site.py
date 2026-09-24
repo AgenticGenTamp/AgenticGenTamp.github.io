@@ -153,6 +153,7 @@ assert shelf['source']['environmentImplementation']=='kinder.envs.dynamic3d.task
 base_motion=next(e for e in manifest['environments'] if e['id']=='BaseMotion3D')
 assert base_motion['source']['environmentImplementation']=='kinder/BaseMotion3D-v0'
 gallery_items=json.loads((ROOT/'data/gallery.json').read_text())
+assert f"- Gallery: {len(gallery_items)} examples" in (ROOT/'README.md').read_text()
 assert len({g['id'] for g in gallery_items})==len(gallery_items) and len({g['file'] for g in gallery_items})==len(gallery_items)
 for g in gallery_items:
     require(f"film/assets/clips/{g['file']}.mp4");require(f"assets/posters/{g['file']}.jpg")
