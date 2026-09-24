@@ -11,8 +11,8 @@
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#66418b">
   <link rel="icon" href="assets/prpl-robot.png" type="image/png">
-  <link rel="stylesheet" href="styles.css?v=setup-constraints-1">
-  <script type="module" src="app.js?v=complete-rollouts-20260923"></script>
+  <link rel="stylesheet" href="styles.css?v=astra-source-1">
+  <script type="module" src="app.js?v=astra-source-1"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -95,11 +95,11 @@
       </ul>
     </article>
   </div>
-  <p class="setup-source"><strong>+ source comparison.</strong> In this additional Claude Code setting, the agent can inspect the environment implementation and import its helper functions, including inverse kinematics solvers. During synthesis, it can also set arbitrary simulator states.</p>
+  <p class="setup-source"><strong>+ source comparison.</strong> In this additional setting, run with Claude Code (Opus 5) and Codex (GPT-6 Astra) on all 28 environments, the agent can inspect the environment implementation and import its helper functions, including inverse kinematics solvers. During synthesis, it can also set arbitrary simulator states.</p>
   <p class="benchmark-scope">The study includes 25 KinDER environments across four families and three PDDLStream domains: Packing, Blocked, and Rovers. <a href="#environments">View each environment and the exact description given to the agent.</a></p>
   <p class="paper-reference">Protocol: <a href="assets/paper.pdf?v=20260922#page=2" target="_blank" rel="noopener">Sections II-C and III-A</a> and <a href="assets/paper.pdf?v=20260922#page=4" target="_blank" rel="noopener">Section IV-A</a>.</p>
-  <div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong>840</strong><span>synthesized programs</span></div><div><strong>84,000</strong><span>evaluation episodes</span></div></div>
-  <p class="fine">Includes 140 additional GPT-6 Astra programs and 14,000 evaluation episodes.</p>
+  <div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong>980</strong><span>synthesized programs</span></div><div><strong>98,000</strong><span>evaluation episodes</span></div></div>
+  <p class="fine">Includes 280 additional GPT-6 Astra programs and 28,000 evaluation episodes: 140 in the main setting and 140 + source.</p>
 </section>
 <section class="gallery-section" aria-labelledby="gallery-title"><div class="section gallery" id="gallery">
   <div class="section-heading"><h2 id="gallery-title">Gallery</h2><p>Examples of tool use, task strategies, failure recovery, and typical failures in the synthesized programs. Main setting uses the simulator API; + source also provides the environment source code.</p></div>
@@ -117,7 +117,7 @@
 <div class="table-scroll" tabindex="0" role="region" aria-label="Experimental results, scroll horizontally on smaller screens"><table class="ranking"><caption class="sr-only">Mean held-out success rate by method. The future coding agents row is a placeholder with an unknown score.</caption><thead><tr><th scope="col">Method / backend</th><th scope="col">Setting / access</th><th scope="col">Coverage</th><th scope="col" aria-sort="descending"><button id="sort-score">Mean success <span aria-hidden="true">↓</span></button></th></tr></thead>
 <tbody class="future-methods"><tr><td><span class="method-name">Future coding agents</span><span class="backend">More and better in the future</span></td><td>—</td><td class="coverage">—</td><td class="score-cell"><span class="score-number" aria-label="Unknown">?</span></td></tr></tbody>
 <tbody id="ranking-body"></tbody></table></div>
-<div class="leader-note"><p>Equal-environment averages. GPT-6 Astra uses five completed experiment runs per environment; the other methods use Tables I–II. All environment means use the same two-decimal precision. The source-access reference is listed separately. Missing planner results are excluded from its average.</p><a href="assets/paper.pdf?v=20260922#page=5" target="_blank" rel="noopener">Read the tables ↗</a></div>
+<div class="leader-note"><p>Equal-environment averages. GPT-6 Astra, in the main setting and + source, uses five completed experiment runs per environment; the other methods use Tables I–II. All environment means use the same two-decimal precision. The two + source rows are listed separately. Missing planner results are excluded from its average.</p><a href="assets/paper.pdf?v=20260922#page=5" target="_blank" rel="noopener">Read the tables ↗</a></div>
 </section>
 <section class="results-section" id="environments"><div class="section"><div class="section-heading"><div><h2>Results by environment</h2></div><p>Select an environment to play the policy examples together. Method results and the text supplied to the agent appear below the videos.</p></div><div class="explorer"><div class="env-list" role="group" aria-label="Select an environment" id="env-list"></div><div class="env-detail"><div class="env-title"><div><p class="eyebrow" id="env-family"></p><h3 id="env-name"></h3></div></div>
 <section class="policy-comparison" id="policy-comparison" aria-labelledby="policy-comparison-title" hidden><h4 id="policy-comparison-title">Synthesized policy examples</h4><p id="policy-comparison-note"></p><button class="policy-play" id="play-policies">Replay together</button><div class="policy-grid" id="policy-grid"></div></section>
@@ -128,11 +128,15 @@
   <div id="env-description-content" class="description-document" role="region" tabindex="0" aria-labelledby="env-description-title" aria-busy="true"><p>Loading the environment description…</p></div>
 </section>
 </div></div>
-<div class="insights"><article class="insight"><h3>Effect of source access</h3><p>On SweepIntoDrawer, access to source code raises Claude Code’s mean success from 0% to 57%. The agent discovers it can use the gripper itself to sweep.</p><button class="inline-link" data-select-env="SweepIntoDrawer3D">Inspect this environment ↗</button></article><article class="insight efficiency"><h3>Computation at test time</h3>
+<div class="insights"><article class="insight source-access"><h3>Effect of source access</h3><p>On SweepIntoDrawer, access to source code raises Claude Code’s mean success from 0% to 57%. The agent discovers it can use the gripper itself to sweep.</p><button class="inline-link" data-select-env="SweepIntoDrawer3D">Inspect this environment ↗</button>
+<div class="table-scroll source-scroll" tabindex="0" role="region" aria-label="Main setting and + source on all 28 environments"><table class="source-table" id="source-table"><caption class="sr-only">Mean held-out success over all 28 environments for each coding agent, in the main setting and with source access.</caption><thead><tr><th scope="col">Coding agent</th><th scope="col">Main setting</th><th scope="col">+ source</th></tr></thead><tbody id="source-table-body"><tr><td colspan="3">Loading…</td></tr></tbody></table></div>
+<p class="fine" id="source-astra-counts"></p>
+<p class="fine" id="source-loophole-note">Equal-environment means over all 28 environments, five runs each. On ScoopPour (Dynamic 3D), one GPT-6 Astra + source run scores 100% by laying the empty target tray over the source tray instead of moving the cubes, which the environment’s success check accepts.</p></article><article class="insight efficiency"><h3>Computation at test time</h3>
 <div class="time-bar" data-efficiency="claude"><span>Claude Code<small>Opus 5 · Main setting</small></span><i style="--w:12.668%;--c:var(--rust)" aria-hidden="true"></i><strong>10.949 ms</strong></div>
 <div class="time-bar" data-efficiency="source"><span>Claude Code<small>Opus 5 · + source</small></span><i style="--w:100.000%;--c:#956d9b" aria-hidden="true"></i><strong>86.433 ms</strong></div>
-<div class="time-bar" data-efficiency="codexAstra"><span>Codex<small>GPT-6 Astra</small></span><i style="--w:2.109%;--c:#24847b" aria-hidden="true"></i><strong>1.823 ms</strong></div>
-<p class="fine">Policy computation per action on five shared environments. Each method uses its own seeds with 100% held-out success, averaged equally across environments. <a href="assets/paper.pdf?v=20260922#page=7" target="_blank" rel="noopener">Table III ↗</a></p></article></div>
+<div class="time-bar" data-efficiency="codexAstra"><span>Codex<small>GPT-6 Astra · Main setting</small></span><i style="--w:2.109%;--c:#24847b" aria-hidden="true"></i><strong>1.823 ms</strong></div>
+<div class="time-bar" data-efficiency="astraSource"><span>Codex<small>GPT-6 Astra · + source</small></span><i style="--w:19.256%;--c:#6f93c6" aria-hidden="true"></i><strong>16.644 ms</strong></div>
+<p class="fine">Policy computation per action on five shared environments. Each method uses its own seeds with 100% held-out success, averaged equally across environments. The GPT-6 Astra + source time is computed from its archived runs with the same rule. <a href="assets/paper.pdf?v=20260922#page=7" target="_blank" rel="noopener">Table III ↗</a></p></article></div>
 </div></section>
 </main>
 <footer><div><a class="wordmark" href="#top">AgenticGenTAMP</a><p>Coding Agents for Generalized Task and Motion Planning Problems</p></div><div class="footer-links"><a href="assets/paper.pdf?v=20260922" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/tomsilver/robocode" target="_blank" rel="noopener">Code ↗</a><a href="https://github.com/AgenticGenTamp/AgenticGenTamp.github.io" target="_blank" rel="noopener">Website source ↗</a></div></footer>

@@ -620,5 +620,38 @@
       "videoSha256": "8083a9c4fb819f5db97dacc16d2f2d4b572f9c4c057749c20e5c47560aeb09be",
       "selection": "Codex failure analysis replays this frozen program; episode 2 (7 objects) is the analysed instance in a 65% run."
     }
+  },
+  {
+    "id": "astra-source-sweepsimple",
+    "title": "Carrying cubes one at a time",
+    "category": "Strategy",
+    "description": "With source access, the program grasps the five cubes one at a time and leaves the sweeping tool unused. It solves every 1- and 5-cube instance and none with 10 or 50 cubes.",
+    "environment": "SweepSimple · Dynamic 3D",
+    "method": "AgenticGenPlan + source",
+    "backend": "Codex · GPT-6 Astra",
+    "setting": "+ source",
+    "seed": 42,
+    "episode": 1,
+    "file": "sweepsimple3d-astra-source-r42-ep1",
+    "source": {
+      "collection": "Final/Whitebox/GPT-6 Astra",
+      "archive": "sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8071ebc4__seed42__sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8071ebc4.zip",
+      "resultsMember": "run/results.json",
+      "programMember": "run/sandbox/approach.py",
+      "environment": "SweepSimple3D",
+      "replicateSeed": 42,
+      "episode": 1,
+      "instanceSeed": 5553887448546940950,
+      "objectCount": 5,
+      "resultsSha256": "b60b85e86385d534e15b5bdcf844f327d25a8728b9d25ceb9fdd18deee0baeba",
+      "approachSha256": "8ad88afa64bfbf8c2cbee820b96388bf6fa91e752caa53df2e7351439e2a349f",
+      "archivedSolved": true,
+      "archivedSteps": 462,
+      "replaySolved": true,
+      "replaySteps": 462,
+      "initialFrameSha256": "a05889006b6385c82aa12f5aa73bc2531efd0c1888f7519889ebae1d04d8934f",
+      "videoSha256": "c13bdc70467444281252287a7b729e68e51455d18c37c37d644920953d6262d8",
+      "selection": "Best GPT-6 Astra + source SweepSimple run (50%); episode 1 is its first 5-cube instance."
+    }
   }
 ]

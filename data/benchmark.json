@@ -5,26 +5,31 @@
     "tables": "I–III",
     "pdf": "assets/paper.pdf",
     "sha256": "9484f20060193914f83fde41496dc7823add88ed09e200671efff5c5ea574f14",
-    "precision": "The original six methods use the printed two-decimal means and min/max in Tables I–II. GPT-6 Astra uses five complete archived runs per environment; its means are rounded to the same two-decimal precision. Aggregate scores equally weight environments. Missing planner entries are excluded, never treated as failures.",
+    "precision": "The original six methods use the printed two-decimal means and min/max in Tables I–II. GPT-6 Astra in the main setting and + source uses five complete archived runs per environment; its means are rounded to the same two-decimal precision. Aggregate scores equally weight environments. Missing planner entries are excluded, never treated as failures.",
     "additionalMethods": [
       {
         "id": "astra",
         "source": "data/astra-results.json",
         "version": "Completed Drive experiment records · 22 September 2026"
+      },
+      {
+        "id": "astraSource",
+        "source": "data/astra-source-results.json",
+        "version": "Completed Drive experiment records · 24 September 2026"
       }
     ]
   },
   "protocol": {
     "runs": 5,
     "heldOutInstances": 100,
-    "programs": 840,
-    "episodes": 84000,
+    "programs": 980,
+    "episodes": 98000,
     "synthesisBudgetUSD": 20,
     "timeoutSeconds": 60,
     "paperPrograms": 700,
     "paperEpisodes": 70000,
-    "additionalPrograms": 140,
-    "additionalEpisodes": 14000
+    "additionalPrograms": 280,
+    "additionalEpisodes": 28000
   },
   "methods": [
     {
@@ -83,6 +88,15 @@
       "access": "Source code",
       "color": "#956d9b",
       "kind": "reference"
+    },
+    {
+      "id": "astraSource",
+      "name": "AgenticGenPlan + source",
+      "backend": "Codex · GPT-6 Astra",
+      "access": "Source code",
+      "color": "#6f93c6",
+      "kind": "reference",
+      "resultSource": "data/astra-source-results.json"
     }
   ],
   "environments": [
@@ -124,6 +138,11 @@
           "max": 1.0
         },
         "astra": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "astraSource": {
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
@@ -171,6 +190,11 @@
           "mean": 1.0,
           "min": 0.99,
           "max": 1.0
+        },
+        "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -214,6 +238,11 @@
         "astra": {
           "mean": 1.0,
           "min": 0.99,
+          "max": 1.0
+        },
+        "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
           "max": 1.0
         }
       }
@@ -259,6 +288,11 @@
           "mean": 0.96,
           "min": 0.91,
           "max": 1.0
+        },
+        "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -303,6 +337,11 @@
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
+        },
+        "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -340,6 +379,11 @@
           "max": 1.0
         },
         "astra": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "astraSource": {
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
@@ -387,6 +431,11 @@
           "mean": 0.96,
           "min": 0.94,
           "max": 0.98
+        },
+        "astraSource": {
+          "mean": 0.93,
+          "min": 0.83,
+          "max": 0.98
         }
       }
     },
@@ -431,6 +480,11 @@
           "mean": 0.91,
           "min": 0.79,
           "max": 1.0
+        },
+        "astraSource": {
+          "mean": 0.97,
+          "min": 0.91,
+          "max": 1.0
         }
       }
     },
@@ -470,6 +524,11 @@
         "astra": {
           "mean": 1.0,
           "min": 0.99,
+          "max": 1.0
+        },
+        "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
           "max": 1.0
         }
       }
@@ -511,6 +570,11 @@
           "mean": 1.0,
           "min": 0.99,
           "max": 1.0
+        },
+        "astraSource": {
+          "mean": 0.97,
+          "min": 0.87,
+          "max": 1.0
         }
       }
     },
@@ -551,6 +615,11 @@
           "mean": 0.97,
           "min": 0.92,
           "max": 0.99
+        },
+        "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -594,6 +663,11 @@
         "astra": {
           "mean": 0.89,
           "min": 0.67,
+          "max": 1.0
+        },
+        "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
           "max": 1.0
         }
       }
@@ -639,6 +713,11 @@
           "mean": 0.78,
           "min": 0.0,
           "max": 1.0
+        },
+        "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -676,6 +755,11 @@
           "max": 1.0
         },
         "astra": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "astraSource": {
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
@@ -723,6 +807,11 @@
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
+        },
+        "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -760,6 +849,11 @@
           "max": 1.0
         },
         "astra": {
+          "mean": 1.0,
+          "min": 0.99,
+          "max": 1.0
+        },
+        "astraSource": {
           "mean": 1.0,
           "min": 0.99,
           "max": 1.0
@@ -803,6 +897,11 @@
           "mean": 0.29,
           "min": 0.04,
           "max": 0.63
+        },
+        "astraSource": {
+          "mean": 1.0,
+          "min": 0.99,
+          "max": 1.0
         }
       }
     },
@@ -840,6 +939,11 @@
           "max": 1.0
         },
         "astra": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "astraSource": {
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
@@ -883,6 +987,11 @@
           "mean": 0.96,
           "min": 0.93,
           "max": 0.98
+        },
+        "astraSource": {
+          "mean": 0.99,
+          "min": 0.97,
+          "max": 1.0
         }
       }
     },
@@ -923,6 +1032,11 @@
           "mean": 0.14,
           "min": 0.0,
           "max": 0.23
+        },
+        "astraSource": {
+          "mean": 0.42,
+          "min": 0.06,
+          "max": 1.0
         }
       }
     },
@@ -967,6 +1081,11 @@
           "mean": 1.0,
           "min": 0.98,
           "max": 1.0
+        },
+        "astraSource": {
+          "mean": 1.0,
+          "min": 0.99,
+          "max": 1.0
         }
       }
     },
@@ -1007,6 +1126,11 @@
           "mean": 0.43,
           "min": 0.31,
           "max": 0.5
+        },
+        "astraSource": {
+          "mean": 0.95,
+          "min": 0.89,
+          "max": 0.99
         }
       }
     },
@@ -1051,6 +1175,11 @@
           "mean": 0.72,
           "min": 0.15,
           "max": 1.0
+        },
+        "astraSource": {
+          "mean": 0.86,
+          "min": 0.47,
+          "max": 1.0
         }
       }
     },
@@ -1091,6 +1220,11 @@
           "mean": 0.03,
           "min": 0.0,
           "max": 0.15
+        },
+        "astraSource": {
+          "mean": 0.44,
+          "min": 0.35,
+          "max": 0.5
         }
       }
     },
@@ -1134,6 +1268,11 @@
         "astra": {
           "mean": 0.96,
           "min": 0.82,
+          "max": 1.0
+        },
+        "astraSource": {
+          "mean": 0.98,
+          "min": 0.93,
           "max": 1.0
         }
       }
@@ -1179,6 +1318,11 @@
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
+        },
+        "astraSource": {
+          "mean": 1.0,
+          "min": 0.98,
+          "max": 1.0
         }
       }
     },
@@ -1222,6 +1366,11 @@
         "astra": {
           "mean": 0.99,
           "min": 0.98,
+          "max": 1.0
+        },
+        "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
           "max": 1.0
         }
       }
@@ -1267,6 +1416,11 @@
           "mean": 1.0,
           "min": 0.99,
           "max": 1.0
+        },
+        "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     }
@@ -1297,6 +1451,11 @@
       "mean": 1.823,
       "min": 0.033,
       "max": 6.047
+    },
+    "astraSource": {
+      "mean": 16.644,
+      "min": 0.053,
+      "max": 45.602
     }
   }
 }

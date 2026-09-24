@@ -33,3 +33,9 @@ test('all filter combinations preserve counts and score sort direction',()=>{
 test('printed run ranges contain every mean',()=>{
  for(const e of data.environments)for(const r of Object.values(e.results))if(r){assert.ok(r.min<=r.mean&&r.mean<=r.max);assert.ok(r.min>=0&&r.max<=1);}
 });
+test('both + source rows stay unranked references with complete coverage',()=>{
+ const rows=summarize(data);const refs=rows.filter(x=>x.kind==='reference');
+ assert.deepEqual(refs.map(x=>x.id),['source','astraSource']);
+ for(const r of refs){assert.equal(r.rank,null);assert.equal(r.count,28);}
+ assert.deepEqual(rows.slice(-2).map(x=>x.id),['source','astraSource']);
+});

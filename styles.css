@@ -147,6 +147,15 @@ select{background:white;border:1px solid var(--line);padding:10px 26px 10px 12px
 .time-bar i{height:7px;background:var(--c);width:var(--w);min-width:2px}
 .time-bar strong{text-align:right;font-size:12px;font-weight:400;white-space:nowrap}
 .efficiency p.fine{margin-top:20px;font-size:12px}
+.source-scroll{margin-top:18px;border-top:0}
+.source-table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+.source-table th{font-size:11px;font-weight:700;color:var(--muted);text-align:right;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+.source-table th:first-child{text-align:left;padding-left:0}
+.source-table td{text-align:right;padding:10px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+.source-table tbody th{font-size:13px;font-weight:400;color:var(--ink)}
+.source-table .plus{background:#f1ecf6;font-weight:700}
+.source-access p.fine{margin-top:12px}
+.insight{min-width:0}
 footer{max-width:1240px;margin:auto;padding:34px 44px;display:flex;align-items:center;justify-content:space-between;gap:30px}
 footer p{font-size:12px;margin-top:5px}
 .footer-links{display:flex;gap:20px;font-size:12px;white-space:nowrap}

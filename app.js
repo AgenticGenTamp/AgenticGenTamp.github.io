@@ -38,7 +38,7 @@ function renderRanking(){
  const envs=selectEnvironments(data,scope,family);const rows=summarize(data,scope,family,descending);
  const plannerCount=envs.filter(e=>e.results.planner!==null).length;
  $('#scope-note').textContent=`${envs.length} environments · ${family==='all'?'All five families':family}. ${scope==='all' && plannerCount!==envs.length?`Planner covers ${plannerCount}/${envs.length}; its mean uses only those environments. Select the planner subset for a matched comparison.`:'All methods are compared on the same environments.'}`;
- $('#ranking-body').innerHTML=rows.map(r=>`<tr class="${r.kind==='reference'?'reference':''}"><td><span class="method-name">${esc(r.name)}</span><span class="backend">${esc(r.backend)}</span>${r.kind==='reference'?'<span class="reference-label">Source-access reference</span>':''}</td><td><span class="access-tag">${esc(r.id==='source'?'+ source':r.access==='Black box'?'Main setting':r.access)}</span></td><td class="coverage">${r.count} / ${r.total}</td><td class="score-cell"><div class="score-flex"><span class="score-track"><span class="score-fill" style="--w:${r.mean===null?0:r.mean*100}%;--c:${r.color}"></span></span><span class="score-number">${r.mean===null?'—':percent(r.mean)}</span></div></td></tr>`).join('');
+ $('#ranking-body').innerHTML=rows.map(r=>`<tr class="${r.kind==='reference'?'reference':''}"><td><span class="method-name">${esc(r.name)}</span><span class="backend">${esc(r.backend)}</span>${r.kind==='reference'?'<span class="reference-label">Source-access reference</span>':''}</td><td><span class="access-tag">${esc(r.kind==='reference'?'+ source':r.access==='Black box'?'Main setting':r.access)}</span></td><td class="coverage">${r.count} / ${r.total}</td><td class="score-cell"><div class="score-flex"><span class="score-track"><span class="score-fill" style="--w:${r.mean===null?0:r.mean*100}%;--c:${r.color}"></span></span><span class="score-number">${r.mean===null?'—':percent(r.mean)}</span></div></td></tr>`).join('');
  $('#sort-score').innerHTML=`Mean success <span aria-hidden="true">${descending?'↓':'↑'}</span>`;$('#sort-score').closest('th').setAttribute('aria-sort',descending?'descending':'ascending');
 }
 $$('[data-scope]').forEach(b=>b.addEventListener('click',()=>{scope=b.dataset.scope;$$('[data-scope]').forEach(x=>{const active=x===b;x.classList.toggle('active',active);x.setAttribute('aria-pressed',String(active));});if(data)renderRanking();}));
@@ -69,8 +69,8 @@ function selectEnvironment(id, {autoplay=false}={}){
  const env=data.environments.find(e=>e.id===id);if(!env)return;
  $$('[data-env]').forEach(b=>{b.classList.toggle('active',b.dataset.env===id);b.setAttribute('aria-pressed',String(b.dataset.env===id));});
  $('#env-family').textContent=env.family;$('#env-name').textContent=env.name;selectedEnvironment=id;policyPlaybackRequested=autoplay;renderEnvironmentDescription();renderPolicyExamples();
- const order=['claude','codex','astra','genplan','oneshot','planner','source'];
- $('#env-bars').innerHTML=order.map(id=>{const m=data.methods.find(x=>x.id===id),r=env.results[id];const name={claude:'Claude Code · Opus 5',codex:'Codex · GPT-5.6 Sol',astra:'Codex · GPT-6 Astra',genplan:'LLMGenPlan',oneshot:'One-shot',planner:'Planner',source:'Claude Code · Opus 5 + source'}[id];return `<div class="env-row"><strong>${name}</strong><span class="score-track"><span class="score-fill" style="--w:${r?r.mean*100:0}%;--c:${m.color}"></span></span><span class="env-value">${r?`${whole(r.mean)} <small>[${whole(r.min)}–${whole(r.max)}]</small>`:'Not available'}</span></div>`;}).join('');
+ const order=['claude','codex','astra','genplan','oneshot','planner','source','astraSource'];
+ $('#env-bars').innerHTML=order.map(id=>{const m=data.methods.find(x=>x.id===id),r=env.results[id];const name={claude:'Claude Code · Opus 5',codex:'Codex · GPT-5.6 Sol',astra:'Codex · GPT-6 Astra',genplan:'LLMGenPlan',oneshot:'One-shot',planner:'Planner',source:'Claude Code · Opus 5 + source',astraSource:'Codex · GPT-6 Astra + source'}[id];return `<div class="env-row"><strong>${name}</strong><span class="score-track"><span class="score-fill" style="--w:${r?r.mean*100:0}%;--c:${m.color}"></span></span><span class="env-value">${r?`${whole(r.mean)} <small>[${whole(r.min)}–${whole(r.max)}]</small>`:'Not available'}</span></div>`;}).join('');
 }
 function renderEnvironmentList(){let last='';$('#env-list').innerHTML=data.environments.map(e=>{const heading=e.family!==last?`<p class="env-group-title">${e.family}</p>`:'';last=e.family;return `${heading}<button data-env="${e.id}" aria-pressed="false">${e.name}<span aria-hidden="true">↗</span></button>`;}).join('');$$('[data-env]').forEach(b=>b.addEventListener('click',()=>selectEnvironment(b.dataset.env,{autoplay:true})));selectEnvironment('StickButton2D');markPolicyExamples();}
 $$('[data-select-env]').forEach(b=>b.addEventListener('click',()=>{if(!data)return;selectEnvironment(b.dataset.selectEnv,{autoplay:true});$('.explorer').scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'start'});}));
@@ -206,8 +206,17 @@ $('#gallery-speed').addEventListener('change', event => {
   gallerySpeed=Number(event.target.value);
   $$('.gallery-video').forEach(video => {video.defaultPlaybackRate=gallerySpeed;video.playbackRate=gallerySpeed;});
 });
+// Compares each agent's main setting with its + source run on all 28 environments.
+function renderSourceComparison(){
+ const envs=selectEnvironments(data);const avg=id=>envs.reduce((sum,e)=>sum+e.results[id].mean,0)/envs.length;
+ const pairs=[['Claude Code · Opus 5','claude','source'],['Codex · GPT-6 Astra','astra','astraSource']];
+ $('#source-table-body').innerHTML=pairs.map(([label,main,plus])=>`<tr><th scope="row">${esc(label)}</th><td>${percent(avg(main))}</td><td class="plus">${percent(avg(plus))}</td></tr>`).join('');
+ const diff=envs.map(e=>Math.sign(Math.round(100*(e.results.astraSource.mean-e.results.astra.mean))));
+ const lower=envs.filter((e,i)=>diff[i]<0).map(e=>`${e.name} (${e.family})`);
+ $('#source-astra-counts').textContent=`Compared with its main setting, GPT-6 Astra + source has a higher mean on ${diff.filter(d=>d>0).length} environments, the same mean on ${diff.filter(d=>d===0).length}, and a lower mean on ${lower.length}${lower.length?`: ${lower.join(' and ')}`:''}.`;
+}
 async function loadJSON(path){const res=await fetch(path);if(!res.ok)throw new Error(`Cannot load ${path}: ${res.status}`);return res.json();}
-loadJSON('data/benchmark.json?v=astra-results-1').then(result=>{data=result;renderRanking();renderEnvironmentList();}).catch(error=>{console.error(error);$('#scope-note').textContent='The interactive results could not load. Please download the CSV or read Tables I–II in the paper.';});
+loadJSON('data/benchmark.json?v=astra-source-1').then(result=>{data=result;renderRanking();renderEnvironmentList();renderSourceComparison();}).catch(error=>{console.error(error);$('#scope-note').textContent='The interactive results could not load. Please download the CSV or read Tables I–II in the paper.';});
 loadJSON('data/gallery.json').then(result=>{gallery=result;renderGallery();}).catch(error=>{console.error(error);$('#gallery-grid').innerHTML='<p>The gallery could not load. <a href="assets/project-video.mp4?v=a9fc3fad1bcc">Watch the project video ↗</a></p>';});
 
 loadJSON('data/environment-descriptions.json?v=descriptions-5').then(result=>{descriptions=result;renderEnvironmentDescription();}).catch(error=>{console.error(error);descriptionLoadFailed=true;renderEnvironmentDescription();});

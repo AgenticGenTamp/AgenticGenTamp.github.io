@@ -1,0 +1,2211 @@
+{
+  "method": "astraSource",
+  "backend": "Codex · GPT-6 Astra",
+  "setting": "+ source",
+  "snapshotDate": "2026-09-24",
+  "collection": "Final/Whitebox/GPT-6 Astra",
+  "protocol": "gpt-6-astra, reasoning effort high, $20 model-usage budget per synthesis run, source access, five synthesis runs (seeds 24, 42, 222, 424, 444), 100 held-out instances per run, evaluation seed 792075 as in the main-setting runs, 60-second timeout per instance. All 14,000 episodes completed without crashes.",
+  "selection": "Every run in the collection, including runs inside multi-run bundles, is checked against the protocol above. For each environment and synthesis seed, the latest complete 100-instance evaluation is selected. Duplicate revisions do not add weight.",
+  "precision": "Compute each per-run success rate from its 100 per-episode outcomes. Average the five rates, rounded to two decimals (round half up) to match the printed paper precision. Record unrounded means separately.",
+  "runsPerEnvironment": 5,
+  "heldOutInstancesPerRun": 100,
+  "replicateSeeds": [
+    24,
+    42,
+    222,
+    424,
+    444
+  ],
+  "completeRuns": 140,
+  "evaluationEpisodes": 14000,
+  "environments": [
+    {
+      "id": "StickButton2D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__a211b78f__seed24__stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__a211b78f.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__a211b78f",
+          "resultsSha256": "0e19103a746c3f50ba017d6efab0e061fbecaa40d29ea9a1663367e95cdab09b",
+          "approachSha256": "1602a944cb9a8b5d101872330194972a8f854e90ac906558edcfd0c52c620903",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f6168ea0__seed42__stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f6168ea0.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f6168ea0",
+          "resultsSha256": "a8b6137e5e0b96989074eedeff90b249e2ba6d4a0332ce8461f4c6f3424f02e1",
+          "approachSha256": "e88f11619b1828932e5a4efdd61cba980963ec9bf254726394d05a39cae612e6",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__211b9f37__seed222__stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__211b9f37.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__211b9f37",
+          "resultsSha256": "c2b411a87fdd06ae16ea895be4809b9fe1e078fa585c3284be4c17414fe0e350",
+          "approachSha256": "86117b0659d3a7c157524b71aa049a4e2ffcb494a048ddc01ec349533b6357e2",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__d3633763__seed424__stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__d3633763.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__d3633763",
+          "resultsSha256": "de9a835a4aad169d09f1321783ddb19320eb31e3d206befa008e59044f5b4d47",
+          "approachSha256": "16c534826a41f7d658a64ac4c68f6a6467adc111b77ba2ed9b574bea2bfcddd9",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8878d402__seed444__stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8878d402.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "stickbutton2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8878d402",
+          "resultsSha256": "96664217ab765331524aa7cb54e5916468de511ca93f30fdc44fa027ea19a5e3",
+          "approachSha256": "d9e76cf0ca85bda8087e3b1a5c29f18fa7974b2a8b913ce040adcd350a646345",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Obstruction2D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ca9e96e2__seed24__obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ca9e96e2.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ca9e96e2",
+          "resultsSha256": "2c95ba430c9305f0a31b0dbf8c2c3e01bc8629cff439bd543ca928d7b3080f03",
+          "approachSha256": "2f51f103fe1e1d947fc93b99a163d6db3b2ada50ecdc5908c6770fe4c4f3fe31",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ad53c159__seed42__obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ad53c159.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ad53c159",
+          "resultsSha256": "e36f57008d7d03f3e22ddd3832e3d3e23b0b425342c79cced20b47d3b5980489",
+          "approachSha256": "ce2ca432eec389d63a0027306a22af7535f6b17a06c78987d57efb5ea58ea2e9",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__01fd4299__seed222__obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__01fd4299.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__01fd4299",
+          "resultsSha256": "77db7280747abca4d6e83bf011ef4a42c0713796afa5eb80801160a6407ec384",
+          "approachSha256": "7441333a51a105b4ee7df10ba0c0141faa67a7460b9abdb7d18f43809fdc1944",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__77f6cfe2__seed424__obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__77f6cfe2.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__77f6cfe2",
+          "resultsSha256": "fa06a25b9102a3f46371a4b6f1a170b2647630cc923ad002aebf03eab21eaecf",
+          "approachSha256": "97faff79f35574c68d13574ff0ded013d4c57fd2120a6b46a4e5671309b77267",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__4d96d70d__seed444__obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__4d96d70d.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "obstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__4d96d70d",
+          "resultsSha256": "8b1bb25048c22ae2876867f817c7b3fc44d2f70deb613be31e7f1a98cbec2e27",
+          "approachSha256": "8393829527d8da9b6fffe4fbe04f8eb870a0d0dbd7904d61ccb02896bf0586a2",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "ClutteredStorage2D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__e194f683__seed24__clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__e194f683.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__e194f683",
+          "resultsSha256": "00672cff73a73c5eeacffaf16001dd87ecf990f309297b9e75438cbe3e71e7b3",
+          "approachSha256": "b81691b5024aafa48fe97e8515fcbd219cd8e8ec2f931fc8f86b23921cdca462",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__cd7b15b2__seed42__clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__cd7b15b2.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__cd7b15b2",
+          "resultsSha256": "1a31da587d5e6876a04b75b2a6ec17c81d3c046301634882a01a31ec6cdb30d1",
+          "approachSha256": "7de50eec7d4e066804f898218388d957f1441743a17d0f9a8b4435054c61341d",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ee97407c__seed222__clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ee97407c.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ee97407c",
+          "resultsSha256": "74a68a7767b783fdceb301b33881d42476a1015950c887e83fe4a604d4793027",
+          "approachSha256": "49f3d0a38cd60a4e9131447e782689967b7d320d4f65d6f8e8a4e67dcb96e278",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b6265ba1__seed424__clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b6265ba1.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b6265ba1",
+          "resultsSha256": "3022d41d4d151d718d7a9c56cdbf825eac6b981e710c9cfa223aed885e8b4644",
+          "approachSha256": "77e2fd165804fa65b92ace17a31b5076d1d80f9ea728cc3b3f9a52b699f6a1cf",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7d36ef7d__seed444__clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7d36ef7d.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "clutteredstorage2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7d36ef7d",
+          "resultsSha256": "d4b2c4190816d915657327f739c613bf30a66ab8370f6c2501049952ae415cf0",
+          "approachSha256": "5964028ba70b7bd606e9498677d23361e181291a10c4ebf4d715ceffc5d52ccd",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "ClutteredRetrieval2D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__d47039f0/2026-09-23_12-23-00/replicate_24/results.json",
+          "programMember": "0923/clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__d47039f0/2026-09-23_12-23-00/replicate_24/sandbox/approach.py",
+          "experimentId": "clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__d47039f0",
+          "resultsSha256": "5f5c95d7eb8f266fe6e6d5b5730d07278534b61fdb64bcfad85143bde77ded26",
+          "approachSha256": "eecc50ca9eb6f221e48094c5e752deb1f7e2b80a44e4571914a4312ba8dc72f3",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__a16993e3/2026-09-23_11-31-37/replicate_42/results.json",
+          "programMember": "0923/clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__a16993e3/2026-09-23_11-31-37/replicate_42/sandbox/approach.py",
+          "experimentId": "clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__a16993e3",
+          "resultsSha256": "2851d29afd2c0f249be80d480ef5edc5ef0801db20408ce9b68d33f27a82ed96",
+          "approachSha256": "bfa221235360141e66d7efbe4d79f2ec5b716c65e1d18eb9abe9115772448045",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__08502f93/2026-09-23_13-16-31/replicate_222/results.json",
+          "programMember": "0923/clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__08502f93/2026-09-23_13-16-31/replicate_222/sandbox/approach.py",
+          "experimentId": "clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__08502f93",
+          "resultsSha256": "4f64087c2597810b16043978df7974b3678f837776ba274358fa1c993652338c",
+          "approachSha256": "c202834c6c7f373dda5a78cd9136ac2a8a1a3840cdf341c4eeb6f520faabd11d",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__422b2e50/2026-09-23_14-00-51/replicate_424/results.json",
+          "programMember": "0923/clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__422b2e50/2026-09-23_14-00-51/replicate_424/sandbox/approach.py",
+          "experimentId": "clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__422b2e50",
+          "resultsSha256": "c7333389a5aff251edca69c511a862f78ded98de4b73ac9aac3c4753588904f0",
+          "approachSha256": "c16a295632ffe888cae70e448ae553d5ce990b3b89014c4ed0d3a919485b0eaa",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__bc51ffba/2026-09-23_14-47-48/replicate_444/results.json",
+          "programMember": "0923/clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__bc51ffba/2026-09-23_14-47-48/replicate_444/sandbox/approach.py",
+          "experimentId": "clutteredretrieval2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__bc51ffba",
+          "resultsSha256": "13d9c5a215361ea7e73b5309ad193720fbb862990622b92606df3b4bd57b0c36",
+          "approachSha256": "7780195e98bf8574a1330665e66815e2bbbc16a1c30ca63880dbce22ad911984",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Motion2D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__a251dcc7__seed24__motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__a251dcc7.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__a251dcc7",
+          "resultsSha256": "6d26fdd05ad3ab6b8b297120f719df5584c321b6028a6641de957fe6c9264e49",
+          "approachSha256": "477b16718d8aa75a7e375c70c89ecea05ab3b5c7ddbaeb3c9880d841a30cbcbd",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b8bcc538__seed42__motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b8bcc538.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b8bcc538",
+          "resultsSha256": "735cd5ec8347364d2cceab5b5b476a891f20f8eaf43bf767aa247c7b2ba4a4f0",
+          "approachSha256": "2982ab0529f65daebe9890db5a2b361d22375b337672739b32463d2641830bf9",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__64c569f3__seed222__motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__64c569f3.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__64c569f3",
+          "resultsSha256": "82900be17959e7d9f4a0c5e7cfc76763af90000f7553990d570e637379d80f2b",
+          "approachSha256": "b42b0cd2936ba2d00a3bda0f213d869fe60b3a03f22886199619aa193d4cb0a5",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__02169880__seed424__motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__02169880.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__02169880",
+          "resultsSha256": "793973824fad24ab7e8bbdd788a89c1091b872a506416adee0be39bbbaf2149c",
+          "approachSha256": "439813e9fda137f61563c46d6bb8b1a5361e1535ac92ca59b58f964c4df650c4",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__9c035315__seed444__motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__9c035315.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "motion2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__9c035315",
+          "resultsSha256": "17fcd79936e0f56ded8e94806199d64ae2e292f60ae236f4f913cfaa8c03def9",
+          "approachSha256": "9d1c9ca12e0cc9dd7c04fe9ad0cd411c52867928d2a3a1e0e1e27b7ef23d1461",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "PushPullHook2D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__20b1d438__seed24__pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__20b1d438.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__20b1d438",
+          "resultsSha256": "4aa44c2499050f64e3260e9efbb5e2a33472c91aa5fe229a503b514ee1bcb11e",
+          "approachSha256": "ab50d7bddbeb6867e3985f6fd7f113eea104f598355171fbc3e37c92d964a0cb",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__49f8134d__seed42__pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__49f8134d.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__49f8134d",
+          "resultsSha256": "0d8b43c6b6423bb569f6f93b1fe1b218f0b84490d65aaa0d5a45d2a8ac03f9fe",
+          "approachSha256": "8b4cc69f6bbebbec31127d80e66d7683ac4df52522817bf3b2299b2e8c8ed695",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__bfe7c001__seed222__pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__bfe7c001.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__bfe7c001",
+          "resultsSha256": "60d2d561d8af0e710f256fe4283752771ed0772cfcf2ee7ee5a039d693ca33d3",
+          "approachSha256": "26908cf24946f12acc2e0b6e1174ad0e8b5ec1136ecd31925a5eb37d9ce91b85",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__4f556728__seed424__pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__4f556728.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__4f556728",
+          "resultsSha256": "9812f505e3bf8313f7bbb6371c917713399b8687a94b22159e2b7d371f509d7d",
+          "approachSha256": "ec9ac4a35348c05fa382e86168f2027a288647f2d93304605ece69bc2f1d3536",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__ac1f325e__seed444__pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__ac1f325e.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pushpullhook2d__agentic__none__whitebox__codex_gpt6__timeout_60s__ac1f325e",
+          "resultsSha256": "45d9075537883a4015f53edfdab8ff7ba559821aa9b298c514c56e1a96461ec5",
+          "approachSha256": "a3136db7aff5ada74b7b2d399080643f7863b776fc2b5543a1f42b66d310be78",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "DynObstruction2D",
+      "result": {
+        "mean": 0.93,
+        "min": 0.83,
+        "max": 0.98
+      },
+      "unroundedMean": 0.932,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__88235f8d/2026-09-23_16-09-57/replicate_24/results.json",
+          "programMember": "0923/dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__88235f8d/2026-09-23_16-09-57/replicate_24/sandbox/approach.py",
+          "experimentId": "dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__88235f8d",
+          "resultsSha256": "456736d2bda1a66358a51c73fd13eca73dc02a9eb508c59df998114053c2d0a0",
+          "approachSha256": "0ecedb5d3c611ba3e042ced3e29261af0d22e9e5c83fd3b36e81d20ac42aa5eb",
+          "solved": 83,
+          "episodes": 100,
+          "rate": 0.83,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__19e6f74c/2026-09-23_15-37-30/replicate_42/results.json",
+          "programMember": "0923/dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__19e6f74c/2026-09-23_15-37-30/replicate_42/sandbox/approach.py",
+          "experimentId": "dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__19e6f74c",
+          "resultsSha256": "83c66dd623646d57317922dfc5f211e4090b16a17277efbcc6a01d812be160a2",
+          "approachSha256": "b5d456c96dc857374fb1f8ff693956c029adb76349a766083b7c7f793a26ce5d",
+          "solved": 94,
+          "episodes": 100,
+          "rate": 0.94,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b4b27ee6/2026-09-23_16-50-39/replicate_222/results.json",
+          "programMember": "0923/dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b4b27ee6/2026-09-23_16-50-39/replicate_222/sandbox/approach.py",
+          "experimentId": "dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b4b27ee6",
+          "resultsSha256": "3c2fc6250e90daf7e2c5f5fa6c9c557c4d3223ee453f53ee6707885b327df14f",
+          "approachSha256": "1309b9a82dbeaf2628671606131e40f5cc3d93dbd46da39baebb42b49c55c8e9",
+          "solved": 97,
+          "episodes": 100,
+          "rate": 0.97,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__94e60663/2026-09-23_10-10-01/replicate_424/results.json",
+          "programMember": "0923/dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__94e60663/2026-09-23_10-10-01/replicate_424/sandbox/approach.py",
+          "experimentId": "dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__94e60663",
+          "resultsSha256": "2fff963fabbc50393c04ed6325dd37911b3b36296e93d363fd27be75d22b0045",
+          "approachSha256": "7db95894499b2813e1be3a800062f9b5db3a2662c048591181bf3c2b837b4e41",
+          "solved": 94,
+          "episodes": 100,
+          "rate": 0.94,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__10cd6380/2026-09-23_11-04-12/replicate_444/results.json",
+          "programMember": "0923/dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__10cd6380/2026-09-23_11-04-12/replicate_444/sandbox/approach.py",
+          "experimentId": "dynobstruction2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__10cd6380",
+          "resultsSha256": "0b9978b2d3d7ea19bed7b7494c846a83b71dbec40865bf1652a8b6b36b63131c",
+          "approachSha256": "3fe0f2610337c5f1d424836b5027fa68ee5444b8ef768ae431a0daaa248fced2",
+          "solved": 98,
+          "episodes": 100,
+          "rate": 0.98,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "DynPushPullHook2D",
+      "result": {
+        "mean": 0.97,
+        "min": 0.91,
+        "max": 1.0
+      },
+      "unroundedMean": 0.968,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__76206bb3/2026-09-22_21-47-58/replicate_24/results.json",
+          "programMember": "0922/dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__76206bb3/2026-09-22_21-47-58/replicate_24/sandbox/approach.py",
+          "experimentId": "dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__76206bb3",
+          "resultsSha256": "b248bdc7f9ebf0dda57f1624ccfdbff7fb7557f1da718545a8f63fe216745991",
+          "approachSha256": "2cbf41c5a9bc8dbf7677de13602ee20897ea73d2c12e0df55fe889f80e5bffd0",
+          "solved": 98,
+          "episodes": 100,
+          "rate": 0.98,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7db853ac/2026-09-22_21-11-13/replicate_42/results.json",
+          "programMember": "0922/dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7db853ac/2026-09-22_21-11-13/replicate_42/sandbox/approach.py",
+          "experimentId": "dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7db853ac",
+          "resultsSha256": "587d666699819626091df01007938cd60370f92c2cbe15ac506d546016dc2e69",
+          "approachSha256": "87fce1f17908850af904c7e292f63db3c81dfa0f7978698ed984db7c6a361050",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f41d4e97/2026-09-22_22-43-17/replicate_222/results.json",
+          "programMember": "0922/dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f41d4e97/2026-09-22_22-43-17/replicate_222/sandbox/approach.py",
+          "experimentId": "dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f41d4e97",
+          "resultsSha256": "0065031a6df4fa7f4a4c863e175f80c2b017aff8f6f619451c7badd878ec1e51",
+          "approachSha256": "f86db6af2965339737cd22218f7b035e892e83e6b6d9f7c47035e70b802a39e2",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__199e82da/2026-09-23_10-09-57/replicate_424/results.json",
+          "programMember": "0923/dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__199e82da/2026-09-23_10-09-57/replicate_424/sandbox/approach.py",
+          "experimentId": "dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__199e82da",
+          "resultsSha256": "e32aacad8300c37c1c1fbd9eabb1a485e6472d8417bcf70a80f58a4ca8f99ac1",
+          "approachSha256": "14a422e3dd1caed23d32ffaefe2f794cf8c3f06eca6642aa51d4c3a8aba09810",
+          "solved": 96,
+          "episodes": 100,
+          "rate": 0.96,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3ee4b35c__seed444__dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3ee4b35c.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynpushpullhook2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3ee4b35c",
+          "resultsSha256": "63b01753e09d41c90652d4bfec2687d6cbe4edadf516e50bd6926fff46c79991",
+          "approachSha256": "cacba65e3d26169e2a2b5faa0832ecc6faae63e36178ca70be8a34100c90b95a",
+          "solved": 91,
+          "episodes": 100,
+          "rate": 0.91,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "DynPushT2D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__39ce9f32__seed24__dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__39ce9f32.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__39ce9f32",
+          "resultsSha256": "2b0c60976a872da2e2934202083bd6ca15f6003bc5311eea94dae9cb98a5b2a7",
+          "approachSha256": "db43770127529401366f965b7c25a3db2fde49ce515833ea369048283eb06c95",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__eaab9b99__seed42__dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__eaab9b99.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__eaab9b99",
+          "resultsSha256": "70975aedda5b6f3066a3054fe2d1b594733edf881437db51238934ade4a1c688",
+          "approachSha256": "6bc564b85ed32ee835c13a2150bf6417db568e5e0376c470682caaf0de52acc4",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__9984908b__seed222__dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__9984908b.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__9984908b",
+          "resultsSha256": "5a0993dee235c0546c2b7e7831e9d4492f26142949d878bed7197f1cb221630c",
+          "approachSha256": "676a4680d1addc58a0c7b4ab973bb80ebbf5505aa7bf42f12df5337007982f52",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__871eb8b4__seed424__dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__871eb8b4.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__871eb8b4",
+          "resultsSha256": "6aeda13bb19052767623c476ad32819a65bcd5fa508e9c850d39762a88f2a475",
+          "approachSha256": "a4625b01c4f09fb13b94f5ac608f54a9b8f395589843955165b77443344fc168",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__5e391e49__seed444__dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__5e391e49.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynpusht2d__agentic__none__whitebox__codex_gpt6__timeout_60s__5e391e49",
+          "resultsSha256": "7cbb646712f958307527d7a5d45edbf4a47025f931eb6eef8dc6d675d033c685",
+          "approachSha256": "d1bfbccbd2f9a2e9731fc51037d736c31f5835fda04f2de6dd0f3450953cbdd0",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "DynScoopPour2D",
+      "result": {
+        "mean": 0.97,
+        "min": 0.87,
+        "max": 1.0
+      },
+      "unroundedMean": 0.974,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__85b59843__seed24__dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__85b59843.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__85b59843",
+          "resultsSha256": "412c65b031fdb37e95fc9297d39831fb065fe070c191c3cc49bc880c410e46a8",
+          "approachSha256": "6a9a4e0179b7e05b3a73b4f753e1c2ff3d2e5b7faddb5be7f7d673745ad06cf3",
+          "solved": 87,
+          "episodes": 100,
+          "rate": 0.87,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__93aca14a__seed42__dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__93aca14a.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__93aca14a",
+          "resultsSha256": "9ac18ba5623d82b2db89f82a407e3bbf00d80219a127b5d4373b117d2630b085",
+          "approachSha256": "6b75498f2f622b15c305054b78d64a90dd7bdf228fb29347d563aaec30c56321",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__1d41433b__seed222__dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__1d41433b.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__1d41433b",
+          "resultsSha256": "fceb7c5319c58d05e64a8003ff3890a30404349a8d996b65a49ec93c1c38657e",
+          "approachSha256": "394adca2f0e65bb212ae918309d7fadc613adf18856f0ad50fa76e4ab2207125",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__1917d6a1__seed424__dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__1917d6a1.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__1917d6a1",
+          "resultsSha256": "20cbd97fd850f4dfe16dd8fe86cd6796a6e03d5908094034d134ad345082a93d",
+          "approachSha256": "33695bfd519c2eee2caf130d708dedf10b3cd68c93dd380a7b5b914b17a99c6c",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__097e308f__seed444__dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__097e308f.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynscooppour2d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__097e308f",
+          "resultsSha256": "8733864b69595eb81e34764ea1bbeda091e82db78e9c3e105da875e11c325d0b",
+          "approachSha256": "9e226795d5d4731318cb0ce377d567a75e8394cb62b70172ba1bcbd95b0bf8ea",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Obstruction3D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__277d85de__seed24__obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__277d85de.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__277d85de",
+          "resultsSha256": "7f85c04f8671321c00a464ee550a4081fd2b76391709b6ef3d0941aac5b7e0bd",
+          "approachSha256": "b0b6c8776aef17d1660787697faf22cf157c58eaafd8cb96277f3f19e705a3ba",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__46e58304__seed42__obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__46e58304.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__46e58304",
+          "resultsSha256": "9fdb48b82590eb8040b6b7a8d6a8a97fba3bc12b66e9e25c9e30052935160d63",
+          "approachSha256": "b5dac6ea472f235001f34a4e4c215bf90cba0c5b5f8e3c07a6962032ae22b9c4",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__a5f0254a__seed222__obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__a5f0254a.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__a5f0254a",
+          "resultsSha256": "33643a203356dcf8f4312babf319d454c8d208d302f8495adbeb90a60d906e05",
+          "approachSha256": "ce8457fbbd311a6750511ebfead5b46cf63de245ac9662a1a95e7f14e0366123",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7cff7aa0__seed424__obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7cff7aa0.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7cff7aa0",
+          "resultsSha256": "5eaa8ec6fb68e1cdfdd34ab2851318ecf2db9afb6ef8f1a95e8628ae3ba0de49",
+          "approachSha256": "d69293d4b305598ec0563a616e0b25427b21a25e24c7cdaea06011842f9563aa",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__d1cd379b__seed444__obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__d1cd379b.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "obstruction3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__d1cd379b",
+          "resultsSha256": "dea2c93ed419e3e4649426888f8f2d707c756f1faf5a371c4f858e6d26c42915",
+          "approachSha256": "3b65bcd35e7f27ef14673f6b0778a7ff40d1e3cd7cd139017dd99a37e8cfb000",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Packing3D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__632526e5__seed24__packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__632526e5.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__632526e5",
+          "resultsSha256": "d154ccade27fa6c234f75e9a9a4f84111491ed2b67a763e17d37de7a1e0dc40e",
+          "approachSha256": "4180d37a0de56c6a8d78890aabee168c2d9d8ddcb39237799d43fc40183243b0",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3bc8b566__seed42__packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3bc8b566.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3bc8b566",
+          "resultsSha256": "be84ba7ec2ecb976a04fba3ae32c3285ad5304ed0e71c2d89ff3985b0245a89f",
+          "approachSha256": "f293a8daed2191c0015c8371b97ab29334f1cb908ee28fadf288918c62500ec4",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3e90e2be__seed222__packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3e90e2be.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3e90e2be",
+          "resultsSha256": "5fdb22f8a2832d4509143c7552ca909390dd08b400805cd9e6bd049208dc74f2",
+          "approachSha256": "6cee366bc2614d5c1209c92775347fdebb305e76a1aab1f0cc3a7f2a2e41a5a6",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ac15699a__seed424__packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ac15699a.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ac15699a",
+          "resultsSha256": "cafe2c1fb45434f2ebe084705aba037ee498cd45034169ee408826c44650f90e",
+          "approachSha256": "893a7adc709a3fe5f4404d14b480f96abdc5188ef23e428238de28baac09e14c",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f4a28bc7/2026-09-23_11-04-07/replicate_444/results.json",
+          "programMember": "0923/packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f4a28bc7/2026-09-23_11-04-07/replicate_444/sandbox/approach.py",
+          "experimentId": "packing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f4a28bc7",
+          "resultsSha256": "71c58cc504288f85481780eea1085ad68d997aaa25d73c137f03b22341ae8deb",
+          "approachSha256": "9bc7c13a7d51d0c3c6ff39a6e3c2f093542058b16b9e234d85e9832f0843412d",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Transport3D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__cc142eda/2026-09-23_01-35-22/replicate_24/results.json",
+          "programMember": "0922/transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__cc142eda/2026-09-23_01-35-22/replicate_24/sandbox/approach.py",
+          "experimentId": "transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__cc142eda",
+          "resultsSha256": "db77cbbbc4ccdcae8886d279cf751e699427afcdf5c15574150c8d5a35ffb1c9",
+          "approachSha256": "2f56233cf5eccc26ccab3ca1780b28ba4d72ac989666d0799757dcbf071a0710",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__5f74e66e/2026-09-23_01-07-57/replicate_42/results.json",
+          "programMember": "0922/transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__5f74e66e/2026-09-23_01-07-57/replicate_42/sandbox/approach.py",
+          "experimentId": "transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__5f74e66e",
+          "resultsSha256": "f5089d336235fcd39a9e3a1fec2675959115108ec64373d15c5f38f14ce7bbe9",
+          "approachSha256": "5c751d9a62f0f65c647f876fdc1447e634f761cfabb1086d3b11fefdad1ff845",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__75b7f500/2026-09-23_02-06-41/replicate_222/results.json",
+          "programMember": "0922/transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__75b7f500/2026-09-23_02-06-41/replicate_222/sandbox/approach.py",
+          "experimentId": "transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__75b7f500",
+          "resultsSha256": "328e3f7dc1dc0c921a0de7b429bf3cd39e09dc6e1bf5ebd76992da28702c62cc",
+          "approachSha256": "176612eb2a508c0f9bc3fe78c32a0389f0c3a66e8917a705c2b58f97559deabb",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__cff33940/2026-09-22_14-57-32/replicate_424/results.json",
+          "programMember": "0922/transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__cff33940/2026-09-22_14-57-32/replicate_424/sandbox/approach.py",
+          "experimentId": "transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__cff33940",
+          "resultsSha256": "9ad104a568c37d610a1c0bff6e8c24814331f603bc5152b8fe91a2c78d1646ab",
+          "approachSha256": "066a76c5763935c7f1abc0fa63c17dfc735a7139ab666c276527d707b8e82b75",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__aad5a29b/2026-09-22_15-32-59/replicate_444/results.json",
+          "programMember": "0922/transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__aad5a29b/2026-09-22_15-32-59/replicate_444/sandbox/approach.py",
+          "experimentId": "transport3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__aad5a29b",
+          "resultsSha256": "8f36141fdeaded82ba66afbc35bcfbb9e8ce9976101d696c63c6938837b7f90e",
+          "approachSha256": "ed3f217093cc3c35ea70fd93af052d5397379910b61e1b42be2eb736ad77b8be",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Table3D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3ba893d4__seed24__table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3ba893d4.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3ba893d4",
+          "resultsSha256": "1e09cdaf7e86f90895b82b4bc390f8c3da9df40ca9e5344d4574ef28e13f3247",
+          "approachSha256": "03fa17e43dd679ba39e000d38bb9afc460e1c5fa5c95adb935e9d2818bf4d770",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__9da73410__seed42__table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__9da73410.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__9da73410",
+          "resultsSha256": "e6dda47e68f9751dc52591458df8f011b179306f97492f70c1e5c5a74d0c601b",
+          "approachSha256": "38d23b8b5b7c8ca34f3a5abbe1cbcc2ee5f834a982360cfae7493deb84ea3e5c",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__05871d52__seed222__table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__05871d52.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__05871d52",
+          "resultsSha256": "af03c92133817c9f1d5c21014283a3ed3bae9a9560f027d3edb7e786830b4b9f",
+          "approachSha256": "cfbaed154f646922064875d0404bf598041bc44de965ebaf5ccf3fc37d69f835",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8a5f8ca4__seed424__table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8a5f8ca4.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8a5f8ca4",
+          "resultsSha256": "5baabdf27341d906c26a6f972cad9822bb1d75eaad9fc433a4469df439185583",
+          "approachSha256": "cb29d82754985e4d0a3cd302019cd6b0d900491e585199f11b04a801006c4c3f",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__09734cf1__seed444__table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__09734cf1.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "table3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__09734cf1",
+          "resultsSha256": "f61342b8d781f523daa10c221c1fd063c3e511055bdf8284d04b31c9b075ee77",
+          "approachSha256": "052a97d313b734f1eea26a7310b3de01cb33990e0390ca768107b1c160a88c46",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "BaseMotion3D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__148e1107__seed24__basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__148e1107.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__148e1107",
+          "resultsSha256": "5c776e22b4f88d71d3578a3593d6cceef341d15af510d2ea74002d45e866e1b4",
+          "approachSha256": "b91fcd36abd51fcba5aba4942d441c1bf04b85f126af7f16d0656519ccf9d0a1",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__83aee8f0__seed42__basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__83aee8f0.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__83aee8f0",
+          "resultsSha256": "bd72350766634b16af8d620da11cd112a51d6a27bf06cc8681fe5e33a77fc4f7",
+          "approachSha256": "6d7ea84b02c8ac0904b5116289c60dc2c4760eccae4c085088145dfa4e83022f",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__7103ed2c__seed222__basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__7103ed2c.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__7103ed2c",
+          "resultsSha256": "d3ab90e17cb2345f0d1d6372a0ac0d106438de0af611251b43c903fab816e576",
+          "approachSha256": "597979d23eb6d6a60f41a9719267fff63966e805abcea196a8cda73a40676122",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__cc3c3278__seed424__basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__cc3c3278.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__cc3c3278",
+          "resultsSha256": "87446f1368a5811bd643ab32d7ab05894d0fb7c1045950bb73e679162e772b30",
+          "approachSha256": "b2e8db4070fa3d1e0ec30c5f5ac1e658e7c726cb04227563cfbf6c119e42ac25",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__38ecd9be__seed444__basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__38ecd9be.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "basemotion3d__agentic__none__whitebox__codex_gpt6__timeout_60s__38ecd9be",
+          "resultsSha256": "af81452500dfa7ce8217d8dd9c633d9532efa93baa814eb36aaea42ea6a21fa1",
+          "approachSha256": "fe85c7d707cbe0db89a8bca4b400135b711092f5de173b76bf75d8765a1b14e4",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "BalanceBeam3D",
+      "result": {
+        "mean": 1.0,
+        "min": 0.99,
+        "max": 1.0
+      },
+      "unroundedMean": 0.998,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__e8e5aa62__seed24__balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__e8e5aa62.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__e8e5aa62",
+          "resultsSha256": "b024403ad3504902fd5aa3459a656f005624cab2f4841741ccf01f1e4cbcc810",
+          "approachSha256": "603465e28cc8a4979be12409efb6ef1547a175e6468ab8efdfa918ea51544b24",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__06dbf49b__seed42__balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__06dbf49b.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__06dbf49b",
+          "resultsSha256": "7fe94ec7edd47633922c7f04e6e7ba4b1588627118d22aeccc6691153a81cb2c",
+          "approachSha256": "5cb4c95126787cd0cd2ff54f835acea5de4d40bfee841d0f1cc9e887b3347618",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__a4e068f1__seed222__balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__a4e068f1.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__a4e068f1",
+          "resultsSha256": "57f2a3354acb3cdc836884cafd5a8a026aedbf3b37681146243f658aa3f7ddc9",
+          "approachSha256": "a81ba54480ddcd0f99c14dacc1340ac04be8828f6ae8a7a7cf0df4756eea7dc1",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__5b116216__seed424__balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__5b116216.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__5b116216",
+          "resultsSha256": "c226b0b7984bf23c6c1302d40348432a2010cbd4a161d37dc6d39f5277f7330f",
+          "approachSha256": "092160eff252c016d70139e2f881f612a29955bc3959d54f59a66bce1a44286a",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__9320dffc__seed444__balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__9320dffc.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "balancebeam3d__agentic__none__whitebox__codex_gpt6__timeout_60s__9320dffc",
+          "resultsSha256": "e926f896c2a07a561157288f54da32bc8068bcac02dbade3c454c5f4528176d2",
+          "approachSha256": "8544919de868ae9be5c3d9ef1e05786a16822c6a0fcc2368487ba099c9cd6837",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "ConstrainedCupboard3D",
+      "result": {
+        "mean": 1.0,
+        "min": 0.99,
+        "max": 1.0
+      },
+      "unroundedMean": 0.996,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c3f7ba15__seed24__constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c3f7ba15.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c3f7ba15",
+          "resultsSha256": "a7fccea25a5643f4572bf0bc53e7ac3b9826f358594fc557def499b05bf9dbe3",
+          "approachSha256": "6c9b6a1accd9f577cb71ba8c8e25ffc5ba47c9958521dfad074d7ef7008b776c",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__42671d7b__seed42__constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__42671d7b.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__42671d7b",
+          "resultsSha256": "d32bb9d569e01b3c46c0d235d195766b9387604ec73be1d3e6403e391ec017ea",
+          "approachSha256": "40684d3d1554500dd7bc5a6bf52fe9c9a822fede809020f0a5464d44238c345b",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__dcbd990b__seed222__constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__dcbd990b.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__dcbd990b",
+          "resultsSha256": "f4fc56591bc81b9170f9684e754fe169ea88e025dec8069b26c0e11de8da3bcf",
+          "approachSha256": "6e4d2903567c986587d57521e406527701cad47a3711aecc80fe433b54e9ea1b",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__6650b096/2026-09-22_14-56-55/replicate_424/results.json",
+          "programMember": "0922/constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__6650b096/2026-09-22_14-56-55/replicate_424/sandbox/approach.py",
+          "experimentId": "constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__6650b096",
+          "resultsSha256": "ec0b92e62f4748bae8dab44cad00659615cf1abcaa3c5e79ff8891cbbe223e2a",
+          "approachSha256": "aaa75bce6cbce4d81c646f24839360bd213aeb984b92848ddee25ec911b2c36c",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__66f2e464/2026-09-22_15-31-43/replicate_444/results.json",
+          "programMember": "0922/constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__66f2e464/2026-09-22_15-31-43/replicate_444/sandbox/approach.py",
+          "experimentId": "constrainedcupboard3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__66f2e464",
+          "resultsSha256": "634b8fc255f9d7edf63d8f3fb99ca254626b375a2aed4c7e4b7b093c53cc213d",
+          "approachSha256": "7f8bf8f31eb919b340e30cb13335670286c98affd04a4c39e92f4c2b642a0d71",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Dynamo3D",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__09aa6cc3__seed24__dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__09aa6cc3.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__09aa6cc3",
+          "resultsSha256": "ed375c5c43b26d741fdfec1fcffd1de0d04ee29d3154215c6bd05a2a58cb770a",
+          "approachSha256": "2635e0c0201369533e4640f53a84c5a473151e65631f98f50957b506553308d5",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__088153aa__seed42__dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__088153aa.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__088153aa",
+          "resultsSha256": "3722937264db8145ae71d4f31906b412903c7485a42dd1c48801196c310772e4",
+          "approachSha256": "2d8305a4b4e3f28705d1a3798092424b5df5050cc1d13e6bed02c01ee53ac91c",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8e1c6597__seed222__dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8e1c6597.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8e1c6597",
+          "resultsSha256": "d3e0cd355eb29bc6d08bc2337cf9724f334fb1bc5c5a61a5a74379dd9752d9ef",
+          "approachSha256": "8628d365c6aae022f084b8dc8dabf2d324bcec2f2268da738d057a95e0c25557",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b6e17c70__seed424__dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b6e17c70.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b6e17c70",
+          "resultsSha256": "3ed0dde701cfe4493c0540165a7a2fd437c66201a22063f638ff3b0a683a1884",
+          "approachSha256": "2ef06afd9d97ac2d9b6b832674b29a176bf70b19ea8424583998933d1e1e289b",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__1ebf0e85__seed444__dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__1ebf0e85.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynamo3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__1ebf0e85",
+          "resultsSha256": "0ea93499353e5f469f8f074066696c888a7fee86972903ccccef29b1e9cb6187",
+          "approachSha256": "cc6b682da75369ff6b9ad79569268bf0a163ee2b43863bd9ac17a3defa9bd1f6",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Rearrange3D",
+      "result": {
+        "mean": 0.99,
+        "min": 0.97,
+        "max": 1.0
+      },
+      "unroundedMean": 0.988,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__2c6def7a/2026-09-23_16-10-11/replicate_24/results.json",
+          "programMember": "0923/rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__2c6def7a/2026-09-23_16-10-11/replicate_24/sandbox/approach.py",
+          "experimentId": "rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__2c6def7a",
+          "resultsSha256": "7ebb9d3b336e7e74352445110e99b44cc8addf58f65e2a3540bad88ed9812e4e",
+          "approachSha256": "f7f07c31f27303ec0500005f2116dd4a637c947ca2cbef0315b59bf1a4cd1cfd",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__f49f2a55/2026-09-23_15-17-36/replicate_42/results.json",
+          "programMember": "0923/rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__f49f2a55/2026-09-23_15-17-36/replicate_42/sandbox/approach.py",
+          "experimentId": "rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__f49f2a55",
+          "resultsSha256": "7e55e6b68260d26ff21b6a38d1310fa69b99472e19c5e67747f79950947a456d",
+          "approachSha256": "cd68a743fe7a7bea367dedbe7f3ecade3b2462f90929440a72427b92a673a5fd",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__c9f81a06/2026-09-23_17-07-03/replicate_222/results.json",
+          "programMember": "0923/rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__c9f81a06/2026-09-23_17-07-03/replicate_222/sandbox/approach.py",
+          "experimentId": "rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__c9f81a06",
+          "resultsSha256": "9ec6c421be2d4f4de920f827d38132a6f835c07f991ca64fbb4cd8a818a08cd4",
+          "approachSha256": "e52bdf55b33ee8e30702c9a20f55379ffc44573ee1bee473b96fffebdf1c6e73",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__11b55c5c__seed424__rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__11b55c5c.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__11b55c5c",
+          "resultsSha256": "4010bcbd19e28449b1a18d0d337256b9892aa07ed6915ac832a8e0eb29839a81",
+          "approachSha256": "686fb14dafb684062007b92bb6576ba4e2c0eff563b21a0314978701d1ea4dda",
+          "solved": 98,
+          "episodes": 100,
+          "rate": 0.98,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__7f012976__seed444__rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__7f012976.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "rearrange3d__agentic__none__whitebox__codex_gpt6__timeout_60s__7f012976",
+          "resultsSha256": "5a133a6573552872915f12f762bfce184563911d70c7f86cdf99618b97c094d7",
+          "approachSha256": "8b89f4ab2279bde00dcbcecb607c5c8b9d87e5ddb9d44158c74d3220231dfc8f",
+          "solved": 97,
+          "episodes": 100,
+          "rate": 0.97,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "ScoopPour3D",
+      "result": {
+        "mean": 0.42,
+        "min": 0.06,
+        "max": 1.0
+      },
+      "unroundedMean": 0.42,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3ad5815b__seed24__scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3ad5815b.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3ad5815b",
+          "resultsSha256": "a61becc754960b7e9de95d7f409fbf3dda0225bc48d62eb0161c1befbb033f37",
+          "approachSha256": "c23ff2ec975d42357fc76288e1c5efc27f708e8f0da84b6d99f0ade6e01fd43d",
+          "solved": 37,
+          "episodes": 100,
+          "rate": 0.37,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__aa6b3293__seed42__scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__aa6b3293.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__aa6b3293",
+          "resultsSha256": "d197d2bfef4cc962d0c57f7ab85ce05c3407281546b87c1a071c50be3ded8652",
+          "approachSha256": "f80be6bd8b8bd3d896d668e48697a218b5ab0a29dfc275666bc2b5e8e7a0ad77",
+          "solved": 37,
+          "episodes": 100,
+          "rate": 0.37,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3db02027__seed222__scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3db02027.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__3db02027",
+          "resultsSha256": "c27e8456f9c99c194958f77002d0cbd246fb703f4d3fab842df2beb4d77100b0",
+          "approachSha256": "92dd21727abfeba280ecd8cc8e0c3fc57eec3d2eb94f4fc55c5f0e09fa41aa38",
+          "solved": 6,
+          "episodes": 100,
+          "rate": 0.06,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__29bc0033__seed424__scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__29bc0033.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__29bc0033",
+          "resultsSha256": "83644bed9569bab5db7eab00750a6c7f9261db944e1b65009a443fbef8a38ab9",
+          "approachSha256": "d59ec00ba44f2e7d792aa0189b0c3dde73e29cbfeef6f17e72b5dc789dcd0064",
+          "solved": 30,
+          "episodes": 100,
+          "rate": 0.3,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7ff19861__seed444__scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7ff19861.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "scooppour3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7ff19861",
+          "resultsSha256": "303e1bd92f77049a2f51589430debe66a4819cad5c73b75df9ed7771f63511b1",
+          "approachSha256": "4a45fdf95c69b15a53d43acffd2812c1f0a371823d8b35fccb921d51e392f662",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Shelf3D",
+      "result": {
+        "mean": 1.0,
+        "min": 0.99,
+        "max": 1.0
+      },
+      "unroundedMean": 0.998,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__116154f0__seed24__dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__116154f0.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__116154f0",
+          "resultsSha256": "82c1cedf02c2e099f015a8cc41c06b49505a6e2e5512ef6152006bffe2eaf04b",
+          "approachSha256": "797297f0e9e0b2143b0d33233e1e2eeb214b6e51934f1433870da7e235beb7d4",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f4f9dc72__seed42__dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f4f9dc72.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f4f9dc72",
+          "resultsSha256": "be6fe3721c317cb9013563b1c41e2fd43c347f63224e0fb3a6ea5645021b144a",
+          "approachSha256": "b1aa794e6f5170aa365d9d32ad36b1989cd5ed0f4dba0497d07b93ccc0b59a92",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__e6fbd669__seed222__dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__e6fbd669.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__e6fbd669",
+          "resultsSha256": "977647d761b5f7a967b5d6ae0f19150b06bf320625ff0b563688e161916d01fc",
+          "approachSha256": "b090fba9e778b226600ed594a5823aec534d4824447f6f555fb3adb5b28a8f84",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__336917d4__seed424__dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__336917d4.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__336917d4",
+          "resultsSha256": "1d3ecfa70da5b3f675d418855a2b720c86cf48cfe1fb2592a73e17ca932895af",
+          "approachSha256": "c6bdc25ad909aa357681dd03de41c28a0edcef78713b494895f7ff9045eaa1a2",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c5dcc371__seed444__dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c5dcc371.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "dynamicshelf3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c5dcc371",
+          "resultsSha256": "d4167f6868ba8882fc2107f123ea0704de241b1d8ccbbeafeb09fc82ddb37487",
+          "approachSha256": "5b1758e68705d6ad62bde193bd5517a5574aecf6a07759b4b593e92d920cad97",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "SortClutteredBlocks3D",
+      "result": {
+        "mean": 0.95,
+        "min": 0.89,
+        "max": 0.99
+      },
+      "unroundedMean": 0.948,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__28d28fd7/2026-09-22_17-54-21/replicate_24/results.json",
+          "programMember": "0922/sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__28d28fd7/2026-09-22_17-54-21/replicate_24/sandbox/approach.py",
+          "experimentId": "sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__28d28fd7",
+          "resultsSha256": "873fd8fb9dde2ca8d10ac7f0f1ad4b3dbc88804c7309dfb92c2be8013fa84842",
+          "approachSha256": "901cd73154d98bda59ee6d4be439e25ad3e185799b7c504987dc39e871fc7413",
+          "solved": 98,
+          "episodes": 100,
+          "rate": 0.98,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__76b5defb/2026-09-22_16-11-12/replicate_42/results.json",
+          "programMember": "0922/sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__76b5defb/2026-09-22_16-11-12/replicate_42/sandbox/approach.py",
+          "experimentId": "sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__76b5defb",
+          "resultsSha256": "3ec9ba80b0e5505a7e31a0012098292f830d67dc8c1853ecb0d6f5c55ecebe95",
+          "approachSha256": "ce6e42efe75f5ffd9c63e3b23ecc1ecde0c4f3f8d7a335561084a10ec20deb01",
+          "solved": 92,
+          "episodes": 100,
+          "rate": 0.92,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ae2ed71d/2026-09-22_19-22-42/replicate_222/results.json",
+          "programMember": "0922/sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ae2ed71d/2026-09-22_19-22-42/replicate_222/sandbox/approach.py",
+          "experimentId": "sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__ae2ed71d",
+          "resultsSha256": "e49e94043d68bcd9f5cebdef7b5d2c6b5f61f4a4a6b98e65b1456d7ad4ff1aae",
+          "approachSha256": "6b93b79dc8ba9205e355329c2bc642e7a8489991c7d6adf694d33d28c83c4243",
+          "solved": 96,
+          "episodes": 100,
+          "rate": 0.96,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__13698387/2026-09-22_21-14-17/replicate_424/results.json",
+          "programMember": "0922/sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__13698387/2026-09-22_21-14-17/replicate_424/sandbox/approach.py",
+          "experimentId": "sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__13698387",
+          "resultsSha256": "b25a4c6fadbe152f94046ae6ec50f169e666b9cffc9246df3910cd8e6f44f7d0",
+          "approachSha256": "97b6dbd56e29ab2ca4586f83975fc8368a646e2346d8345707373afa28e8139f",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__6cb1e5a5/2026-09-22_23-02-03/replicate_444/results.json",
+          "programMember": "0922/sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__6cb1e5a5/2026-09-22_23-02-03/replicate_444/sandbox/approach.py",
+          "experimentId": "sortclutteredblocks3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__6cb1e5a5",
+          "resultsSha256": "b56d6c44a92a8026d468e625d1d15670c05536ff4fba7390f70082e53979da13",
+          "approachSha256": "ae3d8ec735888475a13a6d332e5a7ea81850ff3161c8e768a755267b7c0cda56",
+          "solved": 89,
+          "episodes": 100,
+          "rate": 0.89,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "SweepIntoDrawer3D",
+      "result": {
+        "mean": 0.86,
+        "min": 0.47,
+        "max": 1.0
+      },
+      "unroundedMean": 0.862,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__e0a9b020/2026-09-22_17-19-45/replicate_24/results.json",
+          "programMember": "0922/sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__e0a9b020/2026-09-22_17-19-45/replicate_24/sandbox/approach.py",
+          "experimentId": "sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__e0a9b020",
+          "resultsSha256": "eb6045e76cd65c0c0fe4f5b250ab95af21381ad7468136751437c09d93135a33",
+          "approachSha256": "60449f2b7137b6f14360eeba3db9891e2f6557e6f6d526bda8bd4548dec0bda6",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__b12eb39f/2026-09-22_16-11-28/replicate_42/results.json",
+          "programMember": "0922/sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__b12eb39f/2026-09-22_16-11-28/replicate_42/sandbox/approach.py",
+          "experimentId": "sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__b12eb39f",
+          "resultsSha256": "cf76d779644ba51a74e9b41a32e919dc424c73e723a510a0c252b7ca88d2c41e",
+          "approachSha256": "6b8a8ceac306262800c481f47e5864ccabe1f6a5782163931fb70961a507b6c3",
+          "solved": 85,
+          "episodes": 100,
+          "rate": 0.85,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__c5dc290b/2026-09-22_18-16-50/replicate_222/results.json",
+          "programMember": "0922/sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__c5dc290b/2026-09-22_18-16-50/replicate_222/sandbox/approach.py",
+          "experimentId": "sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__c5dc290b",
+          "resultsSha256": "1f7ad0d2337e35bf7c620799ca99ef36ff82868b281942bd773c1fd5ae81f631",
+          "approachSha256": "1c6d3bfe4e5352d548e1216ecc7c38b830f08c0f4c152112042bb77d6b598e1d",
+          "solved": 47,
+          "episodes": 100,
+          "rate": 0.47,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__1ad05e15/2026-09-22_19-21-44/replicate_424/results.json",
+          "programMember": "0922/sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__1ad05e15/2026-09-22_19-21-44/replicate_424/sandbox/approach.py",
+          "experimentId": "sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__1ad05e15",
+          "resultsSha256": "daa43c6a1118116f678538f835a2e107262aa3389a06b4c6f8b5552ec41064fd",
+          "approachSha256": "b5734aded92922a3c03b53c39379c36db1ac0a7e1944063daa645c897793220f",
+          "solved": 99,
+          "episodes": 100,
+          "rate": 0.99,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "bowen_astra_0922.zip",
+          "member": "0922/sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__8295e9da/2026-09-22_20-10-07/replicate_444/results.json",
+          "programMember": "0922/sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__8295e9da/2026-09-22_20-10-07/replicate_444/sandbox/approach.py",
+          "experimentId": "sweepintodrawer3d__agentic__none__whitebox__codex_gpt6__timeout_60s__8295e9da",
+          "resultsSha256": "37c9e722583eb391f26d0da41a32ec976a8770598acc79a72d0afc2213d4e933",
+          "approachSha256": "dbfa542f83cf6dfaf54aa9c4cbca1e3794dabf8c7f5780c6b684d0b2a3d08b5b",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "SweepSimple3D",
+      "result": {
+        "mean": 0.44,
+        "min": 0.35,
+        "max": 0.5
+      },
+      "unroundedMean": 0.438,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__10dac388__seed24__sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__10dac388.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__10dac388",
+          "resultsSha256": "a2eb10a89d496eeed99f2ba144b16e4703f4dd9208edc9af952414a7a0326152",
+          "approachSha256": "7cb7d88754d2216db8b57ac75507e039f1a44787a2ebafc989661c9855c04dc5",
+          "solved": 48,
+          "episodes": 100,
+          "rate": 0.48,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8071ebc4__seed42__sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8071ebc4.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8071ebc4",
+          "resultsSha256": "b60b85e86385d534e15b5bdcf844f327d25a8728b9d25ceb9fdd18deee0baeba",
+          "approachSha256": "8ad88afa64bfbf8c2cbee820b96388bf6fa91e752caa53df2e7351439e2a349f",
+          "solved": 50,
+          "episodes": 100,
+          "rate": 0.5,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7674df8a__seed222__sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7674df8a.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__7674df8a",
+          "resultsSha256": "bd1f25f4ef483a7d7a09bca91f22b89b8d784c41e204d9737ae57a958178b17a",
+          "approachSha256": "7cb663e45db21e16302ea7037460a03b3343f242d308bc6f063c26961c9dd843",
+          "solved": 39,
+          "episodes": 100,
+          "rate": 0.39,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c3cbe595__seed424__sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c3cbe595.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c3cbe595",
+          "resultsSha256": "071ceddc9824aa656825a2f5ec0dd93cab85e8f0cae027b1634c265f85a9be01",
+          "approachSha256": "5ff626cd20627972f2bfe268aac20d66a6058bf4801470c954f5258a7811749f",
+          "solved": 35,
+          "episodes": 100,
+          "rate": 0.35,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8a42d33f__seed444__sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8a42d33f.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "sweepsimple3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__8a42d33f",
+          "resultsSha256": "f7246b13a71bb8112a8907087c5a470116763d1c894eeb2e5da1e5e3d663907c",
+          "approachSha256": "9d2273c0d89ad3843caea2c6bde448b89cfbd4e244d0e40fe77f7d769aacb317",
+          "solved": 47,
+          "episodes": 100,
+          "rate": 0.47,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "Tossing3D",
+      "result": {
+        "mean": 0.98,
+        "min": 0.93,
+        "max": 1.0
+      },
+      "unroundedMean": 0.982,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__43370ac1/2026-09-23_12-09-30/replicate_24/results.json",
+          "programMember": "0923/tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__43370ac1/2026-09-23_12-09-30/replicate_24/sandbox/approach.py",
+          "experimentId": "tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__43370ac1",
+          "resultsSha256": "d38d405badc748adbe981026f3cefe144d7b7ded1c295bdda51508b0cc9c5db9",
+          "approachSha256": "c7481ac04cf4ad35017883848362bb3ae5c4a73390d231d8323855a9303a580b",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c0ce628f/2026-09-23_11-42-22/replicate_42/results.json",
+          "programMember": "0923/tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c0ce628f/2026-09-23_11-42-22/replicate_42/sandbox/approach.py",
+          "experimentId": "tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c0ce628f",
+          "resultsSha256": "6c05f73c71d15b20974a9ae2fbfda7e16f2d376401280beeddb40c1e3fd4dc78",
+          "approachSha256": "eed84789614933c6135edede72c00a4ec8f1fbc3ae473321a3df983d246216e7",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__517a1dfb/2026-09-23_12-43-34/replicate_222/results.json",
+          "programMember": "0923/tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__517a1dfb/2026-09-23_12-43-34/replicate_222/sandbox/approach.py",
+          "experimentId": "tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__517a1dfb",
+          "resultsSha256": "1a7116a771b6542e708e12cb87381df02555af6c7f67f0affb34e44314c80822",
+          "approachSha256": "575413b940a5201e2a64f9b31409735a7eb1ed60bf0a4b3fffb2f11b2250d001",
+          "solved": 93,
+          "episodes": 100,
+          "rate": 0.93,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__cb9c53b4/2026-09-23_13-41-56/replicate_424/results.json",
+          "programMember": "0923/tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__cb9c53b4/2026-09-23_13-41-56/replicate_424/sandbox/approach.py",
+          "experimentId": "tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__cb9c53b4",
+          "resultsSha256": "df68b7f99a46e1abc47ae73b8d5d7fc804bc495ef980bb3189599aa1ac5e52c0",
+          "approachSha256": "0a0e35a840ff79a32a60d0152e2c2b1bfb96f02a21456824ab65e54b0622a334",
+          "solved": 98,
+          "episodes": 100,
+          "rate": 0.98,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "bowen_astra_0923.zip",
+          "member": "0923/tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__98a2796d/2026-09-23_14-24-11/replicate_444/results.json",
+          "programMember": "0923/tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__98a2796d/2026-09-23_14-24-11/replicate_444/sandbox/approach.py",
+          "experimentId": "tossing3d_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__98a2796d",
+          "resultsSha256": "d7a083b12f79c408fa519f45ebc2c1d083968a914f2edc5d453b174be3232eae",
+          "approachSha256": "b5d61d6a978c93ba3684c2fde5649a1115a7a23298eb1cd0bf4906dcafd5222c",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "PddlPacking",
+      "result": {
+        "mean": 1.0,
+        "min": 0.98,
+        "max": 1.0
+      },
+      "unroundedMean": 0.996,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__6a82f361__seed24__pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__6a82f361.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__6a82f361",
+          "resultsSha256": "fe654d1ad0f17a43143aee1e3cc2c5767e4e2a73495dba78a0f36df48dc9132d",
+          "approachSha256": "9372478bd102bb9c2a928be5964c4141e7e7c54e9773a0e45d2f7730b15db14e",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__e8f01365__seed42__pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__e8f01365.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__e8f01365",
+          "resultsSha256": "01f7a8af04aa9ec372a321acccfd242cf9fcdda5933c84093115b077665d0054",
+          "approachSha256": "92b5a5fbc4c69db401c73a01bde480a723eb0d19e3342a968e997cbe809263b3",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__1037b0a3__seed222__pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__1037b0a3.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__1037b0a3",
+          "resultsSha256": "e8fbf9529d9da40f23d353c83ad6364d7d172c721f9291274a6318c521a964d6",
+          "approachSha256": "688671c56c375acb2d771334c28068f1f5c54deaac9f12f67804ff23f7b16cc7",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__d3fbc9c1__seed424__pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__d3fbc9c1.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__d3fbc9c1",
+          "resultsSha256": "00fc170d15b4df53be93059e8cd7bd66cbb767bee00619c8908a65b372659075",
+          "approachSha256": "878a369ef4730867fde024eb74618e4afa009a61d300a1902d4563a454cafdd7",
+          "solved": 98,
+          "episodes": 100,
+          "rate": 0.98,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b73bce0b__seed444__pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b73bce0b.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pr2packed_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__b73bce0b",
+          "resultsSha256": "0f81933abf5579dc04fd5b6f78a708009e7297b2b94c066c3ff995b7c1b1c053",
+          "approachSha256": "b8e9437a164d1ed53769ef410723274026c9cf9fda9943e6b81ff03709952ceb",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "PddlBlocked",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f17a258d__seed24__pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f17a258d.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__f17a258d",
+          "resultsSha256": "d5f686a5529fc7af3065073cd5235d375820f8328bfbe97ed0be4b0c36ba1c1a",
+          "approachSha256": "c8ded3698ec738af44fe5ae21c2047b2397076fcaad853239d673956263db5f4",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__dc933cd9__seed42__pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__dc933cd9.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__dc933cd9",
+          "resultsSha256": "55de9ebe3e8ce1dd0fdb088268e7c3fe1484aaee5aecab9f5f773a2287d3628d",
+          "approachSha256": "3bb72c6dd2ebc7ecda9b223b4458140e2ee2adeaa34fccce31fa2da5e1bbd9e3",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__9059abe7__seed222__pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__9059abe7.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__9059abe7",
+          "resultsSha256": "bb3e28589dd77cbb72abe83e0ba816070379b82bc3547ceef94ef3c47031e55a",
+          "approachSha256": "8d402677035ea159cd98180930e92eb59e900e87baba04de74e0af4d36127d40",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__41fdd5da__seed424__pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__41fdd5da.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__41fdd5da",
+          "resultsSha256": "22f5a0cba1a37d56f5da677f0c5aaef799a5ec8ee396aa58d823e94eb0d1c13d",
+          "approachSha256": "9a2265e1d3c320c533f1e159f497ec974774effa927ba31d37aca070185807f5",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__716c8bf7__seed444__pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__716c8bf7.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "pr2blocked_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__716c8bf7",
+          "resultsSha256": "348357c5be4ca53f8a527a8a687fe36e2516dd7151070fc9d8be46805145b585",
+          "approachSha256": "88b803f7d69a8bdd9f1fe489a492b99df291071e89cce5d130c530b44d32dc54",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    },
+    {
+      "id": "PddlRovers",
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "runs": [
+        {
+          "seed": 24,
+          "archive": "rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__47fe2a10__seed24__rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__47fe2a10.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__47fe2a10",
+          "resultsSha256": "ed9a7653e24956e60f0fcfd53f8a1c2dd226903ee29833e12d9824084fdd2ab3",
+          "approachSha256": "d7d598f7f9c0aebc57368006945711dcfa0d27ebbbeeb7ef30c09e3ed926cb34",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 42,
+          "archive": "rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c3a3cb31__seed42__rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c3a3cb31.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__c3a3cb31",
+          "resultsSha256": "dd4c456c595feaf9d55ff1fcfb1b10badc8745a0a2f5eb7598ae9e68bcb6f600",
+          "approachSha256": "9471c49d22abfd872133c53d0a0dcc5b91cf78042cfebaa22f033ff8ee301029",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 222,
+          "archive": "rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__064cab5c__seed222__rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__064cab5c.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__064cab5c",
+          "resultsSha256": "137f613219a283d5c29c848c596d73d2fd43273c40b03630e1511943b08d2d61",
+          "approachSha256": "125879bb9a2c1fa4fef3bc42cfa37eb9f2ac36b3ca5884054077a8bad5de9eca",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 424,
+          "archive": "rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__050f8ad9__seed424__rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__050f8ad9.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__050f8ad9",
+          "resultsSha256": "faa90281fc9db6cc09500fc97398888e18e99a13b33e59c55000b3e5869a450a",
+          "approachSha256": "c2a76f5b9ff1928707d5fdcf6187aca3c5fcd8232f1bad1f1e4567eaa6eae501",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        },
+        {
+          "seed": 444,
+          "archive": "rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__69f0efbd__seed444__rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__69f0efbd.zip",
+          "member": "run/results.json",
+          "programMember": "run/sandbox/approach.py",
+          "experimentId": "rovers_generalized__agentic__none__whitebox__codex_gpt6__timeout_60s__69f0efbd",
+          "resultsSha256": "9d340c10093ce53f2c2726e19f0d0c39df45e9f3670cb794b8ba80755d111703",
+          "approachSha256": "1e15d135c1b29dd1f90975bb2e64d7e3d10763e637858b84685c043d0c96a11e",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075
+        }
+      ]
+    }
+  ],
+  "computationTime": {
+    "table": "III",
+    "rule": "Per run: median over episodes of 1000 × policy_time_s / num_steps from results.json. Per environment: mean over this method’s runs with 100% held-out success. Row: equal-environment mean, with min–max across environment means.",
+    "environments": {
+      "BalanceBeam3D": {
+        "meanMs": 0.17556992744768687,
+        "perfectSeeds": [
+          24,
+          42,
+          222,
+          444
+        ]
+      },
+      "Dynamo3D": {
+        "meanMs": 0.05332766119746103,
+        "perfectSeeds": [
+          24,
+          42,
+          222,
+          424,
+          444
+        ]
+      },
+      "PddlPacking": {
+        "meanMs": 14.569807468748422,
+        "perfectSeeds": [
+          24,
+          42,
+          222,
+          444
+        ]
+      },
+      "PddlRovers": {
+        "meanMs": 45.60222818809705,
+        "perfectSeeds": [
+          24,
+          42,
+          222,
+          424,
+          444
+        ]
+      },
+      "Tossing3D": {
+        "meanMs": 22.8169542128835,
+        "perfectSeeds": [
+          24,
+          42,
+          444
+        ]
+      }
+    },
+    "meanMs": 16.643577491674822,
+    "minMs": 0.05332766119746103,
+    "maxMs": 45.60222818809705,
+    "rounded": {
+      "mean": 16.644,
+      "min": 0.053,
+      "max": 45.602
+    }
+  }
+}

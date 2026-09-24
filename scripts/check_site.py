@@ -23,7 +23,7 @@ for p in ROOT.rglob('*'):
     if p.suffix in ('.js','.css','.html','.json','.md'):
         if re.search(r'/home/|/Users/|AIza[\w-]{30}|gh[pousr]_[\w]{25}',p.read_text()):errors.append(f'Private path or credential pattern: {p.relative_to(ROOT)}')
 data=json.loads((ROOT/'data/benchmark.json').read_text())
-assert len(data['environments'])==28 and len(data['methods'])==7
+assert len(data['environments'])==28 and len(data['methods'])==8
 with (ROOT/'data/benchmark.csv').open() as stream:
     csv_rows=list(csv.DictReader(stream))
 assert len(csv_rows)==28*len(data['methods'])
@@ -51,6 +51,38 @@ for entry in astra['environments']:
     assert env['results']['astra']==expected
     assert all('bad - too little tokens' not in r['archive'] for r in runs)
     assert all(re.fullmatch(r'[a-f0-9]{64}',r['resultsSha256']) for r in runs)
+# Astra + source: complete runs on all 28 environments, reported like the main setting.
+astra_source=json.loads((ROOT/'data/astra-source-results.json').read_text())
+assert [e['id'] for e in astra_source['environments']]==[e['id'] for e in data['environments']]
+assert astra_source['completeRuns']==140 and astra_source['evaluationEpisodes']==14000 and astra_source['setting']=='+ source'
+for entry in astra_source['environments']:
+    runs=entry['runs'];assert [r['seed'] for r in runs]==[24,42,222,424,444]
+    assert all(r['episodes']==100 and r['rate']==r['solved']/100 and r['evalSeed']==792075 for r in runs)
+    assert all(re.fullmatch(r'[a-f0-9]{64}',r[k]) for r in runs for k in ('resultsSha256','approachSha256'))
+    exact=Decimal(sum(r['solved'] for r in runs))/500
+    expected={'mean':float(exact.quantize(Decimal('.01'),rounding=ROUND_HALF_UP)),
+              'min':min(r['rate'] for r in runs),'max':max(r['rate'] for r in runs)}
+    assert entry['unroundedMean']==float(exact) and entry['result']==expected
+    assert next(e for e in data['environments'] if e['id']==entry['id'])['results']['astraSource']==expected
+protocol=data['protocol']
+assert protocol['programs']==protocol['paperPrograms']+protocol['additionalPrograms']==980
+assert protocol['episodes']==protocol['paperEpisodes']+protocol['additionalEpisodes']==98000
+assert protocol['additionalPrograms']==astra['completeRuns']+astra_source['completeRuns']
+# Table III: each environment mean averages exactly the runs with 100% held-out success.
+timing=astra_source['computationTime'];eff=data['efficiency']
+assert sorted(timing['environments'])==sorted(eff['environmentIds'])
+for env_id,t in timing['environments'].items():
+    runs=next(e for e in astra_source['environments'] if e['id']==env_id)['runs']
+    assert t['perfectSeeds']==[r['seed'] for r in runs if r['solved']==100]
+means=[t['meanMs'] for t in timing['environments'].values()]
+assert abs(sum(means)/len(means)-timing['meanMs'])<1e-9 and min(means)==timing['minMs'] and max(means)==timing['maxMs']
+assert eff['astraSource']==timing['rounded']=={k:round(timing[k+'Ms'],3) for k in ('mean','min','max')}
+page=(ROOT/'index.html').read_text()
+widest=max(eff[k]['mean'] for k in ('claude','source','codexAstra','astraSource'))
+for key in ('claude','source','codexAstra','astraSource'):
+    bar=re.search(rf'data-efficiency="{key}".*?--w:([\d.]+)%.*?<strong>([\d.]+) ms</strong>',page)
+    assert bar and float(bar[2])==eff[key]['mean'] and abs(float(bar[1])-100*eff[key]['mean']/widest)<1e-3
+assert f"<strong>{protocol['programs']:,}</strong>" in page and f"<strong>{protocol['episodes']:,}</strong>" in page
 # Freeze the assets actually reviewed in the environment audit.
 audit=json.loads((ROOT/'data/environment-audit.json').read_text())
 assert audit['paperSha256']==data['source']['sha256']
@@ -135,11 +167,12 @@ for g in gallery_items:
     assert src['archivedSolved']==src['replaySolved']
     assert hashlib.sha256((ROOT/f"film/assets/clips/{g['file']}.mp4").read_bytes()).hexdigest()==src['videoSha256']
     assert all(re.fullmatch(r'[a-f0-9]{64}',src[k]) for k in ('resultsSha256','approachSha256','initialFrameSha256','videoSha256'))
-    if g['backend']=='Codex · GPT-6 Astra' and g['setting']=='Main setting':
-        env_runs=[r for e in astra['environments'] for r in e['runs'] if e['id']==src['environment'] and r['seed']==g['seed']]
+    if g['backend']=='Codex · GPT-6 Astra':
+        table=astra if g['setting']=='Main setting' else astra_source
+        env_runs=[r for e in table['environments'] for r in e['runs'] if e['id']==src['environment'] and r['seed']==g['seed']]
         assert len(env_runs)==1 and env_runs[0]['resultsSha256']==src['resultsSha256'] and env_runs[0]['approachSha256']==src['approachSha256']
 require('assets/hero.mp4')
 require('assets/project-video.mp4')
 require('assets/prpl-robot.png')
 if errors:raise SystemExit('\n'.join(errors))
-print('PASS: HTML references, 28 audited environments and archived descriptions, 7 methods, 140 complete Astra runs, matched policy-example provenance, paper checksum, gallery provenance, media sizes, private-path scan.')
+print('PASS: HTML references, 28 audited environments and archived descriptions, 8 methods, 140 complete Astra runs, 140 complete Astra + source runs, Table III timing, matched policy-example provenance, paper checksum, gallery provenance, media sizes, private-path scan.')
