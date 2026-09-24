@@ -1,10 +1,10 @@
 {
   "source": {
     "title": "Coding Agents for Generalized Task and Motion Planning Problems",
-    "version": "Author-provided manuscript · 22 September 2026",
+    "version": "Author-provided manuscript · 24 September 2026",
     "tables": "I–III",
     "pdf": "assets/paper.pdf",
-    "sha256": "9484f20060193914f83fde41496dc7823add88ed09e200671efff5c5ea574f14",
+    "sha256": "61d05d0ab15af6695414614b5baa3958bde0e58d0ace57e08febd48ed28182bf",
     "precision": "The original six methods use the printed two-decimal means and min/max in Tables I–II. GPT-6 Astra in the main setting and + source uses five complete archived runs per environment; its means are rounded to the same two-decimal precision. Aggregate scores equally weight environments. Missing planner entries are excluded, never treated as failures.",
     "additionalMethods": [
       {
@@ -1428,34 +1428,44 @@
   "efficiency": {
     "sourceTable": "III",
     "sourcePage": 7,
-    "environments": 5,
+    "environments": 15,
     "environmentIds": [
+      "StickButton2D",
+      "Obstruction2D",
+      "ClutteredStorage2D",
+      "Motion2D",
+      "PushPullHook2D",
+      "DynPushT2D",
+      "DynScoopPour2D",
+      "Transport3D",
+      "Table3D",
+      "BaseMotion3D",
       "BalanceBeam3D",
       "Dynamo3D",
+      "Tossing3D",
       "PddlPacking",
-      "PddlRovers",
-      "Tossing3D"
+      "PddlRovers"
     ],
-    "aggregation": "Equal-environment means. Each method uses its own seeds with 100% held-out success within the five shared environments; the min/max are across environment-level means.",
+    "aggregation": "Equal-environment means over the 15 environments where all four settings have at least one run with 100% held-out success. Each method uses its own runs with 100% held-out success in each environment; the min/max are across environment-level means.",
     "claude": {
-      "mean": 10.949,
-      "min": 0.126,
-      "max": 28.351
+      "mean": 11.741,
+      "min": 0.041,
+      "max": 109.403
     },
     "source": {
-      "mean": 86.433,
-      "min": 0.303,
+      "mean": 42.48,
+      "min": 0.056,
       "max": 381.509
     },
     "codexAstra": {
-      "mean": 1.823,
+      "mean": 1.299,
       "min": 0.033,
       "max": 6.047
     },
     "astraSource": {
-      "mean": 16.644,
+      "mean": 50.392,
       "min": 0.053,
-      "max": 45.602
+      "max": 477.045
     }
   }
 }

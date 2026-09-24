@@ -2152,6 +2152,105 @@
     "table": "III",
     "rule": "Per run: median over episodes of 1000 × policy_time_s / num_steps from results.json. Per environment: mean over this method’s runs with 100% held-out success. Row: equal-environment mean, with min–max across environment means.",
     "environments": {
+      "StickButton2D": {
+        "meanMs": 0.2513534362042062,
+        "perfectSeeds": [
+          24,
+          42,
+          222,
+          424,
+          444
+        ]
+      },
+      "Obstruction2D": {
+        "meanMs": 0.5065356364591291,
+        "perfectSeeds": [
+          24,
+          42,
+          222,
+          424,
+          444
+        ]
+      },
+      "ClutteredStorage2D": {
+        "meanMs": 0.9280143452876505,
+        "perfectSeeds": [
+          24,
+          42,
+          222,
+          424,
+          444
+        ]
+      },
+      "Motion2D": {
+        "meanMs": 1.2435975531119245,
+        "perfectSeeds": [
+          24,
+          42,
+          222,
+          424,
+          444
+        ]
+      },
+      "PushPullHook2D": {
+        "meanMs": 7.75162028413249,
+        "perfectSeeds": [
+          24,
+          42,
+          222,
+          424,
+          444
+        ]
+      },
+      "DynPushT2D": {
+        "meanMs": 6.554787883709033,
+        "perfectSeeds": [
+          24,
+          42,
+          222,
+          424,
+          444
+        ]
+      },
+      "DynScoopPour2D": {
+        "meanMs": 0.07499516883874469,
+        "perfectSeeds": [
+          42,
+          222,
+          424,
+          444
+        ]
+      },
+      "Transport3D": {
+        "meanMs": 13.444612809640473,
+        "perfectSeeds": [
+          24,
+          42,
+          222,
+          424,
+          444
+        ]
+      },
+      "Table3D": {
+        "meanMs": 477.0454,
+        "perfectSeeds": [
+          24,
+          42,
+          222,
+          424,
+          444
+        ]
+      },
+      "BaseMotion3D": {
+        "meanMs": 164.86073333333334,
+        "perfectSeeds": [
+          24,
+          42,
+          222,
+          424,
+          444
+        ]
+      },
       "BalanceBeam3D": {
         "meanMs": 0.17556992744768687,
         "perfectSeeds": [
@@ -2168,6 +2267,14 @@
           42,
           222,
           424,
+          444
+        ]
+      },
+      "Tossing3D": {
+        "meanMs": 22.8169542128835,
+        "perfectSeeds": [
+          24,
+          42,
           444
         ]
       },
@@ -2189,23 +2296,15 @@
           424,
           444
         ]
-      },
-      "Tossing3D": {
-        "meanMs": 22.8169542128835,
-        "perfectSeeds": [
-          24,
-          42,
-          444
-        ]
       }
     },
-    "meanMs": 16.643577491674822,
+    "meanMs": 50.3919691939394,
     "minMs": 0.05332766119746103,
-    "maxMs": 45.60222818809705,
+    "maxMs": 477.0454,
     "rounded": {
-      "mean": 16.644,
+      "mean": 50.392,
       "min": 0.053,
-      "max": 45.602
+      "max": 477.045
     }
   }
 }
