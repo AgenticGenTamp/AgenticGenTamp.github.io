@@ -83,6 +83,9 @@ figcaption{font-size:13px;color:var(--muted);margin-top:10px}
 .gallery-scroll{max-height:min(840px,85vh);overflow-y:auto;overscroll-behavior:contain;padding:4px 12px 4px 2px;border:1px solid var(--line);border-radius:6px;background:var(--paper);scrollbar-width:thin}
 .gallery-scroll:focus-visible{outline:2px solid var(--green);outline-offset:2px}
 .gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 20px;padding:14px}
+.gallery-story{grid-column:1/-1;border:1px solid #cdbfdc;border-left:4px solid var(--green);border-radius:6px;background:#f4f0f8;padding:12px 14px 16px}
+.gallery-story-title{font-size:13px;font-weight:600;color:var(--green);margin:0 0 10px}
+.gallery-story-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .gallery-card{min-width:0}
 .gallery-thumb{position:relative;aspect-ratio:4/3;width:100%;background:#e9e8ed;border:1px solid var(--line);border-radius:5px;overflow:hidden}
 .gallery-video{width:100%;height:100%;object-fit:contain;background:#e9e8ed}
@@ -168,6 +171,7 @@ footer p{font-size:12px;margin-top:5px}
 @media(max-width:1000px){
   .section{padding:60px 28px}
   .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gallery-story-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
   .nav{padding-inline:24px;gap:18px}.nav nav{gap:17px}
   .hero-content{padding:70px 28px 110px}.hero h1{font-size:49px}
   .section-heading{gap:32px}
@@ -196,7 +200,8 @@ footer p{font-size:12px;margin-top:5px}
   .instance-grid{gap:7px}.instance-grid span{padding:6px;font-size:11px}.instance-example{margin-block:24px}figcaption{font-size:12px}
   .setup-subheading{font-size:23px}
   .stats{gap:22px 12px}.stats strong{font-size:27px}.stats span{font-size:12px}
-  .gallery-grid{grid-template-columns:1fr;gap:32px}.gallery-speed{font-size:12px;margin-bottom:24px}
+  .gallery-grid{grid-template-columns:1fr;gap:32px}
+  .gallery-story-cards{grid-template-columns:1fr;gap:28px}.gallery-speed{font-size:12px;margin-bottom:24px}
   .gallery-card h3{font-size:20px}.gallery-type{font-size:11px}.provenance{font-size:12px}
   .leader-toolbar{flex-direction:column;align-items:stretch;gap:13px;margin-top:25px}
   .segmented button{font-size:12px;padding:9px 11px;flex:1}.select-label{justify-content:space-between;font-size:12px}.select-label select{flex:1;max-width:220px;font-size:12px}

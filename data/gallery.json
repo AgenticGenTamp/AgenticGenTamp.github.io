@@ -575,7 +575,8 @@
       "initialFrameSha256": "5a2ecbe1227fe703180639e54ade068a5c1cace1fd6fb8eb42129775cfb53eeb",
       "videoSha256": "68d2266727a2d7e7816c53af72b9cadef42beb11b5d097008439f49e4b5f8326",
       "selection": "Best GPT-6 Astra ConstrainedCupboard run (63%); episode 2 is a solved 3-object instance, paired with its 4-object failure."
-    }
+    },
+    "story": "constrained-cupboard"
   },
   {
     "id": "astra-cupboard-4",
@@ -608,7 +609,8 @@
       "initialFrameSha256": "21788c65f446c3c88e9cd08e830f7fb5c6378d19abf641126eb3110a0cfb64a5",
       "videoSha256": "fff472289df98ed009adf9b507b1698b6f79423dd07c3218cfc1982bcbfb3c5c",
       "selection": "Same run as the 3-object success (63%); episode 3 is its first 4-object instance. This run solves 0/17 4-object and 0/16 6-object instances; the 28% run (seed 424) is the only GPT-6 Astra run that solves 4-object instances (13/17)."
-    }
+    },
+    "story": "constrained-cupboard"
   },
   {
     "id": "cupboard-source-4",
@@ -642,7 +644,8 @@
       "initialFrameSha256": "21788c65f446c3c88e9cd08e830f7fb5c6378d19abf641126eb3110a0cfb64a5",
       "videoSha256": "f9b502d1cb339f6caf6c5e42765e2da936a194222e7ad9f0b44c853c12ae7741",
       "selection": "Claude Code + source run at 100%; episode 3 is the same 4-object held-out instance as the GPT-6 Astra failure (Astra seed 42, episode 3)."
-    }
+    },
+    "story": "constrained-cupboard"
   },
   {
     "id": "astra-brush-sweep-fail",

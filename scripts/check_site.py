@@ -181,6 +181,14 @@ for g in gallery_items:
         table=astra if g['setting']=='Main setting' else astra_source
         env_runs=[r for e in table['environments'] for r in e['runs'] if e['id']==src['environment'] and r['seed']==g['seed']]
         assert len(env_runs)==1 and env_runs[0]['resultsSha256']==src['resultsSha256'] and env_runs[0]['approachSha256']==src['approachSha256']
+# Cards sharing a story are consecutive, from one environment, and in one group.
+stories={}
+for n,g in enumerate(gallery_items):
+    if g.get('story'): stories.setdefault(g['story'],[]).append(n)
+for story,idx in stories.items():
+    assert idx==list(range(idx[0],idx[-1]+1)) and len(idx)>=2, story
+    members=[gallery_items[n] for n in idx]
+    assert len({m['environment'] for m in members})==1 and len({m.get('group','failures' if m.get('category')=='Failure' else 'strategies') for m in members})==1, story
 # Within each gallery group, families follow a fixed order and each environment's cards are adjacent.
 families=['Dynamic3D','Kinematic3D','PDDLStream','Dynamic2D','Kinematic2D']
 for name in ('strategies','failures'):

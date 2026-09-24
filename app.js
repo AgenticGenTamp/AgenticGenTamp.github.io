@@ -193,7 +193,19 @@ function renderGallery() {
   // An explicit group places a card in a story next to related failures without changing its category.
   const inFailures=g=>(g.group??(g.category==='Failure'?'failures':'strategies'))==='failures';
   const groups=[['#gallery-grid','#gallery-count-main',gallery.filter(g=>!inFailures(g))],['#gallery-grid-failures','#gallery-count-failures',gallery.filter(inFailures)]];
-  for (const [grid,count,items] of groups) {$(grid).innerHTML=items.map(card).join('');$(count).textContent=`${items.length} examples, scroll for more`;}
+  const storyTitles={'constrained-cupboard':'ConstrainedCupboard: one task, three programs'};
+  const renderItems=items=>{
+    let html='';
+    for (let i=0;i<items.length;) {
+      const story=items[i].story;
+      if (!story) {html+=card(items[i]);i++;continue;}
+      let j=i;while (j<items.length&&items[j].story===story) j++;
+      html+=`<div class="gallery-story"><p class="gallery-story-title">${esc(storyTitles[story]||story)}</p><div class="gallery-story-cards">${items.slice(i,j).map(card).join('')}</div></div>`;
+      i=j;
+    }
+    return html;
+  };
+  for (const [grid,count,items] of groups) {$(grid).innerHTML=renderItems(items);$(count).textContent=`${items.length} examples, scroll for more`;}
   $$('.gallery-video').forEach(video => {
     video.muted = true;
     video.defaultPlaybackRate = gallerySpeed;
