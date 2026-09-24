@@ -159,6 +159,8 @@ for g in gallery_items:
     require(f"film/assets/clips/{g['file']}.mp4");require(f"assets/posters/{g['file']}.jpg")
     assert all(key in g for key in ('method','backend','setting','seed','episode','description'))
     assert g['setting'] in ('Main setting','+ source')
+    if 'holdEnd' in g:
+        assert isinstance(g['holdEnd'],(int,float)) and not isinstance(g['holdEnd'],bool) and 0<g['holdEnd']<=10
     if g.get('category')=='Failure':
         assert g['title'].startswith('Failure') and g['source']['archivedSolved'] is False
     else:

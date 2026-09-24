@@ -170,6 +170,7 @@
     "seed": 24,
     "episode": 2,
     "file": "packing3d-square-astra-r24-ep2",
+    "holdEnd": 2,
     "source": {
       "collection": "Final/Blackbox/Codex GPT6 Astra",
       "archive": "packing3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__580d7fe8__seed24__2026-09-20_01-58-37.zip",

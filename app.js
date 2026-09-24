@@ -150,6 +150,7 @@ let gallerySpeed=8;
 const galleryVisible = new Set();
 const galleryPausedByUser = new WeakSet();
 const galleryAutomaticPauses = new WeakSet();
+const galleryHoldTimers = new WeakMap();
 function pauseGalleryVideo(video) {
   if (!video.paused) {
     galleryAutomaticPauses.add(video);
@@ -183,7 +184,7 @@ function renderGallery() {
   galleryVisible.clear();
   $$('.gallery-video').forEach(video => {pauseGalleryVideo(video);video.removeAttribute('src');video.load();});
   const card=g=>`<article class="gallery-card">
-    <div class="gallery-thumb"><video class="gallery-video" data-gallery="${g.id}" data-src="film/assets/clips/${g.file}.mp4" poster="assets/posters/${g.file}.jpg" muted loop playsinline controls preload="none" aria-labelledby="gallery-title-${g.id}" aria-describedby="gallery-provenance-${g.id}"></video></div>
+    <div class="gallery-thumb"><video class="gallery-video" data-gallery="${g.id}" data-src="film/assets/clips/${g.file}.mp4" poster="assets/posters/${g.file}.jpg" muted ${g.holdEnd?`data-hold-end="${Number(g.holdEnd)}"`:'loop'} playsinline controls preload="none" aria-labelledby="gallery-title-${g.id}" aria-describedby="gallery-provenance-${g.id}"></video></div>
     <p class="gallery-type">${esc(g.environment)}</p>
     <h3 id="gallery-title-${g.id}">${esc(g.title)}</h3>
     <p class="description">${esc(g.description)}</p>
@@ -198,10 +199,20 @@ function renderGallery() {
     video.defaultPlaybackRate = gallerySpeed;
     video.playbackRate = gallerySpeed;
     video.addEventListener('loadedmetadata', () => {video.playbackRate=gallerySpeed;});
-    video.addEventListener('play', () => galleryPausedByUser.delete(video));
+    video.addEventListener('play', () => {galleryPausedByUser.delete(video);clearTimeout(galleryHoldTimers.get(video));});
     video.addEventListener('pause', () => {
-      if (galleryAutomaticPauses.delete(video)) return;
+      // Reaching the end fires a pause event; that is not a user pause.
+      if (galleryAutomaticPauses.delete(video) || video.ended) return;
       if (galleryVisible.has(video) && !document.hidden && !reduced.matches) galleryPausedByUser.add(video);
+    });
+    // Clips with holdEnd keep their last frame for that many real seconds at any speed, then restart.
+    if (video.dataset.holdEnd) video.addEventListener('ended', () => {
+      clearTimeout(galleryHoldTimers.get(video));
+      galleryHoldTimers.set(video, setTimeout(() => {
+        if (!video.ended) return;
+        video.currentTime = 0;
+        playGalleryVideo(video);
+      }, 1000 * Number(video.dataset.holdEnd)));
     });
     galleryObserver.observe(video);
   });
