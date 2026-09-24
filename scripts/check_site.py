@@ -161,6 +161,10 @@ for g in gallery_items:
     assert g['setting'] in ('Main setting','+ source')
     if g.get('category')=='Failure':
         assert g['title'].startswith('Failure') and g['source']['archivedSolved'] is False
+    else:
+        assert not g['title'].startswith('Failure')
+    assert g.get('group','failures' if g.get('category')=='Failure' else 'strategies') in ('strategies','failures')
+    assert g.get('category')!='Failure' or g.get('group','failures')=='failures'
     src=g.get('source')
     if not src:continue
     # Replayed clips must reproduce the archived outcome of the recorded episode.
@@ -175,6 +179,14 @@ for g in gallery_items:
         table=astra if g['setting']=='Main setting' else astra_source
         env_runs=[r for e in table['environments'] for r in e['runs'] if e['id']==src['environment'] and r['seed']==g['seed']]
         assert len(env_runs)==1 and env_runs[0]['resultsSha256']==src['resultsSha256'] and env_runs[0]['approachSha256']==src['approachSha256']
+# Within each gallery group, families follow a fixed order and each environment's cards are adjacent.
+families=['Kinematic2D','Dynamic2D','Kinematic3D','Dynamic3D','PDDLStream']
+for name in ('strategies','failures'):
+    envs=[g['environment'] for g in gallery_items if g.get('group','failures' if g.get('category')=='Failure' else 'strategies')==name]
+    ranks=[families.index(e.split(' · ')[1]) for e in envs]
+    assert ranks==sorted(ranks), f'Gallery family order in {name}'
+    runs=[e for i,e in enumerate(envs) if i==0 or envs[i-1]!=e]
+    assert len(runs)==len(set(runs)), f'Gallery environments not adjacent in {name}'
 require('assets/hero.mp4')
 require('assets/project-video.mp4')
 require('assets/prpl-robot.png')

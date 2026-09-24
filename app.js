@@ -189,8 +189,9 @@ function renderGallery() {
     <p class="description">${esc(g.description)}</p>
     <p class="provenance" id="gallery-provenance-${g.id}"><strong>${esc(g.backend)}</strong> · ${esc(g.setting)}</p>
   </article>`;
-  const isFailure=g=>g.category==='Failure';
-  const groups=[['#gallery-grid','#gallery-count-main',gallery.filter(g=>!isFailure(g))],['#gallery-grid-failures','#gallery-count-failures',gallery.filter(isFailure)]];
+  // An explicit group places a card in a story next to related failures without changing its category.
+  const inFailures=g=>(g.group??(g.category==='Failure'?'failures':'strategies'))==='failures';
+  const groups=[['#gallery-grid','#gallery-count-main',gallery.filter(g=>!inFailures(g))],['#gallery-grid-failures','#gallery-count-failures',gallery.filter(inFailures)]];
   for (const [grid,count,items] of groups) {$(grid).innerHTML=items.map(card).join('');$(count).textContent=`${items.length} examples, scroll for more`;}
   $$('.gallery-video').forEach(video => {
     video.muted = true;
