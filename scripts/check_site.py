@@ -126,6 +126,8 @@ for g in gallery_items:
     require(f"film/assets/clips/{g['file']}.mp4");require(f"assets/posters/{g['file']}.jpg")
     assert all(key in g for key in ('method','backend','setting','seed','episode','description'))
     assert g['setting'] in ('Main setting','+ source')
+    if g.get('category')=='Failure':
+        assert g['title'].startswith('Failure') and g['source']['archivedSolved'] is False
     src=g.get('source')
     if not src:continue
     # Replayed clips must reproduce the archived outcome of the recorded episode.
