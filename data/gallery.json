@@ -752,5 +752,39 @@
       "videoSha256": "4c9157604e82ae50b6545eec818c22b7bf8619dfc0e91c3caa75984dea53dc9d",
       "selection": "Main-setting Claude Code seed 424; episode 0 is the first held-out instance."
     }
+  },
+  {
+    "id": "sort-astra-cycle",
+    "title": "Failure: cycling through the bins",
+    "category": "Failure",
+    "description": "Main-setting GPT-6 Astra programs assign cubes to bins by cycling through the four bins in the order the cubes appear in the state. That matches the goal with four cubes but not with twenty, so no twenty-cube instance can succeed. In this episode the robot also pushes the bins out of place. The clip shows every fourth action.",
+    "environment": "SortClutteredBlocks · Dynamic3D",
+    "method": "AgenticGenPlan",
+    "backend": "Codex with GPT-6 Astra",
+    "setting": "Main setting",
+    "seed": 42,
+    "episode": 1,
+    "file": "sortcluttered-cycle-astra-r42-ep1",
+    "source": {
+      "collection": "Final/Blackbox/Codex GPT6 Astra",
+      "archive": "sortclutteredblocks3d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__577f597c__seed42__2026-09-19_23-20-29.zip",
+      "resultsMember": "run/results.json",
+      "programMember": "run/sandbox/approach.py",
+      "environment": "SortClutteredBlocks3D",
+      "replicateSeed": 42,
+      "episode": 1,
+      "instanceSeed": 5553887448546940950,
+      "objectCount": 20,
+      "resultsSha256": "38f0a2bca87ae7f45c79bdcf9865cf1f1ea45c741b3a193cf4f594d9af32103e",
+      "approachSha256": "50d0673055766585a70ebb658029b6d7f112702267c4116ff3052ad89e8dc83e",
+      "archivedSolved": false,
+      "archivedSteps": 4400,
+      "replaySolved": false,
+      "replaySteps": 4400,
+      "initialFrameSha256": "ac66acf1704d8b860ce8476b531d629edeaa72069b00fc3dbc3cbe5200564f50",
+      "videoSha256": "134fe2c12e03b53f1bb149f84510ebd65c38f4f7d87ea3b317a1a11642917e55",
+      "selection": "Main-setting GPT-6 Astra seed 42 (50%: all 4-cube instances, no 20-cube instance); episode 1 is its first 20-cube instance.",
+      "frameStride": 4
+    }
   }
 ]
