@@ -120,9 +120,22 @@ assert shelf['environmentKey']=='dynamicshelf3d_generalized'
 assert shelf['source']['environmentImplementation']=='kinder.envs.dynamic3d.task_families:Shelf3DEnv'
 base_motion=next(e for e in manifest['environments'] if e['id']=='BaseMotion3D')
 assert base_motion['source']['environmentImplementation']=='kinder/BaseMotion3D-v0'
-for g in json.loads((ROOT/'data/gallery.json').read_text()):
+gallery_items=json.loads((ROOT/'data/gallery.json').read_text())
+assert len({g['id'] for g in gallery_items})==len(gallery_items) and len({g['file'] for g in gallery_items})==len(gallery_items)
+for g in gallery_items:
     require(f"film/assets/clips/{g['file']}.mp4");require(f"assets/posters/{g['file']}.jpg")
     assert all(key in g for key in ('method','backend','setting','seed','episode','description'))
+    assert g['setting'] in ('Main setting','+ source')
+    src=g.get('source')
+    if not src:continue
+    # Replayed clips must reproduce the archived outcome of the recorded episode.
+    assert src['replicateSeed']==g['seed'] and src['episode']==g['episode']
+    assert src['archivedSolved']==src['replaySolved']
+    assert hashlib.sha256((ROOT/f"film/assets/clips/{g['file']}.mp4").read_bytes()).hexdigest()==src['videoSha256']
+    assert all(re.fullmatch(r'[a-f0-9]{64}',src[k]) for k in ('resultsSha256','approachSha256','initialFrameSha256','videoSha256'))
+    if g['backend']=='Codex · GPT-6 Astra' and g['setting']=='Main setting':
+        env_runs=[r for e in astra['environments'] for r in e['runs'] if e['id']==src['environment'] and r['seed']==g['seed']]
+        assert len(env_runs)==1 and env_runs[0]['resultsSha256']==src['resultsSha256'] and env_runs[0]['approachSha256']==src['approachSha256']
 require('assets/hero.mp4')
 require('assets/project-video.mp4')
 require('assets/prpl-robot.png')
