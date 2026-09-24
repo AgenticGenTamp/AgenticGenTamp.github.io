@@ -182,7 +182,7 @@ for g in gallery_items:
         env_runs=[r for e in table['environments'] for r in e['runs'] if e['id']==src['environment'] and r['seed']==g['seed']]
         assert len(env_runs)==1 and env_runs[0]['resultsSha256']==src['resultsSha256'] and env_runs[0]['approachSha256']==src['approachSha256']
 # Within each gallery group, families follow a fixed order and each environment's cards are adjacent.
-families=['Kinematic2D','Dynamic2D','Kinematic3D','Dynamic3D','PDDLStream']
+families=['Dynamic3D','Kinematic3D','PDDLStream','Dynamic2D','Kinematic2D']
 for name in ('strategies','failures'):
     envs=[g['environment'] for g in gallery_items if g.get('group','failures' if g.get('category')=='Failure' else 'strategies')==name]
     ranks=[families.index(e.split(' · ')[1]) for e in envs]
