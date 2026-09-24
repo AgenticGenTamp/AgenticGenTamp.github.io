@@ -165,6 +165,7 @@ for g in gallery_items:
     # Replayed clips must reproduce the archived outcome of the recorded episode.
     assert src['replicateSeed']==g['seed'] and src['episode']==g['episode']
     assert src['archivedSolved']==src['replaySolved']
+    assert src.get('renderPass','two-pass') in ('two-pass','single')
     if src.get('frameStride',1)>1:
         assert 'every second' in g['description'] or 'every fourth' in g['description']
     assert hashlib.sha256((ROOT/f"film/assets/clips/{g['file']}.mp4").read_bytes()).hexdigest()==src['videoSha256']

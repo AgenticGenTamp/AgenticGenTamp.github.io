@@ -786,5 +786,39 @@
       "selection": "Main-setting GPT-6 Astra seed 42 (50%: all 4-cube instances, no 20-cube instance); episode 1 is its first 20-cube instance.",
       "frameStride": 4
     }
+  },
+  {
+    "id": "astra-scoop2d-rescue",
+    "title": "Rescued by the physics",
+    "category": "Recovery",
+    "description": "The robot gets stuck next to the tool in the corner and repeats the same motion for more than 1,000 steps. Contact slowly shifts the tool until a grasp works, and the robot then carries the balls over the wall in the tool and completes the task in 1,966 steps.",
+    "environment": "ScoopPour · Dynamic2D",
+    "method": "AgenticGenPlan",
+    "backend": "Codex with GPT-6 Astra",
+    "setting": "Main setting",
+    "seed": 222,
+    "episode": 3,
+    "file": "scooppour2d-rescue-astra-r222-ep3",
+    "source": {
+      "collection": "Final/Blackbox/Codex GPT6 Astra",
+      "archive": "bowen_astra_0921.zip",
+      "resultsMember": "0921/dynscooppour2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__464dfcb9/2026-09-21_11-22-03/replicate_222/results.json",
+      "programMember": "0921/dynscooppour2d_generalized__agentic__none__blackbox__strict__codex_gpt6__timeout_60s__464dfcb9/2026-09-21_11-22-03/replicate_222/sandbox/approach.py",
+      "environment": "DynScoopPour2D",
+      "replicateSeed": 222,
+      "episode": 3,
+      "instanceSeed": 5070999126167511316,
+      "objectCount": 50,
+      "resultsSha256": "9bd571768fee4cc385887d5c7ce3050300bb3e413888e9fc29593f019d6d469e",
+      "approachSha256": "0144708ea22885018ddb58aaee0cef243368c60f1c4a0782ba44c3b90cb47b60",
+      "archivedSolved": true,
+      "archivedSteps": 1966,
+      "replaySolved": true,
+      "replaySteps": 1966,
+      "initialFrameSha256": "5512358e0c0f9308d0d4ff3bb57894ca8913021308a252f4f93c0fb9126c7678",
+      "videoSha256": "2d5368400c731f949356c8036593ce2759935308f18112d296b2196bfa1529c8",
+      "selection": "Main-setting GPT-6 Astra seed 222 (100%); episode 3 (50 balls) is its longest success. Rendered in a single pass with the policy running, because the taped second pass did not reproduce the success.",
+      "renderPass": "single"
+    }
   }
 ]
