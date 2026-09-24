@@ -1,225 +1,225 @@
 environment,family,method,backend,access,mean_success,min_run_success,max_run_success
-StickButton,Kinematic 2D,Planner,Hand-engineered TAMP,Models & skills,0.36,0.36,0.36
-StickButton,Kinematic 2D,One-shot,Opus 5,Source code,0.11,0.03,0.16
-StickButton,Kinematic 2D,LLMGenPlan,Opus 5,Source code,0.83,0.7,0.97
-StickButton,Kinematic 2D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.94,0.9,0.99
-StickButton,Kinematic 2D,AgenticGenPlan,Claude Code · Opus 5,Black box,1.0,1.0,1.0
-StickButton,Kinematic 2D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,1.0,1.0,1.0
-StickButton,Kinematic 2D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,1.0,1.0,1.0
-StickButton,Kinematic 2D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
-Obstruction,Kinematic 2D,Planner,Hand-engineered TAMP,Models & skills,0.41,0.41,0.41
-Obstruction,Kinematic 2D,One-shot,Opus 5,Source code,0.2,0.0,0.54
-Obstruction,Kinematic 2D,LLMGenPlan,Opus 5,Source code,0.82,0.53,1.0
-Obstruction,Kinematic 2D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.96,0.93,0.99
-Obstruction,Kinematic 2D,AgenticGenPlan,Claude Code · Opus 5,Black box,1.0,1.0,1.0
-Obstruction,Kinematic 2D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,1.0,0.99,1.0
-Obstruction,Kinematic 2D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,1.0,1.0,1.0
-Obstruction,Kinematic 2D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
-ClutteredStorage,Kinematic 2D,Planner,Hand-engineered TAMP,Models & skills,0.19,0.19,0.19
-ClutteredStorage,Kinematic 2D,One-shot,Opus 5,Source code,0.02,0.0,0.06
-ClutteredStorage,Kinematic 2D,LLMGenPlan,Opus 5,Source code,0.02,0.0,0.06
-ClutteredStorage,Kinematic 2D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.37,0.19,0.65
-ClutteredStorage,Kinematic 2D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.99,0.99,1.0
-ClutteredStorage,Kinematic 2D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,1.0,0.99,1.0
-ClutteredStorage,Kinematic 2D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,1.0,1.0,1.0
-ClutteredStorage,Kinematic 2D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
-ClutteredRetrieval,Kinematic 2D,Planner,Hand-engineered TAMP,Models & skills,0.51,0.51,0.51
-ClutteredRetrieval,Kinematic 2D,One-shot,Opus 5,Source code,0.13,0.02,0.23
-ClutteredRetrieval,Kinematic 2D,LLMGenPlan,Opus 5,Source code,0.32,0.21,0.41
-ClutteredRetrieval,Kinematic 2D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.21,0.12,0.27
-ClutteredRetrieval,Kinematic 2D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.81,0.36,0.98
-ClutteredRetrieval,Kinematic 2D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,0.96,0.91,1.0
-ClutteredRetrieval,Kinematic 2D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.96,0.92,0.99
-ClutteredRetrieval,Kinematic 2D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
-Motion,Kinematic 2D,Planner,Hand-engineered TAMP,Models & skills,0.71,0.68,0.73
-Motion,Kinematic 2D,One-shot,Opus 5,Source code,0.81,0.17,1.0
-Motion,Kinematic 2D,LLMGenPlan,Opus 5,Source code,0.97,0.95,1.0
-Motion,Kinematic 2D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,1.0,1.0,1.0
-Motion,Kinematic 2D,AgenticGenPlan,Claude Code · Opus 5,Black box,1.0,1.0,1.0
-Motion,Kinematic 2D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,1.0,1.0,1.0
-Motion,Kinematic 2D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,1.0,1.0,1.0
-Motion,Kinematic 2D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
-PushPullHook,Kinematic 2D,Planner,Hand-engineered TAMP,Models & skills,,,
-PushPullHook,Kinematic 2D,One-shot,Opus 5,Source code,0.01,0.0,0.04
-PushPullHook,Kinematic 2D,LLMGenPlan,Opus 5,Source code,0.12,0.02,0.34
-PushPullHook,Kinematic 2D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.69,0.46,0.9
-PushPullHook,Kinematic 2D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.98,0.91,1.0
-PushPullHook,Kinematic 2D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,1.0,1.0,1.0
-PushPullHook,Kinematic 2D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,1.0,1.0,1.0
-PushPullHook,Kinematic 2D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
-Obstruction,Dynamic 2D,Planner,Hand-engineered TAMP,Models & skills,0.24,0.24,0.24
-Obstruction,Dynamic 2D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-Obstruction,Dynamic 2D,LLMGenPlan,Opus 5,Source code,0.49,0.36,0.77
-Obstruction,Dynamic 2D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.77,0.6,0.9
-Obstruction,Dynamic 2D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.88,0.79,0.94
-Obstruction,Dynamic 2D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,0.96,0.94,0.98
-Obstruction,Dynamic 2D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.92,0.87,0.96
-Obstruction,Dynamic 2D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,0.93,0.83,0.98
-PushPullHook,Dynamic 2D,Planner,Hand-engineered TAMP,Models & skills,0.13,0.13,0.13
-PushPullHook,Dynamic 2D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-PushPullHook,Dynamic 2D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
-PushPullHook,Dynamic 2D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.52,0.37,0.64
-PushPullHook,Dynamic 2D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.83,0.63,0.95
-PushPullHook,Dynamic 2D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,0.91,0.79,1.0
-PushPullHook,Dynamic 2D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.92,0.77,0.99
-PushPullHook,Dynamic 2D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,0.97,0.91,1.0
-PushT,Dynamic 2D,Planner,Hand-engineered TAMP,Models & skills,,,
-PushT,Dynamic 2D,One-shot,Opus 5,Source code,0.17,0.01,0.36
-PushT,Dynamic 2D,LLMGenPlan,Opus 5,Source code,0.17,0.0,0.41
-PushT,Dynamic 2D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.76,0.21,1.0
-PushT,Dynamic 2D,AgenticGenPlan,Claude Code · Opus 5,Black box,1.0,1.0,1.0
-PushT,Dynamic 2D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,1.0,0.99,1.0
-PushT,Dynamic 2D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,1.0,1.0,1.0
-PushT,Dynamic 2D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
-ScoopPour,Dynamic 2D,Planner,Hand-engineered TAMP,Models & skills,,,
-ScoopPour,Dynamic 2D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-ScoopPour,Dynamic 2D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
-ScoopPour,Dynamic 2D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.83,0.2,1.0
-ScoopPour,Dynamic 2D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.97,0.89,1.0
-ScoopPour,Dynamic 2D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,1.0,0.99,1.0
-ScoopPour,Dynamic 2D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.88,0.65,1.0
-ScoopPour,Dynamic 2D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,0.97,0.87,1.0
-Obstruction,Kinematic 3D,Planner,Hand-engineered TAMP,Models & skills,,,
-Obstruction,Kinematic 3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-Obstruction,Kinematic 3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
-Obstruction,Kinematic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.26,0.0,0.69
-Obstruction,Kinematic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.85,0.41,1.0
-Obstruction,Kinematic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,0.97,0.92,0.99
-Obstruction,Kinematic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,1.0,0.99,1.0
-Obstruction,Kinematic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
-Packing,Kinematic 3D,Planner,Hand-engineered TAMP,Models & skills,0.67,0.66,0.67
-Packing,Kinematic 3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-Packing,Kinematic 3D,LLMGenPlan,Opus 5,Source code,0.14,0.0,0.58
-Packing,Kinematic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.37,0.0,0.65
-Packing,Kinematic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.66,0.52,0.79
-Packing,Kinematic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,0.89,0.67,1.0
-Packing,Kinematic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.98,0.94,1.0
-Packing,Kinematic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
-Transport,Kinematic 3D,Planner,Hand-engineered TAMP,Models & skills,0.63,0.59,0.69
-Transport,Kinematic 3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-Transport,Kinematic 3D,LLMGenPlan,Opus 5,Source code,0.05,0.0,0.27
-Transport,Kinematic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.17,0.0,0.53
-Transport,Kinematic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.99,0.94,1.0
-Transport,Kinematic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,0.78,0.0,1.0
-Transport,Kinematic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,1.0,1.0,1.0
-Transport,Kinematic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
-Table,Kinematic 3D,Planner,Hand-engineered TAMP,Models & skills,,,
-Table,Kinematic 3D,One-shot,Opus 5,Source code,0.06,0.0,0.3
-Table,Kinematic 3D,LLMGenPlan,Opus 5,Source code,0.85,0.41,1.0
-Table,Kinematic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.99,0.97,1.0
-Table,Kinematic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,1.0,1.0,1.0
-Table,Kinematic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,1.0,1.0,1.0
-Table,Kinematic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,1.0,1.0,1.0
-Table,Kinematic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
-BaseMotion,Kinematic 3D,Planner,Hand-engineered TAMP,Models & skills,1.0,1.0,1.0
-BaseMotion,Kinematic 3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-BaseMotion,Kinematic 3D,LLMGenPlan,Opus 5,Source code,1.0,1.0,1.0
-BaseMotion,Kinematic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,1.0,1.0,1.0
-BaseMotion,Kinematic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,1.0,1.0,1.0
-BaseMotion,Kinematic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,1.0,1.0,1.0
-BaseMotion,Kinematic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,1.0,1.0,1.0
-BaseMotion,Kinematic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
-BalanceBeam,Dynamic 3D,Planner,Hand-engineered TAMP,Models & skills,,,
-BalanceBeam,Dynamic 3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-BalanceBeam,Dynamic 3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
-BalanceBeam,Dynamic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.64,0.0,1.0
-BalanceBeam,Dynamic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.97,0.87,1.0
-BalanceBeam,Dynamic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,1.0,0.99,1.0
-BalanceBeam,Dynamic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,1.0,0.99,1.0
-BalanceBeam,Dynamic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,0.99,1.0
-ConstrainedCupboard,Dynamic 3D,Planner,Hand-engineered TAMP,Models & skills,,,
-ConstrainedCupboard,Dynamic 3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-ConstrainedCupboard,Dynamic 3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
-ConstrainedCupboard,Dynamic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.0,0.0,0.0
-ConstrainedCupboard,Dynamic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.08,0.0,0.34
-ConstrainedCupboard,Dynamic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,0.29,0.04,0.63
-ConstrainedCupboard,Dynamic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.47,0.05,1.0
-ConstrainedCupboard,Dynamic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,0.99,1.0
-Dynamo,Dynamic 3D,Planner,Hand-engineered TAMP,Models & skills,,,
-Dynamo,Dynamic 3D,One-shot,Opus 5,Source code,0.13,0.01,0.34
-Dynamo,Dynamic 3D,LLMGenPlan,Opus 5,Source code,0.98,0.95,1.0
-Dynamo,Dynamic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,1.0,1.0,1.0
-Dynamo,Dynamic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.92,0.6,1.0
-Dynamo,Dynamic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,1.0,1.0,1.0
-Dynamo,Dynamic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,1.0,1.0,1.0
-Dynamo,Dynamic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
-Rearrange,Dynamic 3D,Planner,Hand-engineered TAMP,Models & skills,,,
-Rearrange,Dynamic 3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-Rearrange,Dynamic 3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
-Rearrange,Dynamic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.09,0.0,0.32
-Rearrange,Dynamic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.58,0.01,0.96
-Rearrange,Dynamic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,0.96,0.93,0.98
-Rearrange,Dynamic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.77,0.15,0.97
-Rearrange,Dynamic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,0.99,0.97,1.0
-ScoopPour,Dynamic 3D,Planner,Hand-engineered TAMP,Models & skills,,,
-ScoopPour,Dynamic 3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-ScoopPour,Dynamic 3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
-ScoopPour,Dynamic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.0,0.0,0.0
-ScoopPour,Dynamic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.09,0.0,0.31
-ScoopPour,Dynamic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,0.14,0.0,0.23
-ScoopPour,Dynamic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.38,0.21,0.57
-ScoopPour,Dynamic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,0.42,0.06,1.0
-Shelf,Dynamic 3D,Planner,Hand-engineered TAMP,Models & skills,0.27,0.22,0.3
-Shelf,Dynamic 3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-Shelf,Dynamic 3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
-Shelf,Dynamic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.24,0.0,0.63
-Shelf,Dynamic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.6,0.0,1.0
-Shelf,Dynamic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,1.0,0.98,1.0
-Shelf,Dynamic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.43,0.0,0.98
-Shelf,Dynamic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,0.99,1.0
-SortClutteredBlocks,Dynamic 3D,Planner,Hand-engineered TAMP,Models & skills,,,
-SortClutteredBlocks,Dynamic 3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-SortClutteredBlocks,Dynamic 3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
-SortClutteredBlocks,Dynamic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.01,0.0,0.03
-SortClutteredBlocks,Dynamic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.3,0.13,0.72
-SortClutteredBlocks,Dynamic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,0.43,0.31,0.5
-SortClutteredBlocks,Dynamic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.49,0.2,0.96
-SortClutteredBlocks,Dynamic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,0.95,0.89,0.99
-SweepIntoDrawer,Dynamic 3D,Planner,Hand-engineered TAMP,Models & skills,0.0,0.0,0.0
-SweepIntoDrawer,Dynamic 3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-SweepIntoDrawer,Dynamic 3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
-SweepIntoDrawer,Dynamic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.0,0.0,0.0
-SweepIntoDrawer,Dynamic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.0,0.0,0.0
-SweepIntoDrawer,Dynamic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,0.72,0.15,1.0
-SweepIntoDrawer,Dynamic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.57,0.0,0.97
-SweepIntoDrawer,Dynamic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,0.86,0.47,1.0
-SweepSimple,Dynamic 3D,Planner,Hand-engineered TAMP,Models & skills,,,
-SweepSimple,Dynamic 3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-SweepSimple,Dynamic 3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
-SweepSimple,Dynamic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.0,0.0,0.0
-SweepSimple,Dynamic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.0,0.0,0.0
-SweepSimple,Dynamic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,0.03,0.0,0.15
-SweepSimple,Dynamic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.07,0.0,0.21
-SweepSimple,Dynamic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,0.44,0.35,0.5
-Tossing,Dynamic 3D,Planner,Hand-engineered TAMP,Models & skills,0.77,0.77,0.78
-Tossing,Dynamic 3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
-Tossing,Dynamic 3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.01
-Tossing,Dynamic 3D,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.0,0.0,0.0
-Tossing,Dynamic 3D,AgenticGenPlan,Claude Code · Opus 5,Black box,0.99,0.96,1.0
-Tossing,Dynamic 3D,AgenticGenPlan,Codex · GPT-6 Astra,Black box,0.96,0.82,1.0
-Tossing,Dynamic 3D,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.85,0.31,1.0
-Tossing,Dynamic 3D,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,0.98,0.93,1.0
+StickButton,Kinematic2D,Planner,Hand-engineered TAMP,Models & skills,0.36,0.36,0.36
+StickButton,Kinematic2D,One-shot,Opus 5,Source code,0.11,0.03,0.16
+StickButton,Kinematic2D,LLMGenPlan,Opus 5,Source code,0.83,0.7,0.97
+StickButton,Kinematic2D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.94,0.9,0.99
+StickButton,Kinematic2D,AgenticGenPlan,Claude Code with Opus 5,Main setting,1.0,1.0,1.0
+StickButton,Kinematic2D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,1.0,1.0,1.0
+StickButton,Kinematic2D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,1.0,1.0,1.0
+StickButton,Kinematic2D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0
+Obstruction,Kinematic2D,Planner,Hand-engineered TAMP,Models & skills,0.41,0.41,0.41
+Obstruction,Kinematic2D,One-shot,Opus 5,Source code,0.2,0.0,0.54
+Obstruction,Kinematic2D,LLMGenPlan,Opus 5,Source code,0.82,0.53,1.0
+Obstruction,Kinematic2D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.96,0.93,0.99
+Obstruction,Kinematic2D,AgenticGenPlan,Claude Code with Opus 5,Main setting,1.0,1.0,1.0
+Obstruction,Kinematic2D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,1.0,0.99,1.0
+Obstruction,Kinematic2D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,1.0,1.0,1.0
+Obstruction,Kinematic2D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0
+ClutteredStorage,Kinematic2D,Planner,Hand-engineered TAMP,Models & skills,0.19,0.19,0.19
+ClutteredStorage,Kinematic2D,One-shot,Opus 5,Source code,0.02,0.0,0.06
+ClutteredStorage,Kinematic2D,LLMGenPlan,Opus 5,Source code,0.02,0.0,0.06
+ClutteredStorage,Kinematic2D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.37,0.19,0.65
+ClutteredStorage,Kinematic2D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.99,0.99,1.0
+ClutteredStorage,Kinematic2D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,1.0,0.99,1.0
+ClutteredStorage,Kinematic2D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,1.0,1.0,1.0
+ClutteredStorage,Kinematic2D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0
+ClutteredRetrieval,Kinematic2D,Planner,Hand-engineered TAMP,Models & skills,0.51,0.51,0.51
+ClutteredRetrieval,Kinematic2D,One-shot,Opus 5,Source code,0.13,0.02,0.23
+ClutteredRetrieval,Kinematic2D,LLMGenPlan,Opus 5,Source code,0.32,0.21,0.41
+ClutteredRetrieval,Kinematic2D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.21,0.12,0.27
+ClutteredRetrieval,Kinematic2D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.81,0.36,0.98
+ClutteredRetrieval,Kinematic2D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,0.96,0.91,1.0
+ClutteredRetrieval,Kinematic2D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.96,0.92,0.99
+ClutteredRetrieval,Kinematic2D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0
+Motion,Kinematic2D,Planner,Hand-engineered TAMP,Models & skills,0.71,0.68,0.73
+Motion,Kinematic2D,One-shot,Opus 5,Source code,0.81,0.17,1.0
+Motion,Kinematic2D,LLMGenPlan,Opus 5,Source code,0.97,0.95,1.0
+Motion,Kinematic2D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,1.0,1.0,1.0
+Motion,Kinematic2D,AgenticGenPlan,Claude Code with Opus 5,Main setting,1.0,1.0,1.0
+Motion,Kinematic2D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,1.0,1.0,1.0
+Motion,Kinematic2D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,1.0,1.0,1.0
+Motion,Kinematic2D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0
+PushPullHook,Kinematic2D,Planner,Hand-engineered TAMP,Models & skills,,,
+PushPullHook,Kinematic2D,One-shot,Opus 5,Source code,0.01,0.0,0.04
+PushPullHook,Kinematic2D,LLMGenPlan,Opus 5,Source code,0.12,0.02,0.34
+PushPullHook,Kinematic2D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.69,0.46,0.9
+PushPullHook,Kinematic2D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.98,0.91,1.0
+PushPullHook,Kinematic2D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,1.0,1.0,1.0
+PushPullHook,Kinematic2D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,1.0,1.0,1.0
+PushPullHook,Kinematic2D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0
+Obstruction,Dynamic2D,Planner,Hand-engineered TAMP,Models & skills,0.24,0.24,0.24
+Obstruction,Dynamic2D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+Obstruction,Dynamic2D,LLMGenPlan,Opus 5,Source code,0.49,0.36,0.77
+Obstruction,Dynamic2D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.77,0.6,0.9
+Obstruction,Dynamic2D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.88,0.79,0.94
+Obstruction,Dynamic2D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,0.96,0.94,0.98
+Obstruction,Dynamic2D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.92,0.87,0.96
+Obstruction,Dynamic2D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,0.93,0.83,0.98
+PushPullHook,Dynamic2D,Planner,Hand-engineered TAMP,Models & skills,0.13,0.13,0.13
+PushPullHook,Dynamic2D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+PushPullHook,Dynamic2D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
+PushPullHook,Dynamic2D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.52,0.37,0.64
+PushPullHook,Dynamic2D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.83,0.63,0.95
+PushPullHook,Dynamic2D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,0.91,0.79,1.0
+PushPullHook,Dynamic2D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.92,0.77,0.99
+PushPullHook,Dynamic2D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,0.97,0.91,1.0
+PushT,Dynamic2D,Planner,Hand-engineered TAMP,Models & skills,,,
+PushT,Dynamic2D,One-shot,Opus 5,Source code,0.17,0.01,0.36
+PushT,Dynamic2D,LLMGenPlan,Opus 5,Source code,0.17,0.0,0.41
+PushT,Dynamic2D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.76,0.21,1.0
+PushT,Dynamic2D,AgenticGenPlan,Claude Code with Opus 5,Main setting,1.0,1.0,1.0
+PushT,Dynamic2D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,1.0,0.99,1.0
+PushT,Dynamic2D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,1.0,1.0,1.0
+PushT,Dynamic2D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0
+ScoopPour,Dynamic2D,Planner,Hand-engineered TAMP,Models & skills,,,
+ScoopPour,Dynamic2D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+ScoopPour,Dynamic2D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
+ScoopPour,Dynamic2D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.83,0.2,1.0
+ScoopPour,Dynamic2D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.97,0.89,1.0
+ScoopPour,Dynamic2D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,1.0,0.99,1.0
+ScoopPour,Dynamic2D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.88,0.65,1.0
+ScoopPour,Dynamic2D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,0.97,0.87,1.0
+Obstruction,Kinematic3D,Planner,Hand-engineered TAMP,Models & skills,,,
+Obstruction,Kinematic3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+Obstruction,Kinematic3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
+Obstruction,Kinematic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.26,0.0,0.69
+Obstruction,Kinematic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.85,0.41,1.0
+Obstruction,Kinematic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,0.97,0.92,0.99
+Obstruction,Kinematic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,1.0,0.99,1.0
+Obstruction,Kinematic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0
+Packing,Kinematic3D,Planner,Hand-engineered TAMP,Models & skills,0.67,0.66,0.67
+Packing,Kinematic3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+Packing,Kinematic3D,LLMGenPlan,Opus 5,Source code,0.14,0.0,0.58
+Packing,Kinematic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.37,0.0,0.65
+Packing,Kinematic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.66,0.52,0.79
+Packing,Kinematic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,0.89,0.67,1.0
+Packing,Kinematic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.98,0.94,1.0
+Packing,Kinematic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0
+Transport,Kinematic3D,Planner,Hand-engineered TAMP,Models & skills,0.63,0.59,0.69
+Transport,Kinematic3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+Transport,Kinematic3D,LLMGenPlan,Opus 5,Source code,0.05,0.0,0.27
+Transport,Kinematic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.17,0.0,0.53
+Transport,Kinematic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.99,0.94,1.0
+Transport,Kinematic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,0.78,0.0,1.0
+Transport,Kinematic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,1.0,1.0,1.0
+Transport,Kinematic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0
+Table,Kinematic3D,Planner,Hand-engineered TAMP,Models & skills,,,
+Table,Kinematic3D,One-shot,Opus 5,Source code,0.06,0.0,0.3
+Table,Kinematic3D,LLMGenPlan,Opus 5,Source code,0.85,0.41,1.0
+Table,Kinematic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.99,0.97,1.0
+Table,Kinematic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,1.0,1.0,1.0
+Table,Kinematic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,1.0,1.0,1.0
+Table,Kinematic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,1.0,1.0,1.0
+Table,Kinematic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0
+BaseMotion,Kinematic3D,Planner,Hand-engineered TAMP,Models & skills,1.0,1.0,1.0
+BaseMotion,Kinematic3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+BaseMotion,Kinematic3D,LLMGenPlan,Opus 5,Source code,1.0,1.0,1.0
+BaseMotion,Kinematic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,1.0,1.0,1.0
+BaseMotion,Kinematic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,1.0,1.0,1.0
+BaseMotion,Kinematic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,1.0,1.0,1.0
+BaseMotion,Kinematic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,1.0,1.0,1.0
+BaseMotion,Kinematic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0
+BalanceBeam,Dynamic3D,Planner,Hand-engineered TAMP,Models & skills,,,
+BalanceBeam,Dynamic3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+BalanceBeam,Dynamic3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
+BalanceBeam,Dynamic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.64,0.0,1.0
+BalanceBeam,Dynamic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.97,0.87,1.0
+BalanceBeam,Dynamic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,1.0,0.99,1.0
+BalanceBeam,Dynamic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,1.0,0.99,1.0
+BalanceBeam,Dynamic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,0.99,1.0
+ConstrainedCupboard,Dynamic3D,Planner,Hand-engineered TAMP,Models & skills,,,
+ConstrainedCupboard,Dynamic3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+ConstrainedCupboard,Dynamic3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
+ConstrainedCupboard,Dynamic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.0,0.0,0.0
+ConstrainedCupboard,Dynamic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.08,0.0,0.34
+ConstrainedCupboard,Dynamic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,0.29,0.04,0.63
+ConstrainedCupboard,Dynamic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.47,0.05,1.0
+ConstrainedCupboard,Dynamic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,0.99,1.0
+Dynamo,Dynamic3D,Planner,Hand-engineered TAMP,Models & skills,,,
+Dynamo,Dynamic3D,One-shot,Opus 5,Source code,0.13,0.01,0.34
+Dynamo,Dynamic3D,LLMGenPlan,Opus 5,Source code,0.98,0.95,1.0
+Dynamo,Dynamic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,1.0,1.0,1.0
+Dynamo,Dynamic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.92,0.6,1.0
+Dynamo,Dynamic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,1.0,1.0,1.0
+Dynamo,Dynamic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,1.0,1.0,1.0
+Dynamo,Dynamic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0
+Rearrange,Dynamic3D,Planner,Hand-engineered TAMP,Models & skills,,,
+Rearrange,Dynamic3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+Rearrange,Dynamic3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
+Rearrange,Dynamic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.09,0.0,0.32
+Rearrange,Dynamic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.58,0.01,0.96
+Rearrange,Dynamic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,0.96,0.93,0.98
+Rearrange,Dynamic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.77,0.15,0.97
+Rearrange,Dynamic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,0.99,0.97,1.0
+ScoopPour,Dynamic3D,Planner,Hand-engineered TAMP,Models & skills,,,
+ScoopPour,Dynamic3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+ScoopPour,Dynamic3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
+ScoopPour,Dynamic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.0,0.0,0.0
+ScoopPour,Dynamic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.09,0.0,0.31
+ScoopPour,Dynamic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,0.14,0.0,0.23
+ScoopPour,Dynamic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.38,0.21,0.57
+ScoopPour,Dynamic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,0.42,0.06,1.0
+Shelf,Dynamic3D,Planner,Hand-engineered TAMP,Models & skills,0.27,0.22,0.3
+Shelf,Dynamic3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+Shelf,Dynamic3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
+Shelf,Dynamic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.24,0.0,0.63
+Shelf,Dynamic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.6,0.0,1.0
+Shelf,Dynamic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,1.0,0.98,1.0
+Shelf,Dynamic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.43,0.0,0.98
+Shelf,Dynamic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,0.99,1.0
+SortClutteredBlocks,Dynamic3D,Planner,Hand-engineered TAMP,Models & skills,,,
+SortClutteredBlocks,Dynamic3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+SortClutteredBlocks,Dynamic3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
+SortClutteredBlocks,Dynamic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.01,0.0,0.03
+SortClutteredBlocks,Dynamic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.3,0.13,0.72
+SortClutteredBlocks,Dynamic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,0.43,0.31,0.5
+SortClutteredBlocks,Dynamic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.49,0.2,0.96
+SortClutteredBlocks,Dynamic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,0.95,0.89,0.99
+SweepIntoDrawer,Dynamic3D,Planner,Hand-engineered TAMP,Models & skills,0.0,0.0,0.0
+SweepIntoDrawer,Dynamic3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+SweepIntoDrawer,Dynamic3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
+SweepIntoDrawer,Dynamic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.0,0.0,0.0
+SweepIntoDrawer,Dynamic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.0,0.0,0.0
+SweepIntoDrawer,Dynamic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,0.72,0.15,1.0
+SweepIntoDrawer,Dynamic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.57,0.0,0.97
+SweepIntoDrawer,Dynamic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,0.86,0.47,1.0
+SweepSimple,Dynamic3D,Planner,Hand-engineered TAMP,Models & skills,,,
+SweepSimple,Dynamic3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+SweepSimple,Dynamic3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.0
+SweepSimple,Dynamic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.0,0.0,0.0
+SweepSimple,Dynamic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.0,0.0,0.0
+SweepSimple,Dynamic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,0.03,0.0,0.15
+SweepSimple,Dynamic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.07,0.0,0.21
+SweepSimple,Dynamic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,0.44,0.35,0.5
+Tossing,Dynamic3D,Planner,Hand-engineered TAMP,Models & skills,0.77,0.77,0.78
+Tossing,Dynamic3D,One-shot,Opus 5,Source code,0.0,0.0,0.0
+Tossing,Dynamic3D,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.01
+Tossing,Dynamic3D,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.0,0.0,0.0
+Tossing,Dynamic3D,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.99,0.96,1.0
+Tossing,Dynamic3D,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,0.96,0.82,1.0
+Tossing,Dynamic3D,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.85,0.31,1.0
+Tossing,Dynamic3D,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,0.98,0.93,1.0
 Packing,PDDLStream,Planner,Hand-engineered TAMP,Models & skills,0.54,0.5,0.56
 Packing,PDDLStream,One-shot,Opus 5,Source code,0.12,0.0,0.4
 Packing,PDDLStream,LLMGenPlan,Opus 5,Source code,0.21,0.0,0.39
-Packing,PDDLStream,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.81,0.41,1.0
-Packing,PDDLStream,AgenticGenPlan,Claude Code · Opus 5,Black box,0.99,0.96,1.0
-Packing,PDDLStream,AgenticGenPlan,Codex · GPT-6 Astra,Black box,1.0,1.0,1.0
-Packing,PDDLStream,AgenticGenPlan + source,Claude Code · Opus 5,Source code,1.0,1.0,1.0
-Packing,PDDLStream,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,0.98,1.0
+Packing,PDDLStream,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.81,0.41,1.0
+Packing,PDDLStream,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.99,0.96,1.0
+Packing,PDDLStream,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,1.0,1.0,1.0
+Packing,PDDLStream,AgenticGenPlan + source,Claude Code with Opus 5,+ source,1.0,1.0,1.0
+Packing,PDDLStream,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,0.98,1.0
 Blocked,PDDLStream,Planner,Hand-engineered TAMP,Models & skills,0.74,0.7,0.77
 Blocked,PDDLStream,One-shot,Opus 5,Source code,0.0,0.0,0.01
 Blocked,PDDLStream,LLMGenPlan,Opus 5,Source code,0.0,0.0,0.01
-Blocked,PDDLStream,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.75,0.34,0.99
-Blocked,PDDLStream,AgenticGenPlan,Claude Code · Opus 5,Black box,0.38,0.25,0.56
-Blocked,PDDLStream,AgenticGenPlan,Codex · GPT-6 Astra,Black box,0.99,0.98,1.0
-Blocked,PDDLStream,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.87,0.43,1.0
-Blocked,PDDLStream,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
+Blocked,PDDLStream,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.75,0.34,0.99
+Blocked,PDDLStream,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.38,0.25,0.56
+Blocked,PDDLStream,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,0.99,0.98,1.0
+Blocked,PDDLStream,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.87,0.43,1.0
+Blocked,PDDLStream,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0
 Rovers,PDDLStream,Planner,Hand-engineered TAMP,Models & skills,0.3,0.24,0.38
 Rovers,PDDLStream,One-shot,Opus 5,Source code,0.26,0.0,0.87
 Rovers,PDDLStream,LLMGenPlan,Opus 5,Source code,0.86,0.81,0.97
-Rovers,PDDLStream,AgenticGenPlan,Codex · GPT-5.6 Sol,Black box,0.78,0.0,1.0
-Rovers,PDDLStream,AgenticGenPlan,Claude Code · Opus 5,Black box,0.98,0.9,1.0
-Rovers,PDDLStream,AgenticGenPlan,Codex · GPT-6 Astra,Black box,1.0,0.99,1.0
-Rovers,PDDLStream,AgenticGenPlan + source,Claude Code · Opus 5,Source code,0.99,0.98,1.0
-Rovers,PDDLStream,AgenticGenPlan + source,Codex · GPT-6 Astra,Source code,1.0,1.0,1.0
+Rovers,PDDLStream,AgenticGenPlan,Codex with GPT-5.6 Sol,Main setting,0.78,0.0,1.0
+Rovers,PDDLStream,AgenticGenPlan,Claude Code with Opus 5,Main setting,0.98,0.9,1.0
+Rovers,PDDLStream,AgenticGenPlan,Codex with GPT-6 Astra,Main setting,1.0,0.99,1.0
+Rovers,PDDLStream,AgenticGenPlan + source,Claude Code with Opus 5,+ source,0.99,0.98,1.0
+Rovers,PDDLStream,AgenticGenPlan + source,Codex with GPT-6 Astra,+ source,1.0,1.0,1.0

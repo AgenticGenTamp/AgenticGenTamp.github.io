@@ -59,24 +59,24 @@
     {
       "id": "codex",
       "name": "AgenticGenPlan",
-      "backend": "Codex · GPT-5.6 Sol",
-      "access": "Black box",
+      "backend": "Codex with GPT-5.6 Sol",
+      "access": "Main setting",
       "color": "#24847b",
       "kind": "agent"
     },
     {
       "id": "claude",
       "name": "AgenticGenPlan",
-      "backend": "Claude Code · Opus 5",
-      "access": "Black box",
+      "backend": "Claude Code with Opus 5",
+      "access": "Main setting",
       "color": "#ca593b",
       "kind": "agent"
     },
     {
       "id": "astra",
       "name": "AgenticGenPlan",
-      "backend": "Codex · GPT-6 Astra",
-      "access": "Black box",
+      "backend": "Codex with GPT-6 Astra",
+      "access": "Main setting",
       "color": "#3468af",
       "kind": "agent",
       "resultSource": "data/astra-results.json"
@@ -84,16 +84,16 @@
     {
       "id": "source",
       "name": "AgenticGenPlan + source",
-      "backend": "Claude Code · Opus 5",
-      "access": "Source code",
+      "backend": "Claude Code with Opus 5",
+      "access": "+ source",
       "color": "#956d9b",
       "kind": "reference"
     },
     {
       "id": "astraSource",
       "name": "AgenticGenPlan + source",
-      "backend": "Codex · GPT-6 Astra",
-      "access": "Source code",
+      "backend": "Codex with GPT-6 Astra",
+      "access": "+ source",
       "color": "#6f93c6",
       "kind": "reference",
       "resultSource": "data/astra-source-results.json"
@@ -103,7 +103,7 @@
     {
       "id": "StickButton2D",
       "name": "StickButton",
-      "family": "Kinematic 2D",
+      "family": "Kinematic2D",
       "video": "film/assets/clips/grid/StickButton2D.mp4",
       "poster": "assets/posters/StickButton2D.jpg",
       "results": {
@@ -152,7 +152,7 @@
     {
       "id": "Obstruction2D",
       "name": "Obstruction",
-      "family": "Kinematic 2D",
+      "family": "Kinematic2D",
       "video": "film/assets/clips/grid/Obstruction2D.mp4",
       "poster": "assets/posters/Obstruction2D.jpg",
       "results": {
@@ -201,7 +201,7 @@
     {
       "id": "ClutteredStorage2D",
       "name": "ClutteredStorage",
-      "family": "Kinematic 2D",
+      "family": "Kinematic2D",
       "video": "film/assets/clips/grid/ClutteredStorage2D.mp4",
       "poster": "assets/posters/ClutteredStorage2D.jpg",
       "results": {
@@ -250,7 +250,7 @@
     {
       "id": "ClutteredRetrieval2D",
       "name": "ClutteredRetrieval",
-      "family": "Kinematic 2D",
+      "family": "Kinematic2D",
       "video": "film/assets/clips/grid/ClutteredRetrieval2D.mp4",
       "poster": "assets/posters/ClutteredRetrieval2D.jpg",
       "results": {
@@ -299,7 +299,7 @@
     {
       "id": "Motion2D",
       "name": "Motion",
-      "family": "Kinematic 2D",
+      "family": "Kinematic2D",
       "video": "film/assets/clips/grid/Motion2D.mp4",
       "poster": "assets/posters/Motion2D.jpg",
       "results": {
@@ -348,7 +348,7 @@
     {
       "id": "PushPullHook2D",
       "name": "PushPullHook",
-      "family": "Kinematic 2D",
+      "family": "Kinematic2D",
       "video": "film/assets/clips/grid/PushPullHook2D.mp4",
       "poster": "assets/posters/PushPullHook2D.jpg",
       "results": {
@@ -393,7 +393,7 @@
     {
       "id": "DynObstruction2D",
       "name": "Obstruction",
-      "family": "Dynamic 2D",
+      "family": "Dynamic2D",
       "video": "film/assets/clips/grid/DynObstruction2D.mp4",
       "poster": "assets/posters/DynObstruction2D.jpg",
       "results": {
@@ -442,7 +442,7 @@
     {
       "id": "DynPushPullHook2D",
       "name": "PushPullHook",
-      "family": "Dynamic 2D",
+      "family": "Dynamic2D",
       "video": "film/assets/clips/grid/DynPushPullHook2D.mp4",
       "poster": "assets/posters/DynPushPullHook2D.jpg",
       "results": {
@@ -491,7 +491,7 @@
     {
       "id": "DynPushT2D",
       "name": "PushT",
-      "family": "Dynamic 2D",
+      "family": "Dynamic2D",
       "video": "film/assets/clips/grid/DynPushT2D.mp4",
       "poster": "assets/posters/DynPushT2D.jpg",
       "results": {
@@ -536,7 +536,7 @@
     {
       "id": "DynScoopPour2D",
       "name": "ScoopPour",
-      "family": "Dynamic 2D",
+      "family": "Dynamic2D",
       "video": "film/assets/clips/grid/DynScoopPour2D.mp4",
       "poster": "assets/posters/DynScoopPour2D.jpg",
       "results": {
@@ -581,7 +581,7 @@
     {
       "id": "Obstruction3D",
       "name": "Obstruction",
-      "family": "Kinematic 3D",
+      "family": "Kinematic3D",
       "video": "film/assets/clips/grid/Obstruction3D.mp4",
       "poster": "assets/posters/Obstruction3D.jpg",
       "results": {
@@ -626,7 +626,7 @@
     {
       "id": "Packing3D",
       "name": "Packing",
-      "family": "Kinematic 3D",
+      "family": "Kinematic3D",
       "video": "film/assets/clips/grid/Packing3D.mp4",
       "poster": "assets/posters/Packing3D.jpg",
       "results": {
@@ -675,7 +675,7 @@
     {
       "id": "Transport3D",
       "name": "Transport",
-      "family": "Kinematic 3D",
+      "family": "Kinematic3D",
       "video": "film/assets/clips/grid/Transport3D.mp4",
       "poster": "assets/posters/Transport3D.jpg",
       "results": {
@@ -724,7 +724,7 @@
     {
       "id": "Table3D",
       "name": "Table",
-      "family": "Kinematic 3D",
+      "family": "Kinematic3D",
       "video": "film/assets/clips/grid/Table3D.mp4",
       "poster": "assets/posters/Table3D.jpg",
       "results": {
@@ -769,7 +769,7 @@
     {
       "id": "BaseMotion3D",
       "name": "BaseMotion",
-      "family": "Kinematic 3D",
+      "family": "Kinematic3D",
       "video": "film/assets/clips/grid/BaseMotion3D.mp4",
       "poster": "assets/posters/BaseMotion3D.jpg",
       "results": {
@@ -818,7 +818,7 @@
     {
       "id": "BalanceBeam3D",
       "name": "BalanceBeam",
-      "family": "Dynamic 3D",
+      "family": "Dynamic3D",
       "video": "film/assets/clips/grid/BalanceBeam3D.mp4",
       "poster": "assets/posters/BalanceBeam3D.jpg",
       "results": {
@@ -863,7 +863,7 @@
     {
       "id": "ConstrainedCupboard3D",
       "name": "ConstrainedCupboard",
-      "family": "Dynamic 3D",
+      "family": "Dynamic3D",
       "video": "film/assets/clips/grid/ConstrainedCupboard3D.mp4",
       "poster": "assets/posters/ConstrainedCupboard3D.jpg",
       "results": {
@@ -908,7 +908,7 @@
     {
       "id": "Dynamo3D",
       "name": "Dynamo",
-      "family": "Dynamic 3D",
+      "family": "Dynamic3D",
       "video": "film/assets/clips/grid/Dynamo3D.mp4",
       "poster": "assets/posters/Dynamo3D.jpg",
       "results": {
@@ -953,7 +953,7 @@
     {
       "id": "Rearrange3D",
       "name": "Rearrange",
-      "family": "Dynamic 3D",
+      "family": "Dynamic3D",
       "video": "film/assets/clips/grid/Rearrange3D.mp4",
       "poster": "assets/posters/Rearrange3D.jpg",
       "results": {
@@ -998,7 +998,7 @@
     {
       "id": "ScoopPour3D",
       "name": "ScoopPour",
-      "family": "Dynamic 3D",
+      "family": "Dynamic3D",
       "video": "film/assets/clips/grid/ScoopPour3D.mp4",
       "poster": "assets/posters/ScoopPour3D.jpg",
       "results": {
@@ -1043,7 +1043,7 @@
     {
       "id": "Shelf3D",
       "name": "Shelf",
-      "family": "Dynamic 3D",
+      "family": "Dynamic3D",
       "video": "film/assets/clips/grid/Shelf3D.mp4",
       "poster": "assets/posters/Shelf3D.jpg",
       "results": {
@@ -1092,7 +1092,7 @@
     {
       "id": "SortClutteredBlocks3D",
       "name": "SortClutteredBlocks",
-      "family": "Dynamic 3D",
+      "family": "Dynamic3D",
       "video": "film/assets/clips/grid/SortClutteredBlocks3D.mp4",
       "poster": "assets/posters/SortClutteredBlocks3D.jpg",
       "results": {
@@ -1137,7 +1137,7 @@
     {
       "id": "SweepIntoDrawer3D",
       "name": "SweepIntoDrawer",
-      "family": "Dynamic 3D",
+      "family": "Dynamic3D",
       "video": "film/assets/clips/grid/SweepIntoDrawer3D.mp4",
       "poster": "assets/posters/SweepIntoDrawer3D.jpg",
       "results": {
@@ -1186,7 +1186,7 @@
     {
       "id": "SweepSimple3D",
       "name": "SweepSimple",
-      "family": "Dynamic 3D",
+      "family": "Dynamic3D",
       "video": "film/assets/clips/grid/SweepSimple3D.mp4",
       "poster": "assets/posters/SweepSimple3D.jpg",
       "results": {
@@ -1231,7 +1231,7 @@
     {
       "id": "Tossing3D",
       "name": "Tossing",
-      "family": "Dynamic 3D",
+      "family": "Dynamic3D",
       "video": "film/assets/clips/grid/Tossing3D.mp4",
       "poster": "assets/posters/Tossing3D.jpg",
       "results": {

@@ -167,7 +167,7 @@ for g in gallery_items:
     assert src['archivedSolved']==src['replaySolved']
     assert hashlib.sha256((ROOT/f"film/assets/clips/{g['file']}.mp4").read_bytes()).hexdigest()==src['videoSha256']
     assert all(re.fullmatch(r'[a-f0-9]{64}',src[k]) for k in ('resultsSha256','approachSha256','initialFrameSha256','videoSha256'))
-    if g['backend']=='Codex · GPT-6 Astra':
+    if g['backend']=='Codex with GPT-6 Astra':
         table=astra if g['setting']=='Main setting' else astra_source
         env_runs=[r for e in table['environments'] for r in e['runs'] if e['id']==src['environment'] and r['seed']==g['seed']]
         assert len(env_runs)==1 and env_runs[0]['resultsSha256']==src['resultsSha256'] and env_runs[0]['approachSha256']==src['approachSha256']

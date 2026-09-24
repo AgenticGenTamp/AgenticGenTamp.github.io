@@ -17,8 +17,8 @@ test('matched planner comparison uses precisely the same 16 environments for eve
  assert.equal(rows.find(x=>x.id==='planner').rank,4);
 });
 test('zero success is retained; unavailable planner entries are never turned into zeros',()=>{
- const family=selectEnvironments(data,'all','Dynamic 3D');assert.equal(family.length,10);
- const planner=summarize(data,'all','Dynamic 3D').find(x=>x.id==='planner');
+ const family=selectEnvironments(data,'all','Dynamic3D');assert.equal(family.length,10);
+ const planner=summarize(data,'all','Dynamic3D').find(x=>x.id==='planner');
  assert.equal(planner.count,3);assert.ok(Math.abs(planner.mean-1.04/3)<1e-10);
  assert.equal(data.environments.find(x=>x.id==='SweepIntoDrawer3D').results.planner.mean,0);
  assert.equal(data.environments.find(x=>x.id==='ScoopPour3D').results.planner,null);

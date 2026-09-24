@@ -1,6 +1,6 @@
 {
   "method": "astra",
-  "backend": "Codex · GPT-6 Astra",
+  "backend": "Codex with GPT-6 Astra",
   "setting": "Main setting",
   "snapshotDate": "2026-09-22",
   "collection": "Final/Blackbox/Codex GPT6 Astra",

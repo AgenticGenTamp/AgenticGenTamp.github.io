@@ -12,7 +12,7 @@
   <meta name="theme-color" content="#66418b">
   <link rel="icon" href="assets/prpl-robot.png" type="image/png">
   <link rel="stylesheet" href="styles.css?v=astra-source-1">
-  <script type="module" src="app.js?v=astra-source-1"></script>
+  <script type="module" src="app.js?v=naming-1"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -74,7 +74,7 @@
   <h3 class="setup-subheading">Experimental setup</h3>
   <div class="setup-grid">
     <article>
-      <h4>Strict access restrictions in the main setting</h4>
+      <h4>Access restrictions in the main setting</h4>
       <p>The agent receives a description of the task, observation and action spaces, and goal. It chooses its own simulator tests within a <strong>$20 model-usage budget per synthesis run</strong>.</p>
       <ul class="setup-constraints">
         <li><strong>No network or host-filesystem access.</strong> Code runs in an isolated Docker container with a separate filesystem.</li>
@@ -95,7 +95,7 @@
       </ul>
     </article>
   </div>
-  <p class="setup-source"><strong>+ source comparison.</strong> In this additional setting, run with Claude Code (Opus 5) and Codex (GPT-6 Astra) on all 28 environments, the agent can inspect the environment implementation and import its helper functions, including inverse kinematics solvers. During synthesis, it can also set arbitrary simulator states.</p>
+  <p class="setup-source"><strong>+ source comparison.</strong> In this additional setting, which we run with Claude Code with Opus 5 and Codex with GPT-6 Astra on all 28 environments, the agent can inspect the environment implementation and import its helper functions, including inverse kinematics solvers. During synthesis, it can also set arbitrary simulator states.</p>
   <p class="benchmark-scope">The study includes 25 KinDER environments across four families and three PDDLStream domains: Packing, Blocked, and Rovers. <a href="#environments">View each environment and the exact description given to the agent.</a></p>
   <p class="paper-reference">Protocol: <a href="assets/paper.pdf?v=20260922#page=2" target="_blank" rel="noopener">Sections II-C and III-A</a> and <a href="assets/paper.pdf?v=20260922#page=4" target="_blank" rel="noopener">Section IV-A</a>.</p>
   <div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong>980</strong><span>synthesized programs</span></div><div><strong>98,000</strong><span>evaluation episodes</span></div></div>
@@ -112,7 +112,7 @@
   <video id="project-video" controls playsinline preload="metadata" poster="assets/posters/project-video.jpg?v=069578f63710" aria-label="Project video: Coding Agents for Generalized Task and Motion Planning Problems"><source src="assets/project-video.mp4?v=069578f63710" type="video/mp4">Your browser cannot play this video. <a href="assets/project-video.mp4?v=069578f63710">Download the MP4</a>.</video>
 </section>
 <section class="section leaderboard" id="results"><div class="section-heading"><div><h2>Experimental results</h2></div><div><p>Mean success rates over 100 held-out instances per run, averaged across five runs and the selected environments.</p><a class="inline-link" href="data/benchmark.csv" download>Download the results <span>↓</span></a></div></div>
-<div class="leader-toolbar"><div class="segmented" role="group" aria-label="Evaluation coverage"><button class="active" data-scope="all" aria-pressed="true">All 28 environments</button><button data-scope="shared" aria-pressed="false">Planner subset · 16</button></div><label class="select-label">Family <select id="family-filter"><option value="all">All families</option><option>Kinematic 2D</option><option>Dynamic 2D</option><option>Kinematic 3D</option><option>Dynamic 3D</option><option>PDDLStream</option></select></label></div>
+<div class="leader-toolbar"><div class="segmented" role="group" aria-label="Evaluation coverage"><button class="active" data-scope="all" aria-pressed="true">All 28 environments</button><button data-scope="shared" aria-pressed="false">Planner subset · 16</button></div><label class="select-label">Family <select id="family-filter"><option value="all">All families</option><option>Kinematic2D</option><option>Dynamic2D</option><option>Kinematic3D</option><option>Dynamic3D</option><option>PDDLStream</option></select></label></div>
 <p class="scope-note" id="scope-note" aria-live="polite">Loading the paper’s results…</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="Experimental results, scroll horizontally on smaller screens"><table class="ranking"><caption class="sr-only">Mean held-out success rate by method. The future coding agents row is a placeholder with an unknown score.</caption><thead><tr><th scope="col">Method / backend</th><th scope="col">Setting / access</th><th scope="col">Coverage</th><th scope="col" aria-sort="descending"><button id="sort-score">Mean success <span aria-hidden="true">↓</span></button></th></tr></thead>
 <tbody class="future-methods"><tr><td><span class="method-name">Future coding agents</span><span class="backend">More and better in the future</span></td><td>—</td><td class="coverage">—</td><td class="score-cell"><span class="score-number" aria-label="Unknown">?</span></td></tr></tbody>
@@ -128,10 +128,10 @@
   <div id="env-description-content" class="description-document" role="region" tabindex="0" aria-labelledby="env-description-title" aria-busy="true"><p>Loading the environment description…</p></div>
 </section>
 </div></div>
-<div class="insights"><article class="insight source-access"><h3>Effect of source access</h3><p>On SweepIntoDrawer, access to source code raises Claude Code’s mean success from 0% to 57%. The agent discovers it can use the gripper itself to sweep.</p><button class="inline-link" data-select-env="SweepIntoDrawer3D">Inspect this environment ↗</button>
+<div class="insights"><article class="insight source-access"><h3>Effect of source access</h3><p>On SweepIntoDrawer, access to source code raises the mean success of Claude Code with Opus 5 from 0% to 57%. The agent discovers it can use the gripper itself to sweep.</p><button class="inline-link" data-select-env="SweepIntoDrawer3D">Inspect this environment ↗</button>
 <div class="table-scroll source-scroll" tabindex="0" role="region" aria-label="Main setting and + source on all 28 environments"><table class="source-table" id="source-table"><caption class="sr-only">Mean held-out success over all 28 environments for each coding agent, in the main setting and with source access.</caption><thead><tr><th scope="col">Coding agent</th><th scope="col">Main setting</th><th scope="col">+ source</th></tr></thead><tbody id="source-table-body"><tr><td colspan="3">Loading…</td></tr></tbody></table></div>
 <p class="fine" id="source-astra-counts"></p>
-<p class="fine" id="source-loophole-note">Equal-environment means over all 28 environments, five runs each. On ScoopPour (Dynamic 3D), one GPT-6 Astra + source run scores 100% by laying the empty target tray over the source tray instead of moving the cubes, which the environment’s success check accepts.</p></article><article class="insight efficiency"><h3>Computation at test time</h3>
+<p class="fine" id="source-loophole-note">Equal-environment means over all 28 environments, five runs each. On ScoopPour (Dynamic3D), one GPT-6 Astra + source run scores 100% by laying the empty target tray over the source tray instead of moving the cubes, which the environment’s success check accepts.</p></article><article class="insight efficiency"><h3>Computation at test time</h3>
 <div class="time-bar" data-efficiency="claude"><span>Claude Code<small>Opus 5 · Main setting</small></span><i style="--w:12.668%;--c:var(--rust)" aria-hidden="true"></i><strong>10.949 ms</strong></div>
 <div class="time-bar" data-efficiency="source"><span>Claude Code<small>Opus 5 · + source</small></span><i style="--w:100.000%;--c:#956d9b" aria-hidden="true"></i><strong>86.433 ms</strong></div>
 <div class="time-bar" data-efficiency="codexAstra"><span>Codex<small>GPT-6 Astra · Main setting</small></span><i style="--w:2.109%;--c:#24847b" aria-hidden="true"></i><strong>1.823 ms</strong></div>
