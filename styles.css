@@ -274,3 +274,8 @@ footer p{font-size:12px;margin-top:5px}
 .policy-play{font-size:12px;background:white;border:1px solid #b8a8c4;border-radius:4px;padding:7px 12px;margin-bottom:16px}
 
 .env-list button .policy-marker{display:inline;font-size:10px;white-space:nowrap;opacity:.8}
+.citation-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:16px}
+.citation-heading h2{margin:0}
+.citation-copy{font:inherit;font-size:14px;padding:6px 14px;border:1px solid var(--line);border-radius:5px;background:var(--paper);color:var(--ink);cursor:pointer}
+.citation-copy:hover{border-color:var(--green);color:var(--green)}
+.bibtex{margin:0;padding:18px 20px;border:1px solid var(--line);border-radius:5px;background:var(--soft);font-size:13px;line-height:1.6;overflow-x:auto}

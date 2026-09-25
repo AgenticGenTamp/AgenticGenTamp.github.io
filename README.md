@@ -24,6 +24,7 @@ Open http://127.0.0.1:8770/. The included server supports byte ranges for seekin
 - Project video: a normal MP4 with native controls and a fixed 16:9 frame.
 - Experimental results: all six methods from the paper plus Codex with GPT-6 Astra in the main setting and + source, each from 140 complete archived runs, with environment-family and matched-planner-coverage controls. The table shows results without a rank column or winner highlight. Click the score heading to reverse sorting. A “Future coding agents” placeholder appears above the measured methods with an unknown score; it is excluded from benchmark data and sorting.
 - Environment explorer: all 28 environments, with synthesized policy videos first, all eight method results and run-level ranges second, and the verbatim agent-facing description last. Selecting an environment starts its available method clips together when the panel is visible. The separate illustration video is no longer displayed. Descriptions include the original task, observation, action, and reward/goal text from archived main-setting runs. The input section states that the agent receives text and interactive simulator access, without demonstration videos. It scrolls for long tables; a link opens the unchanged Markdown file.
+- Citation: the arXiv BibTeX entry (key `merler2026coding`) at the end of the page, with a Copy BibTeX button.
 
 The background and gallery videos pause off screen or when the tab is hidden. Reduced-motion and data-saving preferences disable their automatic playback. Manually paused gallery clips stay paused when returning to them. The main video plays only on request and pauses other visible gallery clips while playing.
 
@@ -66,7 +67,7 @@ The hero and gallery posters are derived from the supplied clips. Setup stills s
 
 ### Paper and links
 
-Replace `assets/paper.pdf`, update the SHA-256 and version in `data/benchmark.json`, and refresh table data if the manuscript changes. Paper links are local. Research-code links point to https://github.com/tomsilver/robocode; edit the links in `index.html` if the team moves it. Website-source links point to this formal repository.
+Replace `assets/paper.pdf`, update the SHA-256 and version in `data/benchmark.json`, and refresh table data if the manuscript changes. Paper links are local. The Citation section at the end of the page holds the BibTeX entry; keep it in sync with the Citation section below. Research-code links point to https://github.com/tomsilver/robocode; edit the links in `index.html` if the team moves it. Website-source links point to this formal repository.
 
 ### Experimental results
 
@@ -149,3 +150,17 @@ git push origin main
 ```
 
 Never run the anonymous site's publication scripts from this repository.
+
+## Citation
+
+```bibtex
+@misc{merler2026coding,
+  title={Coding Agents for Generalized Task and Motion Planning Problems},
+  author={Matteo Merler and Bowen Li and Josh Roy and Yichao Liang and Qianwei Wang and Yixuan Huang and Tom Silver},
+  year={2026},
+  eprint={2609.30233},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2609.30233},
+}
+```

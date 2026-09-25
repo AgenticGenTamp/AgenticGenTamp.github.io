@@ -249,3 +249,10 @@ loadJSON('data/gallery.json').then(result=>{gallery=result;renderGallery();}).ca
 loadJSON('data/environment-descriptions.json?v=descriptions-5').then(result=>{descriptions=result;renderEnvironmentDescription();}).catch(error=>{console.error(error);descriptionLoadFailed=true;renderEnvironmentDescription();});
 
 loadJSON('data/policy-examples.json?v=naming-1').then(result=>{policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
+
+document.getElementById('copy-bibtex')?.addEventListener('click',async e=>{
+  const button=e.currentTarget;
+  try{await navigator.clipboard.writeText(document.getElementById('bibtex').textContent);button.textContent='Copied';}
+  catch{button.textContent='Copy failed';}
+  setTimeout(()=>{button.textContent='Copy BibTeX';},2000);
+});
