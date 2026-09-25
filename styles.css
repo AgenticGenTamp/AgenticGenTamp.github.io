@@ -276,6 +276,6 @@ footer p{font-size:12px;margin-top:5px}
 .env-list button .policy-marker{display:inline;font-size:10px;white-space:nowrap;opacity:.8}
 .citation-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:20px}
 .citation-heading h2{margin:0}
-.citation-copy{font-family:inherit;cursor:pointer}
+.citation-copy{font-family:inherit;cursor:pointer;justify-content:center;min-width:150px}
 .bibtex{margin:0;padding:22px 26px;border:1px solid #e0d9e8;border-radius:5px;background:#f0edf4;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.7;color:var(--ink);overflow-x:auto}
 @media (max-width:640px){.bibtex{padding:16px;font-size:12px}}
