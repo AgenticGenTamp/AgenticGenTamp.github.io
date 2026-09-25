@@ -18,7 +18,7 @@ Open http://127.0.0.1:8770/. The included server supports byte ranges for seekin
 
 ## Page structure
 
-- Header and title: the PRPL logo, the full paper title, authors and numbered affiliations, a background rollout mosaic, and matching Paper, Code, Experimental results, and Gallery links. Author names link to their personal homepages.
+- Header and title: the PRPL logo, the full paper title, authors and numbered affiliations, a background rollout mosaic, and matching Paper, arXiv, Code, Experimental results, and Gallery links. Author names link to their personal homepages.
 - Setup: a paper-grounded definition of generalized TAMP (Introduction and Section II), three instances of the same Obstruction task, and the synthesis/evaluation protocol with links to Sections III-A and IV-A.
 - Gallery: 36 examples near the top of the page, with four compact cards per row on desktop, two on tablets, and one on small screens. Examples are split into two groups, "Strategies and behaviors" and "Failures" (the failure cards plus the two successes of the ConstrainedCupboard story), each in its own scrollable box about two rows tall so the page stays short. Cards that tell one story share an optional `story` field; consecutive cards with the same story render together in a labeled, tinted panel (the ConstrainedCupboard trio: three rods on the lower shelves, the fourth rod failing, and + source using the higher shelves). Within each group, the 3D clips come first: cards follow the environment families in the order Dynamic3D, Kinematic3D, PDDLStream, Dynamic2D, Kinematic2D, and cards for the same environment sit together. Clips loop silently when visible at 8× by default, with a 1×/2×/4×/8× selector and native playback controls. Captions describe the behavior and identify the coding agent and the paper's **Main setting / + source** terminology. Seeds and episode identifiers remain in the data, but are not displayed on cards.
 - Project video: a normal MP4 with native controls and a fixed 16:9 frame.
@@ -29,7 +29,7 @@ The background and gallery videos pause off screen or when the tab is hidden. Re
 
 ## Sources and result definitions
 
-`assets/paper.pdf` is the manuscript as of 24 September 2026, built from the Overleaf source. Its SHA-256 is recorded in `data/benchmark.json`. The website's author list was supplied separately by the project maintainer, who also confirmed the affiliation mapping. No arXiv identifier has been added.
+`assets/paper.pdf` is arXiv:2609.30233v1 (https://arxiv.org/abs/2609.30233), released 25 September 2026. Its SHA-256 is recorded in `data/benchmark.json`. The website's author list was supplied separately by the project maintainer, who also confirmed the affiliation mapping.
 
 The author order is Matteo Merler, Bowen Li, Josh Roy, Yichao Liang, Qianwei Wang, Yixuan Huang, and Tom Silver. The confirmed affiliations are Fondazione Bruno Kessler for Matteo, Carnegie Mellon University for Bowen, University of Cambridge for Yichao, and Princeton University for Josh, Qianwei, Yixuan, and Tom. Institutional names and homepage links were checked against the [PRPL team page](https://prpl-group.com/#team) and the personal homepages of [Matteo](https://merlerm.github.io/), [Bowen](https://jaraxxus-me.github.io/), and [Yichao](https://yichao-liang.github.io/).
 

@@ -21,7 +21,7 @@
     <a class="lab-logo" href="https://prpl-group.com/" target="_blank" rel="noopener" aria-label="Princeton Robot Planning and Learning lab"><img src="assets/prpl-robot.png" width="602" height="435" alt="PRPL"></a>
     <a class="wordmark" href="#top">AgenticGenTAMP</a>
   </div>
-  <nav aria-label="Main navigation"><a href="#overview">Setup</a><a href="#gallery">Gallery</a><a href="#video">Video</a><a href="#results">Results</a><a href="assets/paper.pdf?v=20260924" target="_blank" rel="noopener">Paper ↗</a></nav>
+  <nav aria-label="Main navigation"><a href="#overview">Setup</a><a href="#gallery">Gallery</a><a href="#video">Video</a><a href="#results">Results</a><a href="assets/paper.pdf?v=20260925" target="_blank" rel="noopener">Paper ↗</a></nav>
 </header>
 <section class="hero" id="top" aria-labelledby="hero-title">
   <video id="hero-video" class="hero-video" muted loop playsinline preload="none" poster="assets/posters/study-mosaic-240.jpg" aria-hidden="true"><source src="assets/hero.mp4" type="video/mp4"></video>
@@ -47,7 +47,8 @@
     </div>
     <p class="hero-summary">We evaluate coding agents that synthesize reusable policies for task and motion planning across 28 simulated environments.</p>
     <div class="hero-actions">
-      <a class="button" href="assets/paper.pdf?v=20260924" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a>
+      <a class="button" href="assets/paper.pdf?v=20260925" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a>
+      <a class="button" href="https://arxiv.org/abs/2609.30233" target="_blank" rel="noopener">arXiv <span aria-hidden="true">↗</span></a>
       <a class="button" href="https://github.com/tomsilver/robocode" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a>
       <a class="button" href="#results">Results <span aria-hidden="true">↓</span></a>
       <a class="button" href="#gallery">Gallery <span aria-hidden="true">↓</span></a>
@@ -97,7 +98,7 @@
   </div>
   <p class="setup-source"><strong>+ source comparison.</strong> In this additional setting, which we run with Claude Code with Opus 5 and Codex with GPT-6 Astra on all 28 environments, the agent can inspect the environment implementation and import its helper functions, including inverse kinematics solvers. During synthesis, it can also set arbitrary simulator states.</p>
   <p class="benchmark-scope">The study includes 25 KinDER environments across four families and three PDDLStream domains: Packing, Blocked, and Rovers. <a href="#environments">View each environment and the exact description given to the agent.</a></p>
-  <p class="paper-reference">Protocol: <a href="assets/paper.pdf?v=20260924#page=2" target="_blank" rel="noopener">Sections II-C and III-A</a> and <a href="assets/paper.pdf?v=20260924#page=4" target="_blank" rel="noopener">Section IV-A</a>.</p>
+  <p class="paper-reference">Protocol: <a href="assets/paper.pdf?v=20260925#page=2" target="_blank" rel="noopener">Sections II-C and III-A</a> and <a href="assets/paper.pdf?v=20260925#page=4" target="_blank" rel="noopener">Section IV-A</a>.</p>
   <div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong>980</strong><span>synthesized programs</span></div><div><strong>98,000</strong><span>evaluation episodes</span></div></div>
   <p class="fine">Includes 280 additional GPT-6 Astra programs and 28,000 evaluation episodes: 140 in the main setting and 140 + source.</p>
 </section>
@@ -118,7 +119,7 @@
 <div class="table-scroll" tabindex="0" role="region" aria-label="Experimental results, scroll horizontally on smaller screens"><table class="ranking"><caption class="sr-only">Mean held-out success rate by method. The future coding agents row is a placeholder with an unknown score.</caption><thead><tr><th scope="col">Method / backend</th><th scope="col">Setting / access</th><th scope="col">Coverage</th><th scope="col" aria-sort="descending"><button id="sort-score">Mean success <span aria-hidden="true">↓</span></button></th></tr></thead>
 <tbody class="future-methods"><tr><td><span class="method-name">Future coding agents</span><span class="backend">More and better in the future</span></td><td>—</td><td class="coverage">—</td><td class="score-cell"><span class="score-number" aria-label="Unknown">?</span></td></tr></tbody>
 <tbody id="ranking-body"></tbody></table></div>
-<div class="leader-note"><p>Equal-environment averages. GPT-6 Astra, in the main setting and + source, uses five completed experiment runs per environment; the other methods use Tables I–II. All environment means use the same two-decimal precision. The two + source rows are listed separately. Missing planner results are excluded from its average.</p><a href="assets/paper.pdf?v=20260924#page=5" target="_blank" rel="noopener">Read the tables ↗</a></div>
+<div class="leader-note"><p>Equal-environment averages. GPT-6 Astra, in the main setting and + source, uses five completed experiment runs per environment; the other methods use Tables I–II. All environment means use the same two-decimal precision. The two + source rows are listed separately. Missing planner results are excluded from its average.</p><a href="assets/paper.pdf?v=20260925#page=5" target="_blank" rel="noopener">Read the tables ↗</a></div>
 </section>
 <section class="results-section" id="environments"><div class="section"><div class="section-heading"><div><h2>Results by environment</h2></div><p>Select an environment to play the policy examples together. Method results and the text supplied to the agent appear below the videos.</p></div><div class="explorer"><div class="env-list" role="group" aria-label="Select an environment" id="env-list"></div><div class="env-detail"><div class="env-title"><div><p class="eyebrow" id="env-family"></p><h3 id="env-name"></h3></div></div>
 <section class="policy-comparison" id="policy-comparison" aria-labelledby="policy-comparison-title" hidden><h4 id="policy-comparison-title">Synthesized policy examples</h4><p id="policy-comparison-note"></p><button class="policy-play" id="play-policies">Replay together</button><div class="policy-grid" id="policy-grid"></div></section>
@@ -137,9 +138,9 @@
 <div class="time-bar" data-efficiency="source"><span>Claude Code<small>Opus 5 · + source</small></span><i style="--w:84.299%;--c:#956d9b" aria-hidden="true"></i><strong>42.480 ms</strong></div>
 <div class="time-bar" data-efficiency="codexAstra"><span>Codex<small>GPT-6 Astra · Main setting</small></span><i style="--w:2.578%;--c:#24847b" aria-hidden="true"></i><strong>1.299 ms</strong></div>
 <div class="time-bar" data-efficiency="astraSource"><span>Codex<small>GPT-6 Astra · + source</small></span><i style="--w:100.000%;--c:#6f93c6" aria-hidden="true"></i><strong>50.392 ms</strong></div>
-<p class="fine">Policy computation per action on the 15 environments where all four settings have at least one run with 100% held-out success. Each method is averaged over its own runs with 100% held-out success, equally across environments. <a href="assets/paper.pdf?v=20260924#page=7" target="_blank" rel="noopener">Table III ↗</a></p></article></div>
+<p class="fine">Policy computation per action on the 15 environments where all four settings have at least one run with 100% held-out success. Each method is averaged over its own runs with 100% held-out success, equally across environments. <a href="assets/paper.pdf?v=20260925#page=7" target="_blank" rel="noopener">Table III ↗</a></p></article></div>
 </div></section>
 </main>
-<footer><div><a class="wordmark" href="#top">AgenticGenTAMP</a><p>Coding Agents for Generalized Task and Motion Planning Problems</p></div><div class="footer-links"><a href="assets/paper.pdf?v=20260924" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/tomsilver/robocode" target="_blank" rel="noopener">Code ↗</a><a href="https://github.com/AgenticGenTamp/AgenticGenTamp.github.io" target="_blank" rel="noopener">Website source ↗</a></div></footer>
+<footer><div><a class="wordmark" href="#top">AgenticGenTAMP</a><p>Coding Agents for Generalized Task and Motion Planning Problems</p></div><div class="footer-links"><a href="assets/paper.pdf?v=20260925" target="_blank" rel="noopener">Paper ↗</a><a href="https://arxiv.org/abs/2609.30233" target="_blank" rel="noopener">arXiv ↗</a><a href="https://github.com/tomsilver/robocode" target="_blank" rel="noopener">Code ↗</a><a href="https://github.com/AgenticGenTamp/AgenticGenTamp.github.io" target="_blank" rel="noopener">Website source ↗</a></div></footer>
 </body>
 </html>

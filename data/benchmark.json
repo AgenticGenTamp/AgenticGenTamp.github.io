@@ -1,10 +1,10 @@
 {
   "source": {
     "title": "Coding Agents for Generalized Task and Motion Planning Problems",
-    "version": "Author-provided manuscript · 24 September 2026",
+    "version": "arXiv:2609.30233v1 · 25 September 2026",
     "tables": "I–III",
     "pdf": "assets/paper.pdf",
-    "sha256": "61d05d0ab15af6695414614b5baa3958bde0e58d0ace57e08febd48ed28182bf",
+    "sha256": "0d9f4b8b6ff1be6c39c0761072e2441467dde57edc1174704bf5012f46d45a5b",
     "precision": "The original six methods use the printed two-decimal means and min/max in Tables I–II. GPT-6 Astra in the main setting and + source uses five complete archived runs per environment; its means are rounded to the same two-decimal precision. Aggregate scores equally weight environments. Missing planner entries are excluded, never treated as failures.",
     "additionalMethods": [
       {
