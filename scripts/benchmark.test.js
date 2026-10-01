@@ -24,10 +24,15 @@ test('zero success is retained; unavailable planner entries are never turned int
  assert.equal(data.environments.find(x=>x.id==='ScoopPour3D').results.planner,null);
 });
 test('all filter combinations preserve counts and score sort direction',()=>{
- for(const scope of ['all','shared'])for(const family of ['all',...new Set(data.environments.map(x=>x.family))]){
-   const rows=summarize(data,scope,family,false).filter(x=>x.kind!=='reference'&&x.mean!==null);
-   for(let i=1;i<rows.length;i++)assert.ok(rows[i].mean>=rows[i-1].mean);
-   for(const row of rows)assert.ok(row.count<=row.total);
+ for(const scope of ['all','shared'])for(const family of ['all',...new Set(data.environments.map(x=>x.family))])for(const descending of [true,false]){
+   const summary=summarize(data,scope,family,descending);
+   for(const reference of [false,true]){
+     const rows=summary.filter(x=>(x.kind==='reference')===reference&&x.mean!==null);
+     for(let i=1;i<rows.length;i++)assert.ok(descending?rows[i].mean<=rows[i-1].mean:rows[i].mean>=rows[i-1].mean);
+     for(const row of rows)assert.ok(row.count<=row.total);
+   }
+   const firstReference=summary.findIndex(x=>x.kind==='reference');
+   assert.ok(summary.slice(firstReference).every(x=>x.kind==='reference'));
  }
 });
 test('printed run ranges contain every mean',()=>{
@@ -35,7 +40,8 @@ test('printed run ranges contain every mean',()=>{
 });
 test('both + source rows stay unranked references with complete coverage',()=>{
  const rows=summarize(data);const refs=rows.filter(x=>x.kind==='reference');
- assert.deepEqual(refs.map(x=>x.id),['source','astraSource']);
+ assert.deepEqual(refs.map(x=>x.id),['astraSource','source']);
  for(const r of refs){assert.equal(r.rank,null);assert.equal(r.count,28);}
- assert.deepEqual(rows.slice(-2).map(x=>x.id),['source','astraSource']);
+ assert.deepEqual(rows.slice(-2).map(x=>x.id),['astraSource','source']);
+ assert.deepEqual(summarize(data,'all','all',false).slice(-2).map(x=>x.id),['source','astraSource']);
 });

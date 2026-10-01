@@ -1,5 +1,5 @@
 import {openProgramViewer} from './program-viewer.js?v=2';
-import {selectEnvironments, summarize} from './benchmark.js';
+import {selectEnvironments, summarize} from './benchmark.js?v=reference-section-1';
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -39,7 +39,9 @@ function renderRanking(){
  const envs=selectEnvironments(data,scope,family);const rows=summarize(data,scope,family,descending);
  const plannerCount=envs.filter(e=>e.results.planner!==null).length;
  $('#scope-note').textContent=`${envs.length} environments · ${family==='all'?'All five families':family}. ${scope==='all' && plannerCount!==envs.length?`Planner covers ${plannerCount}/${envs.length}; its mean uses only those environments. Select the planner subset for a matched comparison.`:'All methods are compared on the same environments.'}`;
- $('#ranking-body').innerHTML=rows.map(r=>`<tr class="${r.kind==='reference'?'reference':''}"><td><span class="method-name">${esc(r.name)}</span><span class="backend">${esc(r.backend)}</span>${r.kind==='reference'?'<span class="reference-label">Reference, not ranked</span>':''}</td><td><span class="access-tag">${esc(r.access)}</span></td><td class="coverage">${r.count} / ${r.total}</td><td class="score-cell"><div class="score-flex"><span class="score-track"><span class="score-fill" style="--w:${r.mean===null?0:r.mean*100}%;--c:${r.color}"></span></span><span class="score-number">${r.mean===null?'—':percent(r.mean)}</span></div></td></tr>`).join('');
+ const renderRow=r=>`<tr data-method="${esc(r.id)}"><td><span class="method-name">${esc(r.name)}</span><span class="backend">${esc(r.backend)}</span></td><td><span class="access-tag">${esc(r.access)}</span></td><td class="coverage">${r.count} / ${r.total}</td><td class="score-cell"><div class="score-flex"><span class="score-track"><span class="score-fill" style="--w:${r.mean===null?0:r.mean*100}%;--c:${r.color}"></span></span><span class="score-number">${r.mean===null?'—':percent(r.mean)}</span></div></td></tr>`;
+ $('#ranking-body').innerHTML=rows.filter(r=>r.kind!=='reference').map(renderRow).join('');
+ $('#reference-body').innerHTML='<tr class="ranking-section"><th id="reference-section-title" scope="rowgroup" colspan="4">+ source references</th></tr>'+rows.filter(r=>r.kind==='reference').map(renderRow).join('');
  $('#sort-score').innerHTML=`Mean success <span aria-hidden="true">${descending?'↓':'↑'}</span>`;$('#sort-score').closest('th').setAttribute('aria-sort',descending?'descending':'ascending');
 }
 $$('[data-scope]').forEach(b=>b.addEventListener('click',()=>{scope=b.dataset.scope;$$('[data-scope]').forEach(x=>{const active=x===b;x.classList.toggle('active',active);x.setAttribute('aria-pressed',String(active));});if(data)renderRanking();}));

@@ -112,8 +112,7 @@ select{background:white;border:1px solid var(--line);padding:10px 26px 10px 12px
 .ranking td{padding:23px 14px;border-bottom:1px solid var(--line);vertical-align:middle}
 .ranking .method-name{font-size:18px;letter-spacing:-.02em;white-space:nowrap}
 .ranking .backend{display:block;font-size:12px;color:var(--muted);margin-top:4px}
-.ranking tr.reference td{border-top:2px solid #b8a8c4}
-.ranking .reference-label{font-size:11px;color:#80638d;display:block;margin-top:4px}
+.ranking .ranking-section th{border-top:2px solid #b8a8c4;background:var(--soft);color:#66418b;font-size:14px;padding-top:16px;padding-bottom:16px}
 .access-tag{display:inline-block;font-size:12px;border:1px solid #d6d1dd;border-radius:3px;padding:4px 7px;white-space:nowrap}
 .ranking .score-cell{width:25%;min-width:180px}
 .score-flex{display:flex;align-items:center;gap:14px}

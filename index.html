@@ -11,10 +11,10 @@
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#66418b">
   <link rel="icon" href="assets/prpl-robot.png" type="image/png">
-  <link rel="stylesheet" href="styles.css?v=astra-source-1">
+  <link rel="stylesheet" href="styles.css?v=reference-section-1">
   <link rel="stylesheet" href="vendor/highlight/github.min.css">
   <link rel="stylesheet" href="program.css?v=2">
-  <script type="module" src="app.js?v=programs-2"></script>
+  <script type="module" src="app.js?v=reference-section-1"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -118,10 +118,10 @@
 <section class="section leaderboard" id="results"><div class="section-heading"><div><h2>Experimental results</h2></div><div><p>Mean success rates over 100 held-out instances per run, averaged across five runs and the selected environments.</p><a class="inline-link" href="data/benchmark.csv" download>Download the results <span>↓</span></a></div></div>
 <div class="leader-toolbar"><div class="segmented" role="group" aria-label="Evaluation coverage"><button class="active" data-scope="all" aria-pressed="true">All 28 environments</button><button data-scope="shared" aria-pressed="false">Planner subset · 16</button></div><label class="select-label">Family <select id="family-filter"><option value="all">All families</option><option>Kinematic2D</option><option>Dynamic2D</option><option>Kinematic3D</option><option>Dynamic3D</option><option>PDDLStream</option></select></label></div>
 <p class="scope-note" id="scope-note" aria-live="polite">Loading the paper’s results…</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Experimental results, scroll horizontally on smaller screens"><table class="ranking"><caption class="sr-only">Mean held-out success rate by method. The future coding agents row is a placeholder with an unknown score.</caption><thead><tr><th scope="col">Method / backend</th><th scope="col">Setting / access</th><th scope="col">Coverage</th><th scope="col" aria-sort="descending"><button id="sort-score">Mean success <span aria-hidden="true">↓</span></button></th></tr></thead>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Experimental results, scroll horizontally on smaller screens"><table class="ranking"><caption class="sr-only">Mean held-out success rate by method, sorted independently within the main comparison and + source references. The future coding agents row is a placeholder with an unknown score.</caption><thead><tr><th scope="col">Method / backend</th><th scope="col">Setting / access</th><th scope="col">Coverage</th><th scope="col" aria-sort="descending"><button id="sort-score">Mean success <span aria-hidden="true">↓</span></button></th></tr></thead>
 <tbody class="future-methods"><tr><td><span class="method-name">Future coding agents</span><span class="backend">More and better in the future</span></td><td>—</td><td class="coverage">—</td><td class="score-cell"><span class="score-number" aria-label="Unknown">?</span></td></tr></tbody>
-<tbody id="ranking-body"></tbody></table></div>
-<div class="leader-note"><p>Equal-environment averages. GPT-6 Astra, in the main setting and + source, uses five completed experiment runs per environment; the other methods use Tables I–II. All environment means use the same two-decimal precision. The two + source rows are listed separately. Missing planner results are excluded from its average.</p><a href="assets/paper.pdf?v=20260925#page=5" target="_blank" rel="noopener">Read the tables ↗</a></div>
+<tbody id="ranking-body"></tbody><tbody id="reference-body" aria-labelledby="reference-section-title"></tbody></table></div>
+<div class="leader-note"><p>Equal-environment averages. GPT-6 Astra, in the main setting and + source, uses five completed experiment runs per environment; the other methods use Tables I–II. All environment means use the same two-decimal precision. The + source references form a separate section; both sections follow the selected score order. Missing planner results are excluded from its average.</p><a href="assets/paper.pdf?v=20260925#page=5" target="_blank" rel="noopener">Read the tables ↗</a></div>
 </section>
 <section class="results-section" id="environments"><div class="section"><div class="section-heading"><div><h2>Results by environment</h2></div><p>Select an environment to play the policy examples together. Method results and the text supplied to the agent appear below the videos.</p></div><div class="explorer"><div class="env-list" role="group" aria-label="Select an environment" id="env-list"></div><div class="env-detail"><div class="env-title"><div><p class="eyebrow" id="env-family"></p><h3 id="env-name"></h3></div></div>
 <section class="policy-comparison" id="policy-comparison" aria-labelledby="policy-comparison-title" hidden><h4 id="policy-comparison-title">Synthesized policy examples</h4><p id="policy-comparison-note"></p><button class="policy-play" id="play-policies">Replay together</button><div class="policy-grid" id="policy-grid"></div></section>
