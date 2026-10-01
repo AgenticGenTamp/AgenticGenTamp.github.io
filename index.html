@@ -11,10 +11,10 @@
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#66418b">
   <link rel="icon" href="assets/prpl-robot.png" type="image/png">
-  <link rel="stylesheet" href="styles.css?v=opus55-rovers-1">
+  <link rel="stylesheet" href="styles.css?v=opus55-complete-1">
   <link rel="stylesheet" href="vendor/highlight/github.min.css">
   <link rel="stylesheet" href="program.css?v=2">
-  <script type="module" src="app.js?v=opus55-rovers-1"></script>
+  <script type="module" src="app.js?v=opus55-complete-1"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -101,8 +101,8 @@
   <p class="setup-source"><strong>+ source comparison.</strong> In this additional setting, which we run with Claude Code with Opus 5 (medium) and Codex with GPT-6 Astra (high) on all 28 environments, the agent can inspect the environment implementation and import its helper functions, including inverse kinematics solvers. During synthesis, it can also set arbitrary simulator states.</p>
   <p class="benchmark-scope">The study includes 25 KinDER environments across four families and three PDDLStream domains: Packing, Blocked, and Rovers. <a href="#environments">View each environment and the exact description given to the agent.</a></p>
   <p class="paper-reference">Protocol: <a href="assets/paper.pdf?v=20260925#page=2" target="_blank" rel="noopener">Sections II-C and III-A</a> and <a href="assets/paper.pdf?v=20260925#page=4" target="_blank" rel="noopener">Section IV-A</a>.</p>
-  <div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong id="program-count">1,115</strong><span>synthesized programs</span></div><div><strong id="episode-count">111,500</strong><span>evaluation episodes</span></div></div>
-  <p class="fine" id="additional-counts">Includes 280 additional GPT-6 Astra (high) programs and 135 Opus 5.5 (high) programs from complete five-run environment sets.</p>
+  <div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong id="program-count">1,120</strong><span>synthesized programs</span></div><div><strong id="episode-count">112,000</strong><span>evaluation episodes</span></div></div>
+  <p class="fine" id="additional-counts">Includes 280 additional GPT-6 Astra (high) programs and 140 Opus 5.5 (high) programs from complete five-run environment sets.</p>
 </section>
 <section class="gallery-section" aria-labelledby="gallery-title"><div class="section gallery" id="gallery">
   <div class="section-heading"><h2 id="gallery-title">Gallery</h2><p>Examples of tool use, task strategies, failure recovery, and typical failures in the synthesized programs. Main setting uses the simulator API; + source also provides the environment source code.</p></div>

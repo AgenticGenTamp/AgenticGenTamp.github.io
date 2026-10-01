@@ -4,7 +4,7 @@
   "setting": "Main setting",
   "snapshotDate": "2026-10-01",
   "collection": "Local robocode_final_results snapshot",
-  "selection": "Strict black box, Claude Opus 5.5 high, $20 budget, 60-second evaluation timeout. Require exactly the five expected seeds and 100 complete, crash-free held-out episodes per run. No measured five-run mean is emitted for incomplete environment sets; any website preview assumption is labeled separately in benchmark.json. Reject duplicate complete seeds.",
+  "selection": "Strict black box, Claude Opus 5.5 high, $20 budget, 60-second evaluation timeout. Require exactly the five expected seeds and 100 complete, crash-free held-out episodes per run. No measured five-run mean is emitted for incomplete environment sets. Reject duplicate complete seeds.",
   "precision": "Success counts from per_episode; five-run means rounded half up to two decimals, matching the existing table. Unrounded means retained separately.",
   "runsPerEnvironment": 5,
   "heldOutInstancesPerRun": 100,
@@ -15,10 +15,10 @@
     424,
     444
   ],
-  "completeRuns": 138,
-  "evaluationEpisodes": 13800,
-  "includedRuns": 135,
-  "completeEnvironments": 27,
+  "completeRuns": 140,
+  "evaluationEpisodes": 14000,
+  "includedRuns": 140,
+  "completeEnvironments": 28,
   "environments": [
     {
       "id": "StickButton2D",
@@ -3221,24 +3221,14 @@
     {
       "id": "PddlRovers",
       "environmentKey": "rovers_generalized",
-      "result": null,
-      "unroundedMean": null,
-      "missingSeeds": [
-        222,
-        444
-      ],
-      "pendingRuns": [
-        {
-          "seed": 444,
-          "directory": "rovers_generalized__agentic__none__blackbox__strict__claude_opus55__timeout_60s__aab9e8c1/2026-10-01_10-41-02/replicate_444",
-          "reason": "results.json missing"
-        },
-        {
-          "seed": 222,
-          "directory": "rovers_generalized__agentic__none__blackbox__strict__claude_opus55__timeout_60s__aab9e8c1/2026-10-01_11-00-45/replicate_222",
-          "reason": "results.json missing"
-        }
-      ],
+      "result": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "unroundedMean": 1.0,
+      "missingSeeds": [],
+      "pendingRuns": [],
       "runs": [
         {
           "seed": 24,
@@ -3283,6 +3273,27 @@
           "synthesisSeconds": 4378.921850338578
         },
         {
+          "seed": 222,
+          "timestamp": "2026-10-01_11-00-45",
+          "member": "rovers_generalized__agentic__none__blackbox__strict__claude_opus55__timeout_60s__aab9e8c1/2026-10-01_11-00-45/replicate_222/results.json",
+          "programMember": "rovers_generalized__agentic__none__blackbox__strict__claude_opus55__timeout_60s__aab9e8c1/2026-10-01_11-00-45/replicate_222/sandbox/approach.py",
+          "resultsSha256": "6d5472de86a4cd86d51f331b78b5898c1577ffef7ca3a322d21d4b6df53f2f8c",
+          "approachSha256": "f5d2e1e0eb7aac3cd3f363fc39e305b22c6a33183680a51c3a2bb4cb189c594f",
+          "configSha256": "6d9ebc1f07190c19f2967b040b2a215ff3e8008aaec932d187ba944f9f1cfb0e",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075,
+          "objectCounts": {
+            "1": 25,
+            "2": 25,
+            "3": 25,
+            "4": 25
+          },
+          "costUSD": 12.945499000000009,
+          "synthesisSeconds": 9340.604292136617
+        },
+        {
           "seed": 424,
           "timestamp": "2026-10-01_10-39-32",
           "member": "rovers_generalized__agentic__none__blackbox__strict__claude_opus55__timeout_60s__aab9e8c1/2026-10-01_10-39-32/replicate_424/results.json",
@@ -3302,6 +3313,27 @@
           },
           "costUSD": 12.2989832,
           "synthesisSeconds": 7674.052210257389
+        },
+        {
+          "seed": 444,
+          "timestamp": "2026-10-01_10-41-02",
+          "member": "rovers_generalized__agentic__none__blackbox__strict__claude_opus55__timeout_60s__aab9e8c1/2026-10-01_10-41-02/replicate_444/results.json",
+          "programMember": "rovers_generalized__agentic__none__blackbox__strict__claude_opus55__timeout_60s__aab9e8c1/2026-10-01_10-41-02/replicate_444/sandbox/approach.py",
+          "resultsSha256": "217742bd513143c9c18040156286622f96a28f619bf3e5ff1af97f9a0afce9ce",
+          "approachSha256": "a0bdf2aa7d4202793e6487de09ba5a4e9a18cd7b935a6637f1df3b52156813ea",
+          "configSha256": "03c9973af592de6d1f4108de5a1363b2f25ac36439fa71306b25fed9b8800a55",
+          "solved": 100,
+          "episodes": 100,
+          "rate": 1.0,
+          "evalSeed": 792075,
+          "objectCounts": {
+            "1": 25,
+            "2": 25,
+            "3": 25,
+            "4": 25
+          },
+          "costUSD": 11.547400600000003,
+          "synthesisSeconds": 10394.014026205055
         }
       ]
     }

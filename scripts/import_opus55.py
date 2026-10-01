@@ -84,7 +84,7 @@ def audit(root):
     return {'method': 'opus55', 'backend': 'Claude Code with Opus 5.5 (high)', 'setting': 'Main setting',
         'snapshotDate': datetime.now(timezone.utc).date().isoformat(),
         'collection': 'Local robocode_final_results snapshot',
-        'selection': 'Strict black box, Claude Opus 5.5 high, $20 budget, 60-second evaluation timeout. Require exactly the five expected seeds and 100 complete, crash-free held-out episodes per run. No measured five-run mean is emitted for incomplete environment sets; any website preview assumption is labeled separately in benchmark.json. Reject duplicate complete seeds.',
+        'selection': 'Strict black box, Claude Opus 5.5 high, $20 budget, 60-second evaluation timeout. Require exactly the five expected seeds and 100 complete, crash-free held-out episodes per run. No measured five-run mean is emitted for incomplete environment sets. Reject duplicate complete seeds.',
         'precision': 'Success counts from per_episode; five-run means rounded half up to two decimals, matching the existing table. Unrounded means retained separately.',
         'runsPerEnvironment': 5, 'heldOutInstancesPerRun': 100, 'replicateSeeds': SEEDS,
         'completeRuns': sum(len(e['runs']) for e in entries),
@@ -102,10 +102,6 @@ def main():
     for env, entry in zip(data['environments'], snapshot['environments']):
         assert env['id'] == entry['id']
         env['results']['opus55'] = entry['result']
-        # Maintainer-requested local preview assumption, 2026-10-01.
-        # A complete five-run result automatically replaces this placeholder.
-        if entry['id'] == 'PddlRovers' and entry['missingSeeds']:
-            env['results']['opus55'] = {'mean': 1.0, 'min': None, 'max': None, 'provisional': True}
     data['coverage'] = {'opus55': {k: snapshot[k] for k in ('completeRuns', 'includedRuns', 'completeEnvironments', 'snapshotDate')}}
     data['coverage']['opus55']['pending'] = [{'id': e['id'], 'name': next(x['name'] for x in data['environments'] if x['id'] == e['id']), 'missingSeeds': e['missingSeeds'], 'completedRuns': len(e['runs'])} for e in snapshot['environments'] if e['missingSeeds']]
     protocol = data['protocol']

@@ -248,6 +248,6 @@ Rovers,PDDLStream,LLMGenPlan,Opus 5 (medium),Source code,0.86,0.81,0.97,measured
 Rovers,PDDLStream,AgenticGenPlan,Codex with GPT-5.6 Sol (high),Main setting,0.78,0.0,1.0,measured
 Rovers,PDDLStream,AgenticGenPlan,Claude Code with Opus 5 (medium),Main setting,0.98,0.9,1.0,measured
 Rovers,PDDLStream,AgenticGenPlan,Codex with GPT-6 Astra (high),Main setting,1.0,0.99,1.0,measured
-Rovers,PDDLStream,AgenticGenPlan,Claude Code with Opus 5.5 (high),Main setting,1.0,,,provisional
+Rovers,PDDLStream,AgenticGenPlan,Claude Code with Opus 5.5 (high),Main setting,1.0,1.0,1.0,measured
 Rovers,PDDLStream,AgenticGenPlan + source,Claude Code with Opus 5 (medium),+ source,0.99,0.98,1.0,measured
 Rovers,PDDLStream,AgenticGenPlan + source,Codex with GPT-6 Astra (high),+ source,1.0,1.0,1.0,measured

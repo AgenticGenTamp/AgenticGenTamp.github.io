@@ -9,5 +9,5 @@ with (root/'data/benchmark.csv').open('w',newline='') as stream:
     for env in data['environments']:
         for method in data['methods']:
             result=env['results'][method['id']]
-            writer.writerow([env['name'],env['family'],method['name'],method['backend'],method['access'],*([result['mean'],result['min'],result['max']] if result else ['','','']), 'provisional' if result and result.get('provisional') else 'measured' if result else 'unavailable'])
+            writer.writerow([env['name'],env['family'],method['name'],method['backend'],method['access'],*([result['mean'],result['min'],result['max']] if result else ['','','']), 'measured' if result else 'unavailable'])
 print('Updated data/benchmark.csv')

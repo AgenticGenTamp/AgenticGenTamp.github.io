@@ -5,7 +5,7 @@
     "tables": "I–III",
     "pdf": "assets/paper.pdf",
     "sha256": "0d9f4b8b6ff1be6c39c0761072e2441467dde57edc1174704bf5012f46d45a5b",
-    "precision": "The original six methods use the printed two-decimal means and min/max in Tables I–II. GPT-6 Astra in the main setting and + source uses five complete archived runs per environment; its means are rounded to the same two-decimal precision. Aggregate scores equally weight environments. Missing planner entries are excluded, never treated as failures. Opus 5.5 uses complete five-run environment sets from the local final-results snapshot; Rovers uses a maintainer-requested provisional mean of 1.00 while seeds 222 and 444 are pending. No five-run range or completed-run records are imputed. Other incomplete sets remain null.",
+    "precision": "The original six methods use the printed two-decimal means and min/max in Tables I–II. GPT-6 Astra in the main setting and + source uses five complete archived runs per environment; its means are rounded to the same two-decimal precision. Aggregate scores equally weight environments. Missing planner entries are excluded, never treated as failures. Opus 5.5 uses complete five-run environment sets from the local final-results snapshot; All 28 environments have five complete runs. Incomplete sets remain null.",
     "additionalMethods": [
       {
         "id": "astra",
@@ -28,14 +28,14 @@
   "protocol": {
     "runs": 5,
     "heldOutInstances": 100,
-    "programs": 1115,
-    "episodes": 111500,
+    "programs": 1120,
+    "episodes": 112000,
     "synthesisBudgetUSD": 20,
     "timeoutSeconds": 60,
     "paperPrograms": 700,
     "paperEpisodes": 70000,
-    "additionalPrograms": 415,
-    "additionalEpisodes": 41500
+    "additionalPrograms": 420,
+    "additionalEpisodes": 42000
   },
   "methods": [
     {
@@ -1574,9 +1574,8 @@
         },
         "opus55": {
           "mean": 1.0,
-          "min": null,
-          "max": null,
-          "provisional": true
+          "min": 1.0,
+          "max": 1.0
         }
       }
     }
@@ -1626,21 +1625,11 @@
   },
   "coverage": {
     "opus55": {
-      "completeRuns": 138,
-      "includedRuns": 135,
-      "completeEnvironments": 27,
+      "completeRuns": 140,
+      "includedRuns": 140,
+      "completeEnvironments": 28,
       "snapshotDate": "2026-10-01",
-      "pending": [
-        {
-          "id": "PddlRovers",
-          "name": "Rovers",
-          "missingSeeds": [
-            222,
-            444
-          ],
-          "completedRuns": 3
-        }
-      ]
+      "pending": []
     }
   }
 }

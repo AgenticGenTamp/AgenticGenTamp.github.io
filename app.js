@@ -1,5 +1,5 @@
 import {openProgramViewer} from './program-viewer.js?v=2';
-import {selectEnvironments, summarize} from './benchmark.js?v=opus55-rovers-1';
+import {selectEnvironments, summarize} from './benchmark.js?v=opus55-complete-1';
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -39,7 +39,7 @@ function renderRanking(){
  const envs=selectEnvironments(data,scope,family);const rows=summarize(data,scope,family,descending);
  const partial=rows.filter(r=>r.count<r.total).map(r=>`${r.id==='planner'?'Planner':r.backend}: ${r.count}/${r.total}`);
  $('#scope-note').textContent=`${envs.length} environments · ${family==='all'?'All five families':family}.`+(partial.length?` Partial coverage (${partial.join('; ')}); these means use available environments only.`:'');
- const renderRow=r=>`<tr data-method="${esc(r.id)}"><td><span class="method-name">${esc(r.name)}</span><span class="backend">${esc(r.backend)}</span></td><td><span class="access-tag">${esc(r.access)}</span></td><td class="coverage">${r.count} / ${r.total}${r.provisionalCount?`<span class="backend">${r.provisionalCount} provisional</span>`:''}</td><td class="score-cell"><div class="score-flex"><span class="score-track"><span class="score-fill" style="--w:${r.mean===null?0:r.mean*100}%;--c:${r.color}"></span></span><span class="score-number">${r.mean===null?'—':percent(r.mean)}</span></div></td></tr>`;
+ const renderRow=r=>`<tr data-method="${esc(r.id)}"><td><span class="method-name">${esc(r.name)}</span><span class="backend">${esc(r.backend)}</span></td><td><span class="access-tag">${esc(r.access)}</span></td><td class="coverage">${r.count} / ${r.total}</td><td class="score-cell"><div class="score-flex"><span class="score-track"><span class="score-fill" style="--w:${r.mean===null?0:r.mean*100}%;--c:${r.color}"></span></span><span class="score-number">${r.mean===null?'—':percent(r.mean)}</span></div></td></tr>`;
  $('#ranking-body').innerHTML=rows.filter(r=>r.kind!=='reference').map(renderRow).join('');
  $('#reference-body').innerHTML='<tr class="ranking-section"><th id="reference-section-title" scope="rowgroup" colspan="4">+ source references</th></tr>'+rows.filter(r=>r.kind==='reference').map(renderRow).join('');
  $('#sort-score').innerHTML=`Mean success <span aria-hidden="true">${descending?'↓':'↑'}</span>`;$('#sort-score').closest('th').setAttribute('aria-sort',descending?'descending':'ascending');
@@ -73,7 +73,7 @@ function selectEnvironment(id, {autoplay=false}={}){
  $$('[data-env]').forEach(b=>{b.classList.toggle('active',b.dataset.env===id);b.setAttribute('aria-pressed',String(b.dataset.env===id));});
  $('#env-family').textContent=env.family;$('#env-name').textContent=env.name;selectedEnvironment=id;policyPlaybackRequested=autoplay;renderEnvironmentDescription();renderPolicyExamples();
  const order=['claude','codex','astra','opus55','genplan','oneshot','planner','source','astraSource'];
- $('#env-bars').innerHTML=order.map(id=>{const m=data.methods.find(x=>x.id===id),r=env.results[id];const name=m.kind==='baseline'?m.name:m.backend+(m.kind==='reference'?' + source':'');const pending=data.coverage?.[id]?.pending.find(e=>e.id===env.id);return `<div class="env-row"><strong>${name}</strong><span class="score-track"><span class="score-fill" style="--w:${r?r.mean*100:0}%;--c:${m.color}"></span></span><span class="env-value">${r?(r.provisional?`${whole(r.mean)} <small>provisional</small>`:`${whole(r.mean)} <small>[${whole(r.min)}–${whole(r.max)}]</small>`):pending?`Pending · ${pending.completedRuns}/5 runs`:'Not available'}</span></div>`;}).join('');
+ $('#env-bars').innerHTML=order.map(id=>{const m=data.methods.find(x=>x.id===id),r=env.results[id];const name=m.kind==='baseline'?m.name:m.backend+(m.kind==='reference'?' + source':'');const pending=data.coverage?.[id]?.pending.find(e=>e.id===env.id);return `<div class="env-row"><strong>${name}</strong><span class="score-track"><span class="score-fill" style="--w:${r?r.mean*100:0}%;--c:${m.color}"></span></span><span class="env-value">${r?`${whole(r.mean)} <small>[${whole(r.min)}–${whole(r.max)}]</small>`:pending?`Pending · ${pending.completedRuns}/5 runs`:'Not available'}</span></div>`;}).join('');
 }
 function renderEnvironmentList(){let last='';$('#env-list').innerHTML=data.environments.map(e=>{const heading=e.family!==last?`<p class="env-group-title">${e.family}</p>`:'';last=e.family;return `${heading}<button data-env="${e.id}" aria-pressed="false">${e.name}<span aria-hidden="true">↗</span></button>`;}).join('');$$('[data-env]').forEach(b=>b.addEventListener('click',()=>selectEnvironment(b.dataset.env,{autoplay:true})));selectEnvironment('StickButton2D');markPolicyExamples();}
 $$('[data-select-env]').forEach(b=>b.addEventListener('click',()=>{if(!data)return;selectEnvironment(b.dataset.selectEnv,{autoplay:true});$('.explorer').scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'start'});}));
@@ -254,18 +254,18 @@ function renderSourceComparison(){
  $('#source-astra-counts').textContent=`Compared with its main setting, GPT-6 Astra (high) + source has a higher mean on ${diff.filter(d=>d>0).length} environments, the same mean on ${diff.filter(d=>d===0).length}, and a lower mean on ${lower.length}${lower.length?`: ${lower.join(' and ')}`:''}.`;
 }
 async function loadJSON(path){const res=await fetch(path);if(!res.ok)throw new Error(`Cannot load ${path}: ${res.status}`);return res.json();}
-loadJSON('data/benchmark.json?v=opus55-rovers-1').then(result=>{data=result;
+loadJSON('data/benchmark.json?v=opus55-complete-1').then(result=>{data=result;
  const coverage=data.coverage.opus55;
- $('#opus55-coverage').textContent=coverage.pending.length?`Opus 5.5 (high): ${coverage.completeEnvironments}/28 environments complete. `+coverage.pending.map(e=>`${e.name} is included at a provisional 100% (${e.completedRuns}/5 runs complete; seeds ${e.missingSeeds.join(' and ')} pending).`).join(' '):'Opus 5.5 (high): all 28 environments complete, five runs each.';
+ $('#opus55-coverage').textContent=coverage.pending.length?`Opus 5.5 (high): ${coverage.completeEnvironments}/28 environments complete. `+coverage.pending.map(e=>`${e.name}: ${e.completedRuns}/5 runs complete; seeds ${e.missingSeeds.join(' and ')} pending.`).join(' '):'Opus 5.5 (high): all 28 environments complete, five runs each.';
  $('#program-count').textContent=data.protocol.programs.toLocaleString('en-US');
  $('#episode-count').textContent=data.protocol.episodes.toLocaleString('en-US');
  $('#additional-counts').textContent=`Includes 280 additional GPT-6 Astra (high) programs and ${coverage.includedRuns} Opus 5.5 (high) programs from complete five-run environment sets.`;
  renderRanking();renderEnvironmentList();renderSourceComparison();}).catch(error=>{console.error(error);$('#scope-note').textContent='The interactive results could not load. Please download the CSV or read Tables I–II in the paper.';});
-loadJSON('data/gallery.json?v=opus55-rovers-1').then(result=>{gallery=result;renderGallery();}).catch(error=>{console.error(error);$('#gallery-grid').innerHTML='<p>The gallery could not load. <a href="assets/project-video.mp4?v=a9fc3fad1bcc">Watch the project video ↗</a></p>';});
+loadJSON('data/gallery.json?v=opus55-complete-1').then(result=>{gallery=result;renderGallery();}).catch(error=>{console.error(error);$('#gallery-grid').innerHTML='<p>The gallery could not load. <a href="assets/project-video.mp4?v=a9fc3fad1bcc">Watch the project video ↗</a></p>';});
 
 loadJSON('data/environment-descriptions.json?v=descriptions-5').then(result=>{descriptions=result;renderEnvironmentDescription();}).catch(error=>{console.error(error);descriptionLoadFailed=true;renderEnvironmentDescription();});
 
-loadJSON('data/policy-examples.json?v=opus55-rovers-1').then(result=>{const order=['claude','codex','astra','opus55','genplan'];result.environments.forEach(e=>e.videos.sort((a,b)=>order.indexOf(a.method)-order.indexOf(b.method)));policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
+loadJSON('data/policy-examples.json?v=opus55-complete-1').then(result=>{const order=['claude','codex','astra','opus55','genplan'];result.environments.forEach(e=>e.videos.sort((a,b)=>order.indexOf(a.method)-order.indexOf(b.method)));policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
 
 document.getElementById('copy-bibtex')?.addEventListener('click',async e=>{
   const button=e.currentTarget;
