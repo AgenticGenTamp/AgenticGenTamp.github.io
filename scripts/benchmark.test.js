@@ -11,9 +11,9 @@ test('full coverage ranks exclude a partial-coverage planner and source referenc
  assert.equal(rows.find(x=>x.id==='claude').rank,2);
  assert.ok(Math.abs(planner.mean-.466875)<1e-8);
 });
-test('planner subset preserves the same environment set and exposes incomplete Opus coverage',()=>{
+test('planner subset includes provisional Rovers and retains complete-run ranking',()=>{
  const rows=summarize(data,'shared');assert.equal(selectEnvironments(data,'shared').length,16);
- for(const r of rows){assert.equal(r.count,r.id==='opus55'?15:16);assert.equal(r.total,16);} assert.equal(rows.find(x=>x.id==='opus55').rank,null);
+ for(const r of rows){assert.equal(r.count,16);assert.equal(r.total,16);} assert.equal(rows.find(x=>x.id==='opus55').rank,null);
  assert.equal(rows.find(x=>x.id==='planner').rank,4);
 });
 test('zero success is retained; unavailable planner entries are never turned into zeros',()=>{
@@ -24,7 +24,7 @@ test('zero success is retained; unavailable planner entries are never turned int
  assert.equal(data.environments.find(x=>x.id==='ScoopPour3D').results.planner,null);
 });
 test('all filter combinations preserve counts and score sort direction',()=>{
- for(const scope of ['all','shared','opus55'])for(const family of ['all',...new Set(data.environments.map(x=>x.family))])for(const descending of [true,false]){
+ for(const scope of ['all','shared'])for(const family of ['all',...new Set(data.environments.map(x=>x.family))])for(const descending of [true,false]){
    const summary=summarize(data,scope,family,descending);
    for(const reference of [false,true]){
      const rows=summary.filter(x=>(x.kind==='reference')===reference&&x.mean!==null);
@@ -36,7 +36,7 @@ test('all filter combinations preserve counts and score sort direction',()=>{
  }
 });
 test('printed run ranges contain every mean',()=>{
- for(const e of data.environments)for(const r of Object.values(e.results))if(r){assert.ok(r.min<=r.mean&&r.mean<=r.max);assert.ok(r.min>=0&&r.max<=1);}
+ for(const e of data.environments)for(const r of Object.values(e.results))if(r && !r.provisional){assert.ok(r.min<=r.mean&&r.mean<=r.max);assert.ok(r.min>=0&&r.max<=1);}
 });
 test('both + source rows stay unranked references with complete coverage',()=>{
  const rows=summarize(data);const refs=rows.filter(x=>x.kind==='reference');
@@ -46,17 +46,15 @@ test('both + source rows stay unranked references with complete coverage',()=>{
  assert.deepEqual(summarize(data,'all','all',false).slice(-2).map(x=>x.id),['source','astraSource']);
 });
 
-test('Opus comparison gives Opus and Astra the same 27 complete five-run environments',()=>{
- const envs=selectEnvironments(data,'opus55');assert.equal(envs.length,27);
- assert.ok(envs.every(e=>e.id!=='PddlRovers' && e.results.opus55!==null));
- const rows=summarize(data,'opus55');
- for(const id of ['opus55','astra']){const row=rows.find(r=>r.id===id);assert.equal(row.count,27);assert.equal(row.total,27);}
- assert.equal(rows.find(r=>r.id==='opus55').rank,1);
- assert.ok(Math.abs(rows.find(r=>r.id==='opus55').mean-.9451851851851851)<1e-10);
- assert.ok(Math.abs(rows.find(r=>r.id==='astra').mean-.8514814814814815)<1e-10);
+test('Opus and Astra use all 28 environments, with provisional Rovers explicitly counted',()=>{
+ const rows=summarize(data);assert.equal(selectEnvironments(data).length,28);
+ for(const id of ['opus55','astra']){const row=rows.find(r=>r.id===id);assert.equal(row.count,28);assert.equal(row.total,28);}
+ const opus=rows.find(r=>r.id==='opus55');assert.equal(opus.provisionalCount,1);assert.equal(opus.rank,null);
+ assert.ok(Math.abs(opus.mean-.9471428571428572)<1e-10);
+ assert.ok(Math.abs(rows.find(r=>r.id==='astra').mean-.8567857142857143)<1e-10);
 });
-test('three completed Rovers runs do not become a five-run score or a zero',()=>{
- assert.equal(data.environments.find(e=>e.id==='PddlRovers').results.opus55,null);
- assert.equal(summarize(data).find(r=>r.id==='opus55').rank,null);
+test('provisional Rovers has no invented run range and preserves the two missing seeds',()=>{
+ assert.deepEqual(data.environments.find(e=>e.id==='PddlRovers').results.opus55,{mean:1,min:null,max:null,provisional:true});
  assert.deepEqual(data.coverage.opus55.pending,[{id:'PddlRovers',name:'Rovers',missingSeeds:[222,444],completedRuns:3}]);
+ assert.equal(summarize(data,'all','Dynamic3D').find(r=>r.id==='opus55').provisionalCount,0);
 });

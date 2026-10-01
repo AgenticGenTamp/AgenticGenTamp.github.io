@@ -4,7 +4,7 @@
   "setting": "Main setting",
   "snapshotDate": "2026-10-01",
   "collection": "Local robocode_final_results snapshot",
-  "selection": "Strict black box, Claude Opus 5.5 high, $20 budget, 60-second evaluation timeout. Require exactly the five expected seeds and 100 complete, crash-free held-out episodes per run. Incomplete environment sets are preserved here but excluded from benchmark means. Reject duplicate complete seeds.",
+  "selection": "Strict black box, Claude Opus 5.5 high, $20 budget, 60-second evaluation timeout. Require exactly the five expected seeds and 100 complete, crash-free held-out episodes per run. No measured five-run mean is emitted for incomplete environment sets; any website preview assumption is labeled separately in benchmark.json. Reject duplicate complete seeds.",
   "precision": "Success counts from per_episode; five-run means rounded half up to two decimals, matching the existing table. Unrounded means retained separately.",
   "runsPerEnvironment": 5,
   "heldOutInstancesPerRun": 100,

@@ -31,6 +31,7 @@ for index,(env,method) in enumerate((e,m) for e in data['environments'] for m in
     row=csv_rows[index];result=env['results'][method['id']]
     assert row['environment']==env['name'] and row['family']==env['family']
     assert row['method']==method['name'] and row['backend']==method['backend']
+    assert row['status']==('provisional' if result and result.get('provisional') else 'measured' if result else 'unavailable')
     for key,field in [('mean','mean_success'),('min','min_run_success'),('max','max_run_success')]:
         assert (float(row[field]) if row[field] else None)==(result[key] if result else None)
 assert hashlib.sha256((ROOT/'assets/paper.pdf').read_bytes()).hexdigest()==data['source']['sha256']
@@ -77,7 +78,11 @@ for entry in opus['environments']:
     assert all(sum(r['objectCounts'].values())==100 for r in runs)
     env=next(e for e in data['environments'] if e['id']==entry['id'])
     if entry['missingSeeds']:
-        assert entry['result'] is None and entry['unroundedMean'] is None and env['results']['opus55'] is None
+        assert entry['result'] is None and entry['unroundedMean'] is None
+        if entry['id']=='PddlRovers':
+            assert env['results']['opus55']=={'mean':1.0,'min':None,'max':None,'provisional':True}
+        else:
+            assert env['results']['opus55'] is None
     else:
         complete+=1
         exact=Decimal(sum(r['solved'] for r in runs))/500

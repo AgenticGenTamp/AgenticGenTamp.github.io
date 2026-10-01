@@ -11,10 +11,10 @@
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#66418b">
   <link rel="icon" href="assets/prpl-robot.png" type="image/png">
-  <link rel="stylesheet" href="styles.css?v=opus55-1">
+  <link rel="stylesheet" href="styles.css?v=opus55-rovers-1">
   <link rel="stylesheet" href="vendor/highlight/github.min.css">
   <link rel="stylesheet" href="program.css?v=2">
-  <script type="module" src="app.js?v=opus55-1"></script>
+  <script type="module" src="app.js?v=opus55-rovers-1"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -117,7 +117,7 @@
 </section>
 <section class="section leaderboard" id="results"><div class="section-heading"><div><h2>Experimental results</h2></div><div><p>Mean success rates over 100 held-out instances per run, averaged across five runs and the selected environments.</p><a class="inline-link" href="data/benchmark.csv" download>Download the results <span>↓</span></a></div></div>
 <p class="coverage-note"><span id="opus55-coverage">Checking Opus 5.5 coverage…</span> <a href="data/opus55-results.json">Run audit ↗</a></p>
-<div class="leader-toolbar"><div class="segmented" role="group" aria-label="Evaluation coverage"><button data-scope="all" aria-pressed="false">All 28 environments</button><button class="active" data-scope="opus55" aria-pressed="true">Opus 5.5 subset · 27</button><button data-scope="shared" aria-pressed="false">Planner subset · 16</button></div><label class="select-label">Family <select id="family-filter"><option value="all">All families</option><option>Kinematic2D</option><option>Dynamic2D</option><option>Kinematic3D</option><option>Dynamic3D</option><option>PDDLStream</option></select></label></div>
+<div class="leader-toolbar"><div class="segmented" role="group" aria-label="Evaluation coverage"><button class="active" data-scope="all" aria-pressed="true">All 28 environments</button><button data-scope="shared" aria-pressed="false">Planner subset · 16</button></div><label class="select-label">Family <select id="family-filter"><option value="all">All families</option><option>Kinematic2D</option><option>Dynamic2D</option><option>Kinematic3D</option><option>Dynamic3D</option><option>PDDLStream</option></select></label></div>
 <p class="scope-note" id="scope-note" aria-live="polite">Loading results…</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="Experimental results, scroll horizontally on smaller screens"><table class="ranking"><caption class="sr-only">Mean held-out success rate by method, sorted independently within the main comparison and + source references. The future coding agents row is a placeholder with an unknown score.</caption><thead><tr><th scope="col">Method / backend</th><th scope="col">Setting / access</th><th scope="col">Coverage</th><th scope="col" aria-sort="descending"><button id="sort-score">Mean success <span aria-hidden="true">↓</span></button></th></tr></thead>
 <tbody class="future-methods"><tr><td><span class="method-name">Future coding agents</span><span class="backend">More and better in the future</span></td><td>—</td><td class="coverage">—</td><td class="score-cell"><span class="score-number" aria-label="Unknown">?</span></td></tr></tbody>

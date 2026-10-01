@@ -5,7 +5,7 @@
     "tables": "I–III",
     "pdf": "assets/paper.pdf",
     "sha256": "0d9f4b8b6ff1be6c39c0761072e2441467dde57edc1174704bf5012f46d45a5b",
-    "precision": "The original six methods use the printed two-decimal means and min/max in Tables I–II. GPT-6 Astra in the main setting and + source uses five complete archived runs per environment; its means are rounded to the same two-decimal precision. Aggregate scores equally weight environments. Missing planner entries are excluded, never treated as failures. Opus 5.5 uses complete five-run environment sets from the local final-results snapshot; incomplete sets remain null. The matched Opus 5.5 scope excludes these environments for every method.",
+    "precision": "The original six methods use the printed two-decimal means and min/max in Tables I–II. GPT-6 Astra in the main setting and + source uses five complete archived runs per environment; its means are rounded to the same two-decimal precision. Aggregate scores equally weight environments. Missing planner entries are excluded, never treated as failures. Opus 5.5 uses complete five-run environment sets from the local final-results snapshot; Rovers uses a maintainer-requested provisional mean of 1.00 while seeds 222 and 444 are pending. No five-run range or completed-run records are imputed. Other incomplete sets remain null.",
     "additionalMethods": [
       {
         "id": "astra",
@@ -1572,7 +1572,12 @@
           "min": 1.0,
           "max": 1.0
         },
-        "opus55": null
+        "opus55": {
+          "mean": 1.0,
+          "min": null,
+          "max": null,
+          "provisional": true
+        }
       }
     }
   ],
