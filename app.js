@@ -1,5 +1,5 @@
 import {openProgramViewer} from './program-viewer.js?v=2';
-import {selectEnvironments, summarize, experimentTotals} from './benchmark.js?v=run-totals-1';
+import {selectEnvironments, summarize, experimentTotals} from './benchmark.js?v=run-totals-2';
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -262,11 +262,11 @@ async function renderExperimentStats() {
    $('#environment-count').textContent=format(totals.environments);
    $('#program-count').textContent=format(totals.programs);
    $('#episode-count').textContent=format(totals.episodes);
-   const additions=totals.additional.filter(x=>x.programs).map(x=>`${format(x.programs)} from ${x.backend}`);
-   $('#additional-counts').textContent=additions.length?`Additional completed programs: ${new Intl.ListFormat('en',{style:'long',type:'conjunction'}).format(additions)}.`:'';
+   $('#stats-status').textContent='';
+   $('#stats-status').hidden=true;
  } catch(error) {
    console.error(error);
-   $('#additional-counts').textContent='Experiment totals could not load. Please reload the page.';
+   $('#stats-status').textContent='Experiment totals could not load. Please reload the page.';
  } finally {
    $('#experiment-stats').setAttribute('aria-busy','false');
  }
@@ -275,7 +275,7 @@ loadJSON('data/benchmark.json?v=run-totals-1').then(result=>{data=result;
  const coverage=data.coverage.opus55;
  $('#opus55-coverage').textContent=coverage.pending.length?`Opus 5.5 (high): ${coverage.completeEnvironments}/28 environments complete. `+coverage.pending.map(e=>`${e.name}: ${e.completedRuns}/5 runs complete; seeds ${e.missingSeeds.join(' and ')} pending.`).join(' '):'Opus 5.5 (high): all 28 environments complete, five runs each.';
  renderExperimentStats();
- renderRanking();renderEnvironmentList();renderSourceComparison();}).catch(error=>{console.error(error);$('#scope-note').textContent='The interactive results could not load. Please download the CSV or read Tables I–II in the paper.';$('#experiment-stats').setAttribute('aria-busy','false');$('#additional-counts').textContent='Experiment totals could not load. Please reload the page.';});
+ renderRanking();renderEnvironmentList();renderSourceComparison();}).catch(error=>{console.error(error);$('#scope-note').textContent='The interactive results could not load. Please download the CSV or read Tables I–II in the paper.';$('#experiment-stats').setAttribute('aria-busy','false');$('#stats-status').textContent='Experiment totals could not load. Please reload the page.';});
 loadJSON('data/gallery.json?v=run-totals-1').then(result=>{gallery=result;renderGallery();}).catch(error=>{console.error(error);$('#gallery-grid').innerHTML='<p>The gallery could not load. <a href="assets/project-video.mp4?v=a9fc3fad1bcc">Watch the project video ↗</a></p>';});
 
 loadJSON('data/environment-descriptions.json?v=descriptions-5').then(result=>{descriptions=result;renderEnvironmentDescription();}).catch(error=>{console.error(error);descriptionLoadFailed=true;renderEnvironmentDescription();});

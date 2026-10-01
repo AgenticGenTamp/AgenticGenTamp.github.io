@@ -63,10 +63,7 @@ test('Rovers has a measured five-run range and no remaining missing seeds',()=>{
 
 const runSources=Object.fromEntries(data.methods.filter(m=>m.resultSource).map(m=>[m.id,JSON.parse(readFileSync(new URL('../'+m.resultSource,import.meta.url)))]));
 test('experiment totals count paper programs plus audited runs, excluding planners',()=>{
- assert.deepEqual(experimentTotals(data,runSources),{environments:28,programs:1120,episodes:112000,additional:[
-  {backend:'Codex with GPT-6 Astra (high)',programs:280},
-  {backend:'Claude Code with Opus 5.5 (high)',programs:140}
- ]});
+ assert.deepEqual(experimentTotals(data,runSources),{environments:28,programs:1120,episodes:112000});
 });
 test('a newly registered model contributes completed runs even before an environment mean is ready',()=>{
  const next=structuredClone(data);
@@ -78,7 +75,6 @@ test('a newly registered model contributes completed runs even before an environ
  ]}};
  const totals=experimentTotals(next,sources);
  assert.equal(totals.programs,1122);assert.equal(totals.episodes,112180);
- assert.deepEqual(totals.additional.at(-1),{backend:'New model',programs:2});
 });
 test('removing an environment removes its programs from both paper and run-based totals',()=>{
  const subset={...data,environments:data.environments.filter(e=>e.id!=='PddlRovers')};

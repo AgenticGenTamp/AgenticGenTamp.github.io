@@ -29,7 +29,6 @@ export function experimentTotals(data, resultsByMethod) {
     sum + data.environments.filter(e => e.results[id] != null).length * data.protocol.runs, 0);
   let programs = paperPrograms;
   let episodes = paperPrograms * data.protocol.heldOutInstances;
-  const additionalByBackend = new Map();
   for (const method of data.methods.filter(m => m.resultSource)) {
     if (data.protocol.paperMethods.includes(method.id)) throw new Error(`Duplicate paper/run source: ${method.id}`);
     const source = resultsByMethod[method.id];
@@ -37,8 +36,6 @@ export function experimentTotals(data, resultsByMethod) {
     const runs = source.environments.filter(e => environmentIds.has(e.id)).flatMap(e => e.runs);
     programs += runs.length;
     episodes += runs.reduce((sum, run) => sum + run.episodes, 0);
-    additionalByBackend.set(method.backend, (additionalByBackend.get(method.backend) || 0) + runs.length);
   }
-  return {environments: environmentIds.size, programs, episodes,
-    additional: [...additionalByBackend].map(([backend, programs]) => ({backend, programs}))};
+  return {environments: environmentIds.size, programs, episodes};
 }
