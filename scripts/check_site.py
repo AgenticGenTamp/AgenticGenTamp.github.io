@@ -119,6 +119,22 @@ for entry in examples['environments']:
             run=next(r for e in astra['environments'] if e['id']==entry['id'] for r in e['runs'] if r['seed']==clip['source']['replicateSeed'])
             assert clip['source']['resultsSha256']==run['resultsSha256']
             assert clip['source']['approachSha256']==run['approachSha256']
+        # The reader must show the exact frozen entry point used in this clip.
+        files=clip['program']['files']
+        assert files and files[0]['name']=='approach.py'
+        assert files[0]['sha256']==clip['source']['approachSha256']
+        assert len({f['name'] for f in files})==len(files)
+        for source_file in files:
+            name=source_file['name']
+            assert not Path(name).is_absolute() and '..' not in Path(name).parts
+            expected=f"data/programs/{entry['id']}/{clip['method']}/{name}"
+            assert source_file['path']==expected
+            assert source_file['archiveMember']==str(Path(clip['source']['programMember']).parent/name)
+            require(expected)
+            raw=(ROOT/expected).read_bytes()
+            assert hashlib.sha256(raw).hexdigest()==source_file['sha256']
+            assert len(raw.decode('utf-8-sig').splitlines())==source_file['lines']
+            assert not re.search(r'/home/|/Users/|AIza[\w-]{30}|gh[pousr]_[\w]{25}',raw.decode('utf-8-sig'))
         require(clip['video']);require(clip['poster'])
         assert hashlib.sha256((ROOT/clip['video']).read_bytes()).hexdigest()==clip['source']['videoSha256']
         assert clip['solved']==clip['source']['archivedSolved']
@@ -201,4 +217,4 @@ require('assets/hero.mp4')
 require('assets/project-video.mp4')
 require('assets/prpl-robot.png')
 if errors:raise SystemExit('\n'.join(errors))
-print('PASS: HTML references, 28 audited environments and archived descriptions, 8 methods, 140 complete Astra runs, 140 complete Astra + source runs, Table III timing, matched policy-example provenance, paper checksum, gallery provenance, media sizes, private-path scan.')
+print('PASS: HTML references, 28 audited environments and archived descriptions, 8 methods, 140 complete Astra runs, 140 complete Astra + source runs, Table III timing, matched policy-example and generated-source provenance, paper checksum, gallery provenance, media sizes, private-path scan.')

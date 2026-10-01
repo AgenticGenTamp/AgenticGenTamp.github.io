@@ -28,6 +28,17 @@
             "initialFrameSha256": "c4cc6a0fc9426ffd02b7b6f95fcb05b58c4b7cc510f5a9012531cc3fa1b79bd9",
             "videoSha256": "39c5de24e5441d913f6541491a6a81dcfe82bd4f81ae80afc54dea32bc2f2ccd",
             "collection": "Final/Blackbox/Claude Code Opus 5"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/StickButton2D/claude/approach.py",
+                "sha256": "35a47c160faa5df6c90713dbee5c17f5ccabcec4a71c95612bddda824183a6ef",
+                "lines": 661,
+                "archiveMember": "stickbutton2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__2a66bd4a/2026-09-04_09-35-38/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -52,6 +63,17 @@
             "initialFrameSha256": "c4cc6a0fc9426ffd02b7b6f95fcb05b58c4b7cc510f5a9012531cc3fa1b79bd9",
             "videoSha256": "45f66eb65a63386e000f0d3d3bd811c85e82b438ef122a319050184137d6571a",
             "collection": "Final/Blackbox/Codex GPT5.6 Sol"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/StickButton2D/codex/approach.py",
+                "sha256": "930fa28ff0dfb90119738be05f9d9a8ead5bc3b626cff7ee4bffec656536e9d4",
+                "lines": 228,
+                "archiveMember": "stickbutton2d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__a8beb87f/2026-09-09_01-59-12/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -76,6 +98,17 @@
             "initialFrameSha256": "c4cc6a0fc9426ffd02b7b6f95fcb05b58c4b7cc510f5a9012531cc3fa1b79bd9",
             "videoSha256": "2a916d336eb13ca59b4c3d1a2b6979b5b0c2dee104cc8084de837bf3d9ad6f9f",
             "collection": "Final/Baselines/GenPlan"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/StickButton2D/genplan/approach.py",
+                "sha256": "3ae7e758d3e30794acf0f614cb0d90adc704e3bba401e0044a39804c2e711ae6",
+                "lines": 637,
+                "archiveMember": "multirun/stickbutton2d_generalized__llm_genplan__none__cli_opus5__timeout_60s__25b98eac/2026-09-04_18-44-48/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -101,6 +134,17 @@
             "initialFrameSha256": "c4cc6a0fc9426ffd02b7b6f95fcb05b58c4b7cc510f5a9012531cc3fa1b79bd9",
             "initialStateSha256": "b51619d68c1a6c0e3e09d6142a3dc46f6ef23af7eaf6f48fcb2adc07b8bf31d3",
             "videoSha256": "9a21d53ad882779f4db362fc7cdc31ff654259d8180c96639187fae378db3b2e"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/StickButton2D/astra/approach.py",
+                "sha256": "0ef004cebf88c87df8fb2e0af9f4b5059d8ee1a2769588a73e8e1a15fd239748",
+                "lines": 214,
+                "archiveMember": "run/sandbox/approach.py"
+              }
+            ]
           }
         }
       ],
@@ -131,6 +175,17 @@
             "initialFrameSha256": "5ead9b65ebbf23daa32ff1543e06cb305c24790c64a08749ba874c835a1a6e88",
             "videoSha256": "bfb74535340ff66a387eb4d435363bcd826f3038149c1273042b8858a52f55dd",
             "collection": "Final/Blackbox/Claude Code Opus 5"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Obstruction2D/claude/approach.py",
+                "sha256": "d8b46a1cf2b5c0d3db62deba015982ec63c246a2cbca5e440051a3ff4d312013",
+                "lines": 665,
+                "archiveMember": "obstruction2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__3736cd3f/2026-09-03_18-24-08/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -155,6 +210,17 @@
             "initialFrameSha256": "5ead9b65ebbf23daa32ff1543e06cb305c24790c64a08749ba874c835a1a6e88",
             "videoSha256": "7ca2e4ec2278ed7a66306c129a298ea490b0ec112bf67a0f40e83855d98ba63b",
             "collection": "Final/Blackbox/Codex GPT5.6 Sol"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Obstruction2D/codex/approach.py",
+                "sha256": "7b35ab4336cffdbfee2bc9156c904ef79240a1a9ebe937c6d719c55ef61cbdbc",
+                "lines": 241,
+                "archiveMember": "obstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__99b3a73f/2026-09-08_22-06-59/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -179,6 +245,17 @@
             "initialFrameSha256": "5ead9b65ebbf23daa32ff1543e06cb305c24790c64a08749ba874c835a1a6e88",
             "videoSha256": "43fac03007bef1081e695d3144cae5bbf3bdfa7d687f6a18136acb3e256238d2",
             "collection": "Final/Baselines/GenPlan"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Obstruction2D/genplan/approach.py",
+                "sha256": "90477100813ee15bd98ed71d6cd5775e41085b9e2e79fd23f33761f4b2be6420",
+                "lines": 748,
+                "archiveMember": "obstruction2d_generalized__llm_genplan__none__cli_opus5__timeout_60s__43fb67b1/2026-09-04_12-33-20/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -204,6 +281,17 @@
             "initialFrameSha256": "5ead9b65ebbf23daa32ff1543e06cb305c24790c64a08749ba874c835a1a6e88",
             "initialStateSha256": "a0b8de3c824c0bc822e5a5cf4bfa26fbb4a6893d1f43c384fd5d9009e0c790d9",
             "videoSha256": "8c2b1d81389e1e553a97751602228c170e5c667c14d7a48e924c69a1bb41ac6f"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Obstruction2D/astra/approach.py",
+                "sha256": "c6a516ad9e47c6148a3c62d277a47d627ab489ee575f6f0a221f7611a8a60eb2",
+                "lines": 146,
+                "archiveMember": "run/sandbox/approach.py"
+              }
+            ]
           }
         }
       ],
@@ -234,6 +322,17 @@
             "initialFrameSha256": "df1c9a09b0d2cc03a23fe18a88c0974bd89951ca4ecb6dc9ef8390925b2b83d7",
             "videoSha256": "307bd7297ed2a21cfdf3ccf54be84dc4e27a91271d2e6c1d809c685fe50398b8",
             "collection": "Final/Blackbox/Claude Code Opus 5"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ClutteredStorage2D/claude/approach.py",
+                "sha256": "705aa02bba5e15c4132953a49413f551817a4917db2866e0a80a4bba63b352b2",
+                "lines": 779,
+                "archiveMember": "clutteredstorage2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__d099d391/2026-09-04_07-20-08/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -259,6 +358,17 @@
             "initialFrameSha256": "df1c9a09b0d2cc03a23fe18a88c0974bd89951ca4ecb6dc9ef8390925b2b83d7",
             "initialStateSha256": "29c10d320cd2cc231fe4a278c8bfa11ff2b91ed29755f06f2148902161bebad6",
             "videoSha256": "fe240d492a924219ebf5ebad69df6f7e8af6e4ab157ab7cbf2d6d6cafb11221e"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ClutteredStorage2D/codex/approach.py",
+                "sha256": "d3e6de8a02d6822f20362ac34a267c3fbd28229a294a0ad080e04f96e12fc6ce",
+                "lines": 887,
+                "archiveMember": "clutteredstorage2d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__5f496c8a/2026-09-15_21-34-41/replicate_444/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -283,6 +393,17 @@
             "initialFrameSha256": "df1c9a09b0d2cc03a23fe18a88c0974bd89951ca4ecb6dc9ef8390925b2b83d7",
             "videoSha256": "c03e80249dced012b925ecb16988a4cea771a685afa2331830eea4ff1d03d1e7",
             "collection": "Final/Baselines/GenPlan"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ClutteredStorage2D/genplan/approach.py",
+                "sha256": "fb39fbe0e4b5f7bdfeef5a72a2888605c093a7e420e6ea86b8fc0a20986e04fe",
+                "lines": 699,
+                "archiveMember": "multirun/clutteredstorage2d_generalized__llm_genplan__none__cli_opus5__timeout_60s__c9b7bb4f/2026-09-04_18-00-55/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -308,6 +429,24 @@
             "initialFrameSha256": "df1c9a09b0d2cc03a23fe18a88c0974bd89951ca4ecb6dc9ef8390925b2b83d7",
             "initialStateSha256": "29c10d320cd2cc231fe4a278c8bfa11ff2b91ed29755f06f2148902161bebad6",
             "videoSha256": "482b26233fbf5b88df39da49786f821304bd2ce0bd22b509be9be203360375dc"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ClutteredStorage2D/astra/approach.py",
+                "sha256": "e974d684772ac17aced4ff66826cd2ec7df6c5b9e3c51cace7a0fcf255c03de4",
+                "lines": 163,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "planner.py",
+                "path": "data/programs/ClutteredStorage2D/astra/planner.py",
+                "sha256": "c0d78c207077395c235bb25df39da548825b50cc8aeceb9bfa58769d884315db",
+                "lines": 86,
+                "archiveMember": "run/sandbox/planner.py"
+              }
+            ]
           }
         }
       ],
@@ -338,6 +477,17 @@
             "initialFrameSha256": "c56814fe51142528765aa23c7be9a2db467f44ba121fc4fd6e7ae712e87035fd",
             "videoSha256": "48f22b045a4123378b426ea9a7dc41c8703ff2c083b815a290e8ed5e8f553b43",
             "collection": "Final/Blackbox/Claude Code Opus 5"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ClutteredRetrieval2D/claude/approach.py",
+                "sha256": "f91e0bfbcc333e5990e36d5221855bd423b0d2ce1dbde380c31f9bf824347614",
+                "lines": 960,
+                "archiveMember": "clutteredretrieval2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__bdf9bfa8/2026-09-03_23-25-09/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -362,6 +512,17 @@
             "initialFrameSha256": "c56814fe51142528765aa23c7be9a2db467f44ba121fc4fd6e7ae712e87035fd",
             "videoSha256": "7a3909b10fab9b98971ead106f9206fe80cf172cead2dfbfea1f95162f3f7f5b",
             "collection": "Final/Blackbox/Codex GPT5.6 Sol"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ClutteredRetrieval2D/codex/approach.py",
+                "sha256": "a9244e955e76fbedc9ae9ab2c4081a6f4dda893486f7126b2668ff79454e9264",
+                "lines": 359,
+                "archiveMember": "clutteredretrieval2d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__963a5d8b/2026-09-08_13-26-29/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -386,6 +547,17 @@
             "initialFrameSha256": "c56814fe51142528765aa23c7be9a2db467f44ba121fc4fd6e7ae712e87035fd",
             "videoSha256": "deae23d261667524da9056ce4fec7b9e6ae84c294859867971baaeed247fa5a8",
             "collection": "Final/Baselines/GenPlan"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ClutteredRetrieval2D/genplan/approach.py",
+                "sha256": "7c3c409eae1c320767817cae2f382febb4c546cef2965d6b0010c6650f1d1268",
+                "lines": 820,
+                "archiveMember": "clutteredretrieval2d_generalized__llm_genplan__none__cli_opus5__timeout_60s__445b16cc/2026-09-04_18-00-41/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -411,6 +583,31 @@
             "initialFrameSha256": "c56814fe51142528765aa23c7be9a2db467f44ba121fc4fd6e7ae712e87035fd",
             "initialStateSha256": "d27722b8828dcab4ba6959ae73d7269dbcc2de8257894796a3e097330aadb005",
             "videoSha256": "602832dc3c37d32d344ea25fbb7c586829b8f23fe2d21687e070da09448befe4"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ClutteredRetrieval2D/astra/approach.py",
+                "sha256": "ade6671ef2532c0dcdd8a0e84639948bb7b01114125bdce096c81b5418e14074",
+                "lines": 159,
+                "archiveMember": "run/replicate_42/sandbox/approach.py"
+              },
+              {
+                "name": "geometry.py",
+                "path": "data/programs/ClutteredRetrieval2D/astra/geometry.py",
+                "sha256": "a4cbba64a46e168ad6e187ea5ea288145afff7fd130bca99fd33d5c2a073820a",
+                "lines": 97,
+                "archiveMember": "run/replicate_42/sandbox/geometry.py"
+              },
+              {
+                "name": "planner.py",
+                "path": "data/programs/ClutteredRetrieval2D/astra/planner.py",
+                "sha256": "5e1298da403dbc124dbd466491cc50702d32cee580da0adf0633d49c9e74d83a",
+                "lines": 64,
+                "archiveMember": "run/replicate_42/sandbox/planner.py"
+              }
+            ]
           }
         }
       ],
@@ -441,6 +638,17 @@
             "initialFrameSha256": "56a42becd3f17cdbd0a7ae038793eda6346484dcfbf099ae7305c5207ec03f49",
             "videoSha256": "e7f008abfd0fb543571374c4abe0c13bf66cc98a1f2c7f31d1ebf8ddde70d96a",
             "collection": "Final/Blackbox/Claude Code Opus 5"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Motion2D/claude/approach.py",
+                "sha256": "c79232e215188064e5dc05eff6b3f5dfecbe29936ac1976a4db40f92955b02e2",
+                "lines": 1126,
+                "archiveMember": "motion2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__0abd3dc9/2026-09-04_01-31-22/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -465,6 +673,17 @@
             "initialFrameSha256": "56a42becd3f17cdbd0a7ae038793eda6346484dcfbf099ae7305c5207ec03f49",
             "videoSha256": "f3a276a9a757f298410b616c8783d16613fc0ef4238e2adbdc24c3fabf0299e6",
             "collection": "Final/Blackbox/Codex GPT5.6 Sol"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Motion2D/codex/approach.py",
+                "sha256": "7233eafd30606f2de2201d4e4acdeebf3fcf34a4943b8b692b48202c9e1eb170",
+                "lines": 68,
+                "archiveMember": "motion2d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__6a397c2b/2026-09-08_18-02-36/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -489,6 +708,17 @@
             "initialFrameSha256": "56a42becd3f17cdbd0a7ae038793eda6346484dcfbf099ae7305c5207ec03f49",
             "videoSha256": "2cdc682b647c708d3b339386de1d32f2ff0fcef979cb8eb043374f51969c2e24",
             "collection": "Final/Baselines/GenPlan"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Motion2D/genplan/approach.py",
+                "sha256": "3283ab5f14420e1db2138a53f10a29ec95b3bbab3f7ebe6b1ba24f4944d87fd7",
+                "lines": 384,
+                "archiveMember": "motion2d_generalized__llm_genplan__none__cli_opus5__timeout_60s__31b7b054/2026-09-04_12-17-05/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -514,6 +744,17 @@
             "initialFrameSha256": "56a42becd3f17cdbd0a7ae038793eda6346484dcfbf099ae7305c5207ec03f49",
             "initialStateSha256": "1ad7af94d0df3b277cec5a3db62d3dc8d86c181b2febfda372827a366d3a87b7",
             "videoSha256": "788e135f83581e71a1a141b1e79ce2a04b2e27e7c6013e908ff545ddebe6787a"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Motion2D/astra/approach.py",
+                "sha256": "95955f843a0c95c2817cec8b2972c802491e2d2485150a7ac9cef1f307b8c9c4",
+                "lines": 239,
+                "archiveMember": "run/sandbox/approach.py"
+              }
+            ]
           }
         }
       ],
@@ -544,6 +785,17 @@
             "initialFrameSha256": "1419a1987741a43fae939ae3d51c86893d2c2cfddfb1ba2e4bb6b68575a881f3",
             "videoSha256": "69565718023e423985405103754fb580de9baac7446985a43bba813d3ac9aa22",
             "collection": "Final/Blackbox/Claude Code Opus 5"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PushPullHook2D/claude/approach.py",
+                "sha256": "fb0c64932bdf70a65ab3b26bc3861624b071d26b7b08f7fede4c8ebb812d984a",
+                "lines": 1032,
+                "archiveMember": "pushpullhook2d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__45d72073/2026-09-04_03-08-53/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -568,6 +820,24 @@
             "initialFrameSha256": "1419a1987741a43fae939ae3d51c86893d2c2cfddfb1ba2e4bb6b68575a881f3",
             "videoSha256": "314437b05749bc8c8c7a826f83926c9e3d82cc2acf3661c7dafd2d15c01d16f7",
             "collection": "Final/Blackbox/Codex GPT5.6 Sol"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PushPullHook2D/codex/approach.py",
+                "sha256": "9afa102d859a57b452dfdea17fbbb78316ad5090006a4fd70ac5d7a6bca61aa8",
+                "lines": 3,
+                "archiveMember": "pushpullhook2d__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__51af47a8/2026-09-08_19-41-07/replicate_42/sandbox/approach.py"
+              },
+              {
+                "name": "prototype_agent.py",
+                "path": "data/programs/PushPullHook2D/codex/prototype_agent.py",
+                "sha256": "dc381f116b753dff28a9af8533931ee106c7a494f79b24c3a05b2103f3501081",
+                "lines": 221,
+                "archiveMember": "pushpullhook2d__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__51af47a8/2026-09-08_19-41-07/replicate_42/sandbox/prototype_agent.py"
+              }
+            ]
           }
         },
         {
@@ -592,6 +862,17 @@
             "initialFrameSha256": "1419a1987741a43fae939ae3d51c86893d2c2cfddfb1ba2e4bb6b68575a881f3",
             "videoSha256": "5609b2057c503a9ab1c50f77492c894deab9d984cd3a01920943a2c2dc89973d",
             "collection": "Final/Baselines/GenPlan"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PushPullHook2D/genplan/approach.py",
+                "sha256": "954de363286d320901821b255d54184d69bcbf102683c0b5824758dc4fb3d255",
+                "lines": 302,
+                "archiveMember": "multirun/pushpullhook2d__llm_genplan__none__cli_opus5__timeout_60s__2c78796f/2026-09-05_08-20-49/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -617,6 +898,31 @@
             "initialFrameSha256": "1419a1987741a43fae939ae3d51c86893d2c2cfddfb1ba2e4bb6b68575a881f3",
             "initialStateSha256": "b801b471fb5354c0dc949d1704a336373bb4994716634f66898d5ee9798c913e",
             "videoSha256": "8326c89048b83eef635e25d83186ce64645029883cf6ccb34e52091f25455353"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PushPullHook2D/astra/approach.py",
+                "sha256": "4bd7a1706f06048d90f07657e78ac27894f46d6ecdb9752d02a3cb8b6df16694",
+                "lines": 153,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "motion.py",
+                "path": "data/programs/PushPullHook2D/astra/motion.py",
+                "sha256": "219f889c5ef1377f238d57568dc299983ddd4cc849aaaf8684ffdfa12d86c3dd",
+                "lines": 56,
+                "archiveMember": "run/sandbox/motion.py"
+              },
+              {
+                "name": "pose_motion.py",
+                "path": "data/programs/PushPullHook2D/astra/pose_motion.py",
+                "sha256": "2189bfcf4beaf0762ad95e88bd5eb8c8b946073d814872a7b4e7f44e0bf502e8",
+                "lines": 106,
+                "archiveMember": "run/sandbox/pose_motion.py"
+              }
+            ]
           }
         }
       ],
@@ -647,6 +953,17 @@
             "initialFrameSha256": "e6a4ba20f93e1a05fff95752b8bbd14e8e597156779d711378b3c74693bf462b",
             "videoSha256": "51d986921394abe14907cccb3f620962b2eff2dbc3ae59423a2dcc07c285b838",
             "collection": "Final/Blackbox/Claude Code Opus 5"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynObstruction2D/claude/approach.py",
+                "sha256": "f9add227ff551dddc48864daf860c6c2dc26d6e0e8d3d35f3f8146c7579bcab5",
+                "lines": 428,
+                "archiveMember": "dynobstruction2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__0a98652d/2026-09-03_18-24-48/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -671,6 +988,17 @@
             "initialFrameSha256": "e6a4ba20f93e1a05fff95752b8bbd14e8e597156779d711378b3c74693bf462b",
             "videoSha256": "10d8ff92e310c6341a54491bef251234bd86702a5f91190db7df601263d7670f",
             "collection": "Final/Blackbox/Codex GPT5.6 Sol"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynObstruction2D/codex/approach.py",
+                "sha256": "d01d3bfb447e5e07a337371ad17567324b054c8f236101260d2e44e2534b0407",
+                "lines": 309,
+                "archiveMember": "dynobstruction2d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__fd0aa4fb/2026-09-09_03-43-46/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -695,6 +1023,17 @@
             "initialFrameSha256": "e6a4ba20f93e1a05fff95752b8bbd14e8e597156779d711378b3c74693bf462b",
             "videoSha256": "9e24d94844eab8f7a19bad4799f37b9bf9afa776fda9b0b22274e0fe7cb5feb1",
             "collection": "Final/Baselines/GenPlan"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynObstruction2D/genplan/approach.py",
+                "sha256": "cf70e74071de47c0adbc5dfbde1e32340c706e773fb1d1cdfb115ab36c45d06b",
+                "lines": 894,
+                "archiveMember": "dynobstruction2d_generalized__llm_genplan__none__cli_opus5__timeout_60s__7fe9dc51/2026-09-03_17-10-44/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -720,6 +1059,31 @@
             "initialFrameSha256": "e6a4ba20f93e1a05fff95752b8bbd14e8e597156779d711378b3c74693bf462b",
             "initialStateSha256": "589b08e4dac3211d847978cacfcb8a1a299bcef0ec7fd44de668716e3128a578",
             "videoSha256": "9997e6b98b659f4671535d6b7e92c5fe88cda331e11fa7f7713f8794cdb9a025"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynObstruction2D/astra/approach.py",
+                "sha256": "f31c5f5da448e40fa178065a48becfd54fbe3b7db1ee95f09b67e98e30417d93",
+                "lines": 68,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "narrow_pick.py",
+                "path": "data/programs/DynObstruction2D/astra/narrow_pick.py",
+                "sha256": "7af6eea9da940dd21d20a15e38815e496428927009d0e052bd6854065cd09855",
+                "lines": 38,
+                "archiveMember": "run/sandbox/narrow_pick.py"
+              },
+              {
+                "name": "side_pick.py",
+                "path": "data/programs/DynObstruction2D/astra/side_pick.py",
+                "sha256": "ff0648f482c058ac2176ca683eeaba4b0ed80995b1d6ef6c4ba8bcc8a2a2b05b",
+                "lines": 46,
+                "archiveMember": "run/sandbox/side_pick.py"
+              }
+            ]
           }
         }
       ],
@@ -750,6 +1114,17 @@
             "initialFrameSha256": "5881c8dd7ef185c51e564716497bff63bc32c3ddec4bb1f9c3f870f95eff7719",
             "videoSha256": "806394b01097dbf407fec250c21891226a0d2a1ae59a48861198c182ff7f12f2",
             "collection": "Final/Blackbox/Claude Code Opus 5"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynPushPullHook2D/claude/approach.py",
+                "sha256": "041dcb412c185c10e9546fd07385c3e60974d9107b9f73ec97c093db284508f7",
+                "lines": 515,
+                "archiveMember": "dynpushpullhook2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__fa580313/2026-09-04_18-42-16/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -774,6 +1149,17 @@
             "initialFrameSha256": "5881c8dd7ef185c51e564716497bff63bc32c3ddec4bb1f9c3f870f95eff7719",
             "videoSha256": "2d1bca768477da8eb5d9a758a09643bcc3671ab5bc937968cf2106169e93dbb3",
             "collection": "Final/Blackbox/Codex GPT5.6 Sol"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynPushPullHook2D/codex/approach.py",
+                "sha256": "9eea97f6eb45fe97dff44c0c2d8b4872820d5b6d99eb7e6fa45d76d63bf23444",
+                "lines": 259,
+                "archiveMember": "dynpushpullhook2d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__aa65f752/2026-09-09_06-22-18/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -798,6 +1184,17 @@
             "initialFrameSha256": "5881c8dd7ef185c51e564716497bff63bc32c3ddec4bb1f9c3f870f95eff7719",
             "videoSha256": "542b5786c015b6cedc9997e9a1c2a08e38b514bbb349be16ce0e524ace72140d",
             "collection": "Final/Baselines/GenPlan"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynPushPullHook2D/genplan/approach.py",
+                "sha256": "01e90e2015f4256c64516007b06076c1f0b8d81901a28dbcb2a06b14cbddc038",
+                "lines": 416,
+                "archiveMember": "dynpushpullhook2d_generalized__llm_genplan__none__cli_opus5__timeout_60s__d9f9fcbc/2026-09-03_17-10-52/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -823,6 +1220,31 @@
             "initialFrameSha256": "5881c8dd7ef185c51e564716497bff63bc32c3ddec4bb1f9c3f870f95eff7719",
             "initialStateSha256": "144be869b7a9e455d725737b34185cd25a430a19b9e96e055dbeb1c3ef0aef90",
             "videoSha256": "d2c0b86ae39ff506e0b6afa259d275ed1f65d3cb1db3a72cec4e868d5e224b53"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynPushPullHook2D/astra/approach.py",
+                "sha256": "9aed29a71c7035246ba9b47558c0e3a1c81036dd602dfd6ba02f1ca0612b6cdc",
+                "lines": 32,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "grasp.py",
+                "path": "data/programs/DynPushPullHook2D/astra/grasp.py",
+                "sha256": "9c47f903167786fa2dcda3ddcd60f1fe12e0e1c363ed95203f51c142a80a648e",
+                "lines": 58,
+                "archiveMember": "run/sandbox/grasp.py"
+              },
+              {
+                "name": "pull.py",
+                "path": "data/programs/DynPushPullHook2D/astra/pull.py",
+                "sha256": "579147a4ec1822832999b2c94e02a8e6039c29f0a131bce2168528046b21c62b",
+                "lines": 37,
+                "archiveMember": "run/sandbox/pull.py"
+              }
+            ]
           }
         }
       ],
@@ -853,6 +1275,17 @@
             "initialFrameSha256": "b147d6ce2f1d9481e9ae07c1639a0dac66b857fa8bb569ee13b77e2ff1e08049",
             "videoSha256": "407442ab94105ba7b81b2324df16193af8ac6ca6caeba18aa409a89968e34235",
             "collection": "Final/Blackbox/Claude Code Opus 5"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynPushT2D/claude/approach.py",
+                "sha256": "def32bc5f9fe87be7d191a1989c78c8c66c39683fb68dbf7554e3770f87ed4ed",
+                "lines": 679,
+                "archiveMember": "dynpusht2d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__3a989e8a/2026-09-04_20-08-47/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -877,6 +1310,17 @@
             "initialFrameSha256": "b147d6ce2f1d9481e9ae07c1639a0dac66b857fa8bb569ee13b77e2ff1e08049",
             "videoSha256": "c852868f20679d376e668e69e7cff158945972303d34412a9104a79d2e18305a",
             "collection": "Final/Blackbox/Codex GPT5.6 Sol"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynPushT2D/codex/approach.py",
+                "sha256": "814c6eeef81933fd583934a204f755ccc6a7bae10a8e74d375da532295580834",
+                "lines": 292,
+                "archiveMember": "dynpusht2d__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__3e52b298/2026-09-09_08-23-00/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -901,6 +1345,17 @@
             "initialFrameSha256": "b147d6ce2f1d9481e9ae07c1639a0dac66b857fa8bb569ee13b77e2ff1e08049",
             "videoSha256": "5bee2c04abe692b103a5c7febbc99fdcabb741d87bb51459438f5e1b2d267636",
             "collection": "Final/Baselines/GenPlan"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynPushT2D/genplan/approach.py",
+                "sha256": "ec4f410384a27b1d32db991943aa7d0aab4e6a9ce311c4f83250ff1e077d0631",
+                "lines": 461,
+                "archiveMember": "dynpusht2d__llm_genplan__none__cli_opus5__timeout_60s__2fe91445/2026-09-04_09-51-49/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -926,6 +1381,17 @@
             "initialFrameSha256": "b147d6ce2f1d9481e9ae07c1639a0dac66b857fa8bb569ee13b77e2ff1e08049",
             "initialStateSha256": "d73076c37bc0cdabb86a2059ca9b253231d033aa3c8aa7d1804e8f09f1751cfa",
             "videoSha256": "318ceaa1b67a1950492d9e2acf622ad92b91cc841b15ba4450e490ac708df52f"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynPushT2D/astra/approach.py",
+                "sha256": "e42da15afa58ee50b90e9e26add48998ee6852e078d7f8958780a47c1283e814",
+                "lines": 163,
+                "archiveMember": "run/sandbox/approach.py"
+              }
+            ]
           }
         }
       ],
@@ -956,6 +1422,17 @@
             "initialFrameSha256": "098181d8ade2ae2bfb08731047257ec8b7975b66aed34847883261bcc51b58d9",
             "videoSha256": "72dc3fe9dc492ee05f3838108f71e7fa1d27e6ce2885678a147702079860314f",
             "collection": "Final/Blackbox/Claude Code Opus 5"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynScoopPour2D/claude/approach.py",
+                "sha256": "0ddc94bfbb3ce0b489519c8e2a71c4a27223bdfe214a4d1c2ad3d339296fbdad",
+                "lines": 306,
+                "archiveMember": "dynscooppour2d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__fdd0573f/2026-09-04_23-25-18/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -980,6 +1457,17 @@
             "initialFrameSha256": "098181d8ade2ae2bfb08731047257ec8b7975b66aed34847883261bcc51b58d9",
             "videoSha256": "75b202975c9dbdfe4e954d2afe5e18f3027327817b02c6ee253d1f2725e99400",
             "collection": "Final/Blackbox/Codex GPT5.6 Sol"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynScoopPour2D/codex/approach.py",
+                "sha256": "a0c8ab833feaeb18cfbfc5ea86777c8d8d8d461402f827f10fb337c5c5b99c7d",
+                "lines": 212,
+                "archiveMember": "dynscooppour2d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__ba8f7b37/2026-09-09_09-54-01/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1004,6 +1492,17 @@
             "initialFrameSha256": "098181d8ade2ae2bfb08731047257ec8b7975b66aed34847883261bcc51b58d9",
             "videoSha256": "85b186f1956052532676fd459dfaa863b20ba942054ea9d43019898eeb196484",
             "collection": "Final/Baselines/GenPlan"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynScoopPour2D/genplan/approach.py",
+                "sha256": "e7991e76d5077f8ee17f9bd4ca0809c7b835dfdb8d47f27a86ff6de1aa0c1445",
+                "lines": 524,
+                "archiveMember": "multirun/dynscooppour2d_generalized__llm_genplan__none__cli_opus5__timeout_60s__a48ac3fe/2026-09-04_08-42-00/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1029,6 +1528,24 @@
             "initialFrameSha256": "098181d8ade2ae2bfb08731047257ec8b7975b66aed34847883261bcc51b58d9",
             "initialStateSha256": "28d98571b500afa9619b927e3878a0d89b2d6a0fe0ca8fddecb62df00a8eeb21",
             "videoSha256": "21f5975432045bfa1ab792efc63e018ddf215de037fafbdb5243bb38a705eb4b"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/DynScoopPour2D/astra/approach.py",
+                "sha256": "0e107132ba18917613324b7fddc80d848be5db33181909a8acf18cd912da27b4",
+                "lines": 72,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "hook_policy.py",
+                "path": "data/programs/DynScoopPour2D/astra/hook_policy.py",
+                "sha256": "838ec54ea472546147a12992535782bcd77d4b098413094efde17c72f54925ee",
+                "lines": 49,
+                "archiveMember": "run/sandbox/hook_policy.py"
+              }
+            ]
           }
         }
       ],
@@ -1059,6 +1576,24 @@
             "archivedSteps": 29,
             "initialFrameSha256": "6e86f38231d2403cef25b53a15a15da22eb8bf00135788b5ca81b9fd09f0cf80",
             "videoSha256": "069a9fe269ed9507f8f0e2eef7ed963ce5a67e24a04661151b9937f4edc31596"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Obstruction3D/claude/approach.py",
+                "sha256": "67579923014d19ddfb9ef7ee516c678a78a99a65282ba041bc229dc31271c2b1",
+                "lines": 563,
+                "archiveMember": "obstruction3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__9e2b7c7e/2026-09-03_18-24-28/replicate_42/sandbox/approach.py"
+              },
+              {
+                "name": "robot.py",
+                "path": "data/programs/Obstruction3D/claude/robot.py",
+                "sha256": "269c8fff483c45cf21430e1dbb820ab07ac9c6e3c3825145f22152d6e3228473",
+                "lines": 126,
+                "archiveMember": "obstruction3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__9e2b7c7e/2026-09-03_18-24-28/replicate_42/sandbox/robot.py"
+              }
+            ]
           }
         },
         {
@@ -1084,6 +1619,17 @@
             "initialFrameSha256": "6e86f38231d2403cef25b53a15a15da22eb8bf00135788b5ca81b9fd09f0cf80",
             "initialStateSha256": "9333c88a9b641f3797aa83e691055c09d34a0ab39d239c67feb01115a650dd85",
             "videoSha256": "310e6b1f38f735fcbf8b58555657ec05cefd1c0281016f78dd2d49589ed83cc4"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Obstruction3D/codex/approach.py",
+                "sha256": "9d43684f9a2d04f1169380d99323a849c6cf47c444c8f5d4c28d8f2cebe0be1a",
+                "lines": 259,
+                "archiveMember": "obstruction3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__8d555f92/2026-09-15_21-44-43_UTC/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1108,6 +1654,17 @@
             "archivedSteps": 300,
             "initialFrameSha256": "6e86f38231d2403cef25b53a15a15da22eb8bf00135788b5ca81b9fd09f0cf80",
             "videoSha256": "1fa4d6710966f29fa09ec8317efeaa5839008c40b57319a6a8470d178b5a2fa3"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Obstruction3D/genplan/approach.py",
+                "sha256": "e1a31a9e41a8612521edfa4fe1cd10f965f456af7c2226cca1eb2346c3e36918",
+                "lines": 769,
+                "archiveMember": "multirun/obstruction3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__70156922/2026-09-05_08-22-47/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1133,6 +1690,31 @@
             "initialFrameSha256": "6e86f38231d2403cef25b53a15a15da22eb8bf00135788b5ca81b9fd09f0cf80",
             "initialStateSha256": "9333c88a9b641f3797aa83e691055c09d34a0ab39d239c67feb01115a650dd85",
             "videoSha256": "3f2e382795fd2b98dc7a71a98b65afe6fd00fa600029dbaa28dc3735f69f07fa"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Obstruction3D/astra/approach.py",
+                "sha256": "ce775357e35928a8dbae3c380451be1ffc8526bf36dd90a3a5c512c20d391420",
+                "lines": 87,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "fast_ik.py",
+                "path": "data/programs/Obstruction3D/astra/fast_ik.py",
+                "sha256": "fd90fccb775c7cddeb7d125e007dbb5a22c0af5028611853ed51e8b6b4d4fd65",
+                "lines": 48,
+                "archiveMember": "run/sandbox/fast_ik.py"
+              },
+              {
+                "name": "kinematics.py",
+                "path": "data/programs/Obstruction3D/astra/kinematics.py",
+                "sha256": "f6ce826bd2a58b10a9c3abb889761b034b3dbded36aff42f8d8f4cd0b937ac3f",
+                "lines": 24,
+                "archiveMember": "run/sandbox/kinematics.py"
+              }
+            ]
           }
         }
       ],
@@ -1163,6 +1745,24 @@
             "archivedSteps": 117,
             "initialFrameSha256": "56d979c7ee10ea70ccd4852f0ab98bc768a0e0ef5c2e27ff8a12dca44791125c",
             "videoSha256": "7c943b6c6ad4a01d70df8a4a24efb0d84536a5122172fb9b4def4b519b89ae1f"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Packing3D/claude/approach.py",
+                "sha256": "ab81a8775fd1c68e4ba002b1d66dab7c77bafc3d06cadf602512e7ffd984c7ea",
+                "lines": 272,
+                "archiveMember": "packing3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__414bfc26/2026-09-03_20-11-44/replicate_42/sandbox/approach.py"
+              },
+              {
+                "name": "kinlib.py",
+                "path": "data/programs/Packing3D/claude/kinlib.py",
+                "sha256": "b19794db5400dd2d154cc750b4425617b7e37b3eef5d6d7f3f5be955818c56ab",
+                "lines": 131,
+                "archiveMember": "packing3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__414bfc26/2026-09-03_20-11-44/replicate_42/sandbox/kinlib.py"
+              }
+            ]
           }
         },
         {
@@ -1188,6 +1788,17 @@
             "initialFrameSha256": "56d979c7ee10ea70ccd4852f0ab98bc768a0e0ef5c2e27ff8a12dca44791125c",
             "initialStateSha256": "c33745586a0ed9c0334cb411069f8372716495665aaad916740843ac423710a9",
             "videoSha256": "cf762e82375f8dfd555510a1f6ea6df78041a50e2da1d56445af55b0dcab15f6"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Packing3D/codex/approach.py",
+                "sha256": "e6a9960cbee5532d20ad4059cef6198c0818ef342502a9c716a05ceed1c4d4a9",
+                "lines": 172,
+                "archiveMember": "packing3d__seed42/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1212,6 +1823,17 @@
             "archivedSteps": 750,
             "initialFrameSha256": "56d979c7ee10ea70ccd4852f0ab98bc768a0e0ef5c2e27ff8a12dca44791125c",
             "videoSha256": "bf59d0016db7d4c971d20bdb959c35f613afea7920473fb810da516e08952656"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Packing3D/genplan/approach.py",
+                "sha256": "cd6a84739d89b46846772147b6ca4e24910e7fdcbde8f5267804ad4fee94f8c6",
+                "lines": 1163,
+                "archiveMember": "packing3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__57819e3c/2026-09-05_08-23-09/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1237,6 +1859,24 @@
             "initialFrameSha256": "56d979c7ee10ea70ccd4852f0ab98bc768a0e0ef5c2e27ff8a12dca44791125c",
             "initialStateSha256": "c33745586a0ed9c0334cb411069f8372716495665aaad916740843ac423710a9",
             "videoSha256": "f77d0846ebbcb79fb6a577e9e34e1bb4c4a32f795f1167f17ed884198bb29a7f"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Packing3D/astra/approach.py",
+                "sha256": "d0cef2883e521a816001773a9697c602b37539a370c0935cb09dc3ba10eb45d8",
+                "lines": 177,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "packing.py",
+                "path": "data/programs/Packing3D/astra/packing.py",
+                "sha256": "6cab11747fca9c63ba7c8ab67d9a9111f895e09ca74084dcb93af00fbd8c0c16",
+                "lines": 91,
+                "archiveMember": "run/sandbox/packing.py"
+              }
+            ]
           }
         }
       ],
@@ -1267,6 +1907,24 @@
             "archivedSteps": 458,
             "initialFrameSha256": "2df563aaf646f4135c4bd4203be57f28796fff93f57b2bb404ef37bb6f95335f",
             "videoSha256": "9e6f0999ac2c99e6fc17b59896344f0f068b41325ac47b76a70e809462f5b178"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Transport3D/claude/approach.py",
+                "sha256": "ff5bd3a09158b4a546f957ad63aafca1a6f92cbe0ca4f7670bbe08cd57643d2a",
+                "lines": 765,
+                "archiveMember": "transport3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__88fd6989/2026-09-05_06-39-43/replicate_42/sandbox/approach.py"
+              },
+              {
+                "name": "kin.py",
+                "path": "data/programs/Transport3D/claude/kin.py",
+                "sha256": "9fa3b6f8947ab44d3aa194b780417ca086298cd3c92b81eb7695199ccf474d1c",
+                "lines": 569,
+                "archiveMember": "transport3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__88fd6989/2026-09-05_06-39-43/replicate_42/sandbox/kin.py"
+              }
+            ]
           }
         },
         {
@@ -1292,6 +1950,17 @@
             "initialFrameSha256": "2df563aaf646f4135c4bd4203be57f28796fff93f57b2bb404ef37bb6f95335f",
             "initialStateSha256": "4cd937ca2a0f3fe95d7c48dc5b2aa10d263a2a05e50a836f04f4a6cc2022ada1",
             "videoSha256": "b85c89497c19f275223f176404352fa6cd02b4949bf064e6a724238bf6b347b3"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Transport3D/codex/approach.py",
+                "sha256": "29605aa36c4a61f2094ddc64449e41382f09d998b484022ed4a99cd4d56d3f1c",
+                "lines": 214,
+                "archiveMember": "transport3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__d87b83ce/2026-09-15_19-41-13/replicate_222/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1316,6 +1985,17 @@
             "archivedSteps": 1700,
             "initialFrameSha256": "2df563aaf646f4135c4bd4203be57f28796fff93f57b2bb404ef37bb6f95335f",
             "videoSha256": "58cacde68efd01cd49b6cb1d8ad4854a0a05721d5112a95d6b4f51cc25552fad"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Transport3D/genplan/approach.py",
+                "sha256": "9c78504a69fb1cfcf9434575b9cff22e64de746a778ff540000314027e9d8f0f",
+                "lines": 578,
+                "archiveMember": "transport3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__c9f57513/2026-09-06_11-03-55/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1341,6 +2021,24 @@
             "initialFrameSha256": "2df563aaf646f4135c4bd4203be57f28796fff93f57b2bb404ef37bb6f95335f",
             "initialStateSha256": "4cd937ca2a0f3fe95d7c48dc5b2aa10d263a2a05e50a836f04f4a6cc2022ada1",
             "videoSha256": "97f71d5fcece817c40c6ece07fd416915eb301549c4df823ac61ee8e2995594a"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Transport3D/astra/approach.py",
+                "sha256": "8df8a18b06437104aa279ede0bb05f05bc914755d62564c78f5ac8f4763a554d",
+                "lines": 156,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "kinova.py",
+                "path": "data/programs/Transport3D/astra/kinova.py",
+                "sha256": "45b2f265656082f3a112e252ca55049d6a56e9b32176076e608c6d98f03dbad5",
+                "lines": 12,
+                "archiveMember": "run/sandbox/kinova.py"
+              }
+            ]
           }
         }
       ],
@@ -1371,6 +2069,17 @@
             "archivedSteps": 19,
             "initialFrameSha256": "47e9d1ce7f65ee0e0dd586cf327512f12ff38c10c95228f4f37280a9729af991",
             "videoSha256": "cd6b82015c9747eb5195cb311f2c74fe8051548b63d7593c0f626ef5bd92d2e8"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Table3D/claude/approach.py",
+                "sha256": "db646133a0f5cefba9dde76cb062e59608ee16e477ea81c0f96e3c764fa334e4",
+                "lines": 389,
+                "archiveMember": "table3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__827d1f37/2026-09-05_08-47-14/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1395,6 +2104,17 @@
             "archivedSteps": 6,
             "initialFrameSha256": "47e9d1ce7f65ee0e0dd586cf327512f12ff38c10c95228f4f37280a9729af991",
             "videoSha256": "c05701a88b588a6d661c2f8e0c59049cdfe46c6ea6c0443f1e5fdb5bf4aee06b"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Table3D/codex/approach.py",
+                "sha256": "38476f2115574f82d8d939d952cd2430288984ce4ee6f4aa878c2eb667f56e38",
+                "lines": 91,
+                "archiveMember": "table3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__1bc89f20/2026-09-09_19-21-01/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1419,6 +2139,17 @@
             "archivedSteps": 750,
             "initialFrameSha256": "47e9d1ce7f65ee0e0dd586cf327512f12ff38c10c95228f4f37280a9729af991",
             "videoSha256": "477a1488565e4c4f918fde15df0a98e900d6db4754de3fc7ae24f23e6acd471d"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Table3D/genplan/approach.py",
+                "sha256": "579dc6774282f590e8237fbef5965f68fc69db43aa343cf250f9ae4819d68110",
+                "lines": 522,
+                "archiveMember": "multirun/table3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__02288e24/2026-09-05_18-47-20/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1444,6 +2175,17 @@
             "initialFrameSha256": "47e9d1ce7f65ee0e0dd586cf327512f12ff38c10c95228f4f37280a9729af991",
             "initialStateSha256": "a17e420eac560734848da4df6ebe77e161dc804d941df3acf9539a2e351e43e7",
             "videoSha256": "cda334d2739b895c97b038d80482bb23172afa3a7aecf359f431b86b6c63cbc1"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Table3D/astra/approach.py",
+                "sha256": "a07115ee2f742cb1269792c36b26dabe8955aba7bf3408014a5313e1a1473f5a",
+                "lines": 76,
+                "archiveMember": "run/sandbox/approach.py"
+              }
+            ]
           }
         }
       ],
@@ -1475,6 +2217,17 @@
             "initialFrameSha256": "648471cdbf8854973c68d7b725b7f67229e97e8ba774b98bd0757983eae910f6",
             "initialStateSha256": "6bb73f02b1d85099cc5791ca56360ef739dca1b23fdacc2bbfb8df7362ad1fcd",
             "videoSha256": "04f0158840dedf84c3ed3a28a61c9b5389c94250172868051b67f05fe02623b7"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/BaseMotion3D/claude/approach.py",
+                "sha256": "4d2bcc948f0f96010680b640f81f584426bca013c29ebb69961fcad7ea04f323",
+                "lines": 475,
+                "archiveMember": "basemotion3d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__63388c4c/2026-09-14_08-48-08/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1499,6 +2252,17 @@
             "archivedSteps": 3,
             "initialFrameSha256": "648471cdbf8854973c68d7b725b7f67229e97e8ba774b98bd0757983eae910f6",
             "videoSha256": "04f0158840dedf84c3ed3a28a61c9b5389c94250172868051b67f05fe02623b7"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/BaseMotion3D/codex/approach.py",
+                "sha256": "69283a3e0dcbcc50d2229216b6796f04eec2b62c0013511f28b63a8759aeec03",
+                "lines": 52,
+                "archiveMember": "basemotion3d__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__b464e889/2026-09-14_15-12-23_basemotion/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1524,6 +2288,17 @@
             "initialFrameSha256": "648471cdbf8854973c68d7b725b7f67229e97e8ba774b98bd0757983eae910f6",
             "initialStateSha256": "6bb73f02b1d85099cc5791ca56360ef739dca1b23fdacc2bbfb8df7362ad1fcd",
             "videoSha256": "950bdaa3252f9f72d521bff1b68e09889642a373191e8673a80a2aabf15f490e"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/BaseMotion3D/genplan/approach.py",
+                "sha256": "1458e8bccb49647d87460e30868629afd9e5f4a4eaeb738a8367499e746a46e1",
+                "lines": 206,
+                "archiveMember": "basemotion3d__llm_genplan__none__cli_opus5__timeout_60s__b88bf204/2026-09-13_18-59-33/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1549,6 +2324,17 @@
             "initialFrameSha256": "648471cdbf8854973c68d7b725b7f67229e97e8ba774b98bd0757983eae910f6",
             "initialStateSha256": "6bb73f02b1d85099cc5791ca56360ef739dca1b23fdacc2bbfb8df7362ad1fcd",
             "videoSha256": "04f0158840dedf84c3ed3a28a61c9b5389c94250172868051b67f05fe02623b7"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/BaseMotion3D/astra/approach.py",
+                "sha256": "f426ab1788735b45338ad8b432d945a30a3a41d1a50b4e0a6f0a79ccdfd68487",
+                "lines": 80,
+                "archiveMember": "run/sandbox/approach.py"
+              }
+            ]
           }
         }
       ],
@@ -1579,6 +2365,17 @@
             "archivedSteps": 534,
             "initialFrameSha256": "29c9922cda55c21a32af46b34140cebd1b9f20056d1557af90bb9682aa2ed460",
             "videoSha256": "ca803c438347d94eaae47451de650f034655990d2a3631d1ee8c745a2aa740f1"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/BalanceBeam3D/claude/approach.py",
+                "sha256": "867c6f469f04f024e3fcc64978cc4effadc94ded179e4627d3b4fd6dba0fc14f",
+                "lines": 421,
+                "archiveMember": "balancebeam3d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__78ec7f36/2026-09-09_23-34-48/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1603,6 +2400,17 @@
             "archivedSteps": 395,
             "initialFrameSha256": "29c9922cda55c21a32af46b34140cebd1b9f20056d1557af90bb9682aa2ed460",
             "videoSha256": "db7a48d3e592564ca52006fd9a1c9fe962bd4b48cefe661b4305e41d190df1a9"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/BalanceBeam3D/codex/approach.py",
+                "sha256": "cb8f82a3314abe024e78fc57dea9649554c1f764d248340a8f762e01e813e0dc",
+                "lines": 155,
+                "archiveMember": "balancebeam3d__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__67b14397/2026-09-10_01-29-04/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1627,6 +2435,17 @@
             "archivedSteps": 1000,
             "initialFrameSha256": "29c9922cda55c21a32af46b34140cebd1b9f20056d1557af90bb9682aa2ed460",
             "videoSha256": "0122b24e8cbadf24404ae142f8bae1db3c328b3c0b728c4ae0796af737da0286"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/BalanceBeam3D/genplan/approach.py",
+                "sha256": "67e1116c3a0f61d4db85a5f501ac8ad47e36afea84ebc7dcaa3939b215761965",
+                "lines": 453,
+                "archiveMember": "multirun/balancebeam3d__llm_genplan__none__cli_opus5__timeout_60s__6bf31b55/2026-09-14_05-10-45/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1652,6 +2471,17 @@
             "initialFrameSha256": "29c9922cda55c21a32af46b34140cebd1b9f20056d1557af90bb9682aa2ed460",
             "initialStateSha256": "668181af13b4ca8c0e6940f1a90866f3b3385d201e5ac9ddf9ecc0b5b73b2904",
             "videoSha256": "6c4eae8d1906f90f2228ea8b753dd515ab7130726b574eafd07a749138242ece"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/BalanceBeam3D/astra/approach.py",
+                "sha256": "ab0c5f052f95c1015a04ae09ea7ff9ca883d6ffe57f58ebd3d84ac1042a7f004",
+                "lines": 48,
+                "archiveMember": "run/sandbox/approach.py"
+              }
+            ]
           }
         }
       ],
@@ -1682,6 +2512,31 @@
             "archivedSteps": 1600,
             "initialFrameSha256": "1562799281c7cf4bd9220b14d46b8db3d31f1afc7e7143454740b574789c4810",
             "videoSha256": "b4a884bad695a82669d25edb043696fe3f816c94bb01f972197f1c00d1dfb23f"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ConstrainedCupboard3D/claude/approach.py",
+                "sha256": "8d56b6f1c33114baaf8d7acc5608074e1e67453ff6f2dcd8a3dd834e9a9ad497",
+                "lines": 345,
+                "archiveMember": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__a15cbc70/2026-09-10_08-48-49/replicate_42/sandbox/approach.py"
+              },
+              {
+                "name": "ctrl.py",
+                "path": "data/programs/ConstrainedCupboard3D/claude/ctrl.py",
+                "sha256": "d2bd840123d4656ab626f4fe87b9bbe1a5de0b1c10b36579aadce3f2327ae15f",
+                "lines": 147,
+                "archiveMember": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__a15cbc70/2026-09-10_08-48-49/replicate_42/sandbox/ctrl.py"
+              },
+              {
+                "name": "kin.py",
+                "path": "data/programs/ConstrainedCupboard3D/claude/kin.py",
+                "sha256": "ca2a60ea2f6afab8e3a579140a8d80d915f5758f2dd3bda0d8d4d0548b019912",
+                "lines": 171,
+                "archiveMember": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__a15cbc70/2026-09-10_08-48-49/replicate_42/sandbox/kin.py"
+              }
+            ]
           }
         },
         {
@@ -1707,6 +2562,17 @@
             "initialFrameSha256": "1562799281c7cf4bd9220b14d46b8db3d31f1afc7e7143454740b574789c4810",
             "initialStateSha256": "0e0de9da0c229835c166bf077fc413ffa79b1d53d3bfa9857a65538da5fba28c",
             "videoSha256": "7082bf3083e06411009035c50080348dd9ca1833776e21aab71f7ccdfff249a8"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ConstrainedCupboard3D/codex/approach.py",
+                "sha256": "c0fc5e140420fa3ebcfe004565f3a7d732f25a067d1c14d3bc94315f42ad0484",
+                "lines": 120,
+                "archiveMember": "constrainedcupboard3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__cef42282/2026-09-15_17-00-38/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1732,6 +2598,17 @@
             "initialFrameSha256": "1562799281c7cf4bd9220b14d46b8db3d31f1afc7e7143454740b574789c4810",
             "initialStateSha256": "0e0de9da0c229835c166bf077fc413ffa79b1d53d3bfa9857a65538da5fba28c",
             "videoSha256": "de234e3927465896930ed2291ecc2edd044968251f91c1fa39731741c6057cde"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ConstrainedCupboard3D/genplan/approach.py",
+                "sha256": "99182053f7b32982736312544e02a40bb7561f202c3609518a07776d13534f1b",
+                "lines": 630,
+                "archiveMember": "constrainedcupboard3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__54c3d8f7/2026-09-11_17-19-06/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1757,6 +2634,24 @@
             "initialFrameSha256": "1562799281c7cf4bd9220b14d46b8db3d31f1afc7e7143454740b574789c4810",
             "initialStateSha256": "0e0de9da0c229835c166bf077fc413ffa79b1d53d3bfa9857a65538da5fba28c",
             "videoSha256": "8434386a5ff34b8ee895740b887aeb4638233454ae33b5d23ffea2417c34a257"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ConstrainedCupboard3D/astra/approach.py",
+                "sha256": "b20388d01ea00652824e6905b9bbde5bd8e635a21900a1570cabde7a5a5f0a2a",
+                "lines": 94,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "kin.py",
+                "path": "data/programs/ConstrainedCupboard3D/astra/kin.py",
+                "sha256": "d93b9998d114f9c5c8afea9e0989a6119cf2668bce4f6ba997ebc11d1d9cddee",
+                "lines": 59,
+                "archiveMember": "run/sandbox/kin.py"
+              }
+            ]
           }
         }
       ],
@@ -1788,6 +2683,17 @@
             "initialFrameSha256": "d2c621cc5529f414b531bbf2374bc30dd0b7451544f640ecd5b013f2e5ac46f3",
             "videoSha256": "046b876588fcf33d8199ec188a8e110776091b36972665cb7c0e99e3f93b9fd2",
             "initialStateSha256": "a57a4bf413861256f32bcea6b8f4fce832ae00bcc4650743d74ca424a8071338"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Dynamo3D/claude/approach.py",
+                "sha256": "2f058593073ef583b6a091710594606f06cbbe8820fd3c79432d66903fe0a79e",
+                "lines": 257,
+                "archiveMember": "dynamo3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__589142fc/2026-09-10_19-32-15_rescore/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1813,6 +2719,17 @@
             "initialFrameSha256": "b94de467b67fb866b5bf53f0915872a3ef65eb402f493552142d47c812bcd297",
             "initialStateSha256": "a57a4bf413861256f32bcea6b8f4fce832ae00bcc4650743d74ca424a8071338",
             "videoSha256": "fbf33ff47cd07d570037486bfd63a9df6fae099ffc0269ae2b84c9ea0d391b7c"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Dynamo3D/codex/approach.py",
+                "sha256": "b152503a66616fd77bc729d3ff6ecb111b5df38c8c0f48614f57f2e1c0537099",
+                "lines": 114,
+                "archiveMember": "dynamo3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__375249f1/2026-09-15_21-44-43_UTC/replicate_424/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1838,6 +2755,17 @@
             "initialFrameSha256": "d2c621cc5529f414b531bbf2374bc30dd0b7451544f640ecd5b013f2e5ac46f3",
             "initialStateSha256": "a57a4bf413861256f32bcea6b8f4fce832ae00bcc4650743d74ca424a8071338",
             "videoSha256": "d235b026a50400852c33f39b5dfd5e8f48e324b3702ada0a38c862ac00758aaa"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Dynamo3D/genplan/approach.py",
+                "sha256": "24073507459ea51c78d4af5f280584e8e841f7b01a7e10a9b2d8bb53277c63b9",
+                "lines": 537,
+                "archiveMember": "dynamo3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__b64ab8a9/2026-09-13_11-34-36/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1863,6 +2791,17 @@
             "initialFrameSha256": "d2c621cc5529f414b531bbf2374bc30dd0b7451544f640ecd5b013f2e5ac46f3",
             "initialStateSha256": "a57a4bf413861256f32bcea6b8f4fce832ae00bcc4650743d74ca424a8071338",
             "videoSha256": "5b441d3f38eca8b689b735ab289b7ef57335775539d1a673eb69358598ead78a"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Dynamo3D/astra/approach.py",
+                "sha256": "c96453547600e3ce518d4fd9899ab5290bea602b6589ddf9721ceba3122c62f2",
+                "lines": 35,
+                "archiveMember": "run/sandbox/approach.py"
+              }
+            ]
           }
         }
       ],
@@ -1893,6 +2832,24 @@
             "archivedSteps": 1000,
             "initialFrameSha256": "898789d99e9a1823adbdf3e06e424413291d3054889372722175e8cbbaffcc98",
             "videoSha256": "8e40b7617112b0dcf156e52f482f768a22bc9380d7340b57b736762b39634559"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Rearrange3D/claude/approach.py",
+                "sha256": "e6b75cbf81e6598c0537bf71ce242e3e657ddb4b36b267c716f2419259221110",
+                "lines": 232,
+                "archiveMember": "rearrange3d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__56ea42c0/2026-09-10_06-35-39/replicate_42/sandbox/approach.py"
+              },
+              {
+                "name": "kinova_fk.py",
+                "path": "data/programs/Rearrange3D/claude/kinova_fk.py",
+                "sha256": "21798cee6a4dd1f30d6d1392a8bee39b30b726a9c1b3b260f7fb60410f2234ad",
+                "lines": 407,
+                "archiveMember": "rearrange3d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__56ea42c0/2026-09-10_06-35-39/replicate_42/sandbox/kinova_fk.py"
+              }
+            ]
           }
         },
         {
@@ -1918,6 +2875,17 @@
             "initialFrameSha256": "898789d99e9a1823adbdf3e06e424413291d3054889372722175e8cbbaffcc98",
             "initialStateSha256": "7fd62aa4ca78bc5d00e5ff8308bbc0104af73708f158b446930f41046bb60c0c",
             "videoSha256": "8b21293d9b7d7fa58f7db0298b04bb56379b3cce89543a5b5eb67fe1e3f29349"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Rearrange3D/codex/approach.py",
+                "sha256": "f1aca39bc7722dc331a1cb821e2e162697742d00326191978ac0afc97a577753",
+                "lines": 173,
+                "archiveMember": "rearrange3d__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__b9b9f664/2026-09-15_21-44-43_UTC/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1942,6 +2910,17 @@
             "archivedSteps": 1000,
             "initialFrameSha256": "898789d99e9a1823adbdf3e06e424413291d3054889372722175e8cbbaffcc98",
             "videoSha256": "fec781cb2152c9b509a0e14cf0b3566d4e4dc02fcd96b2565336e5d1f1387057"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Rearrange3D/genplan/approach.py",
+                "sha256": "e895188d8aa63bd8f28929e447d30aea70fa1f845f02cea9642c98b165f8ba87",
+                "lines": 309,
+                "archiveMember": "multirun/rearrange3d__llm_genplan__none__cli_opus5__timeout_60s__80185e71/2026-09-14_16-03-25/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -1967,6 +2946,24 @@
             "initialFrameSha256": "898789d99e9a1823adbdf3e06e424413291d3054889372722175e8cbbaffcc98",
             "initialStateSha256": "7fd62aa4ca78bc5d00e5ff8308bbc0104af73708f158b446930f41046bb60c0c",
             "videoSha256": "ce919e4b6ab7b5e2148e0de069cfbdf3b13cc6d8acf16c3569e74ef5d735aa48"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Rearrange3D/astra/approach.py",
+                "sha256": "371dc49fabcc90b4a9ae30c625f407ccaec2c272b2dab1fb7de9ac38afe0a43f",
+                "lines": 112,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "kinematics.py",
+                "path": "data/programs/Rearrange3D/astra/kinematics.py",
+                "sha256": "9168e04b274cf1565e0ef014d2cbf59925b1090b5a576a3ec8cda662b208dbbd",
+                "lines": 12,
+                "archiveMember": "run/sandbox/kinematics.py"
+              }
+            ]
           }
         }
       ],
@@ -1998,6 +2995,17 @@
             "initialFrameSha256": "4fd293f277b7e1faed9bcc2485b04559ec9e2cc6df55ba9ffee86a342c6af563",
             "initialStateSha256": "9bf623f093f9b87ae97fc5558dd3f0e5f247db7797c66118a61db78b2d22fc86",
             "videoSha256": "ed999279fad9b97e4bff17626f63b27e638e62cd6131800c24a45129a62c81af"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ScoopPour3D/claude/approach.py",
+                "sha256": "adff2c28a1d148f0ea5390b26931c60448cb17bf2d71edf7a4de38ce2ec4c04c",
+                "lines": 359,
+                "archiveMember": "scooppour3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__b7ffde94/2026-09-10_19-55-20/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2023,6 +3031,17 @@
             "initialFrameSha256": "4fd293f277b7e1faed9bcc2485b04559ec9e2cc6df55ba9ffee86a342c6af563",
             "initialStateSha256": "9bf623f093f9b87ae97fc5558dd3f0e5f247db7797c66118a61db78b2d22fc86",
             "videoSha256": "623330421aee06649baaed345482dab0d13c2c79c891c5dc7b73d5cf35d34252"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ScoopPour3D/codex/approach.py",
+                "sha256": "7629c85df762392c023e8d4a24b3bbe20de0fbc1d70b849c085de7fef0bf83a3",
+                "lines": 224,
+                "archiveMember": "scooppour3d__seed24/replicate_24/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2048,6 +3067,17 @@
             "initialFrameSha256": "4fd293f277b7e1faed9bcc2485b04559ec9e2cc6df55ba9ffee86a342c6af563",
             "initialStateSha256": "9bf623f093f9b87ae97fc5558dd3f0e5f247db7797c66118a61db78b2d22fc86",
             "videoSha256": "cc7e2601924134a23810048814ab03a5efb2023087d475b985223461190993c9"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ScoopPour3D/genplan/approach.py",
+                "sha256": "5818072952898d2ff767f4089996b168bd89f0aab793ae328989980c98ad9dbc",
+                "lines": 560,
+                "archiveMember": "scooppour3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__34f2bc34/2026-09-11_17-19-45/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2073,6 +3103,17 @@
             "initialFrameSha256": "4fd293f277b7e1faed9bcc2485b04559ec9e2cc6df55ba9ffee86a342c6af563",
             "initialStateSha256": "9bf623f093f9b87ae97fc5558dd3f0e5f247db7797c66118a61db78b2d22fc86",
             "videoSha256": "2e5f403394021b7ed15300a6f2b793e31644043dff4a020892adaadaaa006677"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/ScoopPour3D/astra/approach.py",
+                "sha256": "087d44fa873aad5244dae45c73caa1938f90c8ff14f5802daf3edce95f7755b8",
+                "lines": 109,
+                "archiveMember": "run/sandbox/approach.py"
+              }
+            ]
           }
         }
       ],
@@ -2103,6 +3144,31 @@
             "archivedSteps": 526,
             "initialFrameSha256": "44825719a4aa09a5ac03681ceb1c35ed4e9c990583104dd0802a819eb56fd62e",
             "videoSha256": "d8c24576fb1b3eca6602a977d6cda35a8f2315464be305df6002916566ae70bf"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Shelf3D/claude/approach.py",
+                "sha256": "3060e0eea181b69e7cfb731a85501a05c8d8609b64538fc36d88c61a2c3585da",
+                "lines": 243,
+                "archiveMember": "dynamicshelf3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__c7ece5c3/2026-09-10_05-42-10/replicate_42/sandbox/approach.py"
+              },
+              {
+                "name": "armkin.py",
+                "path": "data/programs/Shelf3D/claude/armkin.py",
+                "sha256": "d60bcb3fb7c7458d086c9ccbbe7b4b342a7d8ac8c53c3ce0b7bacd57edee5b0c",
+                "lines": 119,
+                "archiveMember": "dynamicshelf3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__c7ece5c3/2026-09-10_05-42-10/replicate_42/sandbox/armkin.py"
+              },
+              {
+                "name": "planar.py",
+                "path": "data/programs/Shelf3D/claude/planar.py",
+                "sha256": "71ca0edf3ade52641ec9772569c73b717e1b5fa446c977140e3c70371c67f2fe",
+                "lines": 52,
+                "archiveMember": "dynamicshelf3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__c7ece5c3/2026-09-10_05-42-10/replicate_42/sandbox/planar.py"
+              }
+            ]
           }
         },
         {
@@ -2128,6 +3194,17 @@
             "initialFrameSha256": "44825719a4aa09a5ac03681ceb1c35ed4e9c990583104dd0802a819eb56fd62e",
             "initialStateSha256": "792af1b57f997439515f6c984dfa549d3f45e2ab2fae4533ec7482acea57f82b",
             "videoSha256": "e9f39bf6e5853f08bcbbe9fbd086710ea47e4d98bff8f98493e09de101f2a7e4"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Shelf3D/codex/approach.py",
+                "sha256": "bbd1d918d091db403adedd6f9defc34ef77bbbe7bedc7cfd309ce6f9b3a630bc",
+                "lines": 167,
+                "archiveMember": "dynamicshelf3d__seed42/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2152,6 +3229,17 @@
             "archivedSteps": 1200,
             "initialFrameSha256": "44825719a4aa09a5ac03681ceb1c35ed4e9c990583104dd0802a819eb56fd62e",
             "videoSha256": "5eb14e83fc13c41fc60db17d197486e6a1eb3f4a312191fa2c06bb6afb143f56"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Shelf3D/genplan/approach.py",
+                "sha256": "028f349a81cfec152fd1bb42ab46a8503d19bfcb42920ff982424ce07b9410d4",
+                "lines": 767,
+                "archiveMember": "dynamicshelf3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__ed30005d/2026-09-09_20-35-27/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2177,6 +3265,24 @@
             "initialFrameSha256": "44825719a4aa09a5ac03681ceb1c35ed4e9c990583104dd0802a819eb56fd62e",
             "initialStateSha256": "792af1b57f997439515f6c984dfa549d3f45e2ab2fae4533ec7482acea57f82b",
             "videoSha256": "12ed9455f582c58240adc5f8b1a99e723a036a48b988af047b68c5a0be22dd5f"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Shelf3D/astra/approach.py",
+                "sha256": "f2ff7a4da367ba54e2a5944d7a807c5febc166a89907641657eecc28974a6fb5",
+                "lines": 84,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "kinematics.py",
+                "path": "data/programs/Shelf3D/astra/kinematics.py",
+                "sha256": "cb69dff5196ea02de097268c0914e7519749303099c87d50c416fb741c8e9119",
+                "lines": 18,
+                "archiveMember": "run/sandbox/kinematics.py"
+              }
+            ]
           }
         }
       ],
@@ -2207,6 +3313,24 @@
             "archivedSteps": 251,
             "initialFrameSha256": "92f0aa262d2e20ab0065654038cb76dbb6c9f70b14ebd3435a3681162d248cda",
             "videoSha256": "483eeeb02d3cc4a0ea0517c898a773550d6261cf7c227c28d6d7103aeaeda4d5"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/SortClutteredBlocks3D/claude/approach.py",
+                "sha256": "5fdd794ea6c3095c3d60d47d811161b0a426573a2bb437ae50278f691ce05914",
+                "lines": 228,
+                "archiveMember": "sortclutteredblocks3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__c664fa0e/2026-09-11_11-38-13/replicate_42/sandbox/approach.py"
+              },
+              {
+                "name": "fk.py",
+                "path": "data/programs/SortClutteredBlocks3D/claude/fk.py",
+                "sha256": "2d2ea83789e999d749050bd245804af22f58aa2544dd19b06e66e6ede54e1129",
+                "lines": 618,
+                "archiveMember": "sortclutteredblocks3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__c664fa0e/2026-09-11_11-38-13/replicate_42/sandbox/fk.py"
+              }
+            ]
           }
         },
         {
@@ -2232,6 +3356,17 @@
             "initialFrameSha256": "92f0aa262d2e20ab0065654038cb76dbb6c9f70b14ebd3435a3681162d248cda",
             "initialStateSha256": "e8205cf7a5a7441283eae70dc5f8fe714a9a46ea4f06050dfb6f4bf7fd68afb0",
             "videoSha256": "da9c7cad6ee16431b88474104038df9314eb949014b811f52be2f806f67dcffe"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/SortClutteredBlocks3D/codex/approach.py",
+                "sha256": "d38887378a2f2954af8edb36d03d9b036f8eacfff027c21e601e1fae27e06235",
+                "lines": 241,
+                "archiveMember": "sortclutteredblocks3d__seed42/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2257,6 +3392,17 @@
             "initialFrameSha256": "92f0aa262d2e20ab0065654038cb76dbb6c9f70b14ebd3435a3681162d248cda",
             "initialStateSha256": "e8205cf7a5a7441283eae70dc5f8fe714a9a46ea4f06050dfb6f4bf7fd68afb0",
             "videoSha256": "404b518129644ab335f3f21dea8770bd3634b32d975a313119b767ac9d02bc40"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/SortClutteredBlocks3D/genplan/approach.py",
+                "sha256": "95cf8dceea805f5b398c64e32981abbae90373b55ad52c23e227989b11318800",
+                "lines": 595,
+                "archiveMember": "sortclutteredblocks3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__63fec73d/2026-09-11_21-30-49/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2282,6 +3428,24 @@
             "initialFrameSha256": "92f0aa262d2e20ab0065654038cb76dbb6c9f70b14ebd3435a3681162d248cda",
             "initialStateSha256": "e8205cf7a5a7441283eae70dc5f8fe714a9a46ea4f06050dfb6f4bf7fd68afb0",
             "videoSha256": "c4c41733604413fafe89b32bebeeb7879116fb83bbbc0ff3255081a33344938d"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/SortClutteredBlocks3D/astra/approach.py",
+                "sha256": "50d0673055766585a70ebb658029b6d7f112702267c4116ff3052ad89e8dc83e",
+                "lines": 100,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "kinematics.py",
+                "path": "data/programs/SortClutteredBlocks3D/astra/kinematics.py",
+                "sha256": "c9a88aee6b8c0f232e006da549ba08756be407633d39dca5b7cf9e0120ade7d5",
+                "lines": 14,
+                "archiveMember": "run/sandbox/kinematics.py"
+              }
+            ]
           }
         }
       ],
@@ -2312,6 +3476,31 @@
             "archivedSteps": 1000,
             "initialFrameSha256": "568d4a89fa3c0f4b598cec4fd2414de328bda3a2c2ba4ae66496bcf532aa4b00",
             "videoSha256": "b9c386f2081c6c1ef1110324e07873635085c34336d0d460bd4d6a71a9beff19"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/SweepIntoDrawer3D/claude/approach.py",
+                "sha256": "be6f04bd58b2ad28ac91bb038d992fb22032c8b24ea62d3c92337e3bd97a6778",
+                "lines": 185,
+                "archiveMember": "sweepintodrawer3d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__4786c7d1/2026-09-10_13-37-12/replicate_42/sandbox/approach.py"
+              },
+              {
+                "name": "fk.py",
+                "path": "data/programs/SweepIntoDrawer3D/claude/fk.py",
+                "sha256": "822a53f5d080a78ad2a824bc04695259264287c5fe0ab13ac4e64a23a53a059c",
+                "lines": 34,
+                "archiveMember": "sweepintodrawer3d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__4786c7d1/2026-09-10_13-37-12/replicate_42/sandbox/fk.py"
+              },
+              {
+                "name": "ik.py",
+                "path": "data/programs/SweepIntoDrawer3D/claude/ik.py",
+                "sha256": "c92da1625ac69d448faf9e09871c4ed162ebfb0a39fddc65d3cb20145f86fca4",
+                "lines": 55,
+                "archiveMember": "sweepintodrawer3d__agentic__none__blackbox__strict__claude_opus5__timeout_60s__4786c7d1/2026-09-10_13-37-12/replicate_42/sandbox/ik.py"
+              }
+            ]
           }
         },
         {
@@ -2336,6 +3525,17 @@
             "archivedSteps": 1000,
             "initialFrameSha256": "568d4a89fa3c0f4b598cec4fd2414de328bda3a2c2ba4ae66496bcf532aa4b00",
             "videoSha256": "1d20dd77196aeb9458d2b8c338fd1772c5a19eb70b7ccab0bdb67e158c47d03b"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/SweepIntoDrawer3D/codex/approach.py",
+                "sha256": "dbeaeb4547d089602f087cbdab2c64dceb3a8b8654204c8f612e83cc55d4d931",
+                "lines": 73,
+                "archiveMember": "sweepintodrawer3d__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__42f55eee/2026-09-10_09-06-03/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2360,6 +3560,17 @@
             "archivedSteps": 1000,
             "initialFrameSha256": "568d4a89fa3c0f4b598cec4fd2414de328bda3a2c2ba4ae66496bcf532aa4b00",
             "videoSha256": "e57f49b934701e5f2747b732b3044a22064dcdb41199dca93dfba17f6921e7cf"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/SweepIntoDrawer3D/genplan/approach.py",
+                "sha256": "837b14497facbf1bc6a096fb730d22aee25918dc7059451e5f7d5e9a568bda48",
+                "lines": 528,
+                "archiveMember": "multirun/sweepintodrawer3d__llm_genplan__none__cli_opus5__timeout_60s__8adf7e50/2026-09-14_17-57-49/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2385,6 +3596,24 @@
             "initialFrameSha256": "568d4a89fa3c0f4b598cec4fd2414de328bda3a2c2ba4ae66496bcf532aa4b00",
             "initialStateSha256": "a5ac3fa6253589aa5bb94b8915802d737c513be0a1885e2df6304482f4ac9e03",
             "videoSha256": "fefe6cba0e7ddcad8fc783799b6b7025410d4129e828ddf3a748442b2b02f901"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/SweepIntoDrawer3D/astra/approach.py",
+                "sha256": "427f116e5d362fdff0daba3db975e4a63b24b91b04bfa1726de1f70d21e22c83",
+                "lines": 51,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "kinova.py",
+                "path": "data/programs/SweepIntoDrawer3D/astra/kinova.py",
+                "sha256": "13918113c355c9779e174954176db565e8dc3ea45569d91793dde8085849779a",
+                "lines": 77,
+                "archiveMember": "run/sandbox/kinova.py"
+              }
+            ]
           }
         }
       ],
@@ -2416,6 +3645,17 @@
             "initialFrameSha256": "c38c0b09875f5545bdbd396cc9c7648316329e615ad985176bfeb61292c03b10",
             "videoSha256": "194db0f7e80b217621aefa98bbfa0d1ae57de9d13f5a9a2a7892fe1c6dbb4679",
             "initialStateSha256": "204a5bf6b2e94784c059c8cbc49895f7ab7cee8ecd0d2d5c08c6f269c2ebd193"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/SweepSimple3D/claude/approach.py",
+                "sha256": "540a5f1283603cffe803ffdfda40140d68819daf25684cf39dca018e4ca6453a",
+                "lines": 174,
+                "archiveMember": "sweepsimple3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__18e456ad/2026-09-10_15-07-39/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2441,6 +3681,17 @@
             "initialFrameSha256": "a849e40732c29be920dafbde1240e3675889139c5fe6092a70f303c58e70a1aa",
             "initialStateSha256": "204a5bf6b2e94784c059c8cbc49895f7ab7cee8ecd0d2d5c08c6f269c2ebd193",
             "videoSha256": "e2c037c9528fb18f8706641893f37a5b180a2627dd417fb4567f3876db98b821"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/SweepSimple3D/codex/approach.py",
+                "sha256": "96ceda8606b3e7e9d0acea2062ec8437a3d0e2afa6a9122d6776e9403bcd39f1",
+                "lines": 119,
+                "archiveMember": "sweepsimple3d_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__f81825ae/2026-09-15_17-01-01/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2466,6 +3717,17 @@
             "initialFrameSha256": "5a2bd7c18b5c66275582d96f366d4fccfdfbecd954a8108cfe93cef5d6e75913",
             "initialStateSha256": "204a5bf6b2e94784c059c8cbc49895f7ab7cee8ecd0d2d5c08c6f269c2ebd193",
             "videoSha256": "e77472e5e343dad7057990107efb399dbc3f634aeb37127455922342d2ab6b45"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/SweepSimple3D/genplan/approach.py",
+                "sha256": "fa24819edd5065f0b1bd291609849c46b632dc84167012d5714f90a630d6ef1d",
+                "lines": 706,
+                "archiveMember": "sweepsimple3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__7f110168/2026-09-12_00-01-25/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2491,6 +3753,17 @@
             "initialFrameSha256": "96ef70ee1daf25ad60700bce6f60771308b102165937c139f0ed349fcde8d5ee",
             "initialStateSha256": "204a5bf6b2e94784c059c8cbc49895f7ab7cee8ecd0d2d5c08c6f269c2ebd193",
             "videoSha256": "2f2efad78c0e82773d54f18bcca6426be7e6c657e3e8a0a062b738a0c5279583"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/SweepSimple3D/astra/approach.py",
+                "sha256": "6e5b29bb44c1c6220ece31179f55ec24d88f550252ef58c98fde039b72ddd178",
+                "lines": 63,
+                "archiveMember": "run/sandbox/approach.py"
+              }
+            ]
           }
         }
       ],
@@ -2521,6 +3794,24 @@
             "archivedSteps": 241,
             "initialFrameSha256": "b31f77f96c8b22bfe12d10b2bde45ccfeb00ee48cc5c06e0573e106cce7f174d",
             "videoSha256": "7a5c854c6a7c7ca50f4cb51b1fde8a24df7654a5a2a579075bb197824b64b638"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Tossing3D/claude/approach.py",
+                "sha256": "440fe0483a6ff910278b1a9d0673375dda6de30929abd8f9c58fab3679d73d62",
+                "lines": 293,
+                "archiveMember": "tossing3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__e3f09576/2026-09-11_23-13-42/replicate_42/sandbox/approach.py"
+              },
+              {
+                "name": "robot.py",
+                "path": "data/programs/Tossing3D/claude/robot.py",
+                "sha256": "7dc18dab4a95113a420164ed6b1dbf862b869679091bcd543fd46943eba3da18",
+                "lines": 105,
+                "archiveMember": "tossing3d_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__e3f09576/2026-09-11_23-13-42/replicate_42/sandbox/robot.py"
+              }
+            ]
           }
         },
         {
@@ -2546,6 +3837,17 @@
             "initialFrameSha256": "b31f77f96c8b22bfe12d10b2bde45ccfeb00ee48cc5c06e0573e106cce7f174d",
             "initialStateSha256": "7565a88e63b31b6247b5bf8c4c2d284118775ce898bd16bb16c37121174a3bbd",
             "videoSha256": "4352b6a49bb048f1943557a541e0e19f73864b5c30dc3433dfc138dad9c600d8"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Tossing3D/codex/approach.py",
+                "sha256": "148d1fb1ca044919f952f902f6feae4fc640875db74fa0c521406830e11d878f",
+                "lines": 85,
+                "archiveMember": "tossing3d__seed42/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2570,6 +3872,17 @@
             "archivedSteps": 1200,
             "initialFrameSha256": "b31f77f96c8b22bfe12d10b2bde45ccfeb00ee48cc5c06e0573e106cce7f174d",
             "videoSha256": "cf7415352a6f82052a626535c2bee64193eeea3dca8f09287135f48fb0e8acb0"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Tossing3D/genplan/approach.py",
+                "sha256": "dba30396def51dea72fb7e69aa7b6753662297e9f8c7f0c56b262e69546d63c0",
+                "lines": 475,
+                "archiveMember": "multirun/tossing3d_generalized__llm_genplan__none__cli_opus5__timeout_60s__0c3e12c6/2026-09-14_14-48-16/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2595,6 +3908,24 @@
             "initialFrameSha256": "b31f77f96c8b22bfe12d10b2bde45ccfeb00ee48cc5c06e0573e106cce7f174d",
             "initialStateSha256": "7565a88e63b31b6247b5bf8c4c2d284118775ce898bd16bb16c37121174a3bbd",
             "videoSha256": "f7995c53facc3ff55736e28f1e50e55cf61e6d797904b475c59cf467299d5c62"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/Tossing3D/astra/approach.py",
+                "sha256": "5458166a6d1abceaa8cdd09510483b14f8c36e8853e415f18b93bbe0480bdeaa",
+                "lines": 116,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "kinova_candidate.py",
+                "path": "data/programs/Tossing3D/astra/kinova_candidate.py",
+                "sha256": "7c2eee8e94cda164b23debb97bca3a58262699cf35a539132b0080c10ef8a94b",
+                "lines": 55,
+                "archiveMember": "run/sandbox/kinova_candidate.py"
+              }
+            ]
           }
         }
       ],
@@ -2625,6 +3956,24 @@
             "archivedSteps": 33,
             "initialFrameSha256": "8e99e90b785f4b6a9d5faa163a6d861c92c617cce92d045ef0bc815de15854b8",
             "videoSha256": "dde5f5192b097e3b29bc74f266c3c5f469b446b7d7201a19a13f6653c4679b06"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PddlPacking/claude/approach.py",
+                "sha256": "fb246bb48fd8804aaf6142e62ef3fb4a981131b51dfc80148ce6ae0836c6e6c3",
+                "lines": 770,
+                "archiveMember": "pr2packed_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__f02e5f73/2026-09-09_13-01-39/replicate_42/sandbox/approach.py"
+              },
+              {
+                "name": "fk.py",
+                "path": "data/programs/PddlPacking/claude/fk.py",
+                "sha256": "820cdde154d3d030d8385a4e673b266f76ddd38713017bb2758609c641979055",
+                "lines": 100,
+                "archiveMember": "pr2packed_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__f02e5f73/2026-09-09_13-01-39/replicate_42/sandbox/fk.py"
+              }
+            ]
           }
         },
         {
@@ -2649,6 +3998,17 @@
             "archivedSteps": 106,
             "initialFrameSha256": "8e99e90b785f4b6a9d5faa163a6d861c92c617cce92d045ef0bc815de15854b8",
             "videoSha256": "2a27947490c2dc9ba37c39fe4c46023b5d9afb04920276fe3c998b45a3cf394d"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PddlPacking/codex/approach.py",
+                "sha256": "b5fe3a2e480c98d5e7e2385e154cf54b5ef0e4949dda891716edeb047ce7046f",
+                "lines": 210,
+                "archiveMember": "pr2packed_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__e0b36e2b/2026-09-09_23-35-23/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2673,6 +4033,17 @@
             "archivedSteps": 390,
             "initialFrameSha256": "8e99e90b785f4b6a9d5faa163a6d861c92c617cce92d045ef0bc815de15854b8",
             "videoSha256": "045bab864e35e77214132e41561031cbd5aec8197eaf80649d1ae12f951e46c6"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PddlPacking/genplan/approach.py",
+                "sha256": "92e6f0c3a8b14dff92a26090ef3c4f629aaa76d01a046ebfd83dc5cce81b82e9",
+                "lines": 1001,
+                "archiveMember": "pr2packed_generalized__llm_genplan__none__cli_opus5__timeout_60s__a93aa447/2026-09-12_13-21-57/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2698,6 +4069,24 @@
             "initialFrameSha256": "8e99e90b785f4b6a9d5faa163a6d861c92c617cce92d045ef0bc815de15854b8",
             "initialStateSha256": "a6212295905f886da61ac5697828c9e97d6c945da9333e3eec928cc12399a5c6",
             "videoSha256": "81148672cfcadad6ae7d78f5202bfee77d8f760992abad356dae7246da0e20fb"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PddlPacking/astra/approach.py",
+                "sha256": "7bfd604a4221508699a2c4118f5a5e6b7b7b8e4ecc8865a834c851ad286e173a",
+                "lines": 116,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "kinematics.py",
+                "path": "data/programs/PddlPacking/astra/kinematics.py",
+                "sha256": "03765eb9483663672bd5898f7d17851056822ca5fa2721f0aa5bc991a4d85afc",
+                "lines": 24,
+                "archiveMember": "run/sandbox/kinematics.py"
+              }
+            ]
           }
         }
       ],
@@ -2728,6 +4117,17 @@
             "archivedSteps": 44,
             "initialFrameSha256": "b1dd1da6868d281571fbee889c8a3b1a555618fffea8c245e131d6c98ed58292",
             "videoSha256": "cd7cdf09f0f535d224833b1a8babc60ec624f5d4c61afb021a957bff00a0e119"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PddlBlocked/claude/approach.py",
+                "sha256": "64a1ee056243c168f4e058df856bdd29bbf0bfe581a0b4c0658d2481a452d4c6",
+                "lines": 683,
+                "archiveMember": "pr2blocked_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__8f851c23/2026-09-09_18-30-41/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2753,6 +4153,17 @@
             "initialFrameSha256": "b1dd1da6868d281571fbee889c8a3b1a555618fffea8c245e131d6c98ed58292",
             "initialStateSha256": "837bd2d62a0f47a3804d1183b50ef72358f016b4146e47d4384b6620ec901e13",
             "videoSha256": "4136ec6455ccf82090ebd0cba5e98932d46a7580a3dae2f1702c69d8960b51c9"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PddlBlocked/codex/approach.py",
+                "sha256": "e496a753d9bf4acd148418dfb663cf55433da59c34843880e17f766ae0025ef9",
+                "lines": 309,
+                "archiveMember": "pr2blocked_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__28cf8f22/2026-09-15_19-41-44/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2777,6 +4188,17 @@
             "archivedSteps": 380,
             "initialFrameSha256": "b1dd1da6868d281571fbee889c8a3b1a555618fffea8c245e131d6c98ed58292",
             "videoSha256": "1bb521c64814edee93009a99641eeb685e63218e098fbdbda1a1700a30bec420"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PddlBlocked/genplan/approach.py",
+                "sha256": "22973bc00e0c01c5bda39a7af4d585037d8aa1a0e6fc290d39491796f1185743",
+                "lines": 795,
+                "archiveMember": "pr2blocked_generalized__llm_genplan__none__cli_opus5__timeout_60s__10257188/2026-09-12_20-28-47/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2802,6 +4224,24 @@
             "initialFrameSha256": "b1dd1da6868d281571fbee889c8a3b1a555618fffea8c245e131d6c98ed58292",
             "initialStateSha256": "837bd2d62a0f47a3804d1183b50ef72358f016b4146e47d4384b6620ec901e13",
             "videoSha256": "b1ff91a738e97e5e5f69d7dd85cb0a2e59972f5894ac6b3b4fafa1d870691b9d"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PddlBlocked/astra/approach.py",
+                "sha256": "640a0da4ef04da312c9acee0633762bdfb58c57e73d3f457299e3066d9b6a1e3",
+                "lines": 118,
+                "archiveMember": "run/sandbox/approach.py"
+              },
+              {
+                "name": "kinematics.py",
+                "path": "data/programs/PddlBlocked/astra/kinematics.py",
+                "sha256": "a0062d032639d3f902615957d5d6ea065e554ee4efab7178ef7e839c42f62a88",
+                "lines": 92,
+                "archiveMember": "run/sandbox/kinematics.py"
+              }
+            ]
           }
         }
       ],
@@ -2832,6 +4272,31 @@
             "archivedSteps": 430,
             "initialFrameSha256": "6004d60b7455bef6a79d06145c43cf82e7beb199428a4a5c023a43c2468ad4d1",
             "videoSha256": "00d63eaa6929f4a185c299da8ac5bfd68b06efc14304f0064615e38c94e51f9e"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PddlRovers/claude/approach.py",
+                "sha256": "c41b758d190da7716f510c55def1e457a7f34b3f8b9fb0b87a01ed572a5d1ad4",
+                "lines": 577,
+                "archiveMember": "rovers_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__39c67a96/2026-09-12_10-41-46/replicate_42/sandbox/approach.py"
+              },
+              {
+                "name": "geom.py",
+                "path": "data/programs/PddlRovers/claude/geom.py",
+                "sha256": "939c86adbecebd1afef05860ae503f25bfcff9b1335d9f0f22375e56c97de87b",
+                "lines": 166,
+                "archiveMember": "rovers_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__39c67a96/2026-09-12_10-41-46/replicate_42/sandbox/geom.py"
+              },
+              {
+                "name": "planner.py",
+                "path": "data/programs/PddlRovers/claude/planner.py",
+                "sha256": "9d2b5e3e5d687c7a5492faebdde489d2cb64b70623516bb2b17b8cdca5878a00",
+                "lines": 121,
+                "archiveMember": "rovers_generalized__agentic__none__blackbox__strict__claude_opus5__timeout_60s__39c67a96/2026-09-12_10-41-46/replicate_42/sandbox/planner.py"
+              }
+            ]
           }
         },
         {
@@ -2856,6 +4321,17 @@
             "archivedSteps": 38,
             "initialFrameSha256": "6004d60b7455bef6a79d06145c43cf82e7beb199428a4a5c023a43c2468ad4d1",
             "videoSha256": "8b77e188df4ead6c6cdc7bd97cbc8a9340a687805c66f3ec865be973778bee65"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PddlRovers/codex/approach.py",
+                "sha256": "834f8e64a9004b9eaa27071a17a2eeda23f2804b791b1fe5a5541a94bd71e550",
+                "lines": 347,
+                "archiveMember": "rovers_generalized__agentic__none__blackbox__strict__codex_gpt56sol__timeout_60s__5a838136/2026-09-11_11-32-00_rovers_main/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2881,6 +4357,17 @@
             "initialFrameSha256": "6004d60b7455bef6a79d06145c43cf82e7beb199428a4a5c023a43c2468ad4d1",
             "initialStateSha256": "80996ce71b143a8ef347b6c3eb7a3581f8d18dbecac7fbd6fff8a9f46f87cc4a",
             "videoSha256": "f0b1dfee4efc9d070a102ab6bb22d7d41bac5affc18317b56ea8d9c0b6d4eb35"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PddlRovers/genplan/approach.py",
+                "sha256": "d37b3ec61d5a62b5327f5922bc61b77bffac0c5fb8af80c76913bdf332f8dc68",
+                "lines": 1125,
+                "archiveMember": "rovers_generalized__llm_genplan__none__cli_opus5__timeout_60s__37459045/2026-09-13_03-00-51/replicate_42/sandbox/approach.py"
+              }
+            ]
           }
         },
         {
@@ -2906,6 +4393,17 @@
             "initialFrameSha256": "6004d60b7455bef6a79d06145c43cf82e7beb199428a4a5c023a43c2468ad4d1",
             "initialStateSha256": "80996ce71b143a8ef347b6c3eb7a3581f8d18dbecac7fbd6fff8a9f46f87cc4a",
             "videoSha256": "cd4f4f37224aeec1b9ccda73d5d56b0cf03e2789fda7f5edbd781ebec3601e3d"
+          },
+          "program": {
+            "files": [
+              {
+                "name": "approach.py",
+                "path": "data/programs/PddlRovers/astra/approach.py",
+                "sha256": "678459617b1496f0b75ad96e98acf6807777c4abd784bb27865b01e42069a702",
+                "lines": 269,
+                "archiveMember": "run/sandbox/approach.py"
+              }
+            ]
           }
         }
       ],

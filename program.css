@@ -1,0 +1,38 @@
+/* The reader keeps each frozen program beside the behavior it produced. */
+.program-open{display:inline-flex;align-items:center;gap:8px;margin-top:9px;padding:6px 10px;border:1px solid #c5b8ce;border-radius:4px;background:white;color:var(--ink);font:inherit;font-size:11px;cursor:pointer}
+.program-open:hover{background:#f1ebf5;border-color:#8b6b9d}
+.program-open:focus-visible,.program-dialog :is(button,a,select,[tabindex]):focus-visible{outline:2px solid #73548a;outline-offset:3px}
+body.program-reader-open{overflow:hidden}
+.program-dialog{width:min(1200px,calc(100vw - 48px));max-width:none;max-height:calc(100dvh - 48px);padding:0;margin:auto;border:1px solid #d9d0df;border-radius:12px;background:#fff;color:var(--ink);box-shadow:0 24px 90px #1c102740;overflow:auto}
+.program-dialog::backdrop{background:#1d1529a8}
+.program-header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:23px 26px;border-bottom:1px solid var(--line)}
+.program-header h2{font-size:25px;line-height:1.25;margin:5px 0 7px;letter-spacing:-.5px}
+.program-header p{margin:0;font-size:13px}
+.program-header .program-eyebrow{font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#73548a}
+.program-close{display:flex;align-items:center;gap:12px;white-space:nowrap;border:1px solid var(--line);border-radius:5px;padding:7px 11px;background:white;font:inherit;font-size:12px;cursor:pointer}
+.program-close span{font-size:20px;line-height:1}
+.program-layout{display:grid;grid-template-columns:270px minmax(0,1fr)}
+.program-context{padding:22px;background:#faf8fc;border-right:1px solid var(--line)}
+.program-context video{width:100%;aspect-ratio:4/3;object-fit:contain;background:white;border:1px solid var(--line);border-radius:5px}
+.program-context p{font-size:12px;line-height:1.65;margin:14px 0 0}
+#program-outcome{font-weight:700;color:var(--ink)}
+#program-instance,#program-file-note{font-size:11px;color:var(--muted,#686171)}
+.program-reader{min-width:0;padding:20px;display:flex;flex-direction:column}
+.program-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px}
+.program-toolbar label{font-weight:600}
+.program-toolbar select{flex:1;min-width:120px;max-width:100%;padding:7px;border:1px solid var(--line);border-radius:4px;background:white;font:inherit}
+.program-toolbar button,.program-toolbar a{padding:7px 9px;border:1px solid var(--line);border-radius:4px;background:white;color:var(--ink);font:inherit;cursor:pointer;text-decoration:none;white-space:nowrap}
+.program-toolbar button:disabled{opacity:.5;cursor:default}
+.program-status{font-size:11px;min-height:18px;margin:10px 0;color:#6a6272}
+.program-source{display:flex;overflow:auto;max-height:calc(100dvh - 340px);min-height:200px;border:1px solid #e5dfea;border-radius:5px;background:#fcfbfd;tab-size:4}
+.program-source pre{margin:0;padding:14px 16px;font:12px/1.75 ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;white-space:pre}
+.program-source .program-lines{position:sticky;left:0;background:#f2eef6;color:#897e94;border-right:1px solid #e5dfea;text-align:right;user-select:none;flex-shrink:0}
+.program-code{color:#30263c}.program-code code{font:inherit}
+.program-footnote{font-size:10px;line-height:1.6;margin:12px 0 0;color:#766c80}
+@media(max-width:700px){
+ .program-dialog{width:calc(100vw - 20px);max-height:calc(100dvh - 20px);border-radius:8px}
+ .program-header{padding:16px;gap:10px}.program-header h2{font-size:20px}.program-header p{font-size:11px}
+ .program-layout{grid-template-columns:1fr}.program-context{display:grid;grid-template-columns:140px minmax(0,1fr);gap:8px 14px;padding:14px 16px;border-right:0;border-bottom:1px solid var(--line)}
+ .program-context video{grid-row:1/4}.program-context p{font-size:10px;margin:0}.program-explanation{display:none}#program-file-note{font-size:10px}
+ .program-reader{padding:14px}.program-source{max-height:45dvh;min-height:180px}.program-source pre{font-size:11px;padding:10px}.program-toolbar{gap:7px}.program-toolbar select{flex-basis:65%}
+}

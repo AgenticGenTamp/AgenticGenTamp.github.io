@@ -12,7 +12,8 @@
   <meta name="theme-color" content="#66418b">
   <link rel="icon" href="assets/prpl-robot.png" type="image/png">
   <link rel="stylesheet" href="styles.css?v=astra-source-1">
-  <script type="module" src="app.js?v=naming-1"></script>
+  <link rel="stylesheet" href="program.css?v=1">
+  <script type="module" src="app.js?v=programs-1"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -151,5 +152,12 @@
 }</code></pre></section>
 </main>
 <footer><div><a class="wordmark" href="#top">AgenticGenTAMP</a><p>Coding Agents for Generalized Task and Motion Planning Problems</p></div><div class="footer-links"><a href="assets/paper.pdf?v=20260925" target="_blank" rel="noopener">Paper ↗</a><a href="https://arxiv.org/abs/2609.30233" target="_blank" rel="noopener">arXiv ↗</a><a href="https://github.com/tomsilver/robocode" target="_blank" rel="noopener">Code ↗</a><a href="https://github.com/AgenticGenTamp/AgenticGenTamp.github.io" target="_blank" rel="noopener">Website source ↗</a></div></footer>
+<dialog id="program-dialog" class="program-dialog" aria-labelledby="program-title" aria-describedby="program-method">
+  <header class="program-header"><div><p class="program-eyebrow">Program behind this example</p><h2 id="program-title"></h2><p id="program-method"></p></div><button id="program-close" class="program-close" aria-label="Close program viewer" autofocus>Close <span aria-hidden="true">×</span></button></header>
+  <div class="program-layout">
+    <aside class="program-context"><video id="program-video" controls muted playsinline preload="none"></video><p id="program-outcome"></p><p class="program-explanation">This is the frozen program used for the video shown here. The same program is evaluated on many held-out instances.</p><p id="program-instance"></p><p id="program-file-note"></p></aside>
+    <section class="program-reader" aria-label="Generated Python source"><div class="program-toolbar"><label for="program-file">File</label><select id="program-file"></select><button id="program-copy" disabled>Copy code</button><a id="program-download" download>Download file</a></div><p id="program-status" class="program-status" role="status"></p><div id="program-source" class="program-source" tabindex="0" aria-label="Source code, scroll to read"><pre id="program-lines" class="program-lines" aria-hidden="true"></pre><pre class="program-code"><code id="program-code"></code></pre></div><p class="program-footnote">Unedited source for inspection. Running it requires the original experiment environment and dependencies.</p></section>
+  </div>
+</dialog>
 </body>
 </html>

@@ -1,3 +1,4 @@
+import {openProgramViewer} from './program-viewer.js';
 import {selectEnvironments, summarize} from './benchmark.js';
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
@@ -10,9 +11,9 @@ let heroWanted = !reduced.matches && !navigator.connection?.saveData;
 function updateMotionButton() { $('#motion-toggle').textContent = hero.paused ? 'Play background' : 'Pause background'; $('#motion-toggle').setAttribute('aria-label', hero.paused ? 'Play background video' : 'Pause background video'); }
 hero.addEventListener('play', updateMotionButton);hero.addEventListener('pause', updateMotionButton);
 $('#motion-toggle').addEventListener('click', () => { heroWanted = hero.paused; if (heroWanted) hero.play().catch(updateMotionButton); else hero.pause(); });
-new IntersectionObserver(entries => { const visible = entries[0].isIntersecting; if (visible && heroWanted && !document.hidden) hero.play().catch(updateMotionButton); else hero.pause(); }, {threshold:0.05}).observe(hero);
+new IntersectionObserver(entries => { const visible = entries[0].isIntersecting; if (visible && heroWanted && !document.hidden && !$('#program-dialog').open) hero.play().catch(updateMotionButton); else hero.pause(); }, {threshold:0.05}).observe(hero);
 reduced.addEventListener('change', () => { if (reduced.matches) {heroWanted=false;hero.pause();galleryVisible.forEach(pauseGalleryVideo);} else galleryVisible.forEach(playGalleryVideo); });
-document.addEventListener('visibilitychange',()=>{ if(document.hidden){hero.pause();pausePolicyExamples();galleryVisible.forEach(pauseGalleryVideo);pauseFilm();}else {if(heroWanted && $('#top').getBoundingClientRect().bottom>0)hero.play().catch(()=>{});galleryVisible.forEach(playGalleryVideo);} });
+document.addEventListener('visibilitychange',()=>{ if(document.hidden){hero.pause();pausePolicyExamples();galleryVisible.forEach(pauseGalleryVideo);pauseFilm();$('#program-video').pause();}else {if(!$('#program-dialog').open && heroWanted && $('#top').getBoundingClientRect().bottom>0)hero.play().catch(()=>{});galleryVisible.forEach(playGalleryVideo);} });
 let scrolled = false;
 function navState(){const next=window.scrollY>100;if(next!==scrolled){$('#nav').classList.toggle('sticky',next);scrolled=next;}}
 window.addEventListener('scroll',navState,{passive:true});navState();
@@ -129,15 +130,23 @@ function renderPolicyExamples() {
     (withheld.length?' The '+withheld.map(item=>item.label).join(' and ')+' clip is withheld because its replay outcome differed from the archive.':'');
   $('#play-policies').textContent=example.videos.length>1?'Replay together':'Replay example';
   $('#policy-grid').style.setProperty('--policy-columns',example.videos.length===4?2:Math.min(3,example.videos.length));
-  $('#policy-grid').innerHTML=example.videos.map(clip=>`<figure class="policy-card">
+  $('#policy-grid').innerHTML=example.videos.map((clip,index)=>`<figure class="policy-card">
     <h5>${esc(clip.label)}</h5><p>${esc(clip.setting)}</p>
     <video class="policy-video" src="${esc(clip.video)}?v=${clip.source.videoSha256.slice(0,12)}" poster="${esc(clip.poster)}" controls muted playsinline preload="none" aria-label="${esc(clip.label)} policy in ${esc($('#env-name').textContent)}"></video>
     <figcaption><strong>${clip.solved?'Success':'Failure'}</strong> · ${clip.steps} actions</figcaption>
+    <button class="program-open" data-program="${index}" aria-label="View generated program: ${esc(clip.label)} in ${esc($('#env-name').textContent)}"><span aria-hidden="true">&lt;/&gt;</span> View generated program</button>
   </figure>`).join('');
   $$('.policy-video').forEach(video => {
     video.muted=true;
     video.addEventListener('play',()=>{pauseFilm();galleryVisible.forEach(pauseGalleryVideo);});
   });
+  $$('[data-program]').forEach(button => button.addEventListener('click', () => {
+    pausePolicyExamples();
+    pauseFilm();
+    hero.pause();
+    galleryVisible.forEach(pauseGalleryVideo);
+    openProgramViewer(data.environments.find(e=>e.id===selectedEnvironment), example.videos[Number(button.dataset.program)], button);
+  }));
   playPolicyExamples();
 }
 $('#play-policies').addEventListener('click',()=>{
@@ -158,10 +167,10 @@ function pauseGalleryVideo(video) {
   }
 }
 function playGalleryVideo(video) {
-  if (document.hidden || !projectVideo.paused || $$('.policy-video').some(v=>!v.paused) || reduced.matches || navigator.connection?.saveData || galleryPausedByUser.has(video) || !galleryVisible.has(video)) return;
+  if ($('#program-dialog').open || document.hidden || !projectVideo.paused || $$('.policy-video').some(v=>!v.paused) || reduced.matches || navigator.connection?.saveData || galleryPausedByUser.has(video) || !galleryVisible.has(video)) return;
   video.play().then(() => {
     // A play request may settle after a scroll, tab switch, or another video starts.
-    if (!galleryVisible.has(video) || document.hidden || reduced.matches || !projectVideo.paused || $$('.policy-video').some(v=>!v.paused)) pauseGalleryVideo(video);
+    if ($('#program-dialog').open || !galleryVisible.has(video) || document.hidden || reduced.matches || !projectVideo.paused || $$('.policy-video').some(v=>!v.paused)) pauseGalleryVideo(video);
   }).catch(() => {}); // Native controls remain available if autoplay is blocked.
 }
 const galleryObserver = new IntersectionObserver(entries => {
@@ -248,7 +257,7 @@ loadJSON('data/gallery.json').then(result=>{gallery=result;renderGallery();}).ca
 
 loadJSON('data/environment-descriptions.json?v=descriptions-5').then(result=>{descriptions=result;renderEnvironmentDescription();}).catch(error=>{console.error(error);descriptionLoadFailed=true;renderEnvironmentDescription();});
 
-loadJSON('data/policy-examples.json?v=naming-1').then(result=>{policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
+loadJSON('data/policy-examples.json?v=programs-1').then(result=>{policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
 
 document.getElementById('copy-bibtex')?.addEventListener('click',async e=>{
   const button=e.currentTarget;
