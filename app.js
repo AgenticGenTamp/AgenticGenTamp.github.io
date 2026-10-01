@@ -266,7 +266,7 @@ loadJSON('data/gallery.json?v=opus55-1').then(result=>{gallery=result;renderGall
 
 loadJSON('data/environment-descriptions.json?v=descriptions-5').then(result=>{descriptions=result;renderEnvironmentDescription();}).catch(error=>{console.error(error);descriptionLoadFailed=true;renderEnvironmentDescription();});
 
-loadJSON('data/policy-examples.json?v=opus55-1').then(result=>{policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
+loadJSON('data/policy-examples.json?v=opus55-1').then(result=>{const order=['claude','codex','astra','opus55','genplan'];result.environments.forEach(e=>e.videos.sort((a,b)=>order.indexOf(a.method)-order.indexOf(b.method)));policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
 
 document.getElementById('copy-bibtex')?.addEventListener('click',async e=>{
   const button=e.currentTarget;

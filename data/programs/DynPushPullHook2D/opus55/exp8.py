@@ -1,0 +1,10 @@
+from grasp import *
+s=S(2)
+print('held',grasp(s),s.rob(),s.pose('hook'),s.t)
+s.goto(1.75,0.35,None); print(s.rob(),s.pose('hook'))
+s.goto(1.75,0.35,np.pi/2); print('rot',s.rob(),s.pose('hook'))
+for i in range(30): s.step([0,0.05,0,0,0])
+print('up',s.rob(),s.pose('hook'))
+for i in range(5): s.step([0,0,0,0.1,0])
+print('ext',s.rob(),s.pose('hook'))
+print('target',s.pose('target_block'))

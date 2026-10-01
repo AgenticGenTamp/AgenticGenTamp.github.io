@@ -1,0 +1,313 @@
+{
+  "serialization": "SHA-256 of UTF-8 JSON with sorted keys and compact separators. Array observations use tolist(); object-centric observations use a list sorted by object name and type, with name, type, and unrounded feature values. Reset with the recorded instance seed and object count using each original Hydra environment configuration; enable scene backgrounds only.",
+  "environments": [
+    {
+      "id": "StickButton2D",
+      "episode": 12,
+      "instanceSeed": 5759426138040833787,
+      "objectCount": 3,
+      "initialObservationSha256": "1985ecbcb9101a12466e58ae94671fbb41d3c2ceae42e4e64c40fe416854203a",
+      "opus55ResultsSha256": "2a95223ee272cdbc437754cf924a5d8b3f37d4d9fe02872d5ef1d4a74829f38d",
+      "astraResultsSha256": "7b5a0c69981e30efcf6e2c08f45abe9dc6a6d1fc02502ccce91a5282a622b1d5",
+      "opus55ConfigSha256": "9487ecb09cddfaeb5586be53df8cfbcbae095343184ea6072308be3086f86e6c",
+      "astraConfigSha256": "deb4425e3804520caadd2af95aa3da238dae2f210dde54812878abdeabba8030"
+    },
+    {
+      "id": "Obstruction2D",
+      "episode": 3,
+      "instanceSeed": 5070999126167511316,
+      "objectCount": 3,
+      "initialObservationSha256": "bf3fc9de864ca3c6fb30d2649e7e2f86b7039bcf98e35080ce3164931c75414f",
+      "opus55ResultsSha256": "2d71b63dfd475cacfb0b746968b5269539614868629f8313d1a9bc6a7108c100",
+      "astraResultsSha256": "0b6f12caeeabc1f19400ec42a27a5d9f5ab675d9a2a4c2790f5780b73759550a",
+      "opus55ConfigSha256": "21e703a334418e2ca79a5fe8138008a47bb1414fcba8175f40b240b3269f9e26",
+      "astraConfigSha256": "f51a1b6fe5e3bd61b1d7648f2486be7e0b721414c993f0758b9abb441369310f"
+    },
+    {
+      "id": "ClutteredStorage2D",
+      "episode": 1,
+      "instanceSeed": 5553887448546940950,
+      "objectCount": 3,
+      "initialObservationSha256": "a48e9483ae317f89724e8fb807d4fe98a6ce64fd8620c4c24b016b778bc11d79",
+      "opus55ResultsSha256": "41877073963627c311dd107c26dcfeaa5bebf127003adcf1792949f8d6b49fb1",
+      "astraResultsSha256": "e97a465ff92e2f0ddc659465564da5541bc7ea867512ce32811c3e77bcc050a4",
+      "opus55ConfigSha256": "1f54f47a479ea984505d7897a557225704c1ec70082bf44d9e92760a268cdcf7",
+      "astraConfigSha256": "165d4330cc431787f334e9f027d54af48306da5c56db69b5baf607d7525e63e5"
+    },
+    {
+      "id": "ClutteredRetrieval2D",
+      "episode": 1,
+      "instanceSeed": 5553887448546940950,
+      "objectCount": 3,
+      "initialObservationSha256": "2d99d22e51af7f659445bd4c65159c001e1aeef90107ad0dea0b9e26ed6d3ac3",
+      "opus55ResultsSha256": "c6a686bfde27c5f19b99501789cbdb510dfa7c5d053527fed3c28a4ed4f1c664",
+      "astraResultsSha256": "cdc443e0397cd3bddffab53a7b4638d100007cee0ac11992ac59c02ca4190add",
+      "opus55ConfigSha256": "413a164747d95a8ec9b8d52923b9dc5d51148547394ca86fae8a12e13fa5de79",
+      "astraConfigSha256": "887ee7771afb394bda7c46906c2290982bf1290d63ece21903254f9aea5552f6"
+    },
+    {
+      "id": "Motion2D",
+      "episode": 99,
+      "instanceSeed": 2396529055829695215,
+      "objectCount": 3,
+      "initialObservationSha256": "bd39790a639c7eba4ba5ffb875a9623ceb24731dae9706366a53644efdb39012",
+      "opus55ResultsSha256": "2b0efafceb56dbdb48ee255202daddbb160a1a02be6755f0b14dd3edae1fa516",
+      "astraResultsSha256": "4af82327bf02f75702f42d26fc870120dd07fd9125dcdee809145eec2e2f56f0",
+      "opus55ConfigSha256": "f4dc9753cdbc8bff0424a57637adfe97ea2370c1263be773e926e2e1fa739e36",
+      "astraConfigSha256": "2f48636b163590d17608b7bf83995c1503d12b777eb654f2542009ccd51d9d7f"
+    },
+    {
+      "id": "PushPullHook2D",
+      "episode": 0,
+      "instanceSeed": 7449868751085282632,
+      "objectCount": null,
+      "initialObservationSha256": "089b68813619ec93771fab03e3c7ada4365d0bf51e2958d23d50cc0ea83df2c0",
+      "opus55ResultsSha256": "70e1bb033cab04833b23cae0d9dfaba1aa2ac8477707e91bdc78547dc7f918d9",
+      "astraResultsSha256": "4636205eb281528f1be0d264aaec48071285258471661c699e8e6ed979fd92eb",
+      "opus55ConfigSha256": "6c8b10ffef91743db18f351bffb0fd8fb3e941c405be725feb0e17143d3203cc",
+      "astraConfigSha256": "9cb6bd6ee8617d5e00966fa2851e0925aa7b304e624b4cf4753f74d0fe88e141"
+    },
+    {
+      "id": "DynObstruction2D",
+      "episode": 0,
+      "instanceSeed": 7449868751085282632,
+      "objectCount": 0,
+      "initialObservationSha256": "9d8b904c650e24a889b6c9c0acaa8cde62c16fd8373b5e45189e4426b3dd3898",
+      "opus55ResultsSha256": "3722118c04e1448ea624498b1aa7f0ba7f1065607a7cd221b555cdac19e70fa0",
+      "astraResultsSha256": "89140be8574668f9f6d2dd106aa7fdd247ced7b75865b15120c4b6368d2da8b8",
+      "opus55ConfigSha256": "5776a5b246049d5be8b905f179602bc1af323e257a723749bb444c7ef75c8763",
+      "astraConfigSha256": "b97dd5758c296ee777ba98f53167e8a351f0a997ae93cca0c06de9cbd2090657"
+    },
+    {
+      "id": "DynPushPullHook2D",
+      "episode": 3,
+      "instanceSeed": 5070999126167511316,
+      "objectCount": 3,
+      "initialObservationSha256": "207144b3e2184e6c80c30d0746fc9156462645fa36a39ff47456d854bc211736",
+      "opus55ResultsSha256": "a974add35061964ac38915d2721d01f78708e2a7fbd08da1c9b4fa7426d2150e",
+      "astraResultsSha256": "aaad50b42473ec4b3e5c4fd83965e9723c6e7b889e2543934459d955bafcc2c0",
+      "opus55ConfigSha256": "c9e85626b3eb5f0306efaf8d8dd3b17d0c06b59a74d08e8bdb0d5de5b6be5cc0",
+      "astraConfigSha256": "7b52c9c7d40dbb555999e37b9b013a01ec0f26efbf1d7c7c9592f6ea13954080"
+    },
+    {
+      "id": "DynPushT2D",
+      "episode": 0,
+      "instanceSeed": 7449868751085282632,
+      "objectCount": null,
+      "initialObservationSha256": "db9451df134f5b8e7fbf2c2c15f76672ac51236d2a6d2738816d95300e8b0df4",
+      "opus55ResultsSha256": "6ace5b51dc174b44e246c9decbdbcb29ecb5d3d2c90a44ef09a6f2ee7aad0b8f",
+      "astraResultsSha256": "392f1c29f709778de635d49b485a21ee820299971f381e90c177a308d79e980f",
+      "opus55ConfigSha256": "cf260a4b838c3226c936687526425c449752a1b03c3634a73209d076bdbd347d",
+      "astraConfigSha256": "39b819752fa823e814f4780f449d7b44700776094049f3903e1dc4ccdfc7059b"
+    },
+    {
+      "id": "DynScoopPour2D",
+      "episode": 0,
+      "instanceSeed": 7449868751085282632,
+      "objectCount": 10,
+      "initialObservationSha256": "34564d96204497c59ec8f7e5dd64daef2b2831132330ffa275f8cf2e7da5e920",
+      "opus55ResultsSha256": "2556749c72531d702d104af803eb4842dc914bab7881e89b98ea64470a0fcda5",
+      "astraResultsSha256": "222f416824afc2de7682940cb8fb37e10fa90853358b5e9fc5ebcafe7f107a39",
+      "opus55ConfigSha256": "c2eae62b8d9a4f34cb2e698d7aeccbedaad50403717925396c31aca4dad47c6c",
+      "astraConfigSha256": "1f2fd6199b5d0484dacaac7c4eb2650a3e0864033d73c764c754bb8d760d081c"
+    },
+    {
+      "id": "Obstruction3D",
+      "episode": 0,
+      "instanceSeed": 7449868751085282632,
+      "objectCount": 0,
+      "initialObservationSha256": "787da916fdebe85ad2bbe1529bbd5a91c2156be10c1460e382637416ce938293",
+      "opus55ResultsSha256": "0f52d16fa4e9f84ff194bd42b7ff8788a785cb04a340af3ddccf76fd93d3ca88",
+      "astraResultsSha256": "a8dae13c78a95a9a3cf936fb9defb2cbbcbd545807a8b587087e23c9f08d4846",
+      "opus55ConfigSha256": "ce141a3ef2c2fddfe5918755975a36845474e178db0eb3d73aada2fdca40cf2d",
+      "astraConfigSha256": "cc98c21b4d63dd23fd62620d52d729cc66f47b939b09d455b731ef9d59561851"
+    },
+    {
+      "id": "Packing3D",
+      "episode": 2,
+      "instanceSeed": 6578458030060481490,
+      "objectCount": 3,
+      "initialObservationSha256": "3135b3f5358d2a89121b0c6af534c6c9c7e972293e87e8cc95f0d94abe366a9c",
+      "opus55ResultsSha256": "c956cc24e7df2e9934dc011c38c5707de507864e0915596462d2a3fcd8fee99b",
+      "astraResultsSha256": "3ff9fde7202d3c5574118a8ac108064d17e926a995b3fc4049df299fd3c44cb6",
+      "opus55ConfigSha256": "5fc164bf570c46ea7f0fdbf48db2068a9fbe9865c562042a0747e2db7f08085d",
+      "astraConfigSha256": "25498e98d2e5ff36de44a85844ad87630c667a86e95072055462d9c384291c83"
+    },
+    {
+      "id": "Transport3D",
+      "episode": 2,
+      "instanceSeed": 6578458030060481490,
+      "objectCount": 3,
+      "initialObservationSha256": "5aeb53400ac662de425a768a63dda76bfe25a8f6d4e8325b09041c8036300b7b",
+      "opus55ResultsSha256": "f6ce2439def9aef58c1eb5311f8cbddf71ffef1a09c3fdfbe509106a29c3114b",
+      "astraResultsSha256": "be41f3fdb936efd37a43478fa1af9005fb491bace9ec2eb97f216e8fd008030c",
+      "opus55ConfigSha256": "194351e8a05750f049e7120b15a2121206e2719a7e41b30289507ef2ab656ae9",
+      "astraConfigSha256": "4927376eeb87d1ea3124e3eee61146117386adcdc3b3b17e0e3df29abcd73a3a"
+    },
+    {
+      "id": "Table3D",
+      "episode": 37,
+      "instanceSeed": 3206203727921791616,
+      "objectCount": 3,
+      "initialObservationSha256": "1b06687a69336e974b402a5a095e6b21f31004add0dc2780f5e3616b8306e283",
+      "opus55ResultsSha256": "4e0873eefc0260fb5ab71eb0c9479953ae854550082c9bb14559426331a2e494",
+      "astraResultsSha256": "b28dad1034bfa750d944a7c478e8e2c0fdfe6010687068f0521c180887991c83",
+      "opus55ConfigSha256": "0ae4348b1e58f7de17981144f7f7d3970a8cc007a77a8e72d2a582ae10006905",
+      "astraConfigSha256": "92e48fb8d4520d7c523b124b8cfc7cbcbe9490fd3a25e1d79f065d0cb4f07009"
+    },
+    {
+      "id": "BaseMotion3D",
+      "episode": 0,
+      "instanceSeed": 7449868751085282632,
+      "objectCount": null,
+      "initialObservationSha256": "c610003abc1e6b6a72316c0b642561b5d2b2822e688dd7a3090be60b98a25548",
+      "opus55ResultsSha256": "f74ba49694a88f3e230e0cd6eea16b6752f1d4a900072ec1dc0962268afe3867",
+      "astraResultsSha256": "4d1e2ad27b8bc6dbce3c34cdf17c1f4d6280f2bb46e4a1c603cf175c505fe375",
+      "opus55ConfigSha256": "9a2bf3c4b0ed2a2b7d3bd0f417add40e828ca5b49707aec12c3371ed5b899d1d",
+      "astraConfigSha256": "54aa2bb4612700736b91805c1cdb8b138020c1f34f512e5ce715051a23cd4039"
+    },
+    {
+      "id": "BalanceBeam3D",
+      "episode": 0,
+      "instanceSeed": 7449868751085282632,
+      "objectCount": null,
+      "initialObservationSha256": "23affc8fe8242daf4c9118f6265c6923f2c7e17535d18156c18a5e9a49af2a8f",
+      "opus55ResultsSha256": "ba164acddd38bc7d145bc4a9583824a621082507ed1809f3a68554ee6d063c55",
+      "astraResultsSha256": "d7161469112ebcc4d5e9714878f3ba000a5ca860af1f11a2369a3f9a23029864",
+      "opus55ConfigSha256": "8c1cd955b84da559dc5d2ef77603b0627e50844bf59d31b92a51513f34c0e07e",
+      "astraConfigSha256": "48211103db2ef29fb51d70612948bb68acb5e5005fe0fc0929fcbef246917dc5"
+    },
+    {
+      "id": "ConstrainedCupboard3D",
+      "episode": 2,
+      "instanceSeed": 6578458030060481490,
+      "objectCount": 3,
+      "initialObservationSha256": "4887a7e193c2ac8e7cd15adcdf390e6f00df665b49b1ea029698a252293aaf27",
+      "opus55ResultsSha256": "de52bb0c5dd60779ce75f2226af5a03016f97f77a3484aa8183bc5b16d9f4bb5",
+      "astraResultsSha256": "bd8b629afa2e9624cf78717aca3560a9c55d079fc333d2d8e8f06e61298a6b0a",
+      "opus55ConfigSha256": "b734eb86804bc76d09eb7a87d747ab072e28bb3a82e9ebf51f5acea6cbbd8d1f",
+      "astraConfigSha256": "0a3039e9f8ad99b074e6e70a401d4dce9eb48e7a382e00d3d3e9d83e3e33d03a"
+    },
+    {
+      "id": "Dynamo3D",
+      "episode": 1,
+      "instanceSeed": 5553887448546940950,
+      "objectCount": 3,
+      "initialObservationSha256": "f9775f1157e82125b652db4c013e96eb22469477e8d58e330e214ac6ec52607b",
+      "opus55ResultsSha256": "f81aead147b407e536d67a87c8b100443a8944578553e5402ef21b8f5bdbb93f",
+      "astraResultsSha256": "58260230d763fb9a7063e1a4377db6be817ce985118c21dc5ffb111cc5bcab10",
+      "opus55ConfigSha256": "6c1a1a44de4c805d210448e669b638377e56e1e9d2c1410560dcfe739c47ade7",
+      "astraConfigSha256": "85561004c8557accf41c9bab5a2cc98d8402fcd09bcff8e72c4e066bb88124f1"
+    },
+    {
+      "id": "Rearrange3D",
+      "episode": 0,
+      "instanceSeed": 7449868751085282632,
+      "objectCount": null,
+      "initialObservationSha256": "acd052805d2dcda676b99da82ca6cd726d2e94643ce55896dcc10b94a3210df9",
+      "opus55ResultsSha256": "29e9602e109531681dd0686603af01f6f7b2635770658f7aedf37a37d5d2b204",
+      "astraResultsSha256": "7e540a003cc5d73fc08b0e20317deb66b216a9175a436e5271cc0c45238511aa",
+      "opus55ConfigSha256": "e6b41004d385fc4be536a26fff61a20d4574a5ac40d8474f20118e856edcd035",
+      "astraConfigSha256": "f1ca8a05c592ee68c151cdd378546010c0d36d70e49c31d8b991b118da5698a4"
+    },
+    {
+      "id": "ScoopPour3D",
+      "episode": 0,
+      "instanceSeed": 7449868751085282632,
+      "objectCount": 10,
+      "initialObservationSha256": "44f161bd3942a1db0caa1bf806bf9d3540852fed03e77ea936dfdfbd1a61fb50",
+      "opus55ResultsSha256": "fef4157e7d9cd46ec8131576bfbdb3ce10de8e658ccb53d446953b877cefae24",
+      "astraResultsSha256": "006908a36f19e74185255ba32afd8102a3ec31a3356044260248f6f2f902924f",
+      "opus55ConfigSha256": "9a8dc0ac99562fb105d8b6a3fb2b3f17b0c5a3bbfe6604fcaf8b104ddb84790b",
+      "astraConfigSha256": "8818d95aa89d5f430bacfc0bece4c9dc94159621cdd6cc686a8cdce3d3b84a7e"
+    },
+    {
+      "id": "Shelf3D",
+      "episode": 1,
+      "instanceSeed": 5553887448546940950,
+      "objectCount": 2,
+      "initialObservationSha256": "47772b0c9f4dd1725c43282fdc27128abe3ea8ee45816e60c4d4bf7d23158dc4",
+      "opus55ResultsSha256": "241f4fb0d811a5d4324c7788af8365f3877ad7a05f27a4b93bc66595efe65f42",
+      "astraResultsSha256": "27c7ce728c127bb0314815410ab4358b3790c8725d5d422b1e96ac5eede9d199",
+      "opus55ConfigSha256": "f7b7eb330cac4fb018afea47d5668c9d1ef7c9964338361c139b3ae2962c43e1",
+      "astraConfigSha256": "a654af3b652230065f2399ccd9becbc8463bd06a1e3f1ed8daebaaf4a912d042"
+    },
+    {
+      "id": "SortClutteredBlocks3D",
+      "episode": 2,
+      "instanceSeed": 6578458030060481490,
+      "objectCount": 4,
+      "initialObservationSha256": "bf2db31011d58b990f6678af310303a5051c407ece020c0660b1744bff724ee2",
+      "opus55ResultsSha256": "0e43407e8a3bad6381fc241899ecf383854452939ee4bd354707662326ee46cc",
+      "astraResultsSha256": "38f0a2bca87ae7f45c79bdcf9865cf1f1ea45c741b3a193cf4f594d9af32103e",
+      "opus55ConfigSha256": "76991403aec57bd510c940f9343762dc94483733967e402b00484d3ffa59f47d",
+      "astraConfigSha256": "e3fa7c475b41d127f0ec5ec1fc11fb7ac1979ea0f80984a1a06ff2bde355f197"
+    },
+    {
+      "id": "SweepIntoDrawer3D",
+      "episode": 0,
+      "instanceSeed": 7449868751085282632,
+      "objectCount": null,
+      "initialObservationSha256": "fe51d5b0f54fefc5ab45c95b9aef0627d02d8586ad4a6bc4b76314c0f1e7c924",
+      "opus55ResultsSha256": "94379078cb36012fdbeaf87e024872048756153a2b125aa79f908cfc4ca68867",
+      "astraResultsSha256": "4275499697fb31b71cc8ddab566ab13814bdedf4105471d5daa16db5ad699dde",
+      "opus55ConfigSha256": "94c697cbc78cf9e3d16fde74eee44b7b18dd988fe3b28354073bc9e08c7ec5e6",
+      "astraConfigSha256": "80c228bf481fdd641c0bf0d0c284773116a48830f78051df9cf85b870865a579"
+    },
+    {
+      "id": "SweepSimple3D",
+      "episode": 0,
+      "instanceSeed": 7449868751085282632,
+      "objectCount": 1,
+      "initialObservationSha256": "42beea7253b26d1cd82964b3159696853c31434c185384a9068094322ef6667b",
+      "opus55ResultsSha256": "e7808094d59cb140bfb4d296a38733e93d49dfd10312f33658a75ce028faed7d",
+      "astraResultsSha256": "00101cabcf4811c5568aba466bc420a62b38700ab2780a52861d2873743fe8b6",
+      "opus55ConfigSha256": "bc1ced20f7f3ad7f7bb5159ae99900ca4485f71b0ba91171d84f32ab959474f0",
+      "astraConfigSha256": "92e6c0e185f3a7be73f811ed8af74eb802c0b407c09d904614bcdda973729999"
+    },
+    {
+      "id": "Tossing3D",
+      "episode": 1,
+      "instanceSeed": 5553887448546940950,
+      "objectCount": 2,
+      "initialObservationSha256": "b660c3f969bf51cd451d54c5ee33c8d55c18cf5f514ca3d278d8f1147ef6f25d",
+      "opus55ResultsSha256": "e6ae7b69d01049b51f97c07250776b55772f07d9126f7d47deebf99f5bc7fe32",
+      "astraResultsSha256": "6ca37a9ef4ba3d2e925a68fcc03b60d3147c5923d5114f359bd4913e3aa200a7",
+      "opus55ConfigSha256": "f86f4c2bae7d5952a6a02bcc1bfe9a6f3a3a696023e1d067b626e22722b9bd33",
+      "astraConfigSha256": "71188f04e6c590b86acc5b0394b0a4096cce8fd80222b037fc4a53c5e594a303"
+    },
+    {
+      "id": "PddlPacking",
+      "episode": 2,
+      "instanceSeed": 6578458030060481490,
+      "objectCount": 3,
+      "initialObservationSha256": "7c3e6959e62c557b25d6ad47ed33f5d5bec311bf5ce8159da3e10276dfa8c039",
+      "opus55ResultsSha256": "067a6ff99199f36fe2bc50ae2133b95c07b6599303343d66c984a378266f681b",
+      "astraResultsSha256": "8091111c5a1248beb1ece6bb8e35ee3e5514b3325597c36c5b9ccb592415be7f",
+      "opus55ConfigSha256": "5598fcf4941542b120cb4a590dac99645155077dd867106d4c75f6dd93f8579a",
+      "astraConfigSha256": "69a9d91b9d01d91739ead3e34b9a00b76ef019c7fafee6bf1e6847da4c4c140d"
+    },
+    {
+      "id": "PddlBlocked",
+      "episode": 3,
+      "instanceSeed": 5070999126167511316,
+      "objectCount": 3,
+      "initialObservationSha256": "8dd6a7314e5cde01ee5044310bfb1f4508aea6241ecfa6983bb3dfd32ae3be4e",
+      "opus55ResultsSha256": "96b5349677a3b6c02ffe71277863aac7d61148cb140b95d240b9243b6b4cfa3c",
+      "astraResultsSha256": "9af442ecfd118e27b2c3e3b71c7763420cd027b8cd361616347f4627f5b1cb25",
+      "opus55ConfigSha256": "f1f4d4ce47bed1171279f01bcbf3d8b014bbbeffbf2158b8c37ec04ac1e6322a",
+      "astraConfigSha256": "609def3f15bbcd55874a82ccabdf794170c071793815648133f07f36aca484e3"
+    },
+    {
+      "id": "PddlRovers",
+      "episode": 6,
+      "instanceSeed": 1124563562602844589,
+      "objectCount": 3,
+      "initialObservationSha256": "44061b727e96b97216a8a57c8b49ef7a4f99e11e5e1cb525db093b0a59b70224",
+      "opus55ResultsSha256": "9d385dcd77aa89d7b2be80e5c2e04f45b45ed1214900dbcacd235986ef26e267",
+      "astraResultsSha256": "8d61b95ba1435e7cf5db9200c0e2c68b1a07f4c1bc3d6864000380b972ee8490",
+      "opus55ConfigSha256": "46062778464c8018f169fe0fafcb57a2b6e619e454108f6f58e7b4650c1b832a",
+      "astraConfigSha256": "bd433b8b9283ac618ef6b62ddc75396ecdbf2e6cba90e6f9f8e4e7ed50a9b55a"
+    }
+  ]
+}

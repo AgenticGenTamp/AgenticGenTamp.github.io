@@ -120,30 +120,48 @@ for entry in audit['environments']:
     assert all(entry['checks'].values())
 # Policy comparisons must use the same held-out instance, with verifiable results.
 examples=json.loads((ROOT/'data/policy-examples.json').read_text())
+opus_examples=json.loads((ROOT/'data/opus55-example-audit.json').read_text())
+assert {e['id'] for e in opus_examples['environments']}=={e['id'] for e in data['environments']}
 assert len({e['id'] for e in examples['environments']})==len(examples['environments'])
 assert {e['id'] for e in examples['environments']}=={e['id'] for e in data['environments']}
 for entry in examples['environments']:
     assert entry['id'] in {e['id'] for e in data['environments']}
     available={v['method'] for v in entry['videos']}
     unavailable={m['method'] for m in entry.get('unavailable',[])}
-    assert available|unavailable=={'claude','codex','genplan','astra'} and not available&unavailable
-    assert 1<=len(entry['videos'])<=4 and len(available)==len(entry['videos'])
+    assert available|unavailable=={'claude','codex','genplan','astra','opus55'} and not available&unavailable
+    assert 1<=len(entry['videos'])<=5 and len(available)==len(entry['videos'])
     assert all(m['reason'] and m['label'] for m in entry.get('unavailable',[]))
     # Synthesis seeds can differ across methods; the held-out instance must match.
     for field in ('instanceSeed','episode'):
         assert len({v['source'][field] for v in entry['videos']})==1
     # Exact state hashes allow harmless rasterization differences in initial frames.
-    state_hashes=[v['source'].get('initialStateSha256') for v in entry['videos']]
-    assert (all(state_hashes) and len(set(state_hashes))==1) or len({v['source']['initialFrameSha256'] for v in entry['videos']})==1
+    original=[v for v in entry['videos'] if v['method']!='opus55']
+    state_hashes=[v['source'].get('initialStateSha256') for v in original]
+    assert (all(state_hashes) and len(set(state_hashes))==1) or len({v['source']['initialFrameSha256'] for v in original})==1
+    # Extend the original four-way audit with an independent Opus/Astra reset comparison.
+    observation=next(e for e in opus_examples['environments'] if e['id']==entry['id'])
+    for method in ('astra','opus55'):
+        clip=next(v for v in entry['videos'] if v['method']==method)
+        assert clip['source']['initialObservationSha256']==observation['initialObservationSha256']
+        assert clip['source']['resultsSha256']==observation[method+'ResultsSha256']
+        assert clip['source']['episode']==observation['episode'] and clip['source']['instanceSeed']==observation['instanceSeed']
     for clip in entry['videos']:
         assert isinstance(clip['source']['replicateSeed'],int)
         if clip['method']=='codex' and entry['id'] in examples.get('codexRerunEnvironments',[]):
             assert clip['source']['collection']=='Codex Reruns'
         if clip['method']=='astra':
-            assert entry['videos'][-1]['method']=='astra'
             run=next(r for e in astra['environments'] if e['id']==entry['id'] for r in e['runs'] if r['seed']==clip['source']['replicateSeed'])
             assert clip['source']['resultsSha256']==run['resultsSha256']
             assert clip['source']['approachSha256']==run['approachSha256']
+        if clip['method']=='opus55':
+            run=next(r for e in opus['environments'] if e['id']==entry['id'] for r in e['runs'] if r['seed']==clip['source']['replicateSeed'])
+            assert clip['source']['resultsSha256']==run['resultsSha256'] and clip['source']['approachSha256']==run['approachSha256']
+            assert clip['source']['archivedSolved']==clip['source']['policyPassSolved']==clip['source']['replaySolved']==clip['solved']
+            assert clip['steps']==clip['source']['replaySteps'] and clip['source']['frameStride']==3
+            assert clip['source']['kind']=='local-experiment'
+            assert clip['source']['objectCount']==observation['objectCount']
+            assert observation['opus55ConfigSha256']==run['configSha256']
+            assert re.fullmatch(r'[a-f0-9]{64}',observation['initialObservationSha256'])
         # The reader must show the exact frozen entry point used in this clip.
         files=clip['program']['files']
         assert files and files[0]['name']=='approach.py'

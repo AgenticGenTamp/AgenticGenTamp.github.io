@@ -1,0 +1,11 @@
+from probe_lib import *
+st=base()
+st2=setst(st)
+print(type(st2), rob(st2), obj(st2,'obstruction0'))
+o,r,t,tr,i=env.step(A(0.05,0.03))
+print(rob(o),r,t,tr,i)
+o,r,t,tr,i=env.step(A(0.0,0.0,0.1))
+print(rob(o))
+s(o,'robot','theta',1.0); print(rob(setst(o)))
+o,r,t,tr,i=env.step(A(0.05,0.0))
+print(rob(o))
