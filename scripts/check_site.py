@@ -23,7 +23,7 @@ for p in ROOT.rglob('*'):
     if p.suffix in ('.js','.css','.html','.json','.md'):
         if re.search(r'/home/|/Users/|AIza[\w-]{30}|gh[pousr]_[\w]{25}',p.read_text()):errors.append(f'Private path or credential pattern: {p.relative_to(ROOT)}')
 data=json.loads((ROOT/'data/benchmark.json').read_text())
-assert len(data['environments'])==28 and len(data['methods'])==8
+assert len(data['environments'])==28 and len(data['methods'])==9
 with (ROOT/'data/benchmark.csv').open() as stream:
     csv_rows=list(csv.DictReader(stream))
 assert len(csv_rows)==28*len(data['methods'])
@@ -64,10 +64,35 @@ for entry in astra_source['environments']:
               'min':min(r['rate'] for r in runs),'max':max(r['rate'] for r in runs)}
     assert entry['unroundedMean']==float(exact) and entry['result']==expected
     assert next(e for e in data['environments'] if e['id']==entry['id'])['results']['astraSource']==expected
+# Opus 5.5 uses only full five-run environment sets; preserve partial provenance.
+opus=json.loads((ROOT/'data/opus55-results.json').read_text())
+assert [e['id'] for e in opus['environments']]==[e['id'] for e in data['environments']]
+complete=0
+for entry in opus['environments']:
+    runs=entry['runs'];seeds=[r['seed'] for r in runs]
+    assert seeds==sorted(set(seeds)) and set(seeds)<=set(opus['replicateSeeds'])
+    assert entry['missingSeeds']==sorted(set(opus['replicateSeeds'])-set(seeds))
+    assert all(r['episodes']==100 and r['rate']==r['solved']/100 and r['evalSeed']==792075 for r in runs)
+    assert all(re.fullmatch(r'[a-f0-9]{64}',r[k]) for r in runs for k in ('resultsSha256','approachSha256','configSha256'))
+    assert all(sum(r['objectCounts'].values())==100 for r in runs)
+    env=next(e for e in data['environments'] if e['id']==entry['id'])
+    if entry['missingSeeds']:
+        assert entry['result'] is None and entry['unroundedMean'] is None and env['results']['opus55'] is None
+    else:
+        complete+=1
+        exact=Decimal(sum(r['solved'] for r in runs))/500
+        expected={'mean':float(exact.quantize(Decimal('.01'),rounding=ROUND_HALF_UP)),
+                  'min':min(r['rate'] for r in runs),'max':max(r['rate'] for r in runs)}
+        assert entry['unroundedMean']==float(exact) and entry['result']==env['results']['opus55']==expected
+assert opus['completeEnvironments']==complete and opus['includedRuns']==complete*5
+assert opus['completeRuns']==sum(len(e['runs']) for e in opus['environments'])
+assert opus['evaluationEpisodes']==opus['completeRuns']*100
+assert data['coverage']['opus55']['completeRuns']==opus['completeRuns']
+assert data['coverage']['opus55']['includedRuns']==opus['includedRuns']
 protocol=data['protocol']
-assert protocol['programs']==protocol['paperPrograms']+protocol['additionalPrograms']==980
-assert protocol['episodes']==protocol['paperEpisodes']+protocol['additionalEpisodes']==98000
-assert protocol['additionalPrograms']==astra['completeRuns']+astra_source['completeRuns']
+assert protocol['programs']==protocol['paperPrograms']+protocol['additionalPrograms']
+assert protocol['episodes']==protocol['paperEpisodes']+protocol['additionalEpisodes']==protocol['programs']*100
+assert protocol['additionalPrograms']==astra['completeRuns']+astra_source['completeRuns']+opus['includedRuns']
 # Table III: each environment mean averages exactly the runs with 100% held-out success.
 timing=astra_source['computationTime'];eff=data['efficiency']
 assert sorted(timing['environments'])==sorted(eff['environmentIds'])
@@ -82,7 +107,7 @@ widest=max(eff[k]['mean'] for k in ('claude','source','codexAstra','astraSource'
 for key in ('claude','source','codexAstra','astraSource'):
     bar=re.search(rf'data-efficiency="{key}".*?--w:([\d.]+)%.*?<strong>([\d.]+) ms</strong>',page)
     assert bar and float(bar[2])==eff[key]['mean'] and abs(float(bar[1])-100*eff[key]['mean']/widest)<1e-3
-assert f"<strong>{protocol['programs']:,}</strong>" in page and f"<strong>{protocol['episodes']:,}</strong>" in page
+assert f'<strong id="program-count">{protocol["programs"]:,}</strong>' in page and f'<strong id="episode-count">{protocol["episodes"]:,}</strong>' in page
 # Freeze the assets actually reviewed in the environment audit.
 audit=json.loads((ROOT/'data/environment-audit.json').read_text())
 assert audit['paperSha256']==data['source']['sha256']
@@ -204,7 +229,7 @@ for g in gallery_items:
         assert 'every second' in g['description'] or 'every fourth' in g['description']
     assert hashlib.sha256((ROOT/f"film/assets/clips/{g['file']}.mp4").read_bytes()).hexdigest()==src['videoSha256']
     assert all(re.fullmatch(r'[a-f0-9]{64}',src[k]) for k in ('resultsSha256','approachSha256','initialFrameSha256','videoSha256'))
-    if g['backend']=='Codex with GPT-6 Astra':
+    if g['backend']=='Codex with GPT-6 Astra (high)':
         table=astra if g['setting']=='Main setting' else astra_source
         env_runs=[r for e in table['environments'] for r in e['runs'] if e['id']==src['environment'] and r['seed']==g['seed']]
         assert len(env_runs)==1 and env_runs[0]['resultsSha256']==src['resultsSha256'] and env_runs[0]['approachSha256']==src['approachSha256']
@@ -228,4 +253,4 @@ require('assets/hero.mp4')
 require('assets/project-video.mp4')
 require('assets/prpl-robot.png')
 if errors:raise SystemExit('\n'.join(errors))
-print('PASS: HTML references, 28 audited environments and archived descriptions, 8 methods, 140 complete Astra runs, 140 complete Astra + source runs, Table III timing, matched policy-example and generated-source provenance, paper checksum, gallery provenance, media sizes, private-path scan.')
+print('PASS: HTML references, 28 audited environments and archived descriptions, 9 methods, audited Opus 5.5 coverage, 140 complete Astra runs, 140 complete Astra + source runs, Table III timing, matched policy-example and generated-source provenance, paper checksum, gallery provenance, media sizes, private-path scan.')

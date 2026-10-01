@@ -8,7 +8,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/StickButton2D-claude.mp4",
           "poster": "assets/policies/StickButton2D-claude.jpg",
@@ -75,7 +75,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/StickButton2D-codex.mp4",
           "poster": "assets/policies/StickButton2D-codex.jpg",
@@ -142,7 +142,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/StickButton2D-genplan.mp4",
           "poster": "assets/policies/StickButton2D-genplan.jpg",
@@ -180,7 +180,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/StickButton2D-astra.mp4",
           "poster": "assets/policies/StickButton2D-astra.jpg",
@@ -387,7 +387,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Obstruction2D-claude.mp4",
           "poster": "assets/policies/Obstruction2D-claude.jpg",
@@ -741,7 +741,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/Obstruction2D-codex.mp4",
           "poster": "assets/policies/Obstruction2D-codex.jpg",
@@ -836,7 +836,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/Obstruction2D-genplan.mp4",
           "poster": "assets/policies/Obstruction2D-genplan.jpg",
@@ -874,7 +874,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/Obstruction2D-astra.mp4",
           "poster": "assets/policies/Obstruction2D-astra.jpg",
@@ -983,7 +983,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/ClutteredStorage2D-claude.mp4",
           "poster": "assets/policies/ClutteredStorage2D-claude.jpg",
@@ -1043,7 +1043,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/ClutteredStorage2D-codex.mp4",
           "poster": "assets/policies/ClutteredStorage2D-codex.jpg",
@@ -1307,7 +1307,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/ClutteredStorage2D-genplan.mp4",
           "poster": "assets/policies/ClutteredStorage2D-genplan.jpg",
@@ -1345,7 +1345,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/ClutteredStorage2D-astra.mp4",
           "poster": "assets/policies/ClutteredStorage2D-astra.jpg",
@@ -1510,7 +1510,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/ClutteredRetrieval2D-claude.mp4",
           "poster": "assets/policies/ClutteredRetrieval2D-claude.jpg",
@@ -1577,7 +1577,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/ClutteredRetrieval2D-codex.mp4",
           "poster": "assets/policies/ClutteredRetrieval2D-codex.jpg",
@@ -1679,7 +1679,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/ClutteredRetrieval2D-genplan.mp4",
           "poster": "assets/policies/ClutteredRetrieval2D-genplan.jpg",
@@ -1717,7 +1717,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/ClutteredRetrieval2D-astra.mp4",
           "poster": "assets/policies/ClutteredRetrieval2D-astra.jpg",
@@ -1840,7 +1840,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Motion2D-claude.mp4",
           "poster": "assets/policies/Motion2D-claude.jpg",
@@ -1991,7 +1991,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/Motion2D-codex.mp4",
           "poster": "assets/policies/Motion2D-codex.jpg",
@@ -2072,7 +2072,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/Motion2D-genplan.mp4",
           "poster": "assets/policies/Motion2D-genplan.jpg",
@@ -2110,7 +2110,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/Motion2D-astra.mp4",
           "poster": "assets/policies/Motion2D-astra.jpg",
@@ -2247,7 +2247,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/PushPullHook2D-claude.mp4",
           "poster": "assets/policies/PushPullHook2D-claude.jpg",
@@ -2573,7 +2573,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/PushPullHook2D-codex.mp4",
           "poster": "assets/policies/PushPullHook2D-codex.jpg",
@@ -2808,7 +2808,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/PushPullHook2D-genplan.mp4",
           "poster": "assets/policies/PushPullHook2D-genplan.jpg",
@@ -2846,7 +2846,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/PushPullHook2D-astra.mp4",
           "poster": "assets/policies/PushPullHook2D-astra.jpg",
@@ -2997,7 +2997,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/DynObstruction2D-claude.mp4",
           "poster": "assets/policies/DynObstruction2D-claude.jpg",
@@ -3057,7 +3057,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/DynObstruction2D-codex.mp4",
           "poster": "assets/policies/DynObstruction2D-codex.jpg",
@@ -3327,7 +3327,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/DynObstruction2D-genplan.mp4",
           "poster": "assets/policies/DynObstruction2D-genplan.jpg",
@@ -3365,7 +3365,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/DynObstruction2D-astra.mp4",
           "poster": "assets/policies/DynObstruction2D-astra.jpg",
@@ -3614,7 +3614,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/DynPushPullHook2D-claude.mp4",
           "poster": "assets/policies/DynPushPullHook2D-claude.jpg",
@@ -3982,7 +3982,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/DynPushPullHook2D-codex.mp4",
           "poster": "assets/policies/DynPushPullHook2D-codex.jpg",
@@ -4063,7 +4063,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/DynPushPullHook2D-genplan.mp4",
           "poster": "assets/policies/DynPushPullHook2D-genplan.jpg",
@@ -4101,7 +4101,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/DynPushPullHook2D-astra.mp4",
           "poster": "assets/policies/DynPushPullHook2D-astra.jpg",
@@ -4357,7 +4357,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/DynPushT2D-claude.mp4",
           "poster": "assets/policies/DynPushT2D-claude.jpg",
@@ -4403,7 +4403,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/DynPushT2D-codex.mp4",
           "poster": "assets/policies/DynPushT2D-codex.jpg",
@@ -4477,7 +4477,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/DynPushT2D-genplan.mp4",
           "poster": "assets/policies/DynPushT2D-genplan.jpg",
@@ -4515,7 +4515,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/DynPushT2D-astra.mp4",
           "poster": "assets/policies/DynPushT2D-astra.jpg",
@@ -4659,7 +4659,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/DynScoopPour2D-claude.mp4",
           "poster": "assets/policies/DynScoopPour2D-claude.jpg",
@@ -4796,7 +4796,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/DynScoopPour2D-codex.mp4",
           "poster": "assets/policies/DynScoopPour2D-codex.jpg",
@@ -5038,7 +5038,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/DynScoopPour2D-genplan.mp4",
           "poster": "assets/policies/DynScoopPour2D-genplan.jpg",
@@ -5076,7 +5076,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/DynScoopPour2D-astra.mp4",
           "poster": "assets/policies/DynScoopPour2D-astra.jpg",
@@ -5332,7 +5332,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Obstruction3D-claude.mp4",
           "poster": "assets/policies/Obstruction3D-claude.jpg",
@@ -5665,7 +5665,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/Obstruction3D-codex.mp4",
           "poster": "assets/policies/Obstruction3D-codex.jpg",
@@ -5789,7 +5789,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/Obstruction3D-genplan.mp4",
           "poster": "assets/policies/Obstruction3D-genplan.jpg",
@@ -5827,7 +5827,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/Obstruction3D-astra.mp4",
           "poster": "assets/policies/Obstruction3D-astra.jpg",
@@ -5985,7 +5985,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Packing3D-claude.mp4",
           "poster": "assets/policies/Packing3D-claude.jpg",
@@ -6339,7 +6339,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/Packing3D-codex.mp4",
           "poster": "assets/policies/Packing3D-codex.jpg",
@@ -6645,7 +6645,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/Packing3D-genplan.mp4",
           "poster": "assets/policies/Packing3D-genplan.jpg",
@@ -6683,7 +6683,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/Packing3D-astra.mp4",
           "poster": "assets/policies/Packing3D-astra.jpg",
@@ -7065,7 +7065,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Transport3D-claude.mp4",
           "poster": "assets/policies/Transport3D-claude.jpg",
@@ -7622,7 +7622,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/Transport3D-codex.mp4",
           "poster": "assets/policies/Transport3D-codex.jpg",
@@ -7970,7 +7970,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/Transport3D-genplan.mp4",
           "poster": "assets/policies/Transport3D-genplan.jpg",
@@ -8008,7 +8008,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/Transport3D-astra.mp4",
           "poster": "assets/policies/Transport3D-astra.jpg",
@@ -8103,7 +8103,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Table3D-claude.mp4",
           "poster": "assets/policies/Table3D-claude.jpg",
@@ -8520,7 +8520,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/Table3D-codex.mp4",
           "poster": "assets/policies/Table3D-codex.jpg",
@@ -8608,7 +8608,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/Table3D-genplan.mp4",
           "poster": "assets/policies/Table3D-genplan.jpg",
@@ -8646,7 +8646,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/Table3D-astra.mp4",
           "poster": "assets/policies/Table3D-astra.jpg",
@@ -8867,7 +8867,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/BaseMotion3D-claude.mp4",
           "poster": "assets/policies/BaseMotion3D-claude.jpg",
@@ -9124,7 +9124,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/BaseMotion3D-codex.mp4",
           "poster": "assets/policies/BaseMotion3D-codex.jpg",
@@ -9212,7 +9212,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/BaseMotion3D-genplan.mp4",
           "poster": "assets/policies/BaseMotion3D-genplan.jpg",
@@ -9251,7 +9251,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/BaseMotion3D-astra.mp4",
           "poster": "assets/policies/BaseMotion3D-astra.jpg",
@@ -9486,7 +9486,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/BalanceBeam3D-claude.mp4",
           "poster": "assets/policies/BalanceBeam3D-claude.jpg",
@@ -9938,7 +9938,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/BalanceBeam3D-codex.mp4",
           "poster": "assets/policies/BalanceBeam3D-codex.jpg",
@@ -10026,7 +10026,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/BalanceBeam3D-genplan.mp4",
           "poster": "assets/policies/BalanceBeam3D-genplan.jpg",
@@ -10064,7 +10064,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/BalanceBeam3D-astra.mp4",
           "poster": "assets/policies/BalanceBeam3D-astra.jpg",
@@ -10299,7 +10299,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/ConstrainedCupboard3D-claude.mp4",
           "poster": "assets/policies/ConstrainedCupboard3D-claude.jpg",
@@ -10884,7 +10884,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/ConstrainedCupboard3D-codex.mp4",
           "poster": "assets/policies/ConstrainedCupboard3D-codex.jpg",
@@ -11274,7 +11274,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/ConstrainedCupboard3D-genplan.mp4",
           "poster": "assets/policies/ConstrainedCupboard3D-genplan.jpg",
@@ -11313,7 +11313,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/ConstrainedCupboard3D-astra.mp4",
           "poster": "assets/policies/ConstrainedCupboard3D-astra.jpg",
@@ -11576,7 +11576,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Dynamo3D-claude.mp4",
           "poster": "assets/policies/Dynamo3D-claude.jpg",
@@ -12043,7 +12043,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/Dynamo3D-codex.mp4",
           "poster": "assets/policies/Dynamo3D-codex.jpg",
@@ -12174,7 +12174,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/Dynamo3D-genplan.mp4",
           "poster": "assets/policies/Dynamo3D-genplan.jpg",
@@ -12213,7 +12213,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/Dynamo3D-astra.mp4",
           "poster": "assets/policies/Dynamo3D-astra.jpg",
@@ -12322,7 +12322,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Rearrange3D-claude.mp4",
           "poster": "assets/policies/Rearrange3D-claude.jpg",
@@ -12830,7 +12830,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/Rearrange3D-codex.mp4",
           "poster": "assets/policies/Rearrange3D-codex.jpg",
@@ -13108,7 +13108,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/Rearrange3D-genplan.mp4",
           "poster": "assets/policies/Rearrange3D-genplan.jpg",
@@ -13146,7 +13146,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/Rearrange3D-astra.mp4",
           "poster": "assets/policies/Rearrange3D-astra.jpg",
@@ -13388,7 +13388,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/ScoopPour3D-claude.mp4",
           "poster": "assets/policies/ScoopPour3D-claude.jpg",
@@ -13666,7 +13666,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/ScoopPour3D-codex.mp4",
           "poster": "assets/policies/ScoopPour3D-codex.jpg",
@@ -13944,7 +13944,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/ScoopPour3D-genplan.mp4",
           "poster": "assets/policies/ScoopPour3D-genplan.jpg",
@@ -13983,7 +13983,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/ScoopPour3D-astra.mp4",
           "poster": "assets/policies/ScoopPour3D-astra.jpg",
@@ -14281,7 +14281,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Shelf3D-claude.mp4",
           "poster": "assets/policies/Shelf3D-claude.jpg",
@@ -14341,7 +14341,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/Shelf3D-codex.mp4",
           "poster": "assets/policies/Shelf3D-codex.jpg",
@@ -14703,7 +14703,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/Shelf3D-genplan.mp4",
           "poster": "assets/policies/Shelf3D-genplan.jpg",
@@ -14741,7 +14741,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/Shelf3D-astra.mp4",
           "poster": "assets/policies/Shelf3D-astra.jpg",
@@ -15067,7 +15067,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/SortClutteredBlocks3D-claude.mp4",
           "poster": "assets/policies/SortClutteredBlocks3D-claude.jpg",
@@ -15554,7 +15554,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/SortClutteredBlocks3D-codex.mp4",
           "poster": "assets/policies/SortClutteredBlocks3D-codex.jpg",
@@ -15909,7 +15909,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/SortClutteredBlocks3D-genplan.mp4",
           "poster": "assets/policies/SortClutteredBlocks3D-genplan.jpg",
@@ -15948,7 +15948,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/SortClutteredBlocks3D-astra.mp4",
           "poster": "assets/policies/SortClutteredBlocks3D-astra.jpg",
@@ -16246,7 +16246,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/SweepIntoDrawer3D-claude.mp4",
           "poster": "assets/policies/SweepIntoDrawer3D-claude.jpg",
@@ -17006,7 +17006,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/SweepIntoDrawer3D-codex.mp4",
           "poster": "assets/policies/SweepIntoDrawer3D-codex.jpg",
@@ -17325,7 +17325,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/SweepIntoDrawer3D-genplan.mp4",
           "poster": "assets/policies/SweepIntoDrawer3D-genplan.jpg",
@@ -17363,7 +17363,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/SweepIntoDrawer3D-astra.mp4",
           "poster": "assets/policies/SweepIntoDrawer3D-astra.jpg",
@@ -17654,7 +17654,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/SweepSimple3D-claude.mp4",
           "poster": "assets/policies/SweepSimple3D-claude.jpg",
@@ -18079,7 +18079,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/SweepSimple3D-codex.mp4",
           "poster": "assets/policies/SweepSimple3D-codex.jpg",
@@ -18406,7 +18406,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/SweepSimple3D-genplan.mp4",
           "poster": "assets/policies/SweepSimple3D-genplan.jpg",
@@ -18445,7 +18445,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/SweepSimple3D-astra.mp4",
           "poster": "assets/policies/SweepSimple3D-astra.jpg",
@@ -18771,7 +18771,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Tossing3D-claude.mp4",
           "poster": "assets/policies/Tossing3D-claude.jpg",
@@ -18838,7 +18838,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/Tossing3D-codex.mp4",
           "poster": "assets/policies/Tossing3D-codex.jpg",
@@ -19081,7 +19081,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/Tossing3D-genplan.mp4",
           "poster": "assets/policies/Tossing3D-genplan.jpg",
@@ -19119,7 +19119,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/Tossing3D-astra.mp4",
           "poster": "assets/policies/Tossing3D-astra.jpg",
@@ -19368,7 +19368,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/PddlPacking-claude.mp4",
           "poster": "assets/policies/PddlPacking-claude.jpg",
@@ -19778,7 +19778,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/PddlPacking-codex.mp4",
           "poster": "assets/policies/PddlPacking-codex.jpg",
@@ -19852,7 +19852,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/PddlPacking-genplan.mp4",
           "poster": "assets/policies/PddlPacking-genplan.jpg",
@@ -19890,7 +19890,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/PddlPacking-astra.mp4",
           "poster": "assets/policies/PddlPacking-astra.jpg",
@@ -20118,7 +20118,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/PddlBlocked-claude.mp4",
           "poster": "assets/policies/PddlBlocked-claude.jpg",
@@ -20731,7 +20731,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/PddlBlocked-codex.mp4",
           "poster": "assets/policies/PddlBlocked-codex.jpg",
@@ -21205,7 +21205,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/PddlBlocked-genplan.mp4",
           "poster": "assets/policies/PddlBlocked-genplan.jpg",
@@ -21243,7 +21243,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/PddlBlocked-astra.mp4",
           "poster": "assets/policies/PddlBlocked-astra.jpg",
@@ -21506,7 +21506,7 @@
       "videos": [
         {
           "method": "claude",
-          "label": "Claude Code with Opus 5",
+          "label": "Claude Code with Opus 5 (medium)",
           "setting": "Main setting",
           "video": "assets/policies/PddlRovers-claude.mp4",
           "poster": "assets/policies/PddlRovers-claude.jpg",
@@ -22196,7 +22196,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol",
+          "label": "Codex with GPT-5.6 Sol (high)",
           "setting": "Main setting",
           "video": "assets/policies/PddlRovers-codex.mp4",
           "poster": "assets/policies/PddlRovers-codex.jpg",
@@ -22319,7 +22319,7 @@
         },
         {
           "method": "genplan",
-          "label": "LLMGenPlan · Opus 5",
+          "label": "LLMGenPlan · Opus 5 (medium)",
           "setting": "Source code",
           "video": "assets/policies/PddlRovers-genplan.mp4",
           "poster": "assets/policies/PddlRovers-genplan.jpg",
@@ -22358,7 +22358,7 @@
         },
         {
           "method": "astra",
-          "label": "Codex with GPT-6 Astra",
+          "label": "Codex with GPT-6 Astra (high)",
           "setting": "Main setting",
           "video": "assets/policies/PddlRovers-astra.mp4",
           "poster": "assets/policies/PddlRovers-astra.jpg",

@@ -11,10 +11,10 @@
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#66418b">
   <link rel="icon" href="assets/prpl-robot.png" type="image/png">
-  <link rel="stylesheet" href="styles.css?v=reference-section-1">
+  <link rel="stylesheet" href="styles.css?v=opus55-1">
   <link rel="stylesheet" href="vendor/highlight/github.min.css">
   <link rel="stylesheet" href="program.css?v=2">
-  <script type="module" src="app.js?v=reference-section-1"></script>
+  <script type="module" src="app.js?v=opus55-1"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -98,11 +98,11 @@
       </ul>
     </article>
   </div>
-  <p class="setup-source"><strong>+ source comparison.</strong> In this additional setting, which we run with Claude Code with Opus 5 and Codex with GPT-6 Astra on all 28 environments, the agent can inspect the environment implementation and import its helper functions, including inverse kinematics solvers. During synthesis, it can also set arbitrary simulator states.</p>
+  <p class="setup-source"><strong>+ source comparison.</strong> In this additional setting, which we run with Claude Code with Opus 5 (medium) and Codex with GPT-6 Astra (high) on all 28 environments, the agent can inspect the environment implementation and import its helper functions, including inverse kinematics solvers. During synthesis, it can also set arbitrary simulator states.</p>
   <p class="benchmark-scope">The study includes 25 KinDER environments across four families and three PDDLStream domains: Packing, Blocked, and Rovers. <a href="#environments">View each environment and the exact description given to the agent.</a></p>
   <p class="paper-reference">Protocol: <a href="assets/paper.pdf?v=20260925#page=2" target="_blank" rel="noopener">Sections II-C and III-A</a> and <a href="assets/paper.pdf?v=20260925#page=4" target="_blank" rel="noopener">Section IV-A</a>.</p>
-  <div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong>980</strong><span>synthesized programs</span></div><div><strong>98,000</strong><span>evaluation episodes</span></div></div>
-  <p class="fine">Includes 280 additional GPT-6 Astra programs and 28,000 evaluation episodes: 140 in the main setting and 140 + source.</p>
+  <div class="stats"><div><strong>28</strong><span>simulated environments</span></div><div><strong id="program-count">1,115</strong><span>synthesized programs</span></div><div><strong id="episode-count">111,500</strong><span>evaluation episodes</span></div></div>
+  <p class="fine" id="additional-counts">Includes 280 additional GPT-6 Astra (high) programs and 135 Opus 5.5 (high) programs from complete five-run environment sets.</p>
 </section>
 <section class="gallery-section" aria-labelledby="gallery-title"><div class="section gallery" id="gallery">
   <div class="section-heading"><h2 id="gallery-title">Gallery</h2><p>Examples of tool use, task strategies, failure recovery, and typical failures in the synthesized programs. Main setting uses the simulator API; + source also provides the environment source code.</p></div>
@@ -116,8 +116,9 @@
   <video id="project-video" controls playsinline preload="metadata" poster="assets/posters/project-video.jpg?v=069578f63710" aria-label="Project video: Coding Agents for Generalized Task and Motion Planning Problems"><source src="assets/project-video.mp4?v=069578f63710" type="video/mp4">Your browser cannot play this video. <a href="assets/project-video.mp4?v=069578f63710">Download the MP4</a>.</video>
 </section>
 <section class="section leaderboard" id="results"><div class="section-heading"><div><h2>Experimental results</h2></div><div><p>Mean success rates over 100 held-out instances per run, averaged across five runs and the selected environments.</p><a class="inline-link" href="data/benchmark.csv" download>Download the results <span>↓</span></a></div></div>
-<div class="leader-toolbar"><div class="segmented" role="group" aria-label="Evaluation coverage"><button class="active" data-scope="all" aria-pressed="true">All 28 environments</button><button data-scope="shared" aria-pressed="false">Planner subset · 16</button></div><label class="select-label">Family <select id="family-filter"><option value="all">All families</option><option>Kinematic2D</option><option>Dynamic2D</option><option>Kinematic3D</option><option>Dynamic3D</option><option>PDDLStream</option></select></label></div>
-<p class="scope-note" id="scope-note" aria-live="polite">Loading the paper’s results…</p>
+<p class="coverage-note"><span id="opus55-coverage">Checking Opus 5.5 coverage…</span> <a href="data/opus55-results.json">Run audit ↗</a></p>
+<div class="leader-toolbar"><div class="segmented" role="group" aria-label="Evaluation coverage"><button data-scope="all" aria-pressed="false">All 28 environments</button><button class="active" data-scope="opus55" aria-pressed="true">Opus 5.5 subset · 27</button><button data-scope="shared" aria-pressed="false">Planner subset · 16</button></div><label class="select-label">Family <select id="family-filter"><option value="all">All families</option><option>Kinematic2D</option><option>Dynamic2D</option><option>Kinematic3D</option><option>Dynamic3D</option><option>PDDLStream</option></select></label></div>
+<p class="scope-note" id="scope-note" aria-live="polite">Loading results…</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="Experimental results, scroll horizontally on smaller screens"><table class="ranking"><caption class="sr-only">Mean held-out success rate by method, sorted independently within the main comparison and + source references. The future coding agents row is a placeholder with an unknown score.</caption><thead><tr><th scope="col">Method / backend</th><th scope="col">Setting / access</th><th scope="col">Coverage</th><th scope="col" aria-sort="descending"><button id="sort-score">Mean success <span aria-hidden="true">↓</span></button></th></tr></thead>
 <tbody class="future-methods"><tr><td><span class="method-name">Future coding agents</span><span class="backend">More and better in the future</span></td><td>—</td><td class="coverage">—</td><td class="score-cell"><span class="score-number" aria-label="Unknown">?</span></td></tr></tbody>
 <tbody id="ranking-body"></tbody><tbody id="reference-body" aria-labelledby="reference-section-title"></tbody></table></div>
@@ -132,14 +133,14 @@
   <div id="env-description-content" class="description-document" role="region" tabindex="0" aria-labelledby="env-description-title" aria-busy="true"><p>Loading the environment description…</p></div>
 </section>
 </div></div>
-<div class="insights"><article class="insight source-access"><h3>Effect of source access</h3><p>Source access serves as a reference for how the agents perform with complete knowledge of the environment. It raises mean success for both agents, from 74% to 84% for Claude Code with Opus 5 and from 86% to 95% for Codex with GPT-6 Astra. Source access is not sufficient on its own: LLMGenPlan also receives the source code, uses Opus 5, and has the same $20 budget, yet reaches 28%, while Claude Code with Opus 5 + source is higher in 27 of 28 environments. The source code provides both information and implementations that programs can reuse. With it, the agents can read goals and success checks directly, whereas in the main setting they must infer them from rewards and images, and sometimes settle on an inaccurate goal. On SweepIntoDrawer, for example, source access raises Claude Code with Opus 5 from 0% to 57%.</p><button class="inline-link" data-select-env="SweepIntoDrawer3D">Inspect this environment ↗</button>
+<div class="insights"><article class="insight source-access"><h3>Effect of source access</h3><p>Source access serves as a reference for how the agents perform with complete knowledge of the environment. It raises mean success for both agents, from 74% to 84% for Claude Code with Opus 5 (medium) and from 86% to 95% for Codex with GPT-6 Astra (high). Source access is not sufficient on its own: LLMGenPlan also receives the source code, uses Opus 5 (medium), and has the same $20 budget, yet reaches 28%, while Claude Code with Opus 5 (medium) + source is higher in 27 of 28 environments. The source code provides both information and implementations that programs can reuse. With it, the agents can read goals and success checks directly, whereas in the main setting they must infer them from rewards and images, and sometimes settle on an inaccurate goal. On SweepIntoDrawer, for example, source access raises Claude Code with Opus 5 (medium) from 0% to 57%.</p><button class="inline-link" data-select-env="SweepIntoDrawer3D">Inspect this environment ↗</button>
 <div class="table-scroll source-scroll" tabindex="0" role="region" aria-label="Main setting and + source on all 28 environments"><table class="source-table" id="source-table"><caption class="sr-only">Mean held-out success over all 28 environments for each coding agent, in the main setting and with source access.</caption><thead><tr><th scope="col">Coding agent</th><th scope="col">Main setting</th><th scope="col">+ source</th></tr></thead><tbody id="source-table-body"><tr><td colspan="3">Loading…</td></tr></tbody></table></div>
 <p class="fine" id="source-astra-counts"></p>
 <p class="fine" id="source-note">Equal-environment means over all 28 environments, five runs each.</p></article><article class="insight efficiency"><h3>Computation at test time</h3>
-<div class="time-bar" data-efficiency="claude"><span>Claude Code<small>Opus 5 · Main setting</small></span><i style="--w:23.299%;--c:var(--rust)" aria-hidden="true"></i><strong>11.741 ms</strong></div>
-<div class="time-bar" data-efficiency="source"><span>Claude Code<small>Opus 5 · + source</small></span><i style="--w:84.299%;--c:#956d9b" aria-hidden="true"></i><strong>42.480 ms</strong></div>
-<div class="time-bar" data-efficiency="codexAstra"><span>Codex<small>GPT-6 Astra · Main setting</small></span><i style="--w:2.578%;--c:#24847b" aria-hidden="true"></i><strong>1.299 ms</strong></div>
-<div class="time-bar" data-efficiency="astraSource"><span>Codex<small>GPT-6 Astra · + source</small></span><i style="--w:100.000%;--c:#6f93c6" aria-hidden="true"></i><strong>50.392 ms</strong></div>
+<div class="time-bar" data-efficiency="claude"><span>Claude Code<small>Opus 5 (medium) · Main setting</small></span><i style="--w:23.299%;--c:var(--rust)" aria-hidden="true"></i><strong>11.741 ms</strong></div>
+<div class="time-bar" data-efficiency="source"><span>Claude Code<small>Opus 5 (medium) · + source</small></span><i style="--w:84.299%;--c:#956d9b" aria-hidden="true"></i><strong>42.480 ms</strong></div>
+<div class="time-bar" data-efficiency="codexAstra"><span>Codex<small>GPT-6 Astra (high) · Main setting</small></span><i style="--w:2.578%;--c:#24847b" aria-hidden="true"></i><strong>1.299 ms</strong></div>
+<div class="time-bar" data-efficiency="astraSource"><span>Codex<small>GPT-6 Astra (high) · + source</small></span><i style="--w:100.000%;--c:#6f93c6" aria-hidden="true"></i><strong>50.392 ms</strong></div>
 <p class="fine">Policy computation per action on the 15 environments where all four settings have at least one run with 100% held-out success. Each method is averaged over its own runs with 100% held-out success, equally across environments. <a href="assets/paper.pdf?v=20260925#page=7" target="_blank" rel="noopener">Table III ↗</a></p></article></div>
 </div></section>
 <section class="section citation-section" id="citation" aria-labelledby="citation-title"><div class="citation-heading"><h2 id="citation-title">Citation</h2><button class="button citation-copy" id="copy-bibtex" type="button">Copy BibTeX</button></div><pre class="bibtex" tabindex="0"><code id="bibtex">@misc{merler2026coding,

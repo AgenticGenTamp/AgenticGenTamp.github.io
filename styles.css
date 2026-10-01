@@ -99,7 +99,7 @@ figcaption{font-size:13px;color:var(--muted);margin-top:10px}
 .video-error{padding:12px;color:#a03b30}
 .inline-link{display:inline-flex;align-items:center;gap:18px;background:none;padding:0;font-size:13px;border-bottom:1px solid #aa97bc;line-height:1.8;margin-top:13px}
 .leader-toolbar{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:26px 0 16px}
-.segmented{display:flex;background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:4px;gap:3px}
+.segmented{display:flex;flex-wrap:wrap;background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:4px;gap:3px}
 .segmented button{font-size:13px;padding:9px 14px;border-radius:3px;background:transparent}
 .segmented button.active{background:var(--green);color:white}
 .select-label{font-size:13px;display:flex;align-items:center;gap:12px;color:var(--muted)}
@@ -278,3 +278,5 @@ footer p{font-size:12px;margin-top:5px}
 .citation-copy{font-family:inherit;cursor:pointer;justify-content:center;min-width:150px}
 .bibtex{margin:0;padding:22px 26px;border:1px solid #e0d9e8;border-radius:5px;background:#f0edf4;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.7;color:var(--ink);overflow-x:auto}
 @media (max-width:640px){.bibtex{padding:16px;font-size:12px}}
+
+.coverage-note{font-size:13px;line-height:1.6;color:var(--muted);margin-top:22px}.coverage-note a{white-space:nowrap;text-decoration:underline;text-underline-offset:3px}

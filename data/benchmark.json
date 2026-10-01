@@ -5,7 +5,7 @@
     "tables": "I–III",
     "pdf": "assets/paper.pdf",
     "sha256": "0d9f4b8b6ff1be6c39c0761072e2441467dde57edc1174704bf5012f46d45a5b",
-    "precision": "The original six methods use the printed two-decimal means and min/max in Tables I–II. GPT-6 Astra in the main setting and + source uses five complete archived runs per environment; its means are rounded to the same two-decimal precision. Aggregate scores equally weight environments. Missing planner entries are excluded, never treated as failures.",
+    "precision": "The original six methods use the printed two-decimal means and min/max in Tables I–II. GPT-6 Astra in the main setting and + source uses five complete archived runs per environment; its means are rounded to the same two-decimal precision. Aggregate scores equally weight environments. Missing planner entries are excluded, never treated as failures. Opus 5.5 uses complete five-run environment sets from the local final-results snapshot; incomplete sets remain null. The matched Opus 5.5 scope excludes these environments for every method.",
     "additionalMethods": [
       {
         "id": "astra",
@@ -16,20 +16,26 @@
         "id": "astraSource",
         "source": "data/astra-source-results.json",
         "version": "Completed Drive experiment records · 24 September 2026"
+      },
+      {
+        "id": "opus55",
+        "source": "data/opus55-results.json",
+        "version": "Local final-results snapshot · 1 October 2026"
       }
-    ]
+    ],
+    "reasoningEffort": "Model display labels follow the project maintainer’s correction on 2026-10-01: Opus 5 medium; GPT-5.6 Sol, GPT-6 Astra, and Opus 5.5 high. Historical source files and paper are unchanged."
   },
   "protocol": {
     "runs": 5,
     "heldOutInstances": 100,
-    "programs": 980,
-    "episodes": 98000,
+    "programs": 1115,
+    "episodes": 111500,
     "synthesisBudgetUSD": 20,
     "timeoutSeconds": 60,
     "paperPrograms": 700,
     "paperEpisodes": 70000,
-    "additionalPrograms": 280,
-    "additionalEpisodes": 28000
+    "additionalPrograms": 415,
+    "additionalEpisodes": 41500
   },
   "methods": [
     {
@@ -43,7 +49,7 @@
     {
       "id": "oneshot",
       "name": "One-shot",
-      "backend": "Opus 5",
+      "backend": "Opus 5 (medium)",
       "access": "Source code",
       "color": "#93919b",
       "kind": "baseline"
@@ -51,7 +57,7 @@
     {
       "id": "genplan",
       "name": "LLMGenPlan",
-      "backend": "Opus 5",
+      "backend": "Opus 5 (medium)",
       "access": "Source code",
       "color": "#b6a449",
       "kind": "baseline"
@@ -59,7 +65,7 @@
     {
       "id": "codex",
       "name": "AgenticGenPlan",
-      "backend": "Codex with GPT-5.6 Sol",
+      "backend": "Codex with GPT-5.6 Sol (high)",
       "access": "Main setting",
       "color": "#24847b",
       "kind": "agent"
@@ -67,7 +73,7 @@
     {
       "id": "claude",
       "name": "AgenticGenPlan",
-      "backend": "Claude Code with Opus 5",
+      "backend": "Claude Code with Opus 5 (medium)",
       "access": "Main setting",
       "color": "#ca593b",
       "kind": "agent"
@@ -75,16 +81,25 @@
     {
       "id": "astra",
       "name": "AgenticGenPlan",
-      "backend": "Codex with GPT-6 Astra",
+      "backend": "Codex with GPT-6 Astra (high)",
       "access": "Main setting",
       "color": "#3468af",
       "kind": "agent",
       "resultSource": "data/astra-results.json"
     },
     {
+      "id": "opus55",
+      "name": "AgenticGenPlan",
+      "backend": "Claude Code with Opus 5.5 (high)",
+      "access": "Main setting",
+      "color": "#ad7621",
+      "kind": "agent",
+      "resultSource": "data/opus55-results.json"
+    },
+    {
       "id": "source",
       "name": "AgenticGenPlan + source",
-      "backend": "Claude Code with Opus 5",
+      "backend": "Claude Code with Opus 5 (medium)",
       "access": "+ source",
       "color": "#956d9b",
       "kind": "reference"
@@ -92,7 +107,7 @@
     {
       "id": "astraSource",
       "name": "AgenticGenPlan + source",
-      "backend": "Codex with GPT-6 Astra",
+      "backend": "Codex with GPT-6 Astra (high)",
       "access": "+ source",
       "color": "#6f93c6",
       "kind": "reference",
@@ -146,6 +161,11 @@
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 1.0,
+          "min": 0.99,
+          "max": 1.0
         }
       }
     },
@@ -195,6 +215,11 @@
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 1.0,
+          "min": 0.99,
+          "max": 1.0
         }
       }
     },
@@ -241,6 +266,11 @@
           "max": 1.0
         },
         "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "opus55": {
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
@@ -293,6 +323,11 @@
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 0.99,
+          "min": 0.96,
+          "max": 1.0
         }
       }
     },
@@ -342,6 +377,11 @@
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -384,6 +424,11 @@
           "max": 1.0
         },
         "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "opus55": {
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
@@ -436,6 +481,11 @@
           "mean": 0.93,
           "min": 0.83,
           "max": 0.98
+        },
+        "opus55": {
+          "mean": 0.94,
+          "min": 0.89,
+          "max": 0.99
         }
       }
     },
@@ -485,6 +535,11 @@
           "mean": 0.97,
           "min": 0.91,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 0.99,
+          "min": 0.94,
+          "max": 1.0
         }
       }
     },
@@ -527,6 +582,11 @@
           "max": 1.0
         },
         "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "opus55": {
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
@@ -575,6 +635,11 @@
           "mean": 0.97,
           "min": 0.87,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 0.97,
+          "min": 0.83,
+          "max": 1.0
         }
       }
     },
@@ -619,6 +684,11 @@
         "astraSource": {
           "mean": 1.0,
           "min": 1.0,
+          "max": 1.0
+        },
+        "opus55": {
+          "mean": 0.99,
+          "min": 0.99,
           "max": 1.0
         }
       }
@@ -669,6 +739,11 @@
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 0.99,
+          "min": 0.95,
+          "max": 1.0
         }
       }
     },
@@ -718,6 +793,11 @@
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 1.0,
+          "min": 0.99,
+          "max": 1.0
         }
       }
     },
@@ -760,6 +840,11 @@
           "max": 1.0
         },
         "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "opus55": {
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
@@ -812,6 +897,11 @@
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -854,6 +944,11 @@
           "max": 1.0
         },
         "astraSource": {
+          "mean": 1.0,
+          "min": 0.99,
+          "max": 1.0
+        },
+        "opus55": {
           "mean": 1.0,
           "min": 0.99,
           "max": 1.0
@@ -902,6 +997,11 @@
           "mean": 1.0,
           "min": 0.99,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 0.83,
+          "min": 0.34,
+          "max": 1.0
         }
       }
     },
@@ -944,6 +1044,11 @@
           "max": 1.0
         },
         "astraSource": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "opus55": {
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
@@ -992,6 +1097,11 @@
           "mean": 0.99,
           "min": 0.97,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 0.98,
+          "min": 0.97,
+          "max": 1.0
         }
       }
     },
@@ -1037,6 +1147,11 @@
           "mean": 0.42,
           "min": 0.06,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 0.43,
+          "min": 0.32,
+          "max": 0.51
         }
       }
     },
@@ -1086,6 +1201,11 @@
           "mean": 1.0,
           "min": 0.99,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 1.0,
+          "min": 0.99,
+          "max": 1.0
         }
       }
     },
@@ -1130,6 +1250,11 @@
         "astraSource": {
           "mean": 0.95,
           "min": 0.89,
+          "max": 0.99
+        },
+        "opus55": {
+          "mean": 0.71,
+          "min": 0.47,
           "max": 0.99
         }
       }
@@ -1180,6 +1305,11 @@
           "mean": 0.86,
           "min": 0.47,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 1.0,
+          "min": 0.98,
+          "max": 1.0
         }
       }
     },
@@ -1225,6 +1355,11 @@
           "mean": 0.44,
           "min": 0.35,
           "max": 0.5
+        },
+        "opus55": {
+          "mean": 0.73,
+          "min": 0.68,
+          "max": 0.75
         }
       }
     },
@@ -1273,6 +1408,11 @@
         "astraSource": {
           "mean": 0.98,
           "min": 0.93,
+          "max": 1.0
+        },
+        "opus55": {
+          "mean": 0.99,
+          "min": 0.97,
           "max": 1.0
         }
       }
@@ -1323,6 +1463,11 @@
           "mean": 1.0,
           "min": 0.98,
           "max": 1.0
+        },
+        "opus55": {
+          "mean": 1.0,
+          "min": 0.99,
+          "max": 1.0
         }
       }
     },
@@ -1371,6 +1516,11 @@
         "astraSource": {
           "mean": 1.0,
           "min": 1.0,
+          "max": 1.0
+        },
+        "opus55": {
+          "mean": 0.98,
+          "min": 0.95,
           "max": 1.0
         }
       }
@@ -1421,7 +1571,8 @@
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
-        }
+        },
+        "opus55": null
       }
     }
   ],
@@ -1466,6 +1617,25 @@
       "mean": 50.392,
       "min": 0.053,
       "max": 477.045
+    }
+  },
+  "coverage": {
+    "opus55": {
+      "completeRuns": 138,
+      "includedRuns": 135,
+      "completeEnvironments": 27,
+      "snapshotDate": "2026-10-01",
+      "pending": [
+        {
+          "id": "PddlRovers",
+          "name": "Rovers",
+          "missingSeeds": [
+            222,
+            444
+          ],
+          "completedRuns": 3
+        }
+      ]
     }
   }
 }

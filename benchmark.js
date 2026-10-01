@@ -1,6 +1,6 @@
 // All averages use identical environment weights; absent results remain absent.
 export function selectEnvironments(data, scope = 'all', family = 'all') {
-  return data.environments.filter(e => (scope !== 'shared' || e.results.planner !== null) && (family === 'all' || e.family === family));
+  return data.environments.filter(e => (scope !== 'shared' || e.results.planner !== null) && (scope !== 'opus55' || e.results.opus55 !== null) && (family === 'all' || e.family === family));
 }
 export function summarize(data, scope = 'all', family = 'all', descending = true) {
   const environments = selectEnvironments(data, scope, family);
