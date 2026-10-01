@@ -1,0 +1,15 @@
+import numpy as np
+from env_client import make_env
+np.set_printoptions(precision=4, suppress=True, linewidth=200)
+env=make_env()
+obs,info=env.reset(seed=0)
+print("info",info)
+print("obs cubes:", obs[:80].reshape(5,16)[:,:3])
+print("bb", obs[:80].reshape(5,16)[:,13:16])
+print("island", obs[96:109])
+print("robot", obs[125:147])
+print("wiper", obs[147:163])
+o2,r,t,tr,i2=env.step(np.zeros(11))
+print("r",r,t,tr,i2)
+print("delta", np.nonzero(np.abs(o2-obs)>1e-5)[0])
+env.close()

@@ -1,6 +1,6 @@
 # AgenticGenTAMP project website
 
-The formal project website for **Coding Agents for Generalized Task and Motion Planning Problems**. This is a static GitHub Pages site with no build step or runtime dependencies.
+The formal project website for **Coding Agents for Generalized Task and Motion Planning Problems**. This is a static GitHub Pages site with no build step or backend.
 
 **Deployment repository:** https://github.com/AgenticGenTamp/AgenticGenTamp.github.io
 
@@ -112,11 +112,13 @@ When adding policy examples, use the archived frozen program and environment con
 
 ### Generated program reader
 
-Each of the 112 environment-explorer clips has a **View generated program** button. The reader keeps that clip beside its unedited Python entry point and recursively imported local Python helpers. It provides file selection, line numbers, copy, and individual file downloads. Source files load only when the reader opens; the site remains static and does not execute the displayed Python. Escape or Close returns focus to the originating card.
+Each of the 112 environment-explorer clips has a **View generated program** button. The reader keeps that clip beside its original Python source, with locally hosted syntax highlighting, line numbers, filename search, copy, and individual file downloads. **Final program** contains the entry point and its recursively imported Python helpers. **Probing & development** contains additional Python files preserved in the same coding-agent sandbox: probes, calibration, tests, development helpers, and intermediate attempts. The video always shows the final policy, not execution of the selected probing script. Archived files do not establish their execution order or prove that each was run.
 
-`data/programs/<environment>/<method>/` contains the archived source bytes. Each clip's `program.files` list in `data/policy-examples.json` records its paths, archive members, SHA-256 hashes, and line counts. The entry point must match that clip's existing `source.approachSha256`; extraction also matches the run's `resultsSha256`. Files come from original archives or matching cached runs, including the eight archives retrieved from the shared Drive collection for this addition. Local helper imports are followed recursively, including imports inside methods and literal `import_module` / `__import__` calls. This is a source browser, not a standalone runnable bundle: simulator code, third-party dependencies, data files, and synthesis logs are not included. Original code is preserved, including its comments and unsuccessful strategies.
+`data/programs/<environment>/<method>/` preserves the source bytes. Each clip's `program.files` (final policy) and `program.synthesisFiles` lists in `data/policy-examples.json` record paths, archive members, SHA-256 hashes, and line counts. Every archive or cached run is matched against the clip's entry-point and result hashes before extracting files. All 112 archives/runs were checked for this addition; the eight missing locally were fetched from the shared Drive collection. Provided harness files (`env_client.py`, `test_approach.py`), hidden tool configuration, and LLMGenPlan's candidate-policy history are excluded from probing files. Files that fail the existing private-path check are withheld unchanged, named in `synthesisOmittedFiles`, and counted in the reader; no source is silently rewritten. An empty probing list means no separate probing scripts are available here.
 
-When replacing a clip, replace its associated source files and metadata from the same archived run. `npm run check` verifies every displayed source hash and every video-to-entry-point match. Never substitute a newer policy merely because it is for the same environment or model.
+The final-policy helper extraction follows local imports recursively, including imports inside methods and literal `import_module` / `__import__` calls. This is a source browser, not a runnable bundle: simulator code, third-party dependencies, data files, and synthesis logs are not included. Scripts can reference earlier versions or other archived files. The source is fetched only when selected and is never executed by the website. Syntax highlighting uses vendored highlight.js 11.12.0 (Python only), with its license and checksums under `vendor/highlight/`; no runtime CDN is used. Copy and download retain the unedited source. Escape or Close returns focus to the originating card.
+
+When replacing a clip, replace its associated source files and metadata from the same archived run. `npm run check` verifies every displayed source hash, every video-to-entry-point match, and that every shipped Python file is listed. Never substitute a newer policy merely because it is for the same environment or model.
 
 ### Paper-grounded copy
 

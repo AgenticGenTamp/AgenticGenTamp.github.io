@@ -1,4 +1,4 @@
-import {openProgramViewer} from './program-viewer.js';
+import {openProgramViewer} from './program-viewer.js?v=2';
 import {selectEnvironments, summarize} from './benchmark.js';
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
@@ -257,7 +257,7 @@ loadJSON('data/gallery.json').then(result=>{gallery=result;renderGallery();}).ca
 
 loadJSON('data/environment-descriptions.json?v=descriptions-5').then(result=>{descriptions=result;renderEnvironmentDescription();}).catch(error=>{console.error(error);descriptionLoadFailed=true;renderEnvironmentDescription();});
 
-loadJSON('data/policy-examples.json?v=programs-1').then(result=>{policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
+loadJSON('data/policy-examples.json?v=programs-2').then(result=>{policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
 
 document.getElementById('copy-bibtex')?.addEventListener('click',async e=>{
   const button=e.currentTarget;

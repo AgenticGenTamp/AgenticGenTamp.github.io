@@ -1,0 +1,30 @@
+from env_client import make_env
+from ctl import act, rget, oget
+import numpy as np
+env=make_env()
+def run(seed, xs, ydir):
+    res={}
+    for tx in xs:
+        obs,info=env.reset(seed=seed)
+        def H(): return np.array([oget(obs,'hook','x'),oget(obs,'hook','y'),oget(obs,'hook','theta')])
+        # set theta
+        tgt = np.pi/2 if ydir<0 else -np.pi/2
+        for _ in range(120):
+            d=(tgt-rget(obs,'theta')+np.pi)%(2*np.pi)-np.pi
+            if abs(d)<0.01: break
+            obs,_,_,_,_=env.step(act(dth=d,da=-0.1,dg=-0.02))
+        ystart = 1.45 if ydir<0 else 0.25
+        for _ in range(300):
+            dx=np.clip(tx-rget(obs,'x'),-0.05,0.05); dy=np.clip(ystart-rget(obs,'y'),-0.05,0.05)
+            if abs(dx)<0.004 and abs(dy)<0.004: break
+            obs,_,_,_,_=env.step(act(dx=dx,dy=dy))
+        h0=H(); hit=None
+        for _ in range(60):
+            obs,_,_,_,_=env.step(act(dy=0.05*ydir))
+            if np.abs(H()-h0).max()>2e-4:
+                hit=rget(obs,'y'); break
+        res[round(tx,2)] = None if hit is None else round(hit+0.24*ydir*-1,3)
+    return res
+xs=[round(v,2) for v in np.arange(1.3,3.5,0.15)]
+print("TOP(seed42):", run(42, xs, -1))
+env.close()

@@ -124,7 +124,13 @@ for entry in examples['environments']:
         assert files and files[0]['name']=='approach.py'
         assert files[0]['sha256']==clip['source']['approachSha256']
         assert len({f['name'] for f in files})==len(files)
-        for source_file in files:
+        assert clip['program']['synthesisArchiveChecked'] is True
+        synthesis=clip['program']['synthesisFiles']
+        assert len({f['name'] for f in files+synthesis})==len(files+synthesis)
+        assert all(f['name'] not in {'env_client.py','test_approach.py'} for f in synthesis)
+        assert all(not any(p.startswith('.') for p in Path(f['name']).parts) for f in synthesis)
+        assert not ({f['name'] for f in files+synthesis}&set(clip['program']['synthesisOmittedFiles']))
+        for source_file in files+synthesis:
             name=source_file['name']
             assert not Path(name).is_absolute() and '..' not in Path(name).parts
             expected=f"data/programs/{entry['id']}/{clip['method']}/{name}"
@@ -142,6 +148,11 @@ for entry in examples['environments']:
         assert all(re.fullmatch(r'[a-f0-9]{64}',clip['source'][key]) for key in ('resultsSha256','approachSha256','initialFrameSha256'))
         if clip['source'].get('initialStateSha256'):
             assert re.fullmatch(r'[a-f0-9]{64}',clip['source']['initialStateSha256'])
+# Every shipped source file has provenance; no stale unlisted files are served.
+source_paths={f['path'] for e in examples['environments'] for c in e['videos'] for f in c['program']['files']+c['program']['synthesisFiles']}
+assert source_paths=={str(p.relative_to(ROOT)) for p in (ROOT/'data/programs').rglob('*.py')}
+for name,digest in json.loads((ROOT/'vendor/highlight/checksums.json').read_text()).items():
+    assert hashlib.sha256((ROOT/'vendor/highlight'/name).read_bytes()).hexdigest()==digest
 # Every paper environment has exactly one original, checksum-verified description.
 manifest=json.loads((ROOT/'data/environment-descriptions/sources.json').read_text())
 descriptions=json.loads((ROOT/'data/environment-descriptions.json').read_text())

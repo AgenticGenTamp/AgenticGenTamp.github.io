@@ -12,8 +12,9 @@
   <meta name="theme-color" content="#66418b">
   <link rel="icon" href="assets/prpl-robot.png" type="image/png">
   <link rel="stylesheet" href="styles.css?v=astra-source-1">
-  <link rel="stylesheet" href="program.css?v=1">
-  <script type="module" src="app.js?v=programs-1"></script>
+  <link rel="stylesheet" href="vendor/highlight/github.min.css">
+  <link rel="stylesheet" href="program.css?v=2">
+  <script type="module" src="app.js?v=programs-2"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -155,8 +156,8 @@
 <dialog id="program-dialog" class="program-dialog" aria-labelledby="program-title" aria-describedby="program-method">
   <header class="program-header"><div><p class="program-eyebrow">Program behind this example</p><h2 id="program-title"></h2><p id="program-method"></p></div><button id="program-close" class="program-close" aria-label="Close program viewer" autofocus>Close <span aria-hidden="true">×</span></button></header>
   <div class="program-layout">
-    <aside class="program-context"><video id="program-video" controls muted playsinline preload="none"></video><p id="program-outcome"></p><p class="program-explanation">This is the frozen program used for the video shown here. The same program is evaluated on many held-out instances.</p><p id="program-instance"></p><p id="program-file-note"></p></aside>
-    <section class="program-reader" aria-label="Generated Python source"><div class="program-toolbar"><label for="program-file">File</label><select id="program-file"></select><button id="program-copy" disabled>Copy code</button><a id="program-download" download>Download file</a></div><p id="program-status" class="program-status" role="status"></p><div id="program-source" class="program-source" tabindex="0" aria-label="Source code, scroll to read"><pre id="program-lines" class="program-lines" aria-hidden="true"></pre><pre class="program-code"><code id="program-code"></code></pre></div><p class="program-footnote">Unedited source for inspection. Running it requires the original experiment environment and dependencies.</p></section>
+    <aside class="program-context"><video id="program-video" controls muted playsinline preload="none"></video><p id="program-outcome"></p><p id="program-video-note" hidden>Video: final-program behavior</p><p id="program-purpose" class="program-explanation">This is the frozen program used for the video shown here. The same program is evaluated on many held-out instances.</p><p id="program-instance"></p><p id="program-file-note"></p></aside>
+    <section class="program-reader" aria-label="Generated Python source"><div class="program-categories" role="group" aria-label="Source files"><button id="program-final" aria-pressed="true">Final program</button><button id="program-synthesis" aria-pressed="false">Probing &amp; development</button></div><input id="program-search" type="search" placeholder="Find a file…" aria-label="Search source filenames" autocomplete="off"><div class="program-toolbar"><label for="program-file">File</label><select id="program-file"></select><button id="program-copy" disabled>Copy code</button><a id="program-download" download>Download file</a></div><p id="program-status" class="program-status" role="status"></p><div id="program-source" class="program-source" tabindex="0" aria-label="Source code, scroll to read"><pre id="program-lines" class="program-lines" aria-hidden="true"></pre><pre class="program-code"><code id="program-code"></code></pre></div><p class="program-footnote">Unedited source for inspection. Running it requires the original experiment environment and dependencies.</p></section>
   </div>
 </dialog>
 </body>
