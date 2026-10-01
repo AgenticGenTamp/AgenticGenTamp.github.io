@@ -91,10 +91,13 @@ assert opus['completeRuns']==sum(len(e['runs']) for e in opus['environments'])
 assert opus['evaluationEpisodes']==opus['completeRuns']*100
 assert data['coverage']['opus55']['completeRuns']==opus['completeRuns']
 assert data['coverage']['opus55']['includedRuns']==opus['includedRuns']
-protocol=data['protocol']
-assert protocol['programs']==protocol['paperPrograms']+protocol['additionalPrograms']
-assert protocol['episodes']==protocol['paperEpisodes']+protocol['additionalEpisodes']==protocol['programs']*100
-assert protocol['additionalPrograms']==astra['completeRuns']+astra_source['completeRuns']+opus['includedRuns']
+# Totals are derived at runtime and tested against the run manifests in Node.
+assert set(data['protocol']['paperMethods']) <= {m['id'] for m in data['methods']}
+assert not set(data['protocol']['paperMethods']) & {m['id'] for m in data['methods'] if m.get('resultSource')}
+for method in data['methods']:
+    if method.get('resultSource'):
+        require(method['resultSource'])
+        assert json.loads((ROOT/method['resultSource']).read_text())['method']==method['id']
 # Table III: each environment mean averages exactly the runs with 100% held-out success.
 timing=astra_source['computationTime'];eff=data['efficiency']
 assert sorted(timing['environments'])==sorted(eff['environmentIds'])
@@ -109,7 +112,8 @@ widest=max(eff[k]['mean'] for k in ('claude','source','codexAstra','astraSource'
 for key in ('claude','source','codexAstra','astraSource'):
     bar=re.search(rf'data-efficiency="{key}".*?--w:([\d.]+)%.*?<strong>([\d.]+) ms</strong>',page)
     assert bar and float(bar[2])==eff[key]['mean'] and abs(float(bar[1])-100*eff[key]['mean']/widest)<1e-3
-assert f'<strong id="program-count">{protocol["programs"]:,}</strong>' in page and f'<strong id="episode-count">{protocol["episodes"]:,}</strong>' in page
+for counter in ('environment-count','program-count','episode-count'):
+    assert f'<strong id="{counter}">—</strong>' in page
 # Freeze the assets actually reviewed in the environment audit.
 audit=json.loads((ROOT/'data/environment-audit.json').read_text())
 assert audit['paperSha256']==data['source']['sha256']

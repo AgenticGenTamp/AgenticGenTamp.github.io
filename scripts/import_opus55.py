@@ -104,11 +104,6 @@ def main():
         env['results']['opus55'] = entry['result']
     data['coverage'] = {'opus55': {k: snapshot[k] for k in ('completeRuns', 'includedRuns', 'completeEnvironments', 'snapshotDate')}}
     data['coverage']['opus55']['pending'] = [{'id': e['id'], 'name': next(x['name'] for x in data['environments'] if x['id'] == e['id']), 'missingSeeds': e['missingSeeds'], 'completedRuns': len(e['runs'])} for e in snapshot['environments'] if e['missingSeeds']]
-    protocol = data['protocol']
-    protocol['additionalPrograms'] = 280 + snapshot['includedRuns']
-    protocol['additionalEpisodes'] = 100 * protocol['additionalPrograms']
-    protocol['programs'] = protocol['paperPrograms'] + protocol['additionalPrograms']
-    protocol['episodes'] = protocol['paperEpisodes'] + protocol['additionalEpisodes']
     save(ROOT / 'data/opus55-results.json', snapshot)
     save(ROOT / 'data/benchmark.json', data)
     for e in snapshot['environments']:

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {summarize,selectEnvironments} from '../benchmark.js';
+import {summarize,selectEnvironments,experimentTotals} from '../benchmark.js';
 const data=JSON.parse(readFileSync(new URL('../data/benchmark.json',import.meta.url)));
 test('full coverage ranks exclude a partial-coverage planner and source reference',()=>{
  const rows=summarize(data);const planner=rows.find(x=>x.id==='planner');
@@ -59,4 +59,32 @@ test('Rovers has a measured five-run range and no remaining missing seeds',()=>{
  assert.equal(data.coverage.opus55.completeRuns,140);
  assert.equal(data.coverage.opus55.completeEnvironments,28);
  assert.ok(data.environments.every(e=>e.results.opus55 && !e.results.opus55.provisional));
+});
+
+const runSources=Object.fromEntries(data.methods.filter(m=>m.resultSource).map(m=>[m.id,JSON.parse(readFileSync(new URL('../'+m.resultSource,import.meta.url)))]));
+test('experiment totals count paper programs plus audited runs, excluding planners',()=>{
+ assert.deepEqual(experimentTotals(data,runSources),{environments:28,programs:1120,episodes:112000,additional:[
+  {backend:'Codex with GPT-6 Astra (high)',programs:280},
+  {backend:'Claude Code with Opus 5.5 (high)',programs:140}
+ ]});
+});
+test('a newly registered model contributes completed runs even before an environment mean is ready',()=>{
+ const next=structuredClone(data);
+ next.methods.push({id:'newModel',backend:'New model',resultSource:'data/new-results.json'});
+ next.environments.forEach(e=>e.results.newModel=null);
+ const sources={...runSources,newModel:{method:'newModel',environments:[
+  {id:next.environments[0].id,runs:[{episodes:100},{episodes:80}]},
+  {id:'DroppedEnvironment',runs:[{episodes:100}]}
+ ]}};
+ const totals=experimentTotals(next,sources);
+ assert.equal(totals.programs,1122);assert.equal(totals.episodes,112180);
+ assert.deepEqual(totals.additional.at(-1),{backend:'New model',programs:2});
+});
+test('removing an environment removes its programs from both paper and run-based totals',()=>{
+ const subset={...data,environments:data.environments.filter(e=>e.id!=='PddlRovers')};
+ assert.equal(experimentTotals(subset,runSources).programs,1080);
+ assert.equal(experimentTotals(subset,runSources).episodes,108000);
+});
+test('missing run sources never silently produce a lower total',()=>{
+ assert.throws(()=>experimentTotals(data,{}),/Missing or mismatched run source/);
 });

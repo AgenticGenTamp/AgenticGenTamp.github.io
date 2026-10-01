@@ -28,14 +28,15 @@
   "protocol": {
     "runs": 5,
     "heldOutInstances": 100,
-    "programs": 1120,
-    "episodes": 112000,
     "synthesisBudgetUSD": 20,
     "timeoutSeconds": 60,
-    "paperPrograms": 700,
-    "paperEpisodes": 70000,
-    "additionalPrograms": 420,
-    "additionalEpisodes": 42000
+    "paperMethods": [
+      "oneshot",
+      "genplan",
+      "codex",
+      "claude",
+      "source"
+    ]
   },
   "methods": [
     {

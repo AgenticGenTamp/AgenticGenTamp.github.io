@@ -1,5 +1,5 @@
 import {openProgramViewer} from './program-viewer.js?v=2';
-import {selectEnvironments, summarize} from './benchmark.js?v=opus55-complete-1';
+import {selectEnvironments, summarize, experimentTotals} from './benchmark.js?v=run-totals-1';
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -254,18 +254,33 @@ function renderSourceComparison(){
  $('#source-astra-counts').textContent=`Compared with its main setting, GPT-6 Astra (high) + source has a higher mean on ${diff.filter(d=>d>0).length} environments, the same mean on ${diff.filter(d=>d===0).length}, and a lower mean on ${lower.length}${lower.length?`: ${lower.join(' and ')}`:''}.`;
 }
 async function loadJSON(path){const res=await fetch(path);if(!res.ok)throw new Error(`Cannot load ${path}: ${res.status}`);return res.json();}
-loadJSON('data/benchmark.json?v=opus55-complete-1').then(result=>{data=result;
+async function renderExperimentStats() {
+ try {
+   const sources=await Promise.all(data.methods.filter(m=>m.resultSource).map(async m=>[m.id,await loadJSON(m.resultSource)]));
+   const totals=experimentTotals(data,Object.fromEntries(sources));
+   const format=n=>n.toLocaleString('en-US');
+   $('#environment-count').textContent=format(totals.environments);
+   $('#program-count').textContent=format(totals.programs);
+   $('#episode-count').textContent=format(totals.episodes);
+   const additions=totals.additional.filter(x=>x.programs).map(x=>`${format(x.programs)} from ${x.backend}`);
+   $('#additional-counts').textContent=additions.length?`Additional completed programs: ${new Intl.ListFormat('en',{style:'long',type:'conjunction'}).format(additions)}.`:'';
+ } catch(error) {
+   console.error(error);
+   $('#additional-counts').textContent='Experiment totals could not load. Please reload the page.';
+ } finally {
+   $('#experiment-stats').setAttribute('aria-busy','false');
+ }
+}
+loadJSON('data/benchmark.json?v=run-totals-1').then(result=>{data=result;
  const coverage=data.coverage.opus55;
  $('#opus55-coverage').textContent=coverage.pending.length?`Opus 5.5 (high): ${coverage.completeEnvironments}/28 environments complete. `+coverage.pending.map(e=>`${e.name}: ${e.completedRuns}/5 runs complete; seeds ${e.missingSeeds.join(' and ')} pending.`).join(' '):'Opus 5.5 (high): all 28 environments complete, five runs each.';
- $('#program-count').textContent=data.protocol.programs.toLocaleString('en-US');
- $('#episode-count').textContent=data.protocol.episodes.toLocaleString('en-US');
- $('#additional-counts').textContent=`Includes 280 additional GPT-6 Astra (high) programs and ${coverage.includedRuns} Opus 5.5 (high) programs from complete five-run environment sets.`;
- renderRanking();renderEnvironmentList();renderSourceComparison();}).catch(error=>{console.error(error);$('#scope-note').textContent='The interactive results could not load. Please download the CSV or read Tables I–II in the paper.';});
-loadJSON('data/gallery.json?v=opus55-complete-1').then(result=>{gallery=result;renderGallery();}).catch(error=>{console.error(error);$('#gallery-grid').innerHTML='<p>The gallery could not load. <a href="assets/project-video.mp4?v=a9fc3fad1bcc">Watch the project video ↗</a></p>';});
+ renderExperimentStats();
+ renderRanking();renderEnvironmentList();renderSourceComparison();}).catch(error=>{console.error(error);$('#scope-note').textContent='The interactive results could not load. Please download the CSV or read Tables I–II in the paper.';$('#experiment-stats').setAttribute('aria-busy','false');$('#additional-counts').textContent='Experiment totals could not load. Please reload the page.';});
+loadJSON('data/gallery.json?v=run-totals-1').then(result=>{gallery=result;renderGallery();}).catch(error=>{console.error(error);$('#gallery-grid').innerHTML='<p>The gallery could not load. <a href="assets/project-video.mp4?v=a9fc3fad1bcc">Watch the project video ↗</a></p>';});
 
 loadJSON('data/environment-descriptions.json?v=descriptions-5').then(result=>{descriptions=result;renderEnvironmentDescription();}).catch(error=>{console.error(error);descriptionLoadFailed=true;renderEnvironmentDescription();});
 
-loadJSON('data/policy-examples.json?v=opus55-complete-1').then(result=>{const order=['claude','codex','astra','opus55','genplan'];result.environments.forEach(e=>e.videos.sort((a,b)=>order.indexOf(a.method)-order.indexOf(b.method)));policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
+loadJSON('data/policy-examples.json?v=run-totals-1').then(result=>{const order=['claude','codex','astra','opus55','genplan'];result.environments.forEach(e=>e.videos.sort((a,b)=>order.indexOf(a.method)-order.indexOf(b.method)));policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
 
 document.getElementById('copy-bibtex')?.addEventListener('click',async e=>{
   const button=e.currentTarget;

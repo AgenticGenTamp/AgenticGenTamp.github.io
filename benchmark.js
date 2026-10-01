@@ -20,3 +20,25 @@ export function summarize(data, scope = 'all', family = 'all', descending = true
   const ranks = new Map(comparable.map(r => [r.id, comparable.findIndex(x => Math.abs(x.mean - r.mean) < 1e-10) + 1]));
   return [...main.map(r => ({...r, rank: ranks.get(r.id) ?? null})), ...references.map(r => ({...r, rank:null}))];
 }
+
+// Count generated programs, not planner evaluations. Legacy paper methods have
+// table coverage and a recorded run protocol; newer methods have individual runs.
+export function experimentTotals(data, resultsByMethod) {
+  const environmentIds = new Set(data.environments.map(e => e.id));
+  const paperPrograms = data.protocol.paperMethods.reduce((sum, id) =>
+    sum + data.environments.filter(e => e.results[id] != null).length * data.protocol.runs, 0);
+  let programs = paperPrograms;
+  let episodes = paperPrograms * data.protocol.heldOutInstances;
+  const additionalByBackend = new Map();
+  for (const method of data.methods.filter(m => m.resultSource)) {
+    if (data.protocol.paperMethods.includes(method.id)) throw new Error(`Duplicate paper/run source: ${method.id}`);
+    const source = resultsByMethod[method.id];
+    if (!source || source.method !== method.id) throw new Error(`Missing or mismatched run source: ${method.id}`);
+    const runs = source.environments.filter(e => environmentIds.has(e.id)).flatMap(e => e.runs);
+    programs += runs.length;
+    episodes += runs.reduce((sum, run) => sum + run.episodes, 0);
+    additionalByBackend.set(method.backend, (additionalByBackend.get(method.backend) || 0) + runs.length);
+  }
+  return {environments: environmentIds.size, programs, episodes,
+    additional: [...additionalByBackend].map(([backend, programs]) => ({backend, programs}))};
+}
