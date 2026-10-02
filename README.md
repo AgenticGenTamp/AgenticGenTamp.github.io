@@ -192,3 +192,13 @@ Never run the anonymous site's publication scripts from this repository.
   url={https://arxiv.org/abs/2609.30233},
 }
 ```
+
+## Search discovery and link previews
+
+The canonical project URL is `https://agenticgentamp.github.io/`. The static HTML includes descriptive search metadata, Open Graph and large-image Twitter cards, citation metadata for the paper, and Schema.org `WebSite`, `WebPage`, and `ScholarlyArticle` records. The preview reuses the 1280 × 720 project-video title frame. Author order and the 2026-09-24 preprint date follow the arXiv record; the paper metadata describes the publication, not later website result updates. Run totals remain derived from the result manifests rather than duplicated in metadata.
+
+`robots.txt` permits crawling and advertises `sitemap.xml`. The sitemap lists the single canonical HTML page, without fragment links, source presentation files, or invented modification dates. When adding real pages, add their canonical URLs to the sitemap. Keep structured data consistent with visible content and update social-image dimensions if replacing the poster.
+
+After publishing, add the project's own URL-prefix property in Google Search Console, complete ownership verification using the token issued for that property, submit `sitemap.xml`, and inspect the homepage for indexing and Google's chosen canonical. A personal-site verification token does not establish ownership of this separate property. Monitor impressions, clicks, search queries, and click-through rate; metadata alone does not guarantee indexing, rich results, or more traffic. Citation tags help identify the paper but are not a claim of Google Scholar eligibility: the current local PDF is over Scholar's documented 5 MB limit, and the project homepage is not a dedicated abstract landing page. The arXiv link remains available.
+
+Prefer an original explanatory post on an author's site, with a descriptive link here, over an identical mirror. If a mirror is needed for another reason, point its canonical link back to this URL and keep internal promotional links consistent. Do not copy this homepage's canonical onto a genuinely distinct article.
