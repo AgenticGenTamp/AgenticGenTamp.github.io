@@ -23,7 +23,7 @@ for p in ROOT.rglob('*'):
     if p.suffix in ('.js','.css','.html','.json','.md'):
         if re.search(r'/home/|/Users/|AIza[\w-]{30}|gh[pousr]_[\w]{25}',p.read_text()):errors.append(f'Private path or credential pattern: {p.relative_to(ROOT)}')
 data=json.loads((ROOT/'data/benchmark.json').read_text())
-assert len(data['environments'])==28 and len(data['methods'])==9
+assert len(data['environments'])==28 and len(data['methods'])==10
 with (ROOT/'data/benchmark.csv').open() as stream:
     csv_rows=list(csv.DictReader(stream))
 assert len(csv_rows)==28*len(data['methods'])
@@ -65,32 +65,34 @@ for entry in astra_source['environments']:
               'min':min(r['rate'] for r in runs),'max':max(r['rate'] for r in runs)}
     assert entry['unroundedMean']==float(exact) and entry['result']==expected
     assert next(e for e in data['environments'] if e['id']==entry['id'])['results']['astraSource']==expected
-# Opus 5.5 uses only full five-run environment sets; preserve partial provenance.
+# Opus 5.5 (main and + source) uses only full five-run environment sets; preserve partial provenance.
+for method,path in [('opus55','data/opus55-results.json'),('opus55Source','data/opus55-source-results.json')]:
+    opus=json.loads((ROOT/path).read_text())
+    assert opus['method']==method and [e['id'] for e in opus['environments']]==[e['id'] for e in data['environments']]
+    complete=0
+    for entry in opus['environments']:
+        runs=entry['runs'];seeds=[r['seed'] for r in runs]
+        assert seeds==sorted(set(seeds)) and set(seeds)<=set(opus['replicateSeeds'])
+        assert entry['missingSeeds']==sorted(set(opus['replicateSeeds'])-set(seeds))
+        assert all(r['episodes']==100 and r['rate']==r['solved']/100 and r['evalSeed']==792075 for r in runs)
+        assert all(re.fullmatch(r'[a-f0-9]{64}',r[k]) for r in runs for k in ('resultsSha256','approachSha256','configSha256'))
+        assert all(sum(r['objectCounts'].values())==100 for r in runs)
+        env=next(e for e in data['environments'] if e['id']==entry['id'])
+        if entry['missingSeeds']:
+            assert entry['result'] is None and entry['unroundedMean'] is None
+            assert env['results'][method] is None
+        else:
+            complete+=1
+            exact=Decimal(sum(r['solved'] for r in runs))/500
+            expected={'mean':float(exact.quantize(Decimal('.01'),rounding=ROUND_HALF_UP)),
+                      'min':min(r['rate'] for r in runs),'max':max(r['rate'] for r in runs)}
+            assert entry['unroundedMean']==float(exact) and entry['result']==env['results'][method]==expected
+    assert opus['completeEnvironments']==complete and opus['includedRuns']==complete*5
+    assert opus['completeRuns']==sum(len(e['runs']) for e in opus['environments'])
+    assert opus['evaluationEpisodes']==opus['completeRuns']*100
+    assert data['coverage'][method]['completeRuns']==opus['completeRuns']
+    assert data['coverage'][method]['includedRuns']==opus['includedRuns']
 opus=json.loads((ROOT/'data/opus55-results.json').read_text())
-assert [e['id'] for e in opus['environments']]==[e['id'] for e in data['environments']]
-complete=0
-for entry in opus['environments']:
-    runs=entry['runs'];seeds=[r['seed'] for r in runs]
-    assert seeds==sorted(set(seeds)) and set(seeds)<=set(opus['replicateSeeds'])
-    assert entry['missingSeeds']==sorted(set(opus['replicateSeeds'])-set(seeds))
-    assert all(r['episodes']==100 and r['rate']==r['solved']/100 and r['evalSeed']==792075 for r in runs)
-    assert all(re.fullmatch(r'[a-f0-9]{64}',r[k]) for r in runs for k in ('resultsSha256','approachSha256','configSha256'))
-    assert all(sum(r['objectCounts'].values())==100 for r in runs)
-    env=next(e for e in data['environments'] if e['id']==entry['id'])
-    if entry['missingSeeds']:
-        assert entry['result'] is None and entry['unroundedMean'] is None
-        assert env['results']['opus55'] is None
-    else:
-        complete+=1
-        exact=Decimal(sum(r['solved'] for r in runs))/500
-        expected={'mean':float(exact.quantize(Decimal('.01'),rounding=ROUND_HALF_UP)),
-                  'min':min(r['rate'] for r in runs),'max':max(r['rate'] for r in runs)}
-        assert entry['unroundedMean']==float(exact) and entry['result']==env['results']['opus55']==expected
-assert opus['completeEnvironments']==complete and opus['includedRuns']==complete*5
-assert opus['completeRuns']==sum(len(e['runs']) for e in opus['environments'])
-assert opus['evaluationEpisodes']==opus['completeRuns']*100
-assert data['coverage']['opus55']['completeRuns']==opus['completeRuns']
-assert data['coverage']['opus55']['includedRuns']==opus['includedRuns']
 # Totals are derived at runtime and tested against the run manifests in Node.
 assert set(data['protocol']['paperMethods']) <= {m['id'] for m in data['methods']}
 assert not set(data['protocol']['paperMethods']) & {m['id'] for m in data['methods'] if m.get('resultSource')}
@@ -277,4 +279,4 @@ require('assets/hero.mp4')
 require('assets/project-video.mp4')
 require('assets/prpl-robot.png')
 if errors:raise SystemExit('\n'.join(errors))
-print('PASS: HTML references, 28 audited environments and archived descriptions, 9 methods, audited Opus 5.5 coverage, 140 complete Astra runs, 140 complete Astra + source runs, Table III timing, matched policy-example and generated-source provenance, paper checksum, gallery provenance, media sizes, private-path scan.')
+print('PASS: HTML references, 28 audited environments and archived descriptions, 10 methods, audited Opus 5.5 and Opus 5.5 + source coverage, 140 complete Astra runs, 140 complete Astra + source runs, Table III timing, matched policy-example and generated-source provenance, paper checksum, gallery provenance, media sizes, private-path scan.')

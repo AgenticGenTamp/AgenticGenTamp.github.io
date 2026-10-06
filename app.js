@@ -72,7 +72,7 @@ function selectEnvironment(id, {autoplay=false}={}){
  const env=data.environments.find(e=>e.id===id);if(!env)return;
  $$('[data-env]').forEach(b=>{b.classList.toggle('active',b.dataset.env===id);b.setAttribute('aria-pressed',String(b.dataset.env===id));});
  $('#env-family').textContent=env.family;$('#env-name').textContent=env.name;selectedEnvironment=id;policyPlaybackRequested=autoplay;renderEnvironmentDescription();renderPolicyExamples();
- const order=['claude','codex','astra','opus55','genplan','oneshot','planner','source','astraSource'];
+ const order=['claude','codex','astra','opus55','genplan','oneshot','planner','source','astraSource','opus55Source'];
  $('#env-bars').innerHTML=order.map(id=>{const m=data.methods.find(x=>x.id===id),r=env.results[id];const name=m.kind==='baseline'?m.name:m.backend+(m.kind==='reference'?' + source':'');const pending=data.coverage?.[id]?.pending.find(e=>e.id===env.id);return `<div class="env-row"><strong>${name}</strong><span class="score-track"><span class="score-fill" style="--w:${r?r.mean*100:0}%;--c:${m.color}"></span></span><span class="env-value">${r?`${whole(r.mean)} <small>[${whole(r.min)}–${whole(r.max)}]</small>`:pending?`Pending · ${pending.completedRuns}/5 runs`:'Not available'}</span></div>`;}).join('');
 }
 function renderEnvironmentList(){let last='';$('#env-list').innerHTML=data.environments.map(e=>{const heading=e.family!==last?`<p class="env-group-title">${e.family}</p>`:'';last=e.family;return `${heading}<button data-env="${e.id}" aria-pressed="false">${e.name}<span aria-hidden="true">↗</span></button>`;}).join('');$$('[data-env]').forEach(b=>b.addEventListener('click',()=>selectEnvironment(b.dataset.env,{autoplay:true})));selectEnvironment('StickButton2D');markPolicyExamples();}
@@ -247,11 +247,14 @@ $('#gallery-speed').addEventListener('change', event => {
 // Compares each agent's main setting with its + source run on all 28 environments.
 function renderSourceComparison(){
  const envs=selectEnvironments(data);const avg=id=>envs.reduce((sum,e)=>sum+e.results[id].mean,0)/envs.length;
- const pairs=[['Claude Code with Opus 5 (medium)','claude','source'],['Codex with GPT-6 Astra (high)','astra','astraSource']];
+ const pairs=[['Claude Code with Opus 5 (medium)','claude','source'],['Codex with GPT-6 Astra (high)','astra','astraSource'],['Claude Code with Opus 5.5 (high)','opus55','opus55Source']];
  $('#source-table-body').innerHTML=pairs.map(([label,main,plus])=>`<tr><th scope="row">${esc(label)}</th><td>${percent(avg(main))}</td><td class="plus">${percent(avg(plus))}</td></tr>`).join('');
- const diff=envs.map(e=>Math.sign(Math.round(100*(e.results.astraSource.mean-e.results.astra.mean))));
- const lower=envs.filter((e,i)=>diff[i]<0).map(e=>`${e.name} (${e.family})`);
- $('#source-astra-counts').textContent=`Compared with its main setting, GPT-6 Astra (high) + source has a higher mean on ${diff.filter(d=>d>0).length} environments, the same mean on ${diff.filter(d=>d===0).length}, and a lower mean on ${lower.length}${lower.length?`: ${lower.join(' and ')}`:''}.`;
+ const counts=([model,main,plus])=>{
+  const diff=envs.map(e=>Math.sign(Math.round(100*(e.results[plus].mean-e.results[main].mean))));
+  const lower=envs.filter((e,i)=>diff[i]<0).map(e=>`${e.name} (${e.family})`);
+  return `${model} + source has a higher mean on ${diff.filter(d=>d>0).length} environments, the same mean on ${diff.filter(d=>d===0).length}, and a lower mean on ${lower.length}${lower.length?`: ${lower.join(' and ')}`:''}.`;
+ };
+ $('#source-astra-counts').textContent='Compared with its main setting, '+[['GPT-6 Astra (high)','astra','astraSource'],['Opus 5.5 (high)','opus55','opus55Source']].map(counts).join(' ');
 }
 async function loadJSON(path){const res=await fetch(path);if(!res.ok)throw new Error(`Cannot load ${path}: ${res.status}`);return res.json();}
 async function renderExperimentStats() {
@@ -271,9 +274,8 @@ async function renderExperimentStats() {
    $('#experiment-stats').setAttribute('aria-busy','false');
  }
 }
-loadJSON('data/benchmark.json?v=run-totals-1').then(result=>{data=result;
- const coverage=data.coverage.opus55;
- $('#opus55-coverage').textContent=coverage.pending.length?`Opus 5.5 (high): ${coverage.completeEnvironments}/28 environments complete. `+coverage.pending.map(e=>`${e.name}: ${e.completedRuns}/5 runs complete; seeds ${e.missingSeeds.join(' and ')} pending.`).join(' '):'Opus 5.5 (high): all 28 environments complete, five runs each.';
+loadJSON('data/benchmark.json?v=opus55-source-1').then(result=>{data=result;
+ $('#opus55-coverage').textContent=[['opus55','Opus 5.5 (high)'],['opus55Source','Opus 5.5 (high) + source']].map(([id,label])=>{const coverage=data.coverage[id];return coverage.pending.length?`${label}: ${coverage.completeEnvironments}/28 environments complete. `+coverage.pending.map(e=>`${e.name}: ${e.completedRuns}/5 runs complete; seeds ${e.missingSeeds.join(' and ')} pending.`).join(' '):`${label}: all 28 environments complete, five runs each.`;}).join(' ');
  renderExperimentStats();
  renderRanking();renderEnvironmentList();renderSourceComparison();}).catch(error=>{console.error(error);$('#scope-note').textContent='The interactive results could not load. Please download the CSV or read Tables I–II in the paper.';$('#experiment-stats').setAttribute('aria-busy','false');$('#stats-status').textContent='Experiment totals could not load. Please reload the page.';});
 loadJSON('data/gallery.json?v=run-totals-1').then(result=>{gallery=result;renderGallery();}).catch(error=>{console.error(error);$('#gallery-grid').innerHTML='<p>The gallery could not load. <a href="assets/project-video.mp4?v=a9fc3fad1bcc">Watch the project video ↗</a></p>';});

@@ -38,12 +38,14 @@ test('all filter combinations preserve counts and score sort direction',()=>{
 test('printed run ranges contain every mean',()=>{
  for(const e of data.environments)for(const r of Object.values(e.results))if(r){assert.ok(r.min<=r.mean&&r.mean<=r.max);assert.ok(r.min>=0&&r.max<=1);}
 });
-test('both + source rows stay unranked references with complete coverage',()=>{
+test('all + source rows stay unranked references with complete coverage',()=>{
  const rows=summarize(data);const refs=rows.filter(x=>x.kind==='reference');
- assert.deepEqual(refs.map(x=>x.id),['astraSource','source']);
+ assert.deepEqual(refs.map(x=>x.id),['opus55Source','astraSource','source']);
  for(const r of refs){assert.equal(r.rank,null);assert.equal(r.count,28);}
- assert.deepEqual(rows.slice(-2).map(x=>x.id),['astraSource','source']);
- assert.deepEqual(summarize(data,'all','all',false).slice(-2).map(x=>x.id),['source','astraSource']);
+ assert.deepEqual(rows.slice(-3).map(x=>x.id),['opus55Source','astraSource','source']);
+ assert.deepEqual(summarize(data,'all','all',false).slice(-3).map(x=>x.id),['source','astraSource','opus55Source']);
+ assert.ok(Math.abs(refs[0].mean-.9596428571428571)<1e-10);
+ assert.deepEqual(data.coverage.opus55Source.pending,[]);
 });
 
 test('Opus and Astra use all 28 environments with complete five-run coverage',()=>{
@@ -63,7 +65,7 @@ test('Rovers has a measured five-run range and no remaining missing seeds',()=>{
 
 const runSources=Object.fromEntries(data.methods.filter(m=>m.resultSource).map(m=>[m.id,JSON.parse(readFileSync(new URL('../'+m.resultSource,import.meta.url)))]));
 test('experiment totals count paper programs plus audited runs, excluding planners',()=>{
- assert.deepEqual(experimentTotals(data,runSources),{environments:28,programs:1120,episodes:112000});
+ assert.deepEqual(experimentTotals(data,runSources),{environments:28,programs:1260,episodes:126000});
 });
 test('a newly registered model contributes completed runs even before an environment mean is ready',()=>{
  const next=structuredClone(data);
@@ -74,12 +76,12 @@ test('a newly registered model contributes completed runs even before an environ
   {id:'DroppedEnvironment',runs:[{episodes:100}]}
  ]}};
  const totals=experimentTotals(next,sources);
- assert.equal(totals.programs,1122);assert.equal(totals.episodes,112180);
+ assert.equal(totals.programs,1262);assert.equal(totals.episodes,126180);
 });
 test('removing an environment removes its programs from both paper and run-based totals',()=>{
  const subset={...data,environments:data.environments.filter(e=>e.id!=='PddlRovers')};
- assert.equal(experimentTotals(subset,runSources).programs,1080);
- assert.equal(experimentTotals(subset,runSources).episodes,108000);
+ assert.equal(experimentTotals(subset,runSources).programs,1215);
+ assert.equal(experimentTotals(subset,runSources).episodes,121500);
 });
 test('missing run sources never silently produce a lower total',()=>{
  assert.throws(()=>experimentTotals(data,{}),/Missing or mismatched run source/);

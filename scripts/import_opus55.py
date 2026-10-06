@@ -1,6 +1,6 @@
 """Audit a local final-results snapshot and import complete five-run environment sets.
 
-Usage: python3 scripts/import_opus55.py PATH_TO_FINAL_RESULTS
+Usage: python3 scripts/import_opus55.py [--source] PATH_TO_FINAL_RESULTS
 Requires PyYAML. Source runs are read-only; public provenance uses relative paths.
 """
 import argparse
@@ -14,6 +14,12 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 SEEDS = [24, 42, 222, 424, 444]
+SETTINGS = {
+    'main': {'method': 'opus55', 'pattern': '__agentic__none__blackbox__strict__claude_opus55__*', 'blackbox': True,
+             'output': 'data/opus55-results.json', 'setting': 'Main setting', 'access': 'Strict black box'},
+    'source': {'method': 'opus55Source', 'pattern': '__agentic__none__whitebox__claude_opus55__*', 'blackbox': False,
+               'output': 'data/opus55-source-results.json', 'setting': '+ source', 'access': 'Source access'},
+}
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -21,12 +27,12 @@ def digest(path):
 def save(path, data):
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n')
 
-def audit(root):
+def audit(root, spec):
     mapping = json.loads((ROOT / 'data/environment-descriptions/sources.json').read_text())
     entries = []
     used_dirs = set()
     for env in mapping['environments']:
-        directories = sorted(root.glob(env['environmentKey'] + '__agentic__none__blackbox__strict__claude_opus55__*'))
+        directories = sorted(root.glob(env['environmentKey'] + spec['pattern']))
         used_dirs.update(directories)
         runs = []
         pending = []
@@ -43,7 +49,7 @@ def audit(root):
                 per = result['per_episode']
                 assert result['replicate_seed'] == config['replicate_seed'] == seed, run
                 assert config['approach']['backend'] == {'backend': 'claude', 'model': 'claude-opus-5-5', 'effort': 'high'}, run
-                assert config['approach']['blackbox'] and config['approach']['blackbox_strict'], run
+                assert config['approach']['blackbox'] == config['approach']['blackbox_strict'] == spec['blackbox'], run
                 assert config['approach']['max_budget_usd'] == 20 and config['eval_timeout'] == 60, run
                 assert config['eval_seed'] == result['eval_seed'] == 792075, run
                 if not result.get('eval_complete') or result['num_evaluated_episodes'] != 100:
@@ -67,24 +73,28 @@ def audit(root):
         assert len({r['seed'] for r in runs}) == len(runs), (env['id'], 'duplicate complete seeds')
         runs.sort(key=lambda r: r['seed'])
         missing = sorted(set(SEEDS) - {r['seed'] for r in runs})
+        # Attempts whose seed has a complete run elsewhere (e.g. a separate rescore) are not pending.
+        superseded = [p for p in pending if p['seed'] not in missing]
+        pending = [p for p in pending if p['seed'] in missing]
         exact = Decimal(sum(r['solved'] for r in runs)) / 500 if not missing else None
         entries.append({'id': env['id'], 'environmentKey': env['environmentKey'],
             'result': {'mean': float(exact.quantize(Decimal('.01'), rounding=ROUND_HALF_UP)),
                        'min': min(r['rate'] for r in runs), 'max': max(r['rate'] for r in runs)} if exact is not None else None,
             'unroundedMean': float(exact) if exact is not None else None,
-            'missingSeeds': missing, 'pendingRuns': pending, 'runs': runs})
+            'missingSeeds': missing, 'pendingRuns': pending, **({'supersededAttempts': superseded} if superseded else {}), 'runs': runs})
     other = []
     for directory in sorted(root.glob('*__claude_opus55__*')):
         if directory in used_dirs:
             continue
+        same_setting = ('__whitebox__' in directory.name) != spec['blackbox']
         other.append({'directory': directory.name,
-                      'reason': '+ source setting' if '__whitebox__' in directory.name else 'Outside the website environment set',
+                      'reason': 'Outside the website environment set' if same_setting else 'Other access setting',
                       'resultFiles': len(list(directory.glob('*/replicate_*/results.json'))),
                       'runDirectories': len(list(directory.glob('*/replicate_*')))})
-    return {'method': 'opus55', 'backend': 'Claude Code with Opus 5.5 (high)', 'setting': 'Main setting',
+    return {'method': spec['method'], 'backend': 'Claude Code with Opus 5.5 (high)', 'setting': spec['setting'],
         'snapshotDate': datetime.now(timezone.utc).date().isoformat(),
         'collection': 'Local robocode_final_results snapshot',
-        'selection': 'Strict black box, Claude Opus 5.5 high, $20 budget, 60-second evaluation timeout. Require exactly the five expected seeds and 100 complete, crash-free held-out episodes per run. No measured five-run mean is emitted for incomplete environment sets. Reject duplicate complete seeds.',
+        'selection': spec['access'] + ', Claude Opus 5.5 high, $20 budget, 60-second evaluation timeout. Require exactly the five expected seeds and 100 complete, crash-free held-out episodes per run. No measured five-run mean is emitted for incomplete environment sets. Reject duplicate complete seeds.',
         'precision': 'Success counts from per_episode; five-run means rounded half up to two decimals, matching the existing table. Unrounded means retained separately.',
         'runsPerEnvironment': 5, 'heldOutInstancesPerRun': 100, 'replicateSeeds': SEEDS,
         'completeRuns': sum(len(e['runs']) for e in entries),
@@ -96,15 +106,18 @@ def audit(root):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('results_root', type=Path)
+    parser.add_argument('--source', action='store_true', help='import the + source runs instead of the main setting')
     args = parser.parse_args()
-    snapshot = audit(args.results_root.resolve())
+    spec = SETTINGS['source' if args.source else 'main']
+    method = spec['method']
+    snapshot = audit(args.results_root.resolve(), spec)
     data = json.loads((ROOT / 'data/benchmark.json').read_text())
     for env, entry in zip(data['environments'], snapshot['environments']):
         assert env['id'] == entry['id']
-        env['results']['opus55'] = entry['result']
-    data['coverage'] = {'opus55': {k: snapshot[k] for k in ('completeRuns', 'includedRuns', 'completeEnvironments', 'snapshotDate')}}
-    data['coverage']['opus55']['pending'] = [{'id': e['id'], 'name': next(x['name'] for x in data['environments'] if x['id'] == e['id']), 'missingSeeds': e['missingSeeds'], 'completedRuns': len(e['runs'])} for e in snapshot['environments'] if e['missingSeeds']]
-    save(ROOT / 'data/opus55-results.json', snapshot)
+        env['results'][method] = entry['result']
+    data['coverage'][method] = {k: snapshot[k] for k in ('completeRuns', 'includedRuns', 'completeEnvironments', 'snapshotDate')}
+    data['coverage'][method]['pending'] = [{'id': e['id'], 'name': next(x['name'] for x in data['environments'] if x['id'] == e['id']), 'missingSeeds': e['missingSeeds'], 'completedRuns': len(e['runs'])} for e in snapshot['environments'] if e['missingSeeds']]
+    save(ROOT / spec['output'], snapshot)
     save(ROOT / 'data/benchmark.json', data)
     for e in snapshot['environments']:
         print(f"{e['id']}: {len(e['runs'])}/5; missing {e['missingSeeds']}")

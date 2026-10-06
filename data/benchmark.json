@@ -113,6 +113,15 @@
       "color": "#6f93c6",
       "kind": "reference",
       "resultSource": "data/astra-source-results.json"
+    },
+    {
+      "id": "opus55Source",
+      "name": "AgenticGenPlan + source",
+      "backend": "Claude Code with Opus 5.5 (high)",
+      "access": "+ source",
+      "color": "#c9a15c",
+      "kind": "reference",
+      "resultSource": "data/opus55-source-results.json"
     }
   ],
   "environments": [
@@ -166,6 +175,11 @@
         "opus55": {
           "mean": 1.0,
           "min": 0.99,
+          "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 1.0,
           "max": 1.0
         }
       }
@@ -221,6 +235,11 @@
           "mean": 1.0,
           "min": 0.99,
           "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -272,6 +291,11 @@
           "max": 1.0
         },
         "opus55": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "opus55Source": {
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
@@ -329,6 +353,11 @@
           "mean": 0.99,
           "min": 0.96,
           "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -383,6 +412,11 @@
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -430,6 +464,11 @@
           "max": 1.0
         },
         "opus55": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "opus55Source": {
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
@@ -487,6 +526,11 @@
           "mean": 0.94,
           "min": 0.89,
           "max": 0.99
+        },
+        "opus55Source": {
+          "mean": 0.93,
+          "min": 0.9,
+          "max": 0.99
         }
       }
     },
@@ -541,6 +585,11 @@
           "mean": 0.99,
           "min": 0.94,
           "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 0.99,
+          "min": 0.96,
+          "max": 1.0
         }
       }
     },
@@ -590,6 +639,11 @@
         "opus55": {
           "mean": 1.0,
           "min": 1.0,
+          "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 0.99,
           "max": 1.0
         }
       }
@@ -641,6 +695,11 @@
           "mean": 0.97,
           "min": 0.83,
           "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 0.98,
+          "min": 0.91,
+          "max": 1.0
         }
       }
     },
@@ -689,6 +748,11 @@
         },
         "opus55": {
           "mean": 0.99,
+          "min": 0.99,
+          "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
           "min": 0.99,
           "max": 1.0
         }
@@ -745,6 +809,11 @@
           "mean": 0.99,
           "min": 0.95,
           "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -799,6 +868,11 @@
           "mean": 1.0,
           "min": 0.99,
           "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -846,6 +920,11 @@
           "max": 1.0
         },
         "opus55": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "opus55Source": {
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
@@ -903,6 +982,11 @@
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -952,6 +1036,11 @@
         "opus55": {
           "mean": 1.0,
           "min": 0.99,
+          "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 1.0,
           "max": 1.0
         }
       }
@@ -1003,6 +1092,11 @@
           "mean": 0.83,
           "min": 0.34,
           "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -1050,6 +1144,11 @@
           "max": 1.0
         },
         "opus55": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "opus55Source": {
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
@@ -1103,6 +1202,11 @@
           "mean": 0.98,
           "min": 0.97,
           "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 0.98,
+          "min": 0.97,
+          "max": 1.0
         }
       }
     },
@@ -1153,6 +1257,11 @@
           "mean": 0.43,
           "min": 0.32,
           "max": 0.51
+        },
+        "opus55Source": {
+          "mean": 0.52,
+          "min": 0.29,
+          "max": 0.79
         }
       }
     },
@@ -1207,6 +1316,11 @@
           "mean": 1.0,
           "min": 0.99,
           "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -1257,6 +1371,11 @@
           "mean": 0.71,
           "min": 0.47,
           "max": 0.99
+        },
+        "opus55Source": {
+          "mean": 0.73,
+          "min": 0.5,
+          "max": 0.98
         }
       }
     },
@@ -1311,6 +1430,11 @@
           "mean": 1.0,
           "min": 0.98,
           "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 0.99,
+          "max": 1.0
         }
       }
     },
@@ -1360,6 +1484,11 @@
         "opus55": {
           "mean": 0.73,
           "min": 0.68,
+          "max": 0.75
+        },
+        "opus55Source": {
+          "mean": 0.74,
+          "min": 0.71,
           "max": 0.75
         }
       }
@@ -1415,6 +1544,11 @@
           "mean": 0.99,
           "min": 0.97,
           "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -1468,6 +1602,11 @@
         "opus55": {
           "mean": 1.0,
           "min": 0.99,
+          "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 1.0,
           "max": 1.0
         }
       }
@@ -1523,6 +1662,11 @@
           "mean": 0.98,
           "min": 0.95,
           "max": 1.0
+        },
+        "opus55Source": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
         }
       }
     },
@@ -1574,6 +1718,11 @@
           "max": 1.0
         },
         "opus55": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "opus55Source": {
           "mean": 1.0,
           "min": 1.0,
           "max": 1.0
@@ -1630,6 +1779,13 @@
       "includedRuns": 140,
       "completeEnvironments": 28,
       "snapshotDate": "2026-10-01",
+      "pending": []
+    },
+    "opus55Source": {
+      "completeRuns": 140,
+      "includedRuns": 140,
+      "completeEnvironments": 28,
+      "snapshotDate": "2026-10-06",
       "pending": []
     }
   }
