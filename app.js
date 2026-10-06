@@ -132,11 +132,13 @@ function renderPolicyExamples() {
     (withheld.length?' The '+withheld.map(item=>item.label).join(' and ')+' clip is withheld because its replay outcome differed from the archive.':'');
   $('#play-policies').textContent=example.videos.length>1?'Replay together':'Replay example';
   $('#policy-grid').style.setProperty('--policy-columns',example.videos.length>=4?2:example.videos.length);
+  // A + source card shares its label with a main-setting card, so the setting names it.
+  const cardName=clip=>clip.setting==='+ source'?`${clip.label} + source`:clip.label;
   $('#policy-grid').innerHTML=example.videos.map((clip,index)=>`<figure class="policy-card">
-    <h5>${esc(clip.label)}</h5><p>${esc(clip.setting)}</p>
-    <video class="policy-video" src="${esc(clip.video)}?v=${clip.source.videoSha256.slice(0,12)}" poster="${esc(clip.poster)}" controls muted playsinline preload="none" aria-label="${esc(clip.label)} policy in ${esc($('#env-name').textContent)}"></video>
+    <h5>${esc(clip.label)}</h5><p>${esc(clip.setting==='+ source'?'+ source setting':clip.setting)}</p>
+    <video class="policy-video" src="${esc(clip.video)}?v=${clip.source.videoSha256.slice(0,12)}" poster="${esc(clip.poster)}" controls muted playsinline preload="none" aria-label="${esc(cardName(clip))} policy in ${esc($('#env-name').textContent)}"></video>
     <figcaption><strong>${clip.solved?'Success':'Failure'}</strong> · ${clip.steps} actions</figcaption>
-    <button class="program-open" data-program="${index}" aria-label="View generated program: ${esc(clip.label)} in ${esc($('#env-name').textContent)}"><span aria-hidden="true">&lt;/&gt;</span> View generated program</button>
+    <button class="program-open" data-program="${index}" aria-label="View generated program: ${esc(cardName(clip))} in ${esc($('#env-name').textContent)}"><span aria-hidden="true">&lt;/&gt;</span> View generated program</button>
   </figure>`).join('');
   $$('.policy-video').forEach(video => {
     video.muted=true;
@@ -282,7 +284,7 @@ loadJSON('data/gallery.json?v=run-totals-1').then(result=>{gallery=result;render
 
 loadJSON('data/environment-descriptions.json?v=descriptions-5').then(result=>{descriptions=result;renderEnvironmentDescription();}).catch(error=>{console.error(error);descriptionLoadFailed=true;renderEnvironmentDescription();});
 
-loadJSON('data/policy-examples.json?v=run-totals-1').then(result=>{const order=['claude','codex','astra','opus55','genplan'];result.environments.forEach(e=>e.videos.sort((a,b)=>order.indexOf(a.method)-order.indexOf(b.method)));policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
+loadJSON('data/policy-examples.json?v=opus55-source-clips-1').then(result=>{const order=['claude','codex','astra','opus55','genplan','opus55Source'];result.environments.forEach(e=>e.videos.sort((a,b)=>order.indexOf(a.method)-order.indexOf(b.method)));policyExamples=result;renderPolicyExamples();markPolicyExamples();}).catch(error=>{console.error(error);$('#policy-comparison').hidden=true;});
 
 document.getElementById('copy-bibtex')?.addEventListener('click',async e=>{
   const button=e.currentTarget;

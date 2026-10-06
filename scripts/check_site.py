@@ -129,21 +129,24 @@ for entry in audit['environments']:
 # Policy comparisons must use the same held-out instance, with verifiable results.
 examples=json.loads((ROOT/'data/policy-examples.json').read_text())
 opus_examples=json.loads((ROOT/'data/opus55-example-audit.json').read_text())
+opus_source_examples=json.loads((ROOT/'data/opus55-source-example-audit.json').read_text())
+opus_source=json.loads((ROOT/'data/opus55-source-results.json').read_text())
 assert {e['id'] for e in opus_examples['environments']}=={e['id'] for e in data['environments']}
+assert {e['id'] for e in opus_source_examples['environments']}=={e['id'] for e in data['environments']}
 assert len({e['id'] for e in examples['environments']})==len(examples['environments'])
 assert {e['id'] for e in examples['environments']}=={e['id'] for e in data['environments']}
 for entry in examples['environments']:
     assert entry['id'] in {e['id'] for e in data['environments']}
     available={v['method'] for v in entry['videos']}
     unavailable={m['method'] for m in entry.get('unavailable',[])}
-    assert available|unavailable=={'claude','codex','genplan','astra','opus55'} and not available&unavailable
-    assert 1<=len(entry['videos'])<=5 and len(available)==len(entry['videos'])
+    assert available|unavailable=={'claude','codex','genplan','astra','opus55','opus55Source'} and not available&unavailable
+    assert 1<=len(entry['videos'])<=6 and len(available)==len(entry['videos'])
     assert all(m['reason'] and m['label'] for m in entry.get('unavailable',[]))
     # Synthesis seeds can differ across methods; the held-out instance must match.
     for field in ('instanceSeed','episode'):
         assert len({v['source'][field] for v in entry['videos']})==1
     # Exact state hashes allow harmless rasterization differences in initial frames.
-    original=[v for v in entry['videos'] if v['method']!='opus55']
+    original=[v for v in entry['videos'] if v['method'] not in ('opus55','opus55Source')]
     state_hashes=[v['source'].get('initialStateSha256') for v in original]
     assert (all(state_hashes) and len(set(state_hashes))==1) or len({v['source']['initialFrameSha256'] for v in original})==1
     # Extend the original four-way audit with an independent Opus/Astra reset comparison.
@@ -153,6 +156,15 @@ for entry in examples['environments']:
         assert clip['source']['initialObservationSha256']==observation['initialObservationSha256']
         assert clip['source']['resultsSha256']==observation[method+'ResultsSha256']
         assert clip['source']['episode']==observation['episode'] and clip['source']['instanceSeed']==observation['instanceSeed']
+    # + source and main-setting resets must both reproduce the recorded Opus 5.5 observation.
+    source_observation=next(e for e in opus_source_examples['environments'] if e['id']==entry['id'])
+    assert source_observation['match'] and source_observation['opus55ResultsSha256']==observation['opus55ResultsSha256']
+    assert source_observation['initialObservationSha256']==source_observation['opus55InitialObservationSha256']==observation['initialObservationSha256']
+    for clip in (v for v in entry['videos'] if v['method']=='opus55Source'):
+        assert clip['source']['initialObservationSha256']==source_observation['initialObservationSha256']
+        assert clip['source']['resultsSha256']==source_observation['opus55SourceResultsSha256']
+        assert clip['source']['episode']==source_observation['episode'] and clip['source']['instanceSeed']==source_observation['instanceSeed']
+        assert clip['setting']=='+ source'
     for clip in entry['videos']:
         assert isinstance(clip['source']['replicateSeed'],int)
         if clip['method']=='codex' and entry['id'] in examples.get('codexRerunEnvironments',[]):
@@ -161,14 +173,15 @@ for entry in examples['environments']:
             run=next(r for e in astra['environments'] if e['id']==entry['id'] for r in e['runs'] if r['seed']==clip['source']['replicateSeed'])
             assert clip['source']['resultsSha256']==run['resultsSha256']
             assert clip['source']['approachSha256']==run['approachSha256']
-        if clip['method']=='opus55':
-            run=next(r for e in opus['environments'] if e['id']==entry['id'] for r in e['runs'] if r['seed']==clip['source']['replicateSeed'])
+        if clip['method'] in ('opus55','opus55Source'):
+            manifest=opus if clip['method']=='opus55' else opus_source
+            run=next(r for e in manifest['environments'] if e['id']==entry['id'] for r in e['runs'] if r['seed']==clip['source']['replicateSeed'])
             assert clip['source']['resultsSha256']==run['resultsSha256'] and clip['source']['approachSha256']==run['approachSha256']
             assert clip['source']['archivedSolved']==clip['source']['policyPassSolved']==clip['source']['replaySolved']==clip['solved']
             assert clip['steps']==clip['source']['replaySteps'] and clip['source']['frameStride']==3
             assert clip['source']['kind']=='local-experiment'
             assert clip['source']['objectCount']==observation['objectCount']
-            assert observation['opus55ConfigSha256']==run['configSha256']
+            assert (observation if clip['method']=='opus55' else source_observation)[clip['method']+'ConfigSha256']==run['configSha256']
             assert re.fullmatch(r'[a-f0-9]{64}',observation['initialObservationSha256'])
         # The reader must show the exact frozen entry point used in this clip.
         files=clip['program']['files']
@@ -279,4 +292,4 @@ require('assets/hero.mp4')
 require('assets/project-video.mp4')
 require('assets/prpl-robot.png')
 if errors:raise SystemExit('\n'.join(errors))
-print('PASS: HTML references, 28 audited environments and archived descriptions, 10 methods, audited Opus 5.5 and Opus 5.5 + source coverage, 140 complete Astra runs, 140 complete Astra + source runs, Table III timing, matched policy-example and generated-source provenance, paper checksum, gallery provenance, media sizes, private-path scan.')
+print('PASS: HTML references, 28 audited environments and archived descriptions, 10 methods, audited Opus 5.5 and Opus 5.5 + source coverage, 140 complete Astra runs, 140 complete Astra + source runs, Table III timing, matched policy-example (including Opus 5.5 + source) and generated-source provenance, paper checksum, gallery provenance, media sizes, private-path scan.')
