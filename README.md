@@ -56,7 +56,7 @@ The default **all-28 comparison** uses measured five-run results throughout. Opu
 
 Refresh the audit with `python3 scripts/import_opus55.py RESULTS_ROOT` (requires PyYAML), then regenerate the CSV with `python3 scripts/export_csv.py`. The importer validates completeness, seeds, model, effort, budget, strict access, timeout, success counts, and hashes; duplicate complete seeds stop the import. Review changed coverage, update coverage-specific tests as needed, and run the checks before publishing. The setup totals update automatically from the imported run records.
 
-Model labels follow the maintainer’s correction on 1 October 2026: **Opus 5 (medium)**, **GPT-5.6 Sol (high)**, **GPT-6 Astra (high)**, and **Opus 5.5 (high)**. Frozen experiment files, source programs, paper, and project video retain their original bytes and historical wording.
+Model labels give the reasoning effort of the runs: **Opus 5 (medium)**, **GPT-5.6 Sol (medium)**, **GPT-6 Astra (high)**, and **Opus 5.5 (high)**. Every archived GPT-5.6 Sol run config sets `reasoning_effort: medium`; the Opus 5 runs set no effort and use the Claude Code default. Frozen experiment files, source programs, paper, and project video retain their original bytes and historical wording.
 
 ### Astra + source
 

@@ -75,7 +75,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/StickButton2D-codex.mp4",
           "poster": "assets/policies/StickButton2D-codex.jpg",
@@ -1193,7 +1193,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Obstruction2D-codex.mp4",
           "poster": "assets/policies/Obstruction2D-codex.jpg",
@@ -1828,7 +1828,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/ClutteredStorage2D-codex.mp4",
           "poster": "assets/policies/ClutteredStorage2D-codex.jpg",
@@ -2996,7 +2996,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/ClutteredRetrieval2D-codex.mp4",
           "poster": "assets/policies/ClutteredRetrieval2D-codex.jpg",
@@ -4058,7 +4058,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Motion2D-codex.mp4",
           "poster": "assets/policies/Motion2D-codex.jpg",
@@ -4896,7 +4896,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/PushPullHook2D-codex.mp4",
           "poster": "assets/policies/PushPullHook2D-codex.jpg",
@@ -5783,7 +5783,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/DynObstruction2D-codex.mp4",
           "poster": "assets/policies/DynObstruction2D-codex.jpg",
@@ -7174,7 +7174,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/DynPushPullHook2D-codex.mp4",
           "poster": "assets/policies/DynPushPullHook2D-codex.jpg",
@@ -8033,7 +8033,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/DynPushT2D-codex.mp4",
           "poster": "assets/policies/DynPushT2D-codex.jpg",
@@ -8667,7 +8667,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/DynScoopPour2D-codex.mp4",
           "poster": "assets/policies/DynScoopPour2D-codex.jpg",
@@ -10338,7 +10338,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Obstruction3D-codex.mp4",
           "poster": "assets/policies/Obstruction3D-codex.jpg",
@@ -11457,7 +11457,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Packing3D-codex.mp4",
           "poster": "assets/policies/Packing3D-codex.jpg",
@@ -13521,7 +13521,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Transport3D-codex.mp4",
           "poster": "assets/policies/Transport3D-codex.jpg",
@@ -14934,7 +14934,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Table3D-codex.mp4",
           "poster": "assets/policies/Table3D-codex.jpg",
@@ -15968,7 +15968,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/BaseMotion3D-codex.mp4",
           "poster": "assets/policies/BaseMotion3D-codex.jpg",
@@ -16968,7 +16968,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/BalanceBeam3D-codex.mp4",
           "poster": "assets/policies/BalanceBeam3D-codex.jpg",
@@ -18289,7 +18289,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/ConstrainedCupboard3D-codex.mp4",
           "poster": "assets/policies/ConstrainedCupboard3D-codex.jpg",
@@ -20026,7 +20026,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Dynamo3D-codex.mp4",
           "poster": "assets/policies/Dynamo3D-codex.jpg",
@@ -20985,7 +20985,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Rearrange3D-codex.mp4",
           "poster": "assets/policies/Rearrange3D-codex.jpg",
@@ -22595,7 +22595,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/ScoopPour3D-codex.mp4",
           "poster": "assets/policies/ScoopPour3D-codex.jpg",
@@ -24065,7 +24065,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Shelf3D-codex.mp4",
           "poster": "assets/policies/Shelf3D-codex.jpg",
@@ -25866,7 +25866,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/SortClutteredBlocks3D-codex.mp4",
           "poster": "assets/policies/SortClutteredBlocks3D-codex.jpg",
@@ -28008,7 +28008,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/SweepIntoDrawer3D-codex.mp4",
           "poster": "assets/policies/SweepIntoDrawer3D-codex.jpg",
@@ -29869,7 +29869,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/SweepSimple3D-codex.mp4",
           "poster": "assets/policies/SweepSimple3D-codex.jpg",
@@ -31325,7 +31325,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/Tossing3D-codex.mp4",
           "poster": "assets/policies/Tossing3D-codex.jpg",
@@ -32682,7 +32682,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/PddlPacking-codex.mp4",
           "poster": "assets/policies/PddlPacking-codex.jpg",
@@ -34549,7 +34549,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/PddlBlocked-codex.mp4",
           "poster": "assets/policies/PddlBlocked-codex.jpg",
@@ -36585,7 +36585,7 @@
         },
         {
           "method": "codex",
-          "label": "Codex with GPT-5.6 Sol (high)",
+          "label": "Codex with GPT-5.6 Sol (medium)",
           "setting": "Main setting",
           "video": "assets/policies/PddlRovers-codex.mp4",
           "poster": "assets/policies/PddlRovers-codex.jpg",
